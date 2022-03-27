@@ -46,5 +46,15 @@ namespace ProyectoDSI
                 Frame.GoBack();
             }
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(ConAzucar));
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(SinAzucar));
+        }
     }
 }

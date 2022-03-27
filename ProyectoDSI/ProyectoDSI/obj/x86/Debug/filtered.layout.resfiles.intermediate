@@ -27,6 +27,7 @@ Assets\Square44x44Logo.targetsize-24_altform-unplated.png
 Assets\StoreLogo.png
 Assets\Wide310x150Logo.scale-200.png
 App.xbf
+ConAzucar.xbf
 Controles.xbf
 MainPage.xbf
 Opciones.xbf
@@ -34,4 +35,5 @@ Pausa.xbf
 ProyectoDSI.xr.xml
 Reglamento.xbf
 SeleccionNivel.xbf
+SinAzucar.xbf
 Properties\Default.rd.xml

@@ -188,3 +188,18 @@ D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Controles.g.i.cs
 D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Controles.g.cs
 D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Controles.xaml
 D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Controles.xbf
+C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\ConAzucar.g.i.cs
+C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\ConAzucar.g.cs
+C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Controles.g.i.cs
+C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Controles.g.cs
+C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\SinAzucar.g.i.cs
+C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\SinAzucar.g.cs
+C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Controles.xaml
+C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\ConAzucar.xaml
+C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\SinAzucar.xaml
+C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Controles.xbf
+C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\ConAzucar.xbf
+C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\SinAzucar.xbf
+C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\ConAzucar.xbf
+C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Controles.xbf
+C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\SinAzucar.xbf
