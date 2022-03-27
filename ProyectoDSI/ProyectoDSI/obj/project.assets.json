@@ -8165,11 +8165,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sarai\\Documents\\UCM\\2º CUATRI\\DSI\\ProyectoDSI\\ProyectoDSI\\ProyectoDSI.csproj",
+      "projectUniqueName": "C:\\Users\\sarai\\Documents\\UCM\\2º CUATRI\\DSI\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\ProyectoDSI.csproj",
       "projectName": "ProyectoDSI",
-      "projectPath": "C:\\Users\\sarai\\Documents\\UCM\\2º CUATRI\\DSI\\ProyectoDSI\\ProyectoDSI\\ProyectoDSI.csproj",
+      "projectPath": "C:\\Users\\sarai\\Documents\\UCM\\2º CUATRI\\DSI\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\ProyectoDSI.csproj",
       "packagesPath": "C:\\Users\\sarai\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sarai\\Documents\\UCM\\2º CUATRI\\DSI\\ProyectoDSI\\ProyectoDSI\\obj\\",
+      "outputPath": "C:\\Users\\sarai\\Documents\\UCM\\2º CUATRI\\DSI\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

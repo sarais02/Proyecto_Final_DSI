@@ -125,7 +125,13 @@
     <Compile Include="Opciones.xaml.cs">
       <DependentUpon>Opciones.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pausa.xaml.cs">
+      <DependentUpon>Pausa.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reglamento.xaml.cs">
+      <DependentUpon>Reglamento.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SeleccionNivel.xaml.cs">
       <DependentUpon>SeleccionNivel.xaml</DependentUpon>
     </Compile>
@@ -169,6 +175,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Opciones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pausa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reglamento.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

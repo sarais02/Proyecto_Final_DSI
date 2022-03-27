@@ -31,34 +31,34 @@
                 </ResourceDictionary>
             </ResourceDictionary.ThemeDictionaries>
         </ResourceDictionary>
-        </Page.Resources>
+    </Page.Resources>
 
-        <Grid Background="#f6a2bf">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <TextBlock Text="Pausa" FontSize="72" Foreground="DeepPink"
+    <Grid Background="#f6a2bf">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Pausa" FontSize="72" Foreground="DeepPink"
                    VerticalAlignment="Top" 
                    HorizontalAlignment="Center" 
                    Margin="0,80,0,0" 
                    FontStyle="Italic" FontWeight="Bold" FontFamily="Fascinate Inline" Height="86" Width="202" Grid.Column="1"/>
-            <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="25" >
-                <Button  Style="{StaticResource butonPause}">
-                    <SymbolIcon Symbol="Play" Width="200" Height="200" Foreground="#e93578"
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="25" >
+            <Button  Style="{StaticResource butonPause}">
+                <SymbolIcon Symbol="Play" Width="200" Height="200" Foreground="#e93578"
                             VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                </Button>
-                <Button x:Name="MainMenu" Style="{StaticResource butonPause}" Click="MainMenu_Click">
-                    <SymbolIcon Symbol="Home" Width="200" Height="200" Foreground="#e93578"
+            </Button>
+            <Button x:Name="MainMenu" Style="{StaticResource butonPause}" Click="MainMenu_Click">
+                <SymbolIcon Symbol="Home" Width="200" Height="200" Foreground="#e93578"
                             VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                </Button>
-                <Button x:Name="Settings" Style="{StaticResource butonPause}" Click="Settings_Click">
-                    <SymbolIcon Symbol="Setting" Width="200" Height="200" Foreground="#e93578"
+            </Button>
+            <Button x:Name="Settings" Style="{StaticResource butonPause}" Click="Settings_Click">
+                <SymbolIcon Symbol="Setting" Width="200" Height="200" Foreground="#e93578"
                             VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                </Button>
-            </StackPanel>
-            <Image Source="Assets/piruleta.png"/>
-            <Image  Grid.Column="2" Source="Assets/piruleta.png"/>
-        </Grid>
+            </Button>
+        </StackPanel>
+        <Image Source="Assets/piruleta.png"/>
+        <Image  Grid.Column="2" Source="Assets/piruleta.png"/>
+    </Grid>
 </Page>

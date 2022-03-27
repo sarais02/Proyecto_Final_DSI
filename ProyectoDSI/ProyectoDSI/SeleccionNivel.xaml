@@ -23,6 +23,10 @@
 
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            
+        </Grid.ColumnDefinitions>
+        
         <Image Source="Assets/Plano.jpg" Stretch="Fill"/>
         <Button Content="Pasillo 1" CornerRadius="20" 
                 FontSize="40" Margin="86,380,0,0" 

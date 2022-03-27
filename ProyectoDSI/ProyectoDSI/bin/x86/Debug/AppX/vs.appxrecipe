@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>1e4738d2-030c-41c1-98f8-1198bc7c99e1</PackageIdentityName>
     <PackageIdentityPublisher>CN=sarai</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>D4CEF7D66690F58DE4E0C97B968007A96750DC8CC359AD0246273D87E97416C6</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>1e4738d2-030c-41c1-98f8-1198bc7c99e1_1.0.0.0_x86__7ya0n1np3hafe</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>1e4738d2-030c-41c1-98f8-1198bc7c99e1_7ya0n1np3hafe!App</RegisteredUserModeAppID>
@@ -27,16 +27,16 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-27T09:04:48.485</Modified>
+      <Modified>2022-03-27T10:09:54.351</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\ProyectoDSI.exe">
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\ProyectoDSI.exe">
       <PackagePath>entrypoint\ProyectoDSI.exe</PackagePath>
-      <Modified>2022-03-27T09:04:46.694</Modified>
+      <Modified>2022-03-27T10:09:53.629</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -46,131 +46,139 @@
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2020-12-02T03:52:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\Assets\back.png">
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\back.png">
       <PackagePath>Assets\back.png</PackagePath>
       <Modified>2022-03-27T09:02:26.628</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\Assets\bastones.png">
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\bastones.png">
       <PackagePath>Assets\bastones.png</PackagePath>
       <Modified>2022-03-27T09:02:26.635</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\Assets\bombassandia.png">
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\bombassandia.png">
       <PackagePath>Assets\bombassandia.png</PackagePath>
       <Modified>2022-03-27T09:02:26.637</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\Assets\cocacolas.png">
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\cocacolas.png">
       <PackagePath>Assets\cocacolas.png</PackagePath>
       <Modified>2022-03-27T09:02:26.640</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\Assets\dedos.png">
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\dedos.png">
       <PackagePath>Assets\dedos.png</PackagePath>
       <Modified>2022-03-27T09:02:26.642</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\Assets\fondomainmenu.png">
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\fondomainmenu.png">
       <PackagePath>Assets\fondomainmenu.png</PackagePath>
       <Modified>2022-03-27T09:02:26.646</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\Assets\fresa.png">
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\fresa.png">
       <PackagePath>Assets\fresa.png</PackagePath>
       <Modified>2022-03-27T09:02:26.648</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\Assets\huevos.png">
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\huevos.png">
       <PackagePath>Assets\huevos.png</PackagePath>
       <Modified>2022-03-27T09:02:26.649</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\Assets\nuve.png">
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\nuve.png">
       <PackagePath>Assets\nuve.png</PackagePath>
       <Modified>2022-03-27T09:02:26.651</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\Assets\petazetas.png">
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\petazetas.png">
       <PackagePath>Assets\petazetas.png</PackagePath>
       <Modified>2022-03-27T09:02:26.653</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\Assets\piruleta.png">
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\piruleta.png">
       <PackagePath>Assets\piruleta.png</PackagePath>
       <Modified>2022-03-27T09:02:26.656</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\Assets\regaliz.png">
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\regaliz.png">
       <PackagePath>Assets\regaliz.png</PackagePath>
       <Modified>2022-03-27T09:02:26.662</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\Assets\sandias.png">
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\sandias.png">
       <PackagePath>Assets\sandias.png</PackagePath>
       <Modified>2022-03-27T09:02:26.664</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2021-11-16T18:14:27.142</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2021-11-16T18:14:27.146</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2021-11-16T18:14:27.147</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2021-11-16T18:14:27.148</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2021-11-16T18:14:27.149</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2021-11-16T18:14:27.151</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2021-11-16T18:14:27.153</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\Assets\Plano.jpg">
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\Plano.jpg">
       <PackagePath>Assets\Plano.jpg</PackagePath>
       <Modified>2022-03-27T09:02:26.659</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2022-03-27T09:01:01.459</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\ProyectoDSI.xr.xml">
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\ProyectoDSI.xr.xml">
       <PackagePath>ProyectoDSI.xr.xml</PackagePath>
-      <Modified>2022-03-27T09:04:46.550</Modified>
+      <Modified>2022-03-27T10:09:53.509</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-03-27T09:04:46.578</Modified>
+      <Modified>2022-03-27T10:09:53.543</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-03-27T09:04:46.578</Modified>
+      <Modified>2022-03-27T10:09:53.543</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Opciones.xbf">
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Opciones.xbf">
       <PackagePath>Opciones.xbf</PackagePath>
-      <Modified>2022-03-27T09:04:46.578</Modified>
+      <Modified>2022-03-27T10:09:53.543</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\SeleccionNivel.xbf">
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Pausa.xbf">
+      <PackagePath>Pausa.xbf</PackagePath>
+      <Modified>2022-03-27T10:09:53.543</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Reglamento.xbf">
+      <PackagePath>Reglamento.xbf</PackagePath>
+      <Modified>2022-03-27T10:09:53.542</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\SeleccionNivel.xbf">
       <PackagePath>SeleccionNivel.xbf</PackagePath>
-      <Modified>2022-03-27T09:04:46.578</Modified>
+      <Modified>2022-03-27T10:09:53.544</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2020-12-02T01:52:06.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-03-27T09:04:47.067</Modified>
+      <Modified>2022-03-27T10:09:53.913</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Core\ProyectoDSI.exe">
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Core\ProyectoDSI.exe">
       <PackagePath>ProyectoDSI.exe</PackagePath>
-      <Modified>2022-03-27T09:04:48.476</Modified>
+      <Modified>2022-03-27T10:09:54.340</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
