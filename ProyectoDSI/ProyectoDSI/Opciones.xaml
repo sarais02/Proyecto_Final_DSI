@@ -27,7 +27,7 @@
             <Setter Property="Orientation" Value="Horizontal"/>
         </Style>
     </Page.Resources>
-    <Grid Background="#f6a2bf">
+    <Grid Background="#f6a2bf" KeyDown="Grid_KeyDown" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="23*"/>
             <ColumnDefinition Width="54*"/>
@@ -68,13 +68,13 @@
         <Image  Grid.Column="0" Source="Assets/nuve.png"  />
         <Image  Grid.Column="2" Source="Assets/nuve.png"  />
 
-        <Button x:Name="Reglas" Content="Reglas" FontSize="30"
-                Grid.Column="1" Margin="252,700,0,0" VerticalAlignment="Top" 
-                Height="96" Width="179" 
-                Click="Reglas_Click"/>
-        <Button x:Name="Pause" Content="Pausa" FontSize="30"
+        <Button x:Name="Reglas" Content="Reglamento" FontSize="30"
+                Grid.Column="1" VerticalAlignment="Bottom" 
+                Height="96" Width="209" Background="#FFFFA834" CornerRadius="10"
+                Click="Reglas_Click" Margin="252,0,0,199" FontFamily="MV Boli"/>
+        <Button x:Name="Pause" Content="Controles" FontSize="30"
                 Grid.Column="1" Margin="252,848,0,0" VerticalAlignment="Top" 
-                Height="96" Width="179" 
-                Click="Pause_Click"/>
+                Height="96" Width="209" FontFamily="MV Boli" Background="#FFFFA834"
+                 CornerRadius="10" Click="Pause_Click"/>
     </Grid>
 </Page>

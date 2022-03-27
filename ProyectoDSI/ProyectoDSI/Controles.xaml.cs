@@ -21,48 +21,31 @@ namespace ProyectoDSI
     /// <summary>
     /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
-    public sealed partial class Opciones : Page
+    public sealed partial class Controles : Page
     {
-        int indice;
-        public Opciones()
+        public Controles()
         {
             this.InitializeComponent();
         }
-        private void ButtonReglamento_Click(object sender, RoutedEventArgs e)
-        {
 
+        private void volver_Click(object sender, RoutedEventArgs e)
+        {
+            Volver();
         }
 
-        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
         {
-
-        }
-
-        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void Reglas_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(Reglamento));
-        }
-
-        private void Pause_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(Controles));
-        }
-
-        private void Grid_KeyDown(object sender, KeyRoutedEventArgs e) {
-            switch (e.Key){
-                case VirtualKey.Escape: Volver(); break;               
+            switch (e.Key)
+            {
+                case VirtualKey.Escape: Volver(); break;
             }
         }
-        private void Volver(){
-            if (Frame.CanGoBack){
+        private void Volver()
+        {
+            if (Frame.CanGoBack)
+            {
                 Frame.GoBack();
             }
         }
-       
     }
 }

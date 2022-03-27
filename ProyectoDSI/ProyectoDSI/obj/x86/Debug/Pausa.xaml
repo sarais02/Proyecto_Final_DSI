@@ -39,11 +39,19 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBlock Text="Pausa" FontSize="72" Foreground="DeepPink"
-                   VerticalAlignment="Top" 
-                   HorizontalAlignment="Center" 
-                   Margin="0,80,0,0" 
-                   FontStyle="Italic" FontWeight="Bold" FontFamily="Fascinate Inline" Height="86" Width="202" Grid.Column="1"/>
+        <TextBlock VerticalAlignment="Top"
+                   Text="PAUSA" 
+                   HorizontalAlignment="Left"
+                   FontSize="70"
+                   Margin="150,44,0,0"
+                   Foreground="Gold" FontFamily="Bauhaus 93" Height="102" Width="404" Grid.Column="1" />
+        <TextBlock VerticalAlignment="Top"
+                   Text="PAUSA" 
+                   HorizontalAlignment="Left"
+                   FontSize="70"
+                   Margin="154,44,0,0"
+                   Foreground="HotPink" FontFamily="Bauhaus 93" 
+                   Height="102" Width="404" Grid.Column="1"  />
         <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="25" >
             <Button  Style="{StaticResource butonPause}">
                 <SymbolIcon Symbol="Play" Width="200" Height="200" Foreground="#e93578"

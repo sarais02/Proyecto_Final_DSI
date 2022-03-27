@@ -119,6 +119,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controles.xaml.cs">
+      <DependentUpon>Controles.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -146,15 +149,20 @@
     <Content Include="Assets\bastones.png" />
     <Content Include="Assets\bombassandia.png" />
     <Content Include="Assets\cocacolas.png" />
+    <Content Include="Assets\controles1.png" />
+    <Content Include="Assets\controles2.png" />
+    <Content Include="Assets\cursor.png" />
     <Content Include="Assets\dedos.png" />
     <Content Include="Assets\fondomainmenu.png" />
     <Content Include="Assets\fresa.png" />
     <Content Include="Assets\huevos.png" />
+    <Content Include="Assets\mando.png" />
     <Content Include="Assets\nuve.png" />
     <Content Include="Assets\petazetas.png" />
     <Content Include="Assets\piruleta.png" />
     <Content Include="Assets\pirulos.png" />
     <Content Include="Assets\Plano.jpg" />
+    <Content Include="Assets\raya.png" />
     <Content Include="Assets\regaliz.png" />
     <Content Include="Assets\sandias.png" />
     <Content Include="Properties\Default.rd.xml" />
@@ -171,6 +179,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Controles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
