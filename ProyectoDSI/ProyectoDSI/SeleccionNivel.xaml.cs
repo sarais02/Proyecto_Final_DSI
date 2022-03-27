@@ -26,5 +26,25 @@ namespace ProyectoDSI
         {
             this.InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MenuIniciarBatalla.Visibility = Visibility.Visible;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MenuElegitBando.Visibility = Visibility.Visible;
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            // First, check that it's safe to ask the Frame to go backward.
+            if (Frame.CanGoBack)
+            {
+                // If there's a page in the "backstack," we can call GoBack().
+                Frame.GoBack();
+            }
+        }
     }
 }

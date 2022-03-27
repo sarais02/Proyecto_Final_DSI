@@ -67,6 +67,9 @@
     <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\piruleta.png">
       <PackagePath>Assets\piruleta.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\pirulos.png">
+      <PackagePath>Assets\pirulos.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\regaliz.png">
       <PackagePath>Assets\regaliz.png</PackagePath>
     </AppxPackagedFile>

@@ -44,10 +44,10 @@
         <StackPanel VerticalAlignment="Bottom" Spacing="10" 
                     Margin="100,0,0,0" HorizontalAlignment="Left">
             <Image Source="Assets/pirulos.png" Height="150" Width="150"/>
-            <Button Content="Pasillo 1" CornerRadius="20" 
+            <Button x:ConnectionId='6' Content="Pasillo 1" CornerRadius="20" 
                     FontSize="30" FontFamily="MV Boli"
                     FontWeight="Bold"
-                    Click="Button_Click"/>
+                                        />
         </StackPanel>
         <!--NIVEL 2-->
         <StackPanel VerticalAlignment="Bottom" Grid.Column="1" 
@@ -84,7 +84,7 @@
         </StackPanel>
 
 
-        <StackPanel Grid.ColumnSpan="3" Grid.RowSpan="3"
+        <StackPanel x:ConnectionId='2' Grid.ColumnSpan="3" Grid.RowSpan="3"
                     Background="LightPink" Height="400"
                     Width="650" Spacing="15"
                     x:Name="MenuIniciarBatalla" Visibility="Collapsed">
@@ -97,16 +97,16 @@
             
             <StackPanel Orientation="Horizontal" Margin="0,180,0,0"
                         Spacing="15" HorizontalAlignment="Center">
-                <Button Background="HotPink" Content="SI" FontSize="40" 
+                <Button x:ConnectionId='4' Background="HotPink" Content="SI" FontSize="40" 
                         Width="300" Height="80"
-                        CornerRadius="10" Click="Button_Click_1"/>
-                <Button Background="HotPink" Content="NO" FontSize="40" 
-                        Width="300" Height="80" Click="Button_Click_2"
+                        CornerRadius="10"                       />
+                <Button x:ConnectionId='5' Background="HotPink" Content="NO" FontSize="40" 
+                        Width="300" Height="80"                       
                         CornerRadius="10"/>
             </StackPanel>
         </StackPanel>
 
-        <StackPanel Grid.ColumnSpan="3" Grid.RowSpan="3"
+        <StackPanel x:ConnectionId='3' Grid.ColumnSpan="3" Grid.RowSpan="3"
                     Background="LightPink" Height="400"
                     Width="650" Spacing="15"
                     x:Name="MenuElegitBando" Visibility="Collapsed">
@@ -131,3 +131,4 @@
         
     </Grid>
 </Page>
+

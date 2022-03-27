@@ -70,6 +70,7 @@
       <RootProperty Name="Style" />
       <RootProperty Name="Background" />
       <RootProperty Name="CornerRadius" />
+      <RootProperty Name="Visibility" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
@@ -80,9 +81,10 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="Style" />
+      <RootProperty Name="Background" />
       <RootProperty Name="CornerRadius" />
       <RootProperty Name="FontWeight" />
-      <RootProperty Name="Background" />
+      <RootProperty Name="IsEnabled" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="ProyectoDSI.MainPage" />
@@ -135,7 +137,9 @@
       <RootProperty Name="RenderTransformOrigin" />
     </RootType>
     <RootType FullName="ProyectoDSI.Pausa" />
-    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition" />
+    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
+      <RootProperty Name="Height" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Border">
       <RootProperty Name="Background" />
     </RootType>
