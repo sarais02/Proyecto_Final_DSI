@@ -29,38 +29,39 @@
             <ColumnDefinition  Width="*"/>
         </Grid.ColumnDefinitions>
         <!--<Image Source="Assets/raya.png" VerticalAlignment="Top" HorizontalAlignment="Left" Height="582" Width="313" Grid.ColumnSpan="2" Margin="594,240,0,0"/>-->
-        <TextBlock VerticalAlignment="Top"
-                   Text="CONTROLES" 
-                   HorizontalAlignment="Center"
+
+        <Grid VerticalAlignment="Top" HorizontalAlignment="Left"  Width="429" Margin="700,20,0,0" Grid.ColumnSpan="2"  >
+            <TextBlock 
+                   Text="CONTROLES"                   
                    FontSize="70"                 
                    Foreground="Gold" FontFamily="Bauhaus 93" Height="102" Width="404" Grid.ColumnSpan="2" Margin="20" />
-        <TextBlock VerticalAlignment="Top"
-                   Text="CONTROLES" 
-                   HorizontalAlignment="Left"
-                   FontSize="70"
-                   Margin="750,20,0,0"
-                   Foreground="HotPink" FontFamily="Bauhaus 93" 
-                   Height="102" Width="404" Grid.ColumnSpan="2"  />
+            <TextBlock 
+                Text="CONTROLES"               
+                FontSize="70"
+                Foreground="HotPink" FontFamily="Bauhaus 93" 
+                Height="102" Width="404"   />
+        </Grid>
         <StackPanel Orientation="Horizontal" Spacing="20" Margin="20">
-            <Image Source="Assets/controles1.png"
+            <StackPanel VerticalAlignment="Center" Height="562" Spacing="50">
+                <Image Source="Assets/controles1.png"
                    Height="400" Width="300"/>
-            <StackPanel VerticalAlignment="Bottom" Spacing="20" >
+                <Image Source="Assets/cursor.png" Width="80" VerticalAlignment="Bottom" Height="77"/>
+            </StackPanel>
+            <StackPanel Spacing="20" Height="530" >
                 <TextBlock Text="-Seleccionar Direccion" Style="{StaticResource controles}"/>
                 <TextBlock Text="-Mover Al Personaje" Style="{StaticResource controles}"/>
-                <TextBlock Text="-Menu Pausa" Style="{StaticResource controles}" Margin="0,156,206,0" Width="225"/>
-                <TextBlock Text="-Sleccionar" Style="{StaticResource controles}" Margin="0,100,206,147"/>
+                <TextBlock Text="-Menu Pausa" Style="{StaticResource controles}" 
+                          HorizontalAlignment="Left" Margin="0,156,0,0" />
+                <TextBlock Text="-Sleccionar" Style="{StaticResource controles}" Margin="0,90,0,0"/>
             </StackPanel>
 
-            <TextBlock Text="-Sleccionar" Style="{StaticResource controles}" Margin="336,801,206,147"/>
-
         </StackPanel>
-        <Image Source="Assets/cursor.png" Width="80" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="132,755,0,0" Height="77"/>
-        <Image Source="Assets/mando.png" Grid.Column="1" Margin="117,102,117,99" />
-        <Image Source="Assets/controles2.png" Grid.Column="1" Margin="93,80,49,99" />
+        <Grid Grid.Column="1">
+            <Image Source="Assets/mando.png"  Margin="117,102,117,99" />
+            <Image Source="Assets/controles2.png" Margin="66,0,37,2" />
+        </Grid>
         <Button x:Name="volver" VerticalAlignment="Bottom" Content="Volver" FontFamily="MV Boli" FontSize="32" 
                 Background="#FFFFA834" CornerRadius="10" Grid.ColumnSpan="2" HorizontalAlignment="Center" 
                 Width="200" Height="59" Click="volver_Click" Margin="30"/>
-
-
     </Grid>
 </Page>

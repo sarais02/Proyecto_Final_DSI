@@ -63,6 +63,9 @@ namespace ProyectoDSI
                 Frame.GoBack();
             }
         }
-       
+
+        private void VolverButton_Click(object sender, RoutedEventArgs e){
+            Volver();
+        }
     }
 }

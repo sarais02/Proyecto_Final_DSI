@@ -33,11 +33,19 @@
             <ColumnDefinition Width="54*"/>
             <ColumnDefinition Width="23*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Text="Opciones" FontSize="72" 
-                   VerticalAlignment="Top" 
-                   HorizontalAlignment="Center" 
-                   Margin="0,80,0,0" 
-                   FontStyle="Italic" FontWeight="Bold" FontFamily="Fascinate Inline" Height="86" Width="307" Grid.Column="1"/>
+        <Grid Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="-10,50,0,0">
+            <TextBlock 
+                VerticalAlignment="Center"
+                   Text="OPCIONES"                  
+                   FontSize="70"
+                   Margin="150,44,0,0"
+                   Foreground="Gold" FontFamily="Bauhaus 93" Height="102" Width="404" Grid.Column="1" />
+            <TextBlock 
+                Text="OPCIONES"                 
+                FontSize="70"
+                Foreground="HotPink" FontFamily="Bauhaus 93" 
+                Height="102" Width="404" Margin="146,44,4,0"  />
+        </Grid>
         <StackPanel VerticalAlignment="Center" 
                     HorizontalAlignment="Center"
                     Spacing="50" Height="400" Width="700" Grid.Column="1" >
@@ -67,14 +75,20 @@
         </StackPanel>
         <Image  Grid.Column="0" Source="Assets/nuve.png"  />
         <Image  Grid.Column="2" Source="Assets/nuve.png"  />
+        <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="0,500,0,0" HorizontalAlignment="Center" Spacing="40" >
 
-        <Button x:Name="Reglas" Content="Reglamento" FontSize="30"
-                Grid.Column="1" VerticalAlignment="Bottom" 
+            <Button x:Name="Reglas" Content="Reglamento" FontSize="30" VerticalAlignment="Center"
                 Height="96" Width="209" Background="#FFFFA834" CornerRadius="10"
-                Click="Reglas_Click" Margin="252,0,0,199" FontFamily="MV Boli"/>
-        <Button x:Name="Pause" Content="Controles" FontSize="30"
-                Grid.Column="1" Margin="252,848,0,0" VerticalAlignment="Top" 
+                Click="Reglas_Click" FontFamily="MV Boli"/>
+            <Button x:Name="Pause" Content="Controles" FontSize="30"   VerticalAlignment="Center"               
                 Height="96" Width="209" FontFamily="MV Boli" Background="#FFFFA834"
                  CornerRadius="10" Click="Pause_Click"/>
+            
+        </StackPanel>
+        <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="0,800,0,0" Spacing="40" HorizontalAlignment="Center" >
+            <Button x:Name="VolverButton" Content="Volver" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center"
+                Height="96" Width="209" Background="#FFFFA834" CornerRadius="10" Click="VolverButton_Click"
+                FontFamily="MV Boli"/>
+        </StackPanel>
     </Grid>
 </Page>
