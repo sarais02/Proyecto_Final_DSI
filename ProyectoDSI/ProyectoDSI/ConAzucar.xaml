@@ -21,6 +21,33 @@
                 FontFamily="MV Boli" CornerRadius="10" BorderThickness="4"
                 BorderBrush="White" Width="120"/>
 
-        <Image Source="Assets/Tablero.png" Grid.Column="1" Margin="20"/>
+        <Grid Grid.Column="1" Margin="70,20,70,20">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image Source="Assets/Tablero.png" Stretch="Fill" Grid.RowSpan="10"
+                   Grid.ColumnSpan="10"/>
+        </Grid>
     </Grid>
 </Page>
