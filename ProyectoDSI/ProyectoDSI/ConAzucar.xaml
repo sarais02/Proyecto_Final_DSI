@@ -14,18 +14,29 @@
             <ColumnDefinition Width="1098*"/>
             <ColumnDefinition Width="203*"/>
         </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="179*"/>
+        </Grid.RowDefinitions>
 
         <TextBlock HorizontalAlignment="Right" Text="Mueve tu Ficha" TextWrapping="Wrap"
-                   FontSize="30" Margin="0,150,0,0" TextAlignment="Center"
-                   Foreground="Cyan" FontFamily="MV Boli" FontWeight="Bold"/>
+                   FontSize="30" Margin="0,20,0,0" TextAlignment="Center"
+                   Foreground="Cyan" FontFamily="MV Boli" FontWeight="Bold" 
+                   Grid.Row="1" Width="140"/>
 
         <Button x:Name="PauseButton" Click="PauseButton_Click"
                 Content="Pausa" Background="LightPink" Foreground="Black"
-                VerticalAlignment="Top" Margin="20" FontSize="25"
+                VerticalAlignment="Top" Margin="20,20,0,0" FontSize="25"
                 FontFamily="MV Boli" CornerRadius="10" BorderThickness="4"
-                BorderBrush="White" Width="120"/>
+                BorderBrush="White" Width="120" Height="58"/>
 
-        <Grid Grid.Column="1" Margin="70,20,70,20">
+        <Border BorderThickness="10" BorderBrush="#FF4B0404" Background="Transparent"
+                VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="2"
+                CornerRadius="10" Grid.Row="2" Margin="0,10,0,0">
+            <TextBlock x:Name="CountDown" Text="00:00" FontSize="45" Foreground="White" />
+        </Border>
+
+        <Grid Grid.Column="1" Grid.RowSpan="2" Margin="79,20,70,20">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -53,12 +64,17 @@
             <Image Source="Assets/Tablero.png" Stretch="Fill" Grid.RowSpan="10"
                    Grid.ColumnSpan="10"/>
         </Grid>
+        
+        <!--Barra de progreso-->
+        <!--Meterlo todo en un viewbox-->
         <StackPanel VerticalAlignment="Top" Grid.Column="1" Orientation="Horizontal" 
-                    HorizontalAlignment="Center" Margin="0,5,0,0">
-            <Image Source="Assets/extremoIz.png" Height="65" Stretch="Fill"></Image>
-            <ProgressBar Value="50" Height="45" 
-                         Background="White" Width="900"/>
-            <Image Source="Assets/extremoDr.png" Height="65" Stretch="Fill"></Image>
+                    HorizontalAlignment="Stretch" Margin="0,5,0,0" Height="65" Width="985">
+            <Image Source="Assets/extremoIz.png" Height="65"></Image>
+            <ProgressBar Value="80" Height="45" 
+                         Background="White" Width="800"/>
+            <Image Source="Assets/extremoDr.png" Height="65"></Image>
         </StackPanel>
+        
+        
     </Grid>
 </Page>

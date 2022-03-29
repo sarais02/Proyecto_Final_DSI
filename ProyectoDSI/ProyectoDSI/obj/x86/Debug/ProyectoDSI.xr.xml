@@ -12,24 +12,27 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Background" />
       <RootProperty Name="ColumnDefinitions" />
+      <RootProperty Name="RowDefinitions" />
       <RootProperty Name="Children" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="RowDefinitions" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Width" />
       <RootEvent Name="KeyDown" />
+      <RootMethod Name="GetRow" />
+      <RootMethod Name="SetRow" />
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
       <RootMethod Name="GetRowSpan" />
       <RootMethod Name="SetRowSpan" />
       <RootMethod Name="GetColumnSpan" />
       <RootMethod Name="SetColumnSpan" />
-      <RootMethod Name="GetRow" />
-      <RootMethod Name="SetRow" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
       <RootProperty Name="Width" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
+      <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="HorizontalAlignment" />
@@ -41,9 +44,9 @@
       <RootProperty Name="Foreground" />
       <RootProperty Name="FontFamily" />
       <RootProperty Name="FontWeight" />
+      <RootProperty Name="Width" />
       <RootProperty Name="Style" />
       <RootProperty Name="Height" />
-      <RootProperty Name="Width" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Visibility" />
       <RootEvent Name="SelectionChanged" />
@@ -60,22 +63,32 @@
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="Width" />
-      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Style" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="IsEnabled" />
       <RootEvent Name="Click" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Border">
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="CornerRadius" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Child" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Orientation" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="Children" />
-      <RootProperty Name="Spacing" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
+      <RootProperty Name="Children" />
+      <RootProperty Name="Spacing" />
       <RootProperty Name="Style" />
       <RootProperty Name="Background" />
       <RootProperty Name="CornerRadius" />
@@ -98,9 +111,6 @@
       <RootProperty Name="Height" />
       <RootProperty Name="Background" />
       <RootProperty Name="Width" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
-      <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="ProyectoDSI.ConAzucar" />
     <RootType FullName="Windows.UI.Xaml.ResourceDictionary">
@@ -157,9 +167,6 @@
       <RootProperty Name="AllowDrop" />
     </RootType>
     <RootType FullName="ProyectoDSI.Pausa" />
-    <RootType FullName="Windows.UI.Xaml.Controls.Border">
-      <RootProperty Name="Background" />
-    </RootType>
     <RootType FullName="ProyectoDSI.Reglamento" />
     <RootType FullName="ProyectoDSI.SeleccionNivel" />
     <RootType FullName="ProyectoDSI.SinAzucar" />
