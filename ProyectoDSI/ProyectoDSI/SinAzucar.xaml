@@ -302,6 +302,18 @@
                          Background="White" Width="900"/>
             <Image Source="Assets/extremoDr.png" Height="65" Stretch="Fill"></Image>
         </StackPanel>
-
+        <StackPanel Grid.Row="1" Margin="30,150,70,0">
+            <ListView ItemsSource="{x:Bind listPanelFichas}" Background="Gold" 
+                      CornerRadius="15" Width="130">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="local:PanelFicha" >
+                        <StackPanel Orientation="Horizontal" Spacing=" 15">
+                            <Image  Source="{x:Bind ficha_.img_.Source}" Height="60" />
+                            <TextBlock Text="{x:Bind num_}" FontSize="48"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
     </Grid>
 </Page>

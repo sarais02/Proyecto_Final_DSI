@@ -1,4 +1,4 @@
-﻿<Page
+﻿<Page x:ConnectionId='1'
     x:Class="ProyectoDSI.SinAzucar"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -42,7 +42,7 @@
         <Border BorderThickness="10" BorderBrush="#FF040E52" Background="Transparent"
                 VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="2"
                 CornerRadius="10" Grid.Row="1" Margin="0,10,0,0" Height="80" Width="127">
-            <TextBlock x:ConnectionId='4' x:Name="CountDown" Text="00:00" FontSize="45" Foreground="White" />
+            <TextBlock x:ConnectionId='9' x:Name="CountDown" Text="00:00" FontSize="45" Foreground="White" />
         </Border>
 
 
@@ -302,7 +302,19 @@
                          Background="White" Width="900"/>
             <Image Source="Assets/extremoDr.png" Height="65" Stretch="Fill"></Image>
         </StackPanel>
-
+        <StackPanel Grid.Row="1" Margin="30,150,70,0">
+            <ListView x:ConnectionId='4'                                        Background="Gold" 
+                      CornerRadius="15" Width="130">
+                <ListView.ItemTemplate>
+                    <DataTemplate                               >
+                        <StackPanel x:ConnectionId='6' Orientation="Horizontal" Spacing=" 15">
+                            <Image x:ConnectionId='7'                                       Height="60" />
+                            <TextBlock x:ConnectionId='8'                      FontSize="48"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
     </Grid>
 </Page>
 

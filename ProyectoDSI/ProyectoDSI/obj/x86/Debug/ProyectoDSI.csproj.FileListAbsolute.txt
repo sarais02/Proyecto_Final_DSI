@@ -120,10 +120,6 @@ C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\Proye
 C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424779200000000.json
 D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\App.xbf
 D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\MainPage.xbf
-D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Opciones.xbf
-D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Pausa.xbf
-D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Reglamento.xbf
-D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\SeleccionNivel.xbf
 D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\ProyectoDSI.xr.xml
 D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\ProyectoDSI.exe
 D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\ProyectoDSI.pdb
@@ -139,27 +135,11 @@ D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\App.g.i.cs
 D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\App.g.cs
 D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\MainPage.g.i.cs
 D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\MainPage.g.cs
-D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Opciones.g.i.cs
-D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Opciones.g.cs
-D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Pausa.g.i.cs
-D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Pausa.g.cs
-D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Reglamento.g.i.cs
-D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Reglamento.g.cs
-D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\SeleccionNivel.g.i.cs
-D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\SeleccionNivel.g.cs
 D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\XamlTypeInfo.g.cs
 D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\App.xaml
 D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\MainPage.xaml
-D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Opciones.xaml
-D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Pausa.xaml
-D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Reglamento.xaml
-D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\SeleccionNivel.xaml
 D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\App.xbf
 D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\MainPage.xbf
-D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Opciones.xbf
-D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Pausa.xbf
-D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Reglamento.xbf
-D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\SeleccionNivel.xbf
 D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\XamlSaveStateFile.xml
 D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\ProyectoDSI.csproj.CoreCompileInputs.cache
 D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\ProyectoDSI.csproj.CopyComplete
@@ -183,11 +163,6 @@ D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\qualifiers.txt.inter
 D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\ProjectArchitectures.txt
 D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424779200000000.json
-D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Controles.xbf
-D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Controles.g.i.cs
-D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Controles.g.cs
-D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Controles.xaml
-D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Controles.xbf
 C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\ConAzucar.g.i.cs
 C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\ConAzucar.g.cs
 C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Controles.g.i.cs
@@ -293,3 +268,28 @@ C:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Menus\Opciones.xbf
 C:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Menus\Pausa.xbf
 C:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Menus\Reglamento.xbf
 C:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Menus\SeleccionNivel.xbf
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Menus\Controles.g.i.cs
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Menus\Controles.g.cs
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Menus\Opciones.g.i.cs
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Menus\Opciones.g.cs
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Menus\Pausa.g.i.cs
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Menus\Pausa.g.cs
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Menus\Reglamento.g.i.cs
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Menus\Reglamento.g.cs
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Menus\SeleccionNivel.g.i.cs
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Menus\SeleccionNivel.g.cs
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Menus\Controles.xaml
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Menus\Opciones.xaml
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Menus\Pausa.xaml
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Menus\SeleccionNivel.xaml
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Menus\Reglamento.xaml
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Menus\Controles.xbf
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Menus\Opciones.xbf
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Menus\Pausa.xbf
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Menus\SeleccionNivel.xbf
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\Menus\Reglamento.xbf
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Menus\Controles.xbf
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Menus\Opciones.xbf
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Menus\Pausa.xbf
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Menus\Reglamento.xbf
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Menus\SeleccionNivel.xbf

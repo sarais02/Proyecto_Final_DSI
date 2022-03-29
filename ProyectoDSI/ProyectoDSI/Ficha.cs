@@ -34,42 +34,52 @@ namespace ProyectoDSI
             //info
             switch (tipo)
             {
-                case "fresas":
-                    info_ ="";
+                case "Fresa":
+                    info_ = "La chuche más popular y preciada, todo el mundo la quiere";
                     break;
 
-                case "cocacolas":
+                case "Cocacola":
                     info_ = "Va absolutamente loca puede moverse mucho y " +
                         "muy rápido en un corto periodo de tiempo.Sin embargo " +
                         "es muy débil porque no está muy fuerte";
                     break;
 
-                case "dedos":
+                case "Dedo":
                     info_ = "Tiene ciertos parecidos con los humanos," +
                         " muchas chuches se asustan al verlos aparecer y " +
-                        "más si se agrupan de 5 en 5.";
+                        "más si se agrupan de 5 en 5";
                     break;
 
-                case "petazetas":
+                case "Petazeta":
+                    info_ = "Muy buenos es su trabajo, explotan y arrasan todo a su paso, dicen que algunos han dejado tuertos a humanos";
                     break;
 
-                case "sandias":
+                case "Sandia":
+                    info_ = "Arma de doble filo, si ataca por la punta podrá causar mucho daño,en cambio si lo hace por la parte de la cáscara será fácil acabar con ella";
                     break;
 
-                case "bastones":
+                case "Baston":
+                    info_ = "Está afilado y puede atravesar a casi todas las cuches, acabando con ellas brutalmente";
                     break;
 
-                case "bombassandia":
+                case "BombaSandia":
+                    info_ = " Destruye todo a su paso , en cuanto detecta a algún enemigo en su área de explosion , no deja nada a su paso";
                     break;
 
-                case "regalices":
+                case "Huevo":
+                    info_ = "Tiene su punto débil expuesto, la yema, pero para poder acabar con él deberás cogerlo primero y gracias a su disposición de la clara puede arrastrarse muy rápido";
                     break;
+
+                case "Regaliz":
+                    info_ = "Es flexible y largo, puede envolver a todas las chuches y asfixiarlas";
+                    break;
+
             }
             //imagen
             img_ = new Image();
-            dirImg_ = "Assets\\" + tipo;
-            string s = System.IO.Directory.GetCurrentDirectory() + "\\" + dirImg_;
-            img_.Source = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri(s));
+            dirImg_ = "ms-appx:///Assets/" + tipo+".png";
+            //string s = System.IO.Directory.GetCurrentDirectory() + "\\" + dirImg_;           
+            img_.Source = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri(dirImg_));
             //contentcontrol
             ccImg_ = new ContentControl();
             ccImg_.Content = img_;

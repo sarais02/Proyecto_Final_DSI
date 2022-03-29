@@ -99,15 +99,15 @@
                            HorizontalAlignment="Center" FontSize="30"
                            Grid.Column="3" Height="40" Width="240"/>
 
-            <Image Source="../Assets/regaliz.png" Grid.Row="1"/>
-            <Image Source="../Assets/bastones.png" Grid.Row="2"/>
-            <Image Source="../Assets/dedos.png" Grid.Row="3"/>
-            <Image Source="../Assets/huevos.png" Grid.Row="4"/>
-            <Image Source="../Assets/sandias.png" Grid.Row="5"/>
-            <Image Source="../Assets/cocacolas.png" Grid.Row="6"/>
-            <Image Source="../Assets/bombassandia.png" Grid.Row="7"/>
-            <Image Source="../Assets/petazetas.png" Grid.Row="8"/>
-            <Image Source="../Assets/fresa.png" Grid.Row="9"/>
+            <Image Source="../Assets/Regaliz.png" Grid.Row="1"/>
+            <Image Source="../Assets/Baston.png" Grid.Row="2"/>
+            <Image Source="../Assets/Dedo.png" Grid.Row="3"/>
+            <Image Source="../Assets/Huevo.png" Grid.Row="4"/>
+            <Image Source="../Assets/Sandia.png" Grid.Row="5"/>
+            <Image Source="../Assets/Cocacola.png" Grid.Row="6"/>
+            <Image Source="../Assets/BombaSandia.png" Grid.Row="7"/>
+            <Image Source="../Assets/Petazeta.png" Grid.Row="8"/>
+            <Image Source="../Assets/Fresa.png" Grid.Row="9"/>
 
             <TextBlock Text="7" Style="{StaticResource TextStyle}" Grid.Column="1" Grid.Row="1"/>
             <TextBlock Text="6" Style="{StaticResource TextStyle}" Grid.Column="1" Grid.Row="2"/>
