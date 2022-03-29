@@ -17,11 +17,11 @@
 
 
 
-    <Grid Background="RoyalBlue">
+    <Grid Background="RoyalBlue" KeyDown="Grid_KeyDown">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="198*"/>
-            <ColumnDefinition Width="1098*"/>
-            <ColumnDefinition Width="203*"/>
+            <ColumnDefinition Width="282*"/>
+            <ColumnDefinition Width="1047*"/>
+            <ColumnDefinition Width="170*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="21*"/>
@@ -29,7 +29,7 @@
         </Grid.RowDefinitions>
 
         <TextBlock HorizontalAlignment="Right" Text="Mueve tu Ficha" TextWrapping="Wrap"
-                   FontSize="30" Margin="0,20,0,0" TextAlignment="Center"
+                   FontSize="30" Margin="0,20,21,0" TextAlignment="Center"
                    Foreground="Cyan" FontFamily="MV Boli" FontWeight="Bold" 
                    Grid.Row="1" Width="140"/>
 
@@ -41,12 +41,12 @@
 
         <Border BorderThickness="10" BorderBrush="#FF040E52" Background="Transparent"
                 VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="2"
-                CornerRadius="10" Grid.Row="2" Margin="0,10,0,0">
+                CornerRadius="10" Grid.Row="1" Margin="0,10,0,0" Height="80" Width="127">
             <TextBlock x:Name="CountDown" Text="00:00" FontSize="45" Foreground="White" />
         </Border>
 
 
-        <Grid Grid.Column="1" Grid.RowSpan="2" Margin="70,20,70,20">
+        <Grid Grid.Column="1" Grid.Row="2" Margin="76,20,70,20">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -296,7 +296,7 @@
         </Grid>
 
         <StackPanel VerticalAlignment="Top" Grid.Column="1" Orientation="Horizontal" 
-                    HorizontalAlignment="Center" Margin="5,5,5,5">
+                    HorizontalAlignment="Center" Margin="0,20,0,0" Height="65" Width="985">
             <Image Source="Assets/extremoIz.png" Height="65" Stretch="Fill"></Image>
             <ProgressBar Value="50" Height="45" 
                          Background="White" Width="900"/>

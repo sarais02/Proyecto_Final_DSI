@@ -12,7 +12,7 @@ namespace ProyectoDSI
 
         public int id_; //todas las fichas estaran en una lista y este sera su indicide en ekl que se encuentra en dicha lista
         public string tipo_;
-
+        public string info_;
         //imagen
         public string dirImg_;
         public Image img_;
@@ -31,6 +31,40 @@ namespace ProyectoDSI
             Y_ = posY;
             Angulo_ = 0;
             Transformation_ = new CompositeTransform();
+            //info
+            switch (tipo)
+            {
+                case "fresas":
+                    info_ ="";
+                    break;
+
+                case "cocacolas":
+                    info_ = "Va absolutamente loca puede moverse mucho y " +
+                        "muy rápido en un corto periodo de tiempo.Sin embargo " +
+                        "es muy débil porque no está muy fuerte";
+                    break;
+
+                case "dedos":
+                    info_ = "Tiene ciertos parecidos con los humanos," +
+                        " muchas chuches se asustan al verlos aparecer y " +
+                        "más si se agrupan de 5 en 5.";
+                    break;
+
+                case "petazetas":
+                    break;
+
+                case "sandias":
+                    break;
+
+                case "bastones":
+                    break;
+
+                case "bombassandia":
+                    break;
+
+                case "regalices":
+                    break;
+            }
             //imagen
             img_ = new Image();
             dirImg_ = "Assets\\" + tipo;

@@ -2,6 +2,8 @@ WinMetadata\Windows.winmd
 Assets\back.png
 Assets\bastones.png
 Assets\bombassandia.png
+Assets\botoncontroles.png
+Assets\botonReglamento.png
 Assets\cocacolas.png
 Assets\controles1.png
 Assets\controles2.png
@@ -31,12 +33,12 @@ Assets\Tablero.png
 Assets\Wide310x150Logo.scale-200.png
 App.xbf
 ConAzucar.xbf
-Controles.xbf
 MainPage.xbf
-Opciones.xbf
-Pausa.xbf
+Menus\Controles.xbf
+Menus\Opciones.xbf
+Menus\Pausa.xbf
+Menus\Reglamento.xbf
+Menus\SeleccionNivel.xbf
 ProyectoDSI.xr.xml
-Reglamento.xbf
-SeleccionNivel.xbf
 SinAzucar.xbf
 Properties\Default.rd.xml

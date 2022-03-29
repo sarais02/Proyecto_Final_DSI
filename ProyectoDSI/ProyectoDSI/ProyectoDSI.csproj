@@ -123,23 +123,23 @@
     <Compile Include="ConAzucar.xaml.cs">
       <DependentUpon>ConAzucar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controles.xaml.cs">
+    <Compile Include="Menus\Controles.xaml.cs">
       <DependentUpon>Controles.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Opciones.xaml.cs">
+    <Compile Include="Menus\Opciones.xaml.cs">
       <DependentUpon>Opciones.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pausa.xaml.cs">
+    <Compile Include="Menus\Pausa.xaml.cs">
       <DependentUpon>Pausa.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reglamento.xaml.cs">
+    <Compile Include="Menus\Reglamento.xaml.cs">
       <DependentUpon>Reglamento.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SeleccionNivel.xaml.cs">
+    <Compile Include="Menus\SeleccionNivel.xaml.cs">
       <DependentUpon>SeleccionNivel.xaml</DependentUpon>
     </Compile>
     <Compile Include="SinAzucar.xaml.cs">
@@ -155,6 +155,8 @@
     <Content Include="Assets\back.png" />
     <Content Include="Assets\bastones.png" />
     <Content Include="Assets\bombassandia.png" />
+    <Content Include="Assets\botoncontroles.png" />
+    <Content Include="Assets\botonReglamento.png" />
     <Content Include="Assets\cocacolas.png" />
     <Content Include="Assets\controles1.png" />
     <Content Include="Assets\controles2.png" />
@@ -193,7 +195,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controles.xaml">
+    <Page Include="Menus\Controles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -201,19 +203,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Opciones.xaml">
+    <Page Include="Menus\Opciones.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pausa.xaml">
+    <Page Include="Menus\Pausa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Reglamento.xaml">
+    <Page Include="Menus\Reglamento.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SeleccionNivel.xaml">
+    <Page Include="Menus\SeleccionNivel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
