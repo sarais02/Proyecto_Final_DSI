@@ -28,7 +28,7 @@
                    FontSize="30" Margin="0,150,0,0" TextAlignment="Center"
                    Foreground="Cyan" FontFamily="MV Boli" FontWeight="Bold"/>
         
-        <Button x:Name="PauseButton" Click="PauseButton_Click"
+        <Button x:ConnectionId='2' x:Name="PauseButton"                          
                 Content="Pausa" Background="LightPink" Foreground="Black"
                 VerticalAlignment="Top" Margin="20" FontSize="25"
                 FontFamily="MV Boli" CornerRadius="10" BorderThickness="4"
@@ -294,3 +294,4 @@
 
     </Grid>
 </Page>
+

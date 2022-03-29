@@ -15,6 +15,10 @@
             <ColumnDefinition Width="203*"/>
         </Grid.ColumnDefinitions>
 
+        <TextBlock HorizontalAlignment="Right" Text="Mueve tu Ficha" TextWrapping="Wrap"
+                   FontSize="30" Margin="0,150,0,0" TextAlignment="Center"
+                   Foreground="Cyan" FontFamily="MV Boli" FontWeight="Bold"/>
+
         <Button x:ConnectionId='2' x:Name="PauseButton"                          
                 Content="Pausa" Background="LightPink" Foreground="Black"
                 VerticalAlignment="Top" Margin="20" FontSize="25"
@@ -49,6 +53,13 @@
             <Image Source="Assets/Tablero.png" Stretch="Fill" Grid.RowSpan="10"
                    Grid.ColumnSpan="10"/>
         </Grid>
+        <StackPanel VerticalAlignment="Top" Grid.Column="1" Orientation="Horizontal" 
+                    HorizontalAlignment="Center" Margin="0,5,0,0">
+            <Image Source="Assets/extremoIz.png" Height="65" Stretch="Fill"></Image>
+            <ProgressBar Value="50" Height="45" 
+                         Background="White" Width="900"/>
+            <Image Source="Assets/extremoDr.png" Height="65" Stretch="Fill"></Image>
+        </StackPanel>
     </Grid>
 </Page>
 
