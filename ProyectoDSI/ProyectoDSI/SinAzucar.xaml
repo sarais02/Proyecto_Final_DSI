@@ -7,7 +7,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    <Page.Resources>
+        <Style TargetType="Image">
+            <Setter Property="AllowDrop" Value="True"/>
+            <Setter Property="Stretch" Value="Fill"/>
+        </Style>
+    </Page.Resources>
+    
     <Grid Background="RoyalBlue">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="198*"/>
@@ -48,7 +54,227 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Image Source="Assets/Tablero.png" Stretch="Fill" Grid.RowSpan="10"
-                   Grid.ColumnSpan="10"/>
+                   Grid.ColumnSpan="10" />
+           
+            <!--Fila 0-->
+            <Image Stretch="Fill" Grid.Row="0"
+                   Grid.Column="0"/>
+            <Image Stretch="Fill" Grid.Row="0"
+                   Grid.Column="1"/>
+            <Image Stretch="Fill" Grid.Row="0"
+                   Grid.Column="2"/>
+            <Image Stretch="Fill" Grid.Row="0"
+                   Grid.Column="3"/>
+            <Image Stretch="Fill" Grid.Row="0"
+                   Grid.Column="4"/>
+            <Image Stretch="Fill" Grid.Row="0"
+                   Grid.Column="5"/>
+            <Image Stretch="Fill" Grid.Row="0"
+                   Grid.Column="6"/>
+            <Image Stretch="Fill" Grid.Row="0"
+                   Grid.Column="7"/>
+            <Image Stretch="Fill" Grid.Row="0"
+                   Grid.Column="8"/>
+            <Image Stretch="Fill" Grid.Row="0"
+                   Grid.Column="9"/>
+
+            <!--Fila 1-->
+            <Image Stretch="Fill" Grid.Row="1"
+                   Grid.Column="0"/>
+            <Image Stretch="Fill" Grid.Row="1"
+                   Grid.Column="1"/>
+            <Image Stretch="Fill" Grid.Row="1"
+                   Grid.Column="2"/>
+            <Image Stretch="Fill" Grid.Row="1"
+                   Grid.Column="3"/>
+            <Image Stretch="Fill" Grid.Row="1"
+                   Grid.Column="4"/>
+            <Image Stretch="Fill" Grid.Row="1"
+                   Grid.Column="5"/>
+            <Image Stretch="Fill" Grid.Row="1"
+                   Grid.Column="6"/>
+            <Image Stretch="Fill" Grid.Row="1"
+                   Grid.Column="7"/>
+            <Image Stretch="Fill" Grid.Row="1"
+                   Grid.Column="8"/>
+            <Image Stretch="Fill" Grid.Row="1"
+                   Grid.Column="9"/>
+
+            <!--Fila 2-->
+            <Image Stretch="Fill" Grid.Row="2"
+                   Grid.Column="0"/>
+            <Image Stretch="Fill" Grid.Row="2"
+                   Grid.Column="1"/>
+            <Image Stretch="Fill" Grid.Row="2"
+                   Grid.Column="2"/>
+            <Image Stretch="Fill" Grid.Row="2"
+                   Grid.Column="3"/>
+            <Image Stretch="Fill" Grid.Row="2"
+                   Grid.Column="4"/>
+            <Image Stretch="Fill" Grid.Row="2"
+                   Grid.Column="5"/>
+            <Image Stretch="Fill" Grid.Row="2"
+                   Grid.Column="6"/>
+            <Image Stretch="Fill" Grid.Row="2"
+                   Grid.Column="7"/>
+            <Image Stretch="Fill" Grid.Row="2"
+                   Grid.Column="8"/>
+            <Image Stretch="Fill" Grid.Row="2"
+                   Grid.Column="9"/>
+
+            <!--Fila 3-->
+            <Image Stretch="Fill" Grid.Row="3"
+                   Grid.Column="0"/>
+            <Image Stretch="Fill" Grid.Row="3"
+                   Grid.Column="1"/>
+            <Image Stretch="Fill" Grid.Row="3"
+                   Grid.Column="2"/>
+            <Image Stretch="Fill" Grid.Row="3"
+                   Grid.Column="3"/>
+            <Image Stretch="Fill" Grid.Row="3"
+                   Grid.Column="4"/>
+            <Image Stretch="Fill" Grid.Row="3"
+                   Grid.Column="5"/>
+            <Image Stretch="Fill" Grid.Row="3"
+                   Grid.Column="6"/>
+            <Image Stretch="Fill" Grid.Row="3"
+                   Grid.Column="7"/>
+            <Image Stretch="Fill" Grid.Row="3"
+                   Grid.Column="8"/>
+            <Image Stretch="Fill" Grid.Row="3"
+                   Grid.Column="9"/>
+
+            <!--Fila 4-->
+            <Image Stretch="Fill" Grid.Row="4"
+                   Grid.Column="0"/>
+            <Image Stretch="Fill" Grid.Row="4"
+                   Grid.Column="1"/>
+            <Image Stretch="Fill" Grid.Row="4"
+                   Grid.Column="2"/>
+            <Image Stretch="Fill" Grid.Row="4"
+                   Grid.Column="3"/>
+            <Image Stretch="Fill" Grid.Row="4"
+                   Grid.Column="4"/>
+            <Image Stretch="Fill" Grid.Row="4"
+                   Grid.Column="5"/>
+            <Image Stretch="Fill" Grid.Row="4"
+                   Grid.Column="6"/>
+            <Image Stretch="Fill" Grid.Row="4"
+                   Grid.Column="7"/>
+            <Image Stretch="Fill" Grid.Row="4"
+                   Grid.Column="8"/>
+            <Image Stretch="Fill" Grid.Row="4"
+                   Grid.Column="9"/>
+
+            <!--Fila 5-->
+            <Image Stretch="Fill" Grid.Row="5"
+                   Grid.Column="0"/>
+            <Image Stretch="Fill" Grid.Row="5"
+                   Grid.Column="1"/>
+            <Image Stretch="Fill" Grid.Row="5"
+                   Grid.Column="2"/>
+            <Image Stretch="Fill" Grid.Row="5"
+                   Grid.Column="3"/>
+            <Image Stretch="Fill" Grid.Row="5"
+                   Grid.Column="4"/>
+            <Image Stretch="Fill" Grid.Row="5"
+                   Grid.Column="5"/>
+            <Image Stretch="Fill" Grid.Row="5"
+                   Grid.Column="6"/>
+            <Image Stretch="Fill" Grid.Row="5"
+                   Grid.Column="7"/>
+            <Image Stretch="Fill" Grid.Row="5"
+                   Grid.Column="8"/>
+            <Image Stretch="Fill" Grid.Row="5"
+                   Grid.Column="9"/>
+
+            <!--Fila 6-->
+            <Image Stretch="Fill" Grid.Row="6"
+                   Grid.Column="0"/>
+            <Image Stretch="Fill" Grid.Row="6"
+                   Grid.Column="1"/>
+            <Image Stretch="Fill" Grid.Row="6"
+                   Grid.Column="2"/>
+            <Image Stretch="Fill" Grid.Row="6"
+                   Grid.Column="3"/>
+            <Image Stretch="Fill" Grid.Row="6"
+                   Grid.Column="4"/>
+            <Image Stretch="Fill" Grid.Row="6"
+                   Grid.Column="5"/>
+            <Image Stretch="Fill" Grid.Row="6"
+                   Grid.Column="6"/>
+            <Image Stretch="Fill" Grid.Row="6"
+                   Grid.Column="7"/>
+            <Image Stretch="Fill" Grid.Row="6"
+                   Grid.Column="8"/>
+            <Image Stretch="Fill" Grid.Row="6"
+                   Grid.Column="9"/>
+
+            <!--Fila 7-->
+            <Image Stretch="Fill" Grid.Row="7"
+                   Grid.Column="0"/>
+            <Image Stretch="Fill" Grid.Row="7"
+                   Grid.Column="1"/>
+            <Image Stretch="Fill" Grid.Row="7"
+                   Grid.Column="2"/>
+            <Image Stretch="Fill" Grid.Row="7"
+                   Grid.Column="3"/>
+            <Image Stretch="Fill" Grid.Row="7"
+                   Grid.Column="4"/>
+            <Image Stretch="Fill" Grid.Row="7"
+                   Grid.Column="5"/>
+            <Image Stretch="Fill" Grid.Row="7"
+                   Grid.Column="6"/>
+            <Image Stretch="Fill" Grid.Row="7"
+                   Grid.Column="7"/>
+            <Image Stretch="Fill" Grid.Row="7"
+                   Grid.Column="8"/>
+            <Image Stretch="Fill" Grid.Row="7"
+                   Grid.Column="9"/>
+            
+            <!--Fila 8-->
+            <Image Stretch="Fill" Grid.Row="8"
+                   Grid.Column="0"/>
+            <Image Stretch="Fill" Grid.Row="8"
+                   Grid.Column="1"/>
+            <Image Stretch="Fill" Grid.Row="8"
+                   Grid.Column="2"/>
+            <Image Stretch="Fill" Grid.Row="8"
+                   Grid.Column="3"/>
+            <Image Stretch="Fill" Grid.Row="8"
+                   Grid.Column="4"/>
+            <Image Stretch="Fill" Grid.Row="8"
+                   Grid.Column="5"/>
+            <Image Stretch="Fill" Grid.Row="8"
+                   Grid.Column="6"/>
+            <Image Stretch="Fill" Grid.Row="8"
+                   Grid.Column="7"/>
+            <Image Stretch="Fill" Grid.Row="8"
+                   Grid.Column="8"/>
+            <Image Stretch="Fill" Grid.Row="8"
+                   Grid.Column="9"/>
+
+            <!--Fila 9-->
+            <Image Stretch="Fill" Grid.Row="9"
+                   Grid.Column="0"/>
+            <Image Stretch="Fill" Grid.Row="9"
+                   Grid.Column="1"/>
+            <Image Stretch="Fill" Grid.Row="9"
+                   Grid.Column="2"/>
+            <Image Stretch="Fill" Grid.Row="9"
+                   Grid.Column="3"/>
+            <Image Stretch="Fill" Grid.Row="9"
+                   Grid.Column="4"/>
+            <Image Stretch="Fill" Grid.Row="9"
+                   Grid.Column="5"/>
+            <Image Stretch="Fill" Grid.Row="9"
+                   Grid.Column="6"/>
+            <Image Stretch="Fill" Grid.Row="9"
+                   Grid.Column="7"/>
+            <Image Stretch="Fill" Grid.Row="9"
+                   Grid.Column="8"/>
+            <Image Stretch="Fill" Grid.Row="9"
+                   Grid.Column="9"/>
         </Grid>
     </Grid>
 </Page>

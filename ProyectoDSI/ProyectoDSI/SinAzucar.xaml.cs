@@ -31,5 +31,8 @@ namespace ProyectoDSI
         {
             Frame.Navigate(typeof(Pausa));
         }
+        protected override void OnNavigatedTo(NavigationEventArgs e){  
+            
+        }
     }
 }

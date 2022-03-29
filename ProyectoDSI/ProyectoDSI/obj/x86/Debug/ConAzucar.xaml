@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="ProyectoDSI.ConAzucar"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProyectoDSI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="MediumVioletRed">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="198*"/>
+            <ColumnDefinition Width="1098*"/>
+            <ColumnDefinition Width="203*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button x:ConnectionId='2' x:Name="PauseButton"                          
+                Content="Pausa" Background="LightPink" Foreground="Black"
+                VerticalAlignment="Top" Margin="20" FontSize="25"
+                FontFamily="MV Boli" CornerRadius="10" BorderThickness="4"
+                BorderBrush="White" Width="120"/>
+
+        <Grid Grid.Column="1" Margin="70,20,70,20">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image Source="Assets/Tablero.png" Stretch="Fill" Grid.RowSpan="10"
+                   Grid.ColumnSpan="10"/>
+        </Grid>
+    </Grid>
+</Page>
+

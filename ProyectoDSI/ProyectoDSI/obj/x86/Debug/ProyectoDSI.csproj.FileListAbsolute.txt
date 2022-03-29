@@ -203,3 +203,13 @@ C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\Proye
 C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\ConAzucar.xbf
 C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Controles.xbf
 C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\SinAzucar.xbf
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\ConAzucar.xbf
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\SinAzucar.xbf
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\ConAzucar.g.i.cs
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\ConAzucar.g.cs
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\SinAzucar.g.i.cs
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\SinAzucar.g.cs
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\ConAzucar.xaml
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\SinAzucar.xaml
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\ConAzucar.xbf
+D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\obj\x86\Debug\SinAzucar.xbf
