@@ -10,9 +10,9 @@
 
     <Grid x:ConnectionId='2' Background="MediumVioletRed"                       >
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="198*"/>
+            <ColumnDefinition Width="282*"/>
             <ColumnDefinition Width="1098*"/>
-            <ColumnDefinition Width="203*"/>
+            <ColumnDefinition Width="170*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="21*"/>
@@ -33,49 +33,58 @@
         <Border BorderThickness="10" BorderBrush="#FF4B0404" Background="Transparent"
                 VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="2"
                 CornerRadius="10" Grid.Row="2" Margin="0,10,0,0">
-            <TextBlock x:ConnectionId='4' x:Name="CountDown" Text="00:00" FontSize="45" Foreground="White" />
+            <TextBlock x:ConnectionId='4' x:Name="CountDown" Text="00:00" FontSize="45" Foreground="White" TextAlignment="Center"/>
         </Border>
 
-        <Grid Grid.Column="1" Grid.RowSpan="2" Margin="79,20,70,20">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Image Source="Assets/Tablero.png" Stretch="Fill" Grid.RowSpan="10"
+        <Viewbox Grid.Column="1" Grid.Row="1" Margin="15"
+                 VerticalAlignment="Stretch" HorizontalAlignment="Center">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="Assets/Tablero.png" Stretch="Fill" Grid.RowSpan="10"
                    Grid.ColumnSpan="10"/>
-        </Grid>
-        
+                <Image Grid.Column="2" Grid.Row="4" 
+                       Source="Assets/obstaculos.png" Grid.RowSpan="2"
+                       Grid.ColumnSpan="2" Width="240"/>
+                <Image Grid.Column="6" Grid.Row="4" 
+                       Source="Assets/obstaculos.png" Grid.RowSpan="2"
+                       Grid.ColumnSpan="2" Width="240"/>
+
+            </Grid>
+        </Viewbox>
+
         <!--Barra de progreso-->
-        <!--Meterlo todo en un viewbox-->
-        <StackPanel VerticalAlignment="Top" Grid.Column="1" Orientation="Horizontal" 
-                    HorizontalAlignment="Stretch" Margin="0,5,0,0" Height="65" Width="985">
-            <Image Source="Assets/extremoIz.png" Height="65"></Image>
-            <ProgressBar Value="80" Height="45" 
-                         Background="White" Width="800"/>
-            <Image Source="Assets/extremoDr.png" Height="65"></Image>
-        </StackPanel>
-        
-        
+        <Viewbox Grid.Column="1" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" 
+                        Margin="0,5,0,0">
+                <Image Source="Assets/extremoDr.png" Height="65" FlowDirection="RightToLeft"></Image>
+                <ProgressBar Value="50" Height="45" Background="Red" 
+                             Foreground="White" Width="700"/>
+                <Image Source="Assets/extremoIz.png" Height="65" FlowDirection="RightToLeft"></Image>
+            </StackPanel>
+        </Viewbox>
     </Grid>
 </Page>
 

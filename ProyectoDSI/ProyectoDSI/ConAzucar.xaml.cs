@@ -24,18 +24,11 @@ namespace ProyectoDSI
     public sealed partial class ConAzucar : Page
     {
         private DispatcherTimer timer;
-        private int minutes = 3;
-        private int seconds = 0;
+        private int minutes;
+        private int seconds ;
         public ConAzucar()
         {
             this.InitializeComponent();
-            this.NavigationCacheMode = NavigationCacheMode.Required;
-            timer = new DispatcherTimer();
-            timer.Interval = new TimeSpan(0, 0, 1);
-
-            timer.Tick += timer_Tick;
-            CountDown.Text = "0" + minutes.ToString() + ":0" + seconds.ToString();
-            timer.Start();
         }
 
         private void PauseButton_Click(object sender, RoutedEventArgs e)
@@ -67,6 +60,19 @@ namespace ProyectoDSI
         {
             if (e.Key == VirtualKey.Escape)
                 Frame.Navigate(typeof(Pausa));
+        }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            minutes = 1;
+            seconds = 30;
+            this.NavigationCacheMode = NavigationCacheMode.Required;
+            timer = new DispatcherTimer();
+            timer.Interval = new TimeSpan(0, 0, 1);
+
+            timer.Tick += timer_Tick;
+            CountDown.Text = "0" + minutes.ToString() + ":0" + seconds.ToString();
+            timer.Start();
+            base.OnNavigatedTo(e);
         }
     }
 }

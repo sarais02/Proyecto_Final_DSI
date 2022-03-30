@@ -295,13 +295,17 @@
             <Image Stretch="Fill" Grid.Row="9"
                    Grid.Column="9"/>
         </Grid>
-        <StackPanel VerticalAlignment="Top" Grid.Column="1" Orientation="Horizontal" 
-                    HorizontalAlignment="Center" Margin="0,20,0,0" Height="65" Width="985">
-            <Image Source="Assets/extremoIz.png" Height="65" Stretch="Fill"></Image>
-            <ProgressBar Value="50" Height="45" 
-                         Background="White" Width="900"/>
-            <Image Source="Assets/extremoDr.png" Height="65" Stretch="Fill"></Image>
-        </StackPanel>
+        <!--Barra de progreso-->
+        <Viewbox Grid.Column="1" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" 
+                        Margin="0,5,0,0">
+                <Image Source="Assets/extremoDr.png" Height="65" FlowDirection="RightToLeft"></Image>
+                <ProgressBar Value="50" Height="45" Background="Red" 
+                             Foreground="White" Width="700"/>
+                <Image Source="Assets/extremoIz.png" Height="65" FlowDirection="RightToLeft"></Image>
+            </StackPanel>
+        </Viewbox>
+        
         <StackPanel x:Name="PanelDeFichas" Grid.Row="1" Margin="20,150,80,0">
             <ListView ItemsSource="{x:Bind listPanelFichas}" Background="Gold" 
                       CornerRadius="15" Width="140">

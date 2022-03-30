@@ -295,13 +295,17 @@
             <Image Stretch="Fill" Grid.Row="9"
                    Grid.Column="9"/>
         </Grid>
-        <StackPanel VerticalAlignment="Top" Grid.Column="1" Orientation="Horizontal" 
-                    HorizontalAlignment="Center" Margin="0,20,0,0" Height="65" Width="985">
-            <Image Source="Assets/extremoIz.png" Height="65" Stretch="Fill"></Image>
-            <ProgressBar Value="50" Height="45" 
-                         Background="White" Width="900"/>
-            <Image Source="Assets/extremoDr.png" Height="65" Stretch="Fill"></Image>
-        </StackPanel>
+        <!--Barra de progreso-->
+        <Viewbox Grid.Column="1" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" 
+                        Margin="0,5,0,0">
+                <Image Source="Assets/extremoDr.png" Height="65" FlowDirection="RightToLeft"></Image>
+                <ProgressBar Value="50" Height="45" Background="Red" 
+                             Foreground="White" Width="700"/>
+                <Image Source="Assets/extremoIz.png" Height="65" FlowDirection="RightToLeft"></Image>
+            </StackPanel>
+        </Viewbox>
+        
         <StackPanel x:ConnectionId='4' x:Name="PanelDeFichas" Grid.Row="1" Margin="20,150,80,0">
             <ListView x:ConnectionId='13'                                        Background="Gold" 
                       CornerRadius="15" Width="140">
@@ -327,7 +331,7 @@
             </StackPanel>
         </StackPanel>
         
-        <StackPanel x:ConnectionId='5'  x:Name="PanelInfoJugador" Grid.Row="1" Grid.ColumnSpan="2" Margin="195,0,0,50" Background="DeepSkyBlue" 
+        <StackPanel x:ConnectionId='5'  x:Name="PanelInfoJugador" Grid.Row="1" Grid.ColumnSpan="2" Margin="190,0,0,50" Background="DeepSkyBlue" 
                     Width="150" Height="200" HorizontalAlignment="Left" VerticalAlignment="Bottom" >
             <TextBlock x:ConnectionId='10'  x:Name="CartaInfoJugador" Text="Regaliz" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24"/>
             <Image x:ConnectionId='11' x:Name="ImagenCartaJugador" Source="Assets/regaliz.png" Width="75"></Image>
