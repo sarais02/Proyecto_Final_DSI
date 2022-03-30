@@ -85,6 +85,9 @@
     <AppxPackagedFile Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\nuve.png">
       <PackagePath>Assets\nuve.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\obstaculos.png">
+      <PackagePath>Assets\obstaculos.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\Petazeta.png">
       <PackagePath>Assets\Petazeta.png</PackagePath>
     </AppxPackagedFile>

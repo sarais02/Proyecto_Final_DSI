@@ -169,6 +169,7 @@
     <Content Include="Assets\Huevo.png" />
     <Content Include="Assets\mando.png" />
     <Content Include="Assets\nuve.png" />
+    <Content Include="Assets\obstaculos.png" />
     <Content Include="Assets\Petazeta.png" />
     <Content Include="Assets\piruleta.png" />
     <Content Include="Assets\pirulos.png" />

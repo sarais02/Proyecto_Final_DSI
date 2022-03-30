@@ -30,13 +30,13 @@
     <AppXManifest Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-03-29T20:25:57.373</Modified>
+      <Modified>2022-03-30T11:10:45.638</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\ProyectoDSI.exe">
       <PackagePath>entrypoint\ProyectoDSI.exe</PackagePath>
-      <Modified>2022-03-29T20:25:57.068</Modified>
+      <Modified>2022-03-30T11:10:45.309</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -114,6 +114,10 @@
       <PackagePath>Assets\nuve.png</PackagePath>
       <Modified>2022-03-27T09:14:45.170</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\obstaculos.png">
+      <PackagePath>Assets\obstaculos.png</PackagePath>
+      <Modified>2022-03-30T10:13:36.475</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\Petazeta.png">
       <PackagePath>Assets\Petazeta.png</PackagePath>
       <Modified>2022-03-27T09:14:45.172</Modified>
@@ -186,43 +190,43 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\ProyectoDSI.xr.xml">
       <PackagePath>ProyectoDSI.xr.xml</PackagePath>
-      <Modified>2022-03-29T20:25:19.017</Modified>
+      <Modified>2022-03-30T10:26:40.427</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-03-29T20:25:57.018</Modified>
+      <Modified>2022-03-30T11:10:45.257</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\ConAzucar.xbf">
       <PackagePath>ConAzucar.xbf</PackagePath>
-      <Modified>2022-03-29T20:25:57.018</Modified>
+      <Modified>2022-03-30T11:10:45.257</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Menus\Controles.xbf">
       <PackagePath>Menus\Controles.xbf</PackagePath>
-      <Modified>2022-03-29T20:25:57.018</Modified>
+      <Modified>2022-03-30T11:10:45.257</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-03-29T20:25:57.018</Modified>
+      <Modified>2022-03-30T11:10:45.257</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Menus\Opciones.xbf">
       <PackagePath>Menus\Opciones.xbf</PackagePath>
-      <Modified>2022-03-29T20:25:57.018</Modified>
+      <Modified>2022-03-30T11:10:45.257</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Menus\Pausa.xbf">
       <PackagePath>Menus\Pausa.xbf</PackagePath>
-      <Modified>2022-03-29T20:25:57.019</Modified>
+      <Modified>2022-03-30T11:10:45.257</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Menus\Reglamento.xbf">
       <PackagePath>Menus\Reglamento.xbf</PackagePath>
-      <Modified>2022-03-29T20:25:57.010</Modified>
+      <Modified>2022-03-30T11:10:45.247</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Menus\SeleccionNivel.xbf">
       <PackagePath>Menus\SeleccionNivel.xbf</PackagePath>
-      <Modified>2022-03-29T20:25:57.019</Modified>
+      <Modified>2022-03-30T11:10:45.257</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\SinAzucar.xbf">
       <PackagePath>SinAzucar.xbf</PackagePath>
-      <Modified>2022-03-29T20:25:57.018</Modified>
+      <Modified>2022-03-30T11:10:45.257</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -230,11 +234,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-03-29T20:20:43.987</Modified>
+      <Modified>2022-03-30T10:24:13.016</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Core\ProyectoDSI.exe">
       <PackagePath>ProyectoDSI.exe</PackagePath>
-      <Modified>2022-03-29T20:25:57.371</Modified>
+      <Modified>2022-03-30T11:10:45.636</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

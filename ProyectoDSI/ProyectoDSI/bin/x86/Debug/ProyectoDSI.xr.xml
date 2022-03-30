@@ -95,6 +95,9 @@
       <RootProperty Name="Background" />
       <RootProperty Name="CornerRadius" />
       <RootProperty Name="Visibility" />
+      <RootProperty Name="Opacity" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="BorderThickness" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Source" />
