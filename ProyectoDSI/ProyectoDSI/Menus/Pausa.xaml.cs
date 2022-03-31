@@ -35,5 +35,10 @@ namespace ProyectoDSI
         {
             Frame.Navigate(typeof(Opciones));
         }
+
+        private void continue_Click(object sender, RoutedEventArgs e)
+        {
+            if (Frame.CanGoBack) Frame.GoBack();
+        }
     }
 }

@@ -14,9 +14,8 @@
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="Children" />
-      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Width" />
+      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Margin" />
       <RootEvent Name="KeyDown" />
       <RootMethod Name="GetRow" />
@@ -46,9 +45,9 @@
       <RootProperty Name="FontWeight" />
       <RootProperty Name="Width" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Height" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="Style" />
-      <RootProperty Name="Height" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
@@ -117,9 +116,6 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
-      <RootEvent Name="PointerEntered" />
-      <RootEvent Name="PointerExited" />
-      <RootEvent Name="PointerPressed" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="ItemsSource" />
@@ -147,9 +143,9 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.FrameworkElement">
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
-      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Setter">

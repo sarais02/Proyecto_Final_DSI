@@ -34,38 +34,50 @@
     </Page.Resources>
 
     <Grid Background="#f6a2bf">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0">
-            <TextBlock 
-                   Text="PAUSA"                  
+        <Grid Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" >
+            <TextBlock VerticalAlignment="Top"
+                   Text="PAUSA" 
+                   HorizontalAlignment="Center"
+                   TextAlignment="Center"
                    FontSize="70"
-                   Margin="150,44,0,0"
-                   Foreground="Gold" FontFamily="Bauhaus 93" Height="102" Width="404" Grid.Column="1" />
-            <TextBlock 
-                Text="PAUSA"                 
-                FontSize="70"
-                Foreground="HotPink" FontFamily="Bauhaus 93" 
-                Height="102" Width="404" Margin="146,44,4,0"  />
+                   Margin="0,44,0,0"
+                   Foreground="Gold" FontFamily="Bauhaus 93" Height="102" Width="404" Grid.Column="1"/>
+            <TextBlock VerticalAlignment="Top"
+                   Text="PAUSA" 
+                   HorizontalAlignment="Center"
+                   FontSize="70"
+                   TextAlignment="Center"
+                   Margin="0,40,0,0"
+                   Foreground="HotPink" FontFamily="Bauhaus 93" 
+                   Height="102" Width="404" />
+
+
         </Grid>
-        <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="25" >
-            <Button  Style="{StaticResource butonPause}">
-                <SymbolIcon Symbol="Play" Width="200" Height="200" Foreground="#e93578"
+        <Viewbox VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="25" >
+                    <Button  Style="{StaticResource butonPause}" Click="continue_Click">
+                        <SymbolIcon Symbol="Play" Width="200" Height="200" Foreground="#e93578"
+                            VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </Button>
+                    <Button x:Name="MainMenu" Style="{StaticResource butonPause}" Click="MainMenu_Click">
+                        <SymbolIcon Symbol="Home" Width="200" Height="200" Foreground="#e93578"
                             VerticalAlignment="Center" HorizontalAlignment="Center"/>
-            </Button>
-            <Button x:Name="MainMenu" Style="{StaticResource butonPause}" Click="MainMenu_Click">
-                <SymbolIcon Symbol="Home" Width="200" Height="200" Foreground="#e93578"
+                    </Button>
+                    <Button x:Name="Settings" Style="{StaticResource butonPause}" Click="Settings_Click">
+                        <SymbolIcon Symbol="Setting" Width="200" Height="200" Foreground="#e93578"
                             VerticalAlignment="Center" HorizontalAlignment="Center"/>
-            </Button>
-            <Button x:Name="Settings" Style="{StaticResource butonPause}" Click="Settings_Click">
-                <SymbolIcon Symbol="Setting" Width="200" Height="200" Foreground="#e93578"
-                            VerticalAlignment="Center" HorizontalAlignment="Center"/>
-            </Button>
-        </StackPanel>
-        <Image Source="../Assets/piruleta.png" Stretch="Uniform"/>
-        <Image  Grid.Column="2" Source="../Assets/piruleta.png" Stretch="Uniform" FlowDirection="RightToLeft"/>
+                    </Button>
+                </StackPanel>
+                <Image Source="../Assets/piruleta.png" Stretch="Uniform"/>
+                <Image  Grid.Column="2" Source="../Assets/piruleta.png" Stretch="Uniform" FlowDirection="RightToLeft"/>
+            </Grid>
+
+        </Viewbox>
     </Grid>
 </Page>

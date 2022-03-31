@@ -28,11 +28,20 @@
         </ResourceDictionary>
     </Page.Resources>
     <Grid x:ConnectionId='2' Background="#f6a2bf"                        >
-        <Grid.ColumnDefinitions >
-            <ColumnDefinition  Width="*"/>
-            <ColumnDefinition  Width="*"/>
-        </Grid.ColumnDefinitions>
-        <!--<Image Source="Assets/raya.png" VerticalAlignment="Top" HorizontalAlignment="Left" Height="582" Width="313" Grid.ColumnSpan="2" Margin="594,240,0,0"/>-->
+        <TextBlock VerticalAlignment="Top"
+                   Text="CONTROLES" 
+                   HorizontalAlignment="Center"
+                   FontSize="70"
+                   Margin="0,44,0,0"
+                   Foreground="Gold" FontFamily="Bauhaus 93" Height="102" Width="404" Grid.Column="1"/>
+        <TextBlock VerticalAlignment="Top"
+                   Text="CONTROLES" 
+                   HorizontalAlignment="Center"
+                   FontSize="70"
+                   Margin="0,40,0,0"
+                   Foreground="HotPink" FontFamily="Bauhaus 93" 
+                   Height="102" Width="404" />
+
 
         <Button x:ConnectionId='3'  x:Name="BackImage"  Margin="35,60,0,0" 
                  VerticalAlignment="Top" HorizontalAlignment="Left"
@@ -42,41 +51,38 @@
             <Image Source="../Assets/back.png" Width="50" Height="50" HorizontalAlignment="Center"/>
         </Button>
 
+
         <TextBlock x:ConnectionId='4' Text="Back" Foreground="HotPink" FontSize="30"
                    Margin="70,65,40,28"
                    Visibility="Collapsed"
                    x:Name="SpecialText"/>
-        
-        <Grid VerticalAlignment="Top" HorizontalAlignment="Left"  Width="429" Margin="700,20,0,0" Grid.ColumnSpan="2"  >
-            <TextBlock 
-                   Text="CONTROLES"                   
-                   FontSize="70"                 
-                   Foreground="Gold" FontFamily="Bauhaus 93" Height="102" Width="404" Grid.ColumnSpan="2" Margin="20" />
-            <TextBlock 
-                Text="CONTROLES"               
-                FontSize="70"
-                Foreground="HotPink" FontFamily="Bauhaus 93" 
-                Height="102" Width="404"   />
-        </Grid>
-        <StackPanel Orientation="Horizontal" Spacing="20" Margin="20">
-            <StackPanel VerticalAlignment="Center" Height="562" Spacing="50">
-                <Image Source="../Assets/controles1.png"
+        <Viewbox Margin="0,150,0,0" >
+            <Grid>
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition  Width="*"/>
+                    <ColumnDefinition  Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" Spacing="20" Margin="20">
+                    <StackPanel VerticalAlignment="Center" Height="562" Spacing="50">
+                        <Image Source="../Assets/controles1.png"
                    Height="400" Width="300"/>
-                <Image Source="../Assets/cursor.png" Width="80" VerticalAlignment="Bottom" Height="77"/>
-            </StackPanel>
-            <StackPanel Spacing="20" Height="530" >
-                <TextBlock Text="-Seleccionar Direccion" Style="{StaticResource TextBlockStyle}"/>
-                <TextBlock Text="-Mover Al Personaje" Style="{StaticResource TextBlockStyle}"/>
-                <TextBlock Text="-Menu Pausa" Style="{StaticResource TextBlockStyle}" 
+                        <Image Source="../Assets/cursor.png" Width="80" VerticalAlignment="Bottom" Height="77"/>
+                    </StackPanel>
+                    <StackPanel Spacing="20" Height="530" >
+                        <TextBlock Text="-Seleccionar Direccion" Style="{StaticResource TextBlockStyle}"/>
+                        <TextBlock Text="-Mover Al Personaje" Style="{StaticResource TextBlockStyle}"/>
+                        <TextBlock Text="-Menu Pausa" Style="{StaticResource TextBlockStyle}" 
                           HorizontalAlignment="Left" Margin="0,156,0,0" />
-                <TextBlock Text="-Sleccionar" Style="{StaticResource TextBlockStyle}" Margin="0,90,0,0"/>
-            </StackPanel>
+                        <TextBlock Text="-Sleccionar" Style="{StaticResource TextBlockStyle}" Margin="0,90,0,0"/>
+                    </StackPanel>
 
-        </StackPanel>
-        <Grid Grid.Column="1">
-            <Image Source="../Assets/mando.png"  Margin="117,102,117,99" />
-            <Image Source="../Assets/controles2.png" Margin="66,0,37,2" />
-        </Grid>
+                </StackPanel>
+                <Grid Grid.Column="1">
+                    <Image Source="../Assets/mando.png"  Margin="117,102,117,99" />
+                    <Image Source="../Assets/controles2.png" Margin="66,0,37,2" />
+                </Grid>
+            </Grid>
+        </Viewbox>
     </Grid>
 </Page>
 

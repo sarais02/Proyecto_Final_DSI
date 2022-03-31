@@ -81,6 +81,7 @@ namespace ProyectoDSI
 
         private void BackImage_PointerExited(object sender, PointerRoutedEventArgs e)
         {
+
             Window.Current.CoreWindow.PointerCursor = CursorArrow;
             SpecialText.Visibility = Visibility.Collapsed;
         }

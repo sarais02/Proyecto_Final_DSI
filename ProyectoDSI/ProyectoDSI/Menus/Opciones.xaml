@@ -9,99 +9,124 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Page.Resources>
-        <Style TargetType="Slider" x:Name="slidersUI">
-            <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="Background" Value="Yellow"/>
-            <Setter Property="Foreground" Value="Orange"/>
-            <Setter Property="Maximum" Value="100"/>
-            <Setter Property="Value" Value="50"/>
-            <Setter Property="Width" Value="300"/>
-            <Setter Property="Height" Value="50"/>
-        </Style>
-        <Style TargetType="StackPanel" x:Name="optionstackPanel">
-            <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="Spacing" Value="40"/>
-            <Setter Property="Width" Value="650"/>
-            <Setter Property="Height" Value="90"/>
-            <Setter Property="Orientation" Value="Horizontal"/>
-        </Style>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Light">
+                    <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Transparent"/>
+                    <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="Transparent"/>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+            <Style TargetType="TextBlock" x:Key="TextBlockStyle">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="Foreground" Value="Black"/>
+                <Setter Property="TextWrapping" Value="Wrap"/>
+                <Setter Property="FontFamily" Value="MV Boli"/>
+            </Style>
+            <Style TargetType="Slider" x:Key="slidersUI">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Background" Value="Yellow"/>
+                <Setter Property="Foreground" Value="Orange"/>
+                <Setter Property="Maximum" Value="100"/>
+                <Setter Property="Value" Value="50"/>
+                <Setter Property="Width" Value="300"/>
+                <Setter Property="Height" Value="50"/>
+            </Style>
+            <Style TargetType="StackPanel" x:Key="optionstackPanel">
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Spacing" Value="40"/>
+                <Setter Property="Width" Value="650"/>
+                <Setter Property="Height" Value="90"/>
+                <Setter Property="Orientation" Value="Horizontal"/>
+            </Style>
+        </ResourceDictionary>
     </Page.Resources>
     <Grid Background="#f6a2bf" KeyDown="Grid_KeyDown" >
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="23*"/>
-            <ColumnDefinition Width="54*"/>
-            <ColumnDefinition Width="23*"/>
-        </Grid.ColumnDefinitions>
 
-        <Image Source="../Assets/back.png" Width="50" Height="50"
-               VerticalAlignment="Top" HorizontalAlignment="Left"
-               Margin="35,60,0,0"
-               PointerEntered="BackImage_PointerEntered"
-               PointerExited="BackImage_PointerExited"
-               PointerPressed="BackImage_PointerPressed"
-               x:Name="BackImage"/>
-        <TextBlock Text="Back" Foreground="HotPink" FontSize="30"
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="0,50,0,0">
+            <TextBlock 
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                TextAlignment="Center"
+                Text="OPCIONES"                  
+                FontSize="70"              
+                Foreground="Gold" FontFamily="Bauhaus 93"  Grid.Column="1" />
+            <TextBlock 
+                VerticalAlignment="Center"
+                HorizontalAlignment="Left"
+                Text="OPCIONES"                 
+                FontSize="70"
+                Foreground="HotPink" FontFamily="Bauhaus 93" Margin="-10,0,0,0" 
+                />
+        </Grid>
+
+        <Viewbox HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="23*"/>
+                    <ColumnDefinition Width="54*"/>
+                    <ColumnDefinition Width="23*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button  x:Name="BackImage"  Margin="35,60,0,0" 
+                 VerticalAlignment="Top" HorizontalAlignment="Left"
+                 Width="45" Click="VolverButton_Click"
+                 PointerEntered="BackImage_PointerEntered"
+                 PointerExited="BackImage_PointerExited">
+                    <Image Source="../Assets/back.png" Width="50" Height="50" HorizontalAlignment="Center"/>
+                </Button>
+                <TextBlock Text="Back" Foreground="HotPink" FontSize="30"
                    Margin="70,65,40,28"
                    Visibility="Collapsed"
                    x:Name="SpecialText"/>
-
-        <Grid Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="-10,50,0,0">
-            <TextBlock 
-                VerticalAlignment="Center"
-                   Text="OPCIONES"                  
-                   FontSize="70"
-                   Margin="150,44,0,0"
-                   Foreground="Gold" FontFamily="Bauhaus 93" Height="102" Width="404" Grid.Column="1" />
-            <TextBlock 
-                Text="OPCIONES"                 
-                FontSize="70"
-                Foreground="HotPink" FontFamily="Bauhaus 93" 
-                Height="102" Width="404" Margin="146,44,4,0"  />
-        </Grid>
-        <StackPanel VerticalAlignment="Center" 
+                <StackPanel VerticalAlignment="Center" 
                     HorizontalAlignment="Stretch"
                     Spacing="50" Height="400" Width="700" Grid.Column="1" >
 
-            <StackPanel Style="{StaticResource optionstackPanel}" >
-                <TextBlock VerticalAlignment="Center" Text="Volumen" FontSize="30" Foreground="HotPink"
+                    <StackPanel Style="{StaticResource optionstackPanel}" >
+                        <TextBlock VerticalAlignment="Center" Text="Volumen" FontSize="30" Foreground="HotPink"
                            FontWeight="Bold" FontFamily="Fascinate Inline" SelectionChanged="TextBlock_SelectionChanged"/>
-                <Slider Style="{StaticResource slidersUI}" />
-                <SymbolIcon Symbol="Audio" Foreground="DeepPink"/>
-            </StackPanel>
-            <StackPanel Style="{StaticResource optionstackPanel}" >
-                <TextBlock VerticalAlignment="Center" Text="Brillo" FontSize="30" Foreground="HotPink"
+                        <Slider Style="{StaticResource slidersUI}" />
+                        <SymbolIcon Symbol="Audio" Foreground="DeepPink"/>
+                    </StackPanel>
+                    <StackPanel Style="{StaticResource optionstackPanel}" >
+                        <TextBlock VerticalAlignment="Center" Text="Brillo" FontSize="30" Foreground="HotPink"
                            FontWeight="Bold" FontFamily="Fascinate Inline" />
-                <Slider Style="{StaticResource slidersUI}" />
-                <SymbolIcon Symbol="Audio" Foreground="DeepPink"/>
-            </StackPanel>
-            <StackPanel Style="{StaticResource optionstackPanel}">
-                <TextBlock VerticalAlignment="Center" Text="Lenguaje" FontSize="30" Foreground="HotPink"
+                        <Slider Style="{StaticResource slidersUI}" />
+                        <SymbolIcon Symbol="Audio" Foreground="DeepPink"/>
+                    </StackPanel>
+                    <StackPanel Style="{StaticResource optionstackPanel}">
+                        <TextBlock VerticalAlignment="Center" Text="Lenguaje" FontSize="30" Foreground="HotPink"
                            FontWeight="Bold" FontFamily="Fascinate Inline" />
-                <ComboBox PlaceholderText="Selecciona Un Idioma" 
+                        <ComboBox PlaceholderText="Selecciona Un Idioma" 
                           Width="200"
                           VerticalAlignment="Center">
-                    <x:String>Español</x:String>
-                    <x:String>Ingles</x:String>
-                </ComboBox>
-            </StackPanel>
-        </StackPanel>
-        <Image  Grid.Column="0" Source="../Assets/nuve.png"  Stretch="Uniform"/>
-        <Image  Grid.Column="2" Source="../Assets/nuve.png"  Stretch="Uniform" FlowDirection="RightToLeft"/>
-        <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="0,500,0,0" HorizontalAlignment="Center" Spacing="40" >
+                            <x:String>Español</x:String>
+                            <x:String>Ingles</x:String>
+                        </ComboBox>
+                    </StackPanel>
+                </StackPanel>
+                <Image  Grid.Column="0" Source="../Assets/nuve.png"  Stretch="Uniform"/>
+                <Image  Grid.Column="2" Source="../Assets/nuve.png"  Stretch="Uniform" FlowDirection="RightToLeft"/>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="0,500,0,0" HorizontalAlignment="Center" Spacing="40" >
 
-            <Button x:Name="Reglas"  FontSize="30" VerticalAlignment="Center"
+                    <Button x:Name="Reglas"  FontSize="30" VerticalAlignment="Center"
                 Height="96" Width="209"  CornerRadius="50" Background="Transparent"
                 Click="Reglas_Click" FontFamily="MV Boli">
-                <Image Source="../Assets/botonReglamento.png" AutomationProperties.Name="slice" Stretch="Fill" Margin="-10,-6,-10,-7"/>
-            </Button>
-            <Button x:Name="Pause"  FontSize="30"   VerticalAlignment="Center"               
+                        <Image Source="../Assets/botonReglamento.png" AutomationProperties.Name="slice" Stretch="Fill" Margin="-10,-6,-10,-7"/>
+                    </Button>
+                    <Button x:Name="Pause"  FontSize="30"   VerticalAlignment="Center"               
                 Height="96" Width="209" FontFamily="MV Boli" Background="Transparent"
                  CornerRadius="50" Click="Pause_Click">
-                <Image Source="../Assets/botoncontroles.png" Stretch="Fill" Margin="-10,-6,-10,-7"/>
-            </Button>
+                        <Image Source="../Assets/botoncontroles.png" Stretch="Fill" Margin="-10,-6,-10,-7"/>
+                    </Button>
 
-        </StackPanel>
-        
+                </StackPanel>
+            </Grid>
+        </Viewbox>
+
     </Grid>
 </Page>
