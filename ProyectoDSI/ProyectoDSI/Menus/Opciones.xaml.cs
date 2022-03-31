@@ -25,8 +25,7 @@ namespace ProyectoDSI
         CoreCursor CursorArrow = null;
         CoreCursor CursorHand = null;
 
-        PointerPoint ptrPt;
-        int indice;
+        PointerPoint ptrPt;       
         public Opciones()
         {
             this.InitializeComponent();

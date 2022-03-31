@@ -23,13 +23,25 @@
             </ResourceDictionary.ThemeDictionaries>
         </ResourceDictionary>
     </Page.Resources>
-    <Grid Background="#f6a2bf" KeyDown="Grid_KeyDown">
+    <Grid Background="#f6a2bf" KeyDown="Grid_KeyDown" >
         <Grid.ColumnDefinitions >
             <ColumnDefinition  Width="*"/>
             <ColumnDefinition  Width="*"/>
         </Grid.ColumnDefinitions>
         <!--<Image Source="Assets/raya.png" VerticalAlignment="Top" HorizontalAlignment="Left" Height="582" Width="313" Grid.ColumnSpan="2" Margin="594,240,0,0"/>-->
+        <Image Source="../Assets/back.png" Width="50" Height="50"
+               VerticalAlignment="Top" HorizontalAlignment="Left"
+               Margin="35,60,0,0"
+               PointerEntered="Button_PointerEntered"
+               PointerExited="BackButton_PointerExited"
+               PointerPressed="BackImage_PointerPressed"
+               x:Name="BackImage"/>
 
+        <TextBlock Text="Back" Foreground="HotPink" FontSize="30"
+                   Margin="70,65,40,28"
+                   Visibility="Collapsed"
+                   x:Name="SpecialText"/>
+        
         <Grid VerticalAlignment="Top" HorizontalAlignment="Left"  Width="429" Margin="700,20,0,0" Grid.ColumnSpan="2"  >
             <TextBlock 
                    Text="CONTROLES"                   
@@ -60,8 +72,5 @@
             <Image Source="../Assets/mando.png"  Margin="117,102,117,99" />
             <Image Source="../Assets/controles2.png" Margin="66,0,37,2" />
         </Grid>
-        <Button x:Name="volver" VerticalAlignment="Bottom" Content="Volver" FontFamily="MV Boli" FontSize="32" 
-                Background="#FFFFA834" CornerRadius="10" Grid.ColumnSpan="2" HorizontalAlignment="Center" 
-                Width="200" Height="59" Click="volver_Click" Margin="30"/>
     </Grid>
 </Page>

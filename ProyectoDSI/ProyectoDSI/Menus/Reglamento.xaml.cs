@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.System;
 using Windows.UI.Core;
 using Windows.UI.Input;
 using Windows.UI.Xaml;
@@ -50,6 +51,17 @@ namespace ProyectoDSI
 
         private void BackImage_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
+            Volver();
+        }
+
+        private void Grid_KeyDown(object sender, KeyRoutedEventArgs e){
+            // First, check that it's safe to ask the Frame to go backward.
+            switch (e.Key)
+            {
+                case VirtualKey.Escape: Volver(); break;
+            }
+        }
+        void Volver(){
             // First, check that it's safe to ask the Frame to go backward.
             if (Frame.CanGoBack)
             {

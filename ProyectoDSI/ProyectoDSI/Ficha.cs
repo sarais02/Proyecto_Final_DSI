@@ -8,6 +8,13 @@ using Windows.UI.Xaml.Controls;
 
 namespace ProyectoDSI
 {
+    struct PanelFicha
+    {
+        public Ficha ficha_;
+        public int num_;
+        public string rango_;
+        public string numFichas_;
+    }
     class Ficha{
 
         public int id_; //todas las fichas estaran en una lista y este sera su indicide en ekl que se encuentra en dicha lista

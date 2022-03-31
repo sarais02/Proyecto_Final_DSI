@@ -20,7 +20,7 @@
     </Page.Resources>
 
 
-    <Grid Background="LightPink">
+    <Grid Background="LightPink" KeyDown="Grid_KeyDown">
 
         <TextBlock VerticalAlignment="Top"
                    Text="REGLAMENTO" 

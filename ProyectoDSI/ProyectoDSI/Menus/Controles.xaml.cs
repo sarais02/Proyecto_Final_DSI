@@ -6,6 +6,8 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.System;
+using Windows.UI.Core;
+using Windows.UI.Input;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -23,9 +25,14 @@ namespace ProyectoDSI
     /// </summary>
     public sealed partial class Controles : Page
     {
+        CoreCursor CursorArrow = null;
+        CoreCursor CursorHand = null;
+        PointerPoint ptrPt;
         public Controles()
         {
             this.InitializeComponent();
+            CursorArrow = new CoreCursor(CoreCursorType.Arrow, 0);
+            CursorHand = new CoreCursor(CoreCursorType.Hand, 0);
         }
 
         private void volver_Click(object sender, RoutedEventArgs e)
@@ -38,6 +45,28 @@ namespace ProyectoDSI
             switch (e.Key)
             {
                 case VirtualKey.Escape: Volver(); break;
+            }
+        }
+        private void Button_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            ptrPt = e.GetCurrentPoint(BackImage);
+            Window.Current.CoreWindow.PointerCursor = CursorHand;
+            SpecialText.Visibility = Visibility.Visible;
+        }
+
+        private void BackButton_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            Window.Current.CoreWindow.PointerCursor = CursorArrow;
+            SpecialText.Visibility = Visibility.Collapsed;
+        }
+
+        private void BackImage_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+            // First, check that it's safe to ask the Frame to go backward.
+            if (Frame.CanGoBack)
+            {
+                // If there's a page in the "backstack," we can call GoBack().
+                Frame.GoBack();
             }
         }
         private void Volver()

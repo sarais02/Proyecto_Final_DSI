@@ -20,7 +20,7 @@
     </Page.Resources>
 
 
-    <Grid Background="LightPink">
+    <Grid x:ConnectionId='2' Background="LightPink"                       >
 
         <TextBlock VerticalAlignment="Top"
                    Text="REGLAMENTO" 
@@ -38,7 +38,7 @@
 
 
 
-        <Image x:ConnectionId='2' Source="../Assets/back.png" Width="50" Height="50"
+        <Image x:ConnectionId='3' Source="../Assets/back.png" Width="50" Height="50"
                VerticalAlignment="Top" HorizontalAlignment="Left"
                Margin="35,60,0,0"
                                                      
@@ -46,7 +46,7 @@
                                                         
                x:Name="BackImage"/>
 
-        <TextBlock x:ConnectionId='3' Text="Back" Foreground="HotPink" FontSize="30"
+        <TextBlock x:ConnectionId='4' Text="Back" Foreground="HotPink" FontSize="30"
                    Margin="70,65,40,28"
                    Visibility="Collapsed"
                    x:Name="SpecialText"/>

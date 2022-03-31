@@ -85,5 +85,73 @@
                 <Image Source="Assets/extremoIz.png" Height="65" FlowDirection="RightToLeft"></Image>
             </StackPanel>
         </Viewbox>
+        <!--PanelIzquierdo-->
+        <Viewbox Grid.Row="1" Margin="20,130,80,20">
+            <StackPanel x:Name="PanelDeFichas" >
+                <ListView ItemsSource="{x:Bind listPanelFichas}" Background="Gold" 
+                      CornerRadius="15" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="local:PanelFicha" >
+                            <StackPanel Orientation="Horizontal" Spacing=" 15">
+                                <Image  Source="{x:Bind ficha_.img_.Source}" Height="55" />
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Text="{x:Bind rango_}" FontSize="16" Foreground="BlueViolet" FontFamily="MV Boli" FontWeight="Bold"/>
+                                    <TextBlock Text="{x:Bind numFichas_}" FontSize="32" FontFamily="MV Boli" FontWeight="Bold"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackPanel>
+        </Viewbox >
+        <!--EstadoInicial-->
+        <Viewbox Grid.Row="1" Grid.Column="1" Margin="0,0,0,280">
+            <StackPanel  Background="Gray" 
+                    Opacity="0.75"  BorderBrush="White" BorderThickness="10" Height="537">
+                <StackPanel Background="Purple" Opacity="1"  BorderThickness="5" BorderBrush="White" Height="430">
+                    <TextBlock Text="Coloca tus fichas" FontFamily="MV Boli" FontWeight="ExtraBold" 
+                           VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="56"/>
+                    <StackPanel Height="345" Margin="10" Spacing="20" Orientation="Vertical" >
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="5">
+                            <StackPanel Orientation="Horizontal" Spacing="10">
+                                <Image Source="Assets/Regaliz.png" Height="150"/>
+                                <TextBlock Text="x1" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Spacing="10">
+                                <Image Source="Assets/Baston.png" Height="150"/>
+                                <TextBlock Text="x2" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Spacing="10">
+                                <Image Source="Assets/Huevo.png" Height="150"/>
+                                <TextBlock Text="x4" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Spacing="10">
+                                <Image Source="Assets/BombaSandia.png" Height="150"/>
+                                <TextBlock Text="x1" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="5">
+                            <StackPanel Orientation="Horizontal" Spacing="10">
+                                <Image Source="Assets/Sandia.png" Height="150"/>
+                                <TextBlock Text="x4" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Spacing="10">
+                                <Image Source="Assets/Cocacola.png" Height="150"/>
+                                <TextBlock Text="x8" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Spacing="10">
+                                <Image Source="Assets/Petazeta.png" Height="150"/>
+                                <TextBlock Text="x6" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Spacing="10">
+                                <Image Source="Assets/Fresa.png" Height="150"/>
+                                <TextBlock Text="x1" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </Viewbox>
+       
     </Grid>
 </Page>

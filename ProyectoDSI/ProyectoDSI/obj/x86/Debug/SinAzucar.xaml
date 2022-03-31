@@ -315,7 +315,7 @@
                 <Image Source="Assets/extremoIz.png" Height="65" FlowDirection="RightToLeft"></Image>
             </StackPanel>
         </Viewbox>
-        
+        <!--PanelIzquierdo-->
         <Viewbox Grid.Row="1" Margin="20,130,80,20">
             <StackPanel x:ConnectionId='12' x:Name="PanelDeFichas" >
                 <ListView x:ConnectionId='13'                                        Background="Gold" 
@@ -334,7 +334,7 @@
                 </ListView>
             </StackPanel>
         </Viewbox >
-        
+        <!--EstadoInicial-->
         <Viewbox Grid.Row="1" Grid.Column="1" Margin="0,0,0,280">
             <StackPanel  Background="Gray" 
                     Opacity="0.75"  BorderBrush="White" BorderThickness="10" Height="537">
@@ -382,7 +382,7 @@
                 </StackPanel>
             </StackPanel>
         </Viewbox>
-
+        <!--infoJugador-->
         <Viewbox Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="365" Width="175" Margin="445,0,0,150">
             <StackPanel x:ConnectionId='8'  x:Name="PanelInfoJugador"  Background="DeepSkyBlue" BorderThickness="5" Width="100">
                 <TextBlock x:ConnectionId='9'  x:Name="CartaInfoJugador" Text="Regaliz" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24"/>
@@ -392,7 +392,7 @@
                            pero para poder acabar con él deberás cogerlo primero y gracias a su disposición de la clara puede arrastrarse muy rápido"  FontSize="8"/>
             </StackPanel>
         </Viewbox>
-
+        <!--infoEnemigo-->
         <Viewbox  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="365" Width="175" Margin="1085,0,0,150"  >
             <StackPanel x:ConnectionId='4'  x:Name="PanelInfoEnemigo" Background="DeepSkyBlue" BorderThickness="5"               
                     Width="100"  HorizontalAlignment="Right" VerticalAlignment="Bottom">

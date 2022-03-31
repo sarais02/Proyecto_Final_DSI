@@ -17,13 +17,7 @@ using Windows.UI.Xaml.Navigation;
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace ProyectoDSI
-{
-    struct PanelFicha{
-        public Ficha ficha_;
-        public int num_;
-        public string rango_;
-        public string numFichas_;
-    }
+{ 
     /// <summary>
     /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>

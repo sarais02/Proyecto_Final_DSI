@@ -23,6 +23,8 @@ namespace ProyectoDSI
     /// </summary>
     public sealed partial class ConAzucar : Page
     {
+        List<PanelFicha> listPanelFichas;
+        bool[,] Tablero;
         private DispatcherTimer timer;
         private int minutes;
         private int seconds ;
@@ -72,7 +74,81 @@ namespace ProyectoDSI
             timer.Tick += timer_Tick;
             CountDown.Text = "0" + minutes.ToString() + ":0" + seconds.ToString();
             timer.Start();
+
+            CrearLista();
+            inicializateTablero();
+
             base.OnNavigatedTo(e);
+        }
+        private void CrearLista()
+        {
+            listPanelFichas = new List<PanelFicha>();
+            PanelFicha panelFicha;
+            //regaliz
+            panelFicha.ficha_ = new Ficha(-1, "Regaliz", -1, -1);
+            panelFicha.num_ = 1;
+            panelFicha.rango_ = "7";
+            panelFicha.numFichas_ = "x1";
+            listPanelFichas.Add(panelFicha);
+            //baston
+            panelFicha.ficha_ = new Ficha(-1, "Baston", -1, -1);
+            panelFicha.num_ = 2;
+            panelFicha.rango_ = "6";
+            panelFicha.numFichas_ = "x2";
+            listPanelFichas.Add(panelFicha);
+            //dedos
+            panelFicha.ficha_ = new Ficha(-1, "Dedo", -1, -1);
+            panelFicha.num_ = 3;
+            panelFicha.rango_ = "5";
+            panelFicha.numFichas_ = "x3";
+            listPanelFichas.Add(panelFicha);
+            //huevo
+            panelFicha.ficha_ = new Ficha(-1, "Huevo", -1, -1);
+            panelFicha.num_ = 4;
+            panelFicha.rango_ = "4";
+            panelFicha.numFichas_ = "x4";
+            listPanelFichas.Add(panelFicha);
+            //sandia
+            panelFicha.ficha_ = new Ficha(-1, "Sandia", -1, -1);
+            panelFicha.num_ = 4;
+            panelFicha.rango_ = "3";
+            panelFicha.numFichas_ = "x4";
+            listPanelFichas.Add(panelFicha);
+            //cocacola
+            panelFicha.ficha_ = new Ficha(-1, "Cocacola", -1, -1);
+            panelFicha.num_ = 8;
+            panelFicha.rango_ = "2";
+            panelFicha.numFichas_ = "x8";
+            listPanelFichas.Add(panelFicha);
+            //chicle sandia
+            panelFicha.ficha_ = new Ficha(-1, "BombaSandia", -1, -1);
+            panelFicha.num_ = 1;
+            panelFicha.rango_ = "1";
+            panelFicha.numFichas_ = "x1";
+            listPanelFichas.Add(panelFicha);
+            //petazetas
+            panelFicha.ficha_ = new Ficha(-1, "Petazeta", -1, -1);
+            panelFicha.num_ = 6;
+            panelFicha.rango_ = "B";
+            panelFicha.numFichas_ = "x6";
+            listPanelFichas.Add(panelFicha);
+            //fresa
+            panelFicha.ficha_ = new Ficha(-1, "Fresa", -1, -1);
+            panelFicha.num_ = 1;
+            panelFicha.rango_ = "F";
+            panelFicha.numFichas_ = "x1";
+            listPanelFichas.Add(panelFicha);
+        }
+        private void inicializateTablero()
+        {
+            Tablero = new bool[10, 10];
+            for (int i = 0; i < Tablero.GetLength(0); i++)
+            {
+                for (int j = 0; j < Tablero.GetLength(1); j++)
+                {
+                    Tablero[i, j] = false;
+                }
+            }
         }
     }
 }
