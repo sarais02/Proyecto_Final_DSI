@@ -48,12 +48,6 @@ namespace ProyectoDSI
             Window.Current.CoreWindow.PointerCursor = CursorArrow;
             SpecialText.Visibility = Visibility.Collapsed;
         }
-
-        private void BackImage_PointerPressed(object sender, PointerRoutedEventArgs e)
-        {
-            Volver();
-        }
-
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e){
             // First, check that it's safe to ask the Frame to go backward.
             switch (e.Key)
@@ -68,6 +62,11 @@ namespace ProyectoDSI
                 // If there's a page in the "backstack," we can call GoBack().
                 Frame.GoBack();
             }
+        }
+
+        private void BackImage_Click(object sender, RoutedEventArgs e)
+        {
+            Volver();
         }
     }
 }
