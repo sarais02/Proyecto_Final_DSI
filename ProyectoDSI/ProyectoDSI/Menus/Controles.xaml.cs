@@ -35,11 +35,6 @@ namespace ProyectoDSI
             CursorHand = new CoreCursor(CoreCursorType.Hand, 0);
         }
 
-        private void volver_Click(object sender, RoutedEventArgs e)
-        {
-            Volver();
-        }
-
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
         {
             switch (e.Key)
@@ -60,21 +55,18 @@ namespace ProyectoDSI
             SpecialText.Visibility = Visibility.Collapsed;
         }
 
-        private void BackImage_PointerPressed(object sender, PointerRoutedEventArgs e)
-        {
-            // First, check that it's safe to ask the Frame to go backward.
-            if (Frame.CanGoBack)
-            {
-                // If there's a page in the "backstack," we can call GoBack().
-                Frame.GoBack();
-            }
-        }
+        
         private void Volver()
         {
             if (Frame.CanGoBack)
             {
                 Frame.GoBack();
             }
+        }
+
+        private void BackImage_Click(object sender, RoutedEventArgs e)
+        {
+            Volver();
         }
     }
 }

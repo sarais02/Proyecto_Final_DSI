@@ -28,23 +28,26 @@
             <RowDefinition Height="179*"/>
         </Grid.RowDefinitions>
 
+
         <TextBlock HorizontalAlignment="Right" Text="Mueve tu Ficha" TextWrapping="Wrap"
-                   FontSize="30" Margin="0,20,21,0" TextAlignment="Center"
+                   FontSize="30" TextAlignment="Center"
                    Foreground="Cyan" FontFamily="MV Boli" FontWeight="Bold" 
                    Grid.Row="1" Width="140"/>
-
-        <Button x:ConnectionId='3' x:Name="PauseButton"                          
+        
+        <Viewbox HorizontalAlignment="Left">
+            <Button x:ConnectionId='19' x:Name="PauseButton"                          
                 Content="Pausa" Background="LightPink" Foreground="Black"
-                VerticalAlignment="Top" Margin="20,20,0,0" FontSize="25"
+                Margin="20,20,0,0" FontSize="25"
                 FontFamily="MV Boli" CornerRadius="10" BorderThickness="4"
                 BorderBrush="White" Width="120" Height="58"/>
+        </Viewbox>
 
-        <Border BorderThickness="10" BorderBrush="#FF040E52" Background="Transparent"
-                VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="2"
-                CornerRadius="10" Grid.Row="1" Margin="0,10,0,0" Height="80" Width="127">
-            <TextBlock x:ConnectionId='19' x:Name="CountDown" Text="00:00" FontSize="45" Foreground="White" />
-        </Border>
-
+        <Viewbox  Grid.Row="1"  Grid.Column="2" VerticalAlignment="Top" Margin="10,10,10,0">
+            <Border BorderThickness="10" BorderBrush="#FF040E52" Background="Transparent"
+                CornerRadius="10" Height="80" >
+                <TextBlock x:ConnectionId='18' x:Name="CountDown" Text="00:00" FontSize="45" Foreground="White" />
+            </Border>
+        </Viewbox>
 
         <Viewbox Grid.Column="1" Grid.Row="1" Margin="15"
                  VerticalAlignment="Stretch" HorizontalAlignment="Center">
@@ -317,16 +320,16 @@
         </Viewbox>
         <!--PanelIzquierdo-->
         <Viewbox Grid.Row="1" Margin="20,130,80,20">
-            <StackPanel x:ConnectionId='12' x:Name="PanelDeFichas" >
-                <ListView x:ConnectionId='13'                                        Background="Gold" 
+            <StackPanel x:ConnectionId='11' x:Name="PanelDeFichas" >
+                <ListView x:ConnectionId='12'                                        Background="Gold" 
                       CornerRadius="15" >
                     <ListView.ItemTemplate>
                         <DataTemplate                               >
-                            <StackPanel x:ConnectionId='15' Orientation="Horizontal" Spacing=" 15">
-                                <Image x:ConnectionId='16'                                       Height="55" />
+                            <StackPanel x:ConnectionId='14' Orientation="Horizontal" Spacing=" 15">
+                                <Image x:ConnectionId='15'                                       Height="55" />
                                 <StackPanel Orientation="Vertical">
-                                    <TextBlock x:ConnectionId='17'                        FontSize="16" Foreground="BlueViolet" FontFamily="MV Boli" FontWeight="Bold"/>
-                                    <TextBlock x:ConnectionId='18'                            FontSize="32" FontFamily="MV Boli" FontWeight="Bold"/>
+                                    <TextBlock x:ConnectionId='16'                        FontSize="16" Foreground="BlueViolet" FontFamily="MV Boli" FontWeight="Bold"/>
+                                    <TextBlock x:ConnectionId='17'                            FontSize="32" FontFamily="MV Boli" FontWeight="Bold"/>
                                 </StackPanel>
                             </StackPanel>
                         </DataTemplate>
@@ -384,21 +387,21 @@
         </Viewbox>
         <!--infoJugador-->
         <Viewbox Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="365" Width="175" Margin="445,0,0,150">
-            <StackPanel x:ConnectionId='8'  x:Name="PanelInfoJugador"  Background="DeepSkyBlue" BorderThickness="5" Width="100">
-                <TextBlock x:ConnectionId='9'  x:Name="CartaInfoJugador" Text="Regaliz" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24"/>
-                <Image x:ConnectionId='10' x:Name="ImagenCartaJugador" Source="Assets/regaliz.png" Width="50"></Image>
-                <TextBlock x:ConnectionId='11' x:Name="InfoCartaJugador" HorizontalAlignment="Center"
+            <StackPanel x:ConnectionId='7'  x:Name="PanelInfoJugador"  Background="DeepSkyBlue" BorderThickness="5" Width="100">
+                <TextBlock x:ConnectionId='8'  x:Name="CartaInfoJugador" Text="Regaliz" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24"/>
+                <Image x:ConnectionId='9' x:Name="ImagenCartaJugador" Source="Assets/regaliz.png" Width="50"></Image>
+                <TextBlock x:ConnectionId='10' x:Name="InfoCartaJugador" HorizontalAlignment="Center"
                            TextWrapping="Wrap" Text="Tiene su punto débil expuesto, la yema, 
                            pero para poder acabar con él deberás cogerlo primero y gracias a su disposición de la clara puede arrastrarse muy rápido"  FontSize="8"/>
             </StackPanel>
         </Viewbox>
         <!--infoEnemigo-->
         <Viewbox  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="365" Width="175" Margin="1085,0,0,150"  >
-            <StackPanel x:ConnectionId='4'  x:Name="PanelInfoEnemigo" Background="DeepSkyBlue" BorderThickness="5"               
+            <StackPanel x:ConnectionId='3'  x:Name="PanelInfoEnemigo" Background="DeepSkyBlue" BorderThickness="5"               
                     Width="100"  HorizontalAlignment="Right" VerticalAlignment="Bottom">
-                <TextBlock x:ConnectionId='5'  x:Name="CartaInfoEnemigo" Text="Regaliz" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24"/>
-                <Image x:ConnectionId='6' x:Name="ImagenCartaEnemigo" Source="Assets/regaliz.png" Width="50"></Image>
-                <TextBlock x:ConnectionId='7' x:Name="InfoCartaEnemigo" HorizontalAlignment="Center"
+                <TextBlock x:ConnectionId='4'  x:Name="CartaInfoEnemigo" Text="Regaliz" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24"/>
+                <Image x:ConnectionId='5' x:Name="ImagenCartaEnemigo" Source="Assets/regaliz.png" Width="50"></Image>
+                <TextBlock x:ConnectionId='6' x:Name="InfoCartaEnemigo" HorizontalAlignment="Center"
                            TextWrapping="Wrap" Text="Tiene su punto débil expuesto, la yema, 
                            pero para poder acabar con él deberás cogerlo primero y gracias a su disposición de la clara puede arrastrarse muy rápido"  FontSize="8"/>
             </StackPanel>

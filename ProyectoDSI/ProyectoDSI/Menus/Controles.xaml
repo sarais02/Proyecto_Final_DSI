@@ -6,21 +6,25 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    RequestedTheme="Light"
     >
     <Page.Resources>
-        <Style TargetType="TextBlock" x:Name="controles">
-            <Setter Property="FontFamily" Value="MV Boli"/>
-            <Setter Property="FontSize" Value="32"/>
-        </Style>
-        <ResourceDictionary x:Key="lightt">
+        <ResourceDictionary>
             <ResourceDictionary.ThemeDictionaries>
                 <ResourceDictionary x:Key="Light">
-                    <SolidColorBrush x:Key="ButtonBackground" Color="MediumOrchid"/>
-                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="DeepSkyBlue"/>
-                    <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="Blue"/>
+                    <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Transparent"/>
+                    <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="Transparent"/>
+                    <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="Transparent"/>
                 </ResourceDictionary>
             </ResourceDictionary.ThemeDictionaries>
+            <Style TargetType="TextBlock" x:Key="TextBlockStyle">
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="Foreground" Value="HotPink"/>
+                <Setter Property="TextWrapping" Value="Wrap"/>
+                <Setter Property="FontFamily" Value="MV Boli"/>
+            </Style>
         </ResourceDictionary>
     </Page.Resources>
     <Grid Background="#f6a2bf" KeyDown="Grid_KeyDown" >
@@ -29,13 +33,14 @@
             <ColumnDefinition  Width="*"/>
         </Grid.ColumnDefinitions>
         <!--<Image Source="Assets/raya.png" VerticalAlignment="Top" HorizontalAlignment="Left" Height="582" Width="313" Grid.ColumnSpan="2" Margin="594,240,0,0"/>-->
-        <Image Source="../Assets/back.png" Width="50" Height="50"
-               VerticalAlignment="Top" HorizontalAlignment="Left"
-               Margin="35,60,0,0"
-               PointerEntered="Button_PointerEntered"
-               PointerExited="BackButton_PointerExited"
-               PointerPressed="BackImage_PointerPressed"
-               x:Name="BackImage"/>
+
+        <Button  x:Name="BackImage"  Margin="35,60,0,0" 
+                 VerticalAlignment="Top" HorizontalAlignment="Left"
+                 Width="45" Click="BackImage_Click"
+                 PointerEntered="Button_PointerEntered"
+                 PointerExited="BackButton_PointerExited">
+            <Image Source="../Assets/back.png" Width="50" Height="50" HorizontalAlignment="Center"/>
+        </Button>
 
         <TextBlock Text="Back" Foreground="HotPink" FontSize="30"
                    Margin="70,65,40,28"
@@ -60,11 +65,11 @@
                 <Image Source="../Assets/cursor.png" Width="80" VerticalAlignment="Bottom" Height="77"/>
             </StackPanel>
             <StackPanel Spacing="20" Height="530" >
-                <TextBlock Text="-Seleccionar Direccion" Style="{StaticResource controles}"/>
-                <TextBlock Text="-Mover Al Personaje" Style="{StaticResource controles}"/>
-                <TextBlock Text="-Menu Pausa" Style="{StaticResource controles}" 
+                <TextBlock Text="-Seleccionar Direccion" Style="{StaticResource TextBlockStyle}"/>
+                <TextBlock Text="-Mover Al Personaje" Style="{StaticResource TextBlockStyle}"/>
+                <TextBlock Text="-Menu Pausa" Style="{StaticResource TextBlockStyle}" 
                           HorizontalAlignment="Left" Margin="0,156,0,0" />
-                <TextBlock Text="-Sleccionar" Style="{StaticResource controles}" Margin="0,90,0,0"/>
+                <TextBlock Text="-Sleccionar" Style="{StaticResource TextBlockStyle}" Margin="0,90,0,0"/>
             </StackPanel>
 
         </StackPanel>
