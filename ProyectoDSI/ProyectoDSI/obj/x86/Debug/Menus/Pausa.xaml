@@ -61,15 +61,15 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Spacing="25" >
-                    <Button  Style="{StaticResource butonPause}">
+                    <Button x:ConnectionId='3'  Style="{StaticResource butonPause}"                       >
                         <SymbolIcon Symbol="Play" Width="200" Height="200" Foreground="#e93578"
-                            VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            VerticalAlignment="Center" HorizontalAlignment="Center" />
                     </Button>
-                    <Button x:ConnectionId='3' x:Name="MainMenu" Style="{StaticResource butonPause}"                       >
+                    <Button x:ConnectionId='4' x:Name="MainMenu" Style="{StaticResource butonPause}"                       >
                         <SymbolIcon Symbol="Home" Width="200" Height="200" Foreground="#e93578"
                             VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </Button>
-                    <Button x:ConnectionId='4' x:Name="Settings" Style="{StaticResource butonPause}"                       >
+                    <Button x:ConnectionId='5' x:Name="Settings" Style="{StaticResource butonPause}"                       >
                         <SymbolIcon Symbol="Setting" Width="200" Height="200" Foreground="#e93578"
                             VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </Button>

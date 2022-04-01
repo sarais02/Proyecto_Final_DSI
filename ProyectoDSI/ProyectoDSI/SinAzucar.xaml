@@ -33,7 +33,7 @@
                    FontSize="30" TextAlignment="Center"
                    Foreground="Cyan" FontFamily="MV Boli" FontWeight="Bold" 
                    Grid.Row="1" Width="140"/>
-        
+
         <Viewbox HorizontalAlignment="Left">
             <Button x:Name="PauseButton" Click="PauseButton_Click"
                 Content="Pausa" Background="LightPink" Foreground="Black"
@@ -385,27 +385,29 @@
                 </StackPanel>
             </StackPanel>
         </Viewbox>
-        <!--infoJugador-->
-        <Viewbox Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="365" Width="175" Margin="445,0,0,150">
-            <StackPanel  x:Name="PanelInfoJugador"  Background="DeepSkyBlue" BorderThickness="5" Width="100">
-                <TextBlock  x:Name="CartaInfoJugador" Text="Regaliz" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24"/>
-                <Image x:Name="ImagenCartaJugador" Source="Assets/regaliz.png" Width="50"></Image>
-                <TextBlock x:Name="InfoCartaJugador" HorizontalAlignment="Center"
+        <!--Paneles de informacion cartas-->
+        <Viewbox Grid.Row="1" Grid.ColumnSpan="3" Margin="0,200,0,0" >
+            <Grid >
+                <StackPanel Orientation="Horizontal" Spacing="600">
+                    <StackPanel  x:Name="PanelInfoJugador"  Background="DeepSkyBlue" BorderThickness="5"
+                         HorizontalAlignment="Left" VerticalAlignment="Center" Width="100" Margin="155,0,0,0" >
+                        <TextBlock  x:Name="CartaInfoJugador" Text="Regaliz" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24"/>
+                        <Image x:Name="ImagenCartaJugador" Source="Assets/regaliz.png" Width="50"></Image>
+                        <TextBlock x:Name="InfoCartaJugador" HorizontalAlignment="Center"
                            TextWrapping="Wrap" Text="Tiene su punto débil expuesto, la yema, 
                            pero para poder acabar con él deberás cogerlo primero y gracias a su disposición de la clara puede arrastrarse muy rápido"  FontSize="8"/>
-            </StackPanel>
-        </Viewbox>
-        <!--infoEnemigo-->
-        <Viewbox  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="365" Width="175" Margin="1085,0,0,150"  >
-            <StackPanel  x:Name="PanelInfoEnemigo" Background="DeepSkyBlue" BorderThickness="5"               
-                    Width="100"  HorizontalAlignment="Right" VerticalAlignment="Bottom">
-                <TextBlock  x:Name="CartaInfoEnemigo" Text="Regaliz" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24"/>
-                <Image x:Name="ImagenCartaEnemigo" Source="Assets/regaliz.png" Width="50"></Image>
-                <TextBlock x:Name="InfoCartaEnemigo" HorizontalAlignment="Center"
+                    </StackPanel>
+                    <StackPanel  x:Name="PanelInfoEnemigo"  Background="DeepSkyBlue" BorderThickness="5"
+                         HorizontalAlignment="Left" VerticalAlignment="Center" Width="100" Margin="0,0,75,0" >
+                        <TextBlock  x:Name="CartaInfoEnemigo" Text="Regaliz" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24"/>
+                        <Image x:Name="ImagenCartaEnemigo" Source="Assets/regaliz.png" Width="50"></Image>
+                        <TextBlock x:Name="InfoCartaEnemigo" HorizontalAlignment="Center"
                            TextWrapping="Wrap" Text="Tiene su punto débil expuesto, la yema, 
                            pero para poder acabar con él deberás cogerlo primero y gracias a su disposición de la clara puede arrastrarse muy rápido"  FontSize="8"/>
-            </StackPanel>
-        </Viewbox>
+                    </StackPanel>
 
+                </StackPanel>
+            </Grid>
+        </Viewbox>
     </Grid>
 </Page>
