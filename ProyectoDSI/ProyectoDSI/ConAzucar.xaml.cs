@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
@@ -26,11 +27,22 @@ namespace ProyectoDSI
         List<PanelFicha> listPanelFichas;
         bool[,] Tablero;
         private DispatcherTimer timer;
+        private DispatcherTimer textTimer_;
         private int minutes;
-        private int seconds ;
+        private int seconds;
+        private int initialTime=2;
+        private int currentTime;
+        private bool playersTurn;
         public ConAzucar()
         {
             this.InitializeComponent();
+            currentTime = initialTime;
+            textTimer_ = new DispatcherTimer();
+            textTimer_.Interval = new TimeSpan(0, 0, 1);
+
+            textTimer_.Tick += textTimer_Tick;
+            textTimer_.Start();
+            playersTurn = true;
         }
 
         private void PauseButton_Click(object sender, RoutedEventArgs e)
@@ -50,13 +62,27 @@ namespace ProyectoDSI
             }
             else if(minutes==0 && seconds <= 59)
             {
-                if (seconds == 0) { timer.Stop(); }
+                if (seconds == 0) { timer.Stop();  Add(); }
                 else seconds--;
 
                 if (seconds < 10) CountDown.Text = "0" + minutes.ToString() + ":0" + seconds.ToString();
                 else CountDown.Text = "0" + minutes.ToString() + ":" + seconds.ToString();
             }
 
+        }
+        void textTimer_Tick(object sender, object e)
+        {
+            if (currentTime > 0)
+            {
+                currentTime--;
+            }
+            else
+            {
+                currentTime = initialTime;
+                clearStackPanel();
+                playersTurn = !playersTurn;
+            }
+            
         }
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
         {
@@ -74,6 +100,7 @@ namespace ProyectoDSI
             timer.Tick += timer_Tick;
             CountDown.Text = "0" + minutes.ToString() + ":0" + seconds.ToString();
             timer.Start();
+           
 
             CrearLista();
             inicializateTablero();
@@ -149,6 +176,54 @@ namespace ProyectoDSI
                     Tablero[i, j] = false;
                 }
             }
+        }
+       void Add()
+       {
+            if (playersTurn) 
+            { 
+                EntranceStackPanel.Children.Add(new Border()
+                {
+                    Width = 150,
+                    Height = 30,
+                    BorderThickness = new Thickness(3),
+                    Background = new SolidColorBrush(Windows.UI.Colors.LightBlue),
+                    BorderBrush = new SolidColorBrush(Windows.UI.Colors.MediumPurple),
+                    Child = new TextBlock() 
+                    { 
+                        TextAlignment = TextAlignment.Center, 
+                        Foreground= new SolidColorBrush(Windows.UI.Colors.MediumPurple),
+                        TextWrapping=TextWrapping.Wrap,
+                        FontSize=15,
+                        FontFamily=new FontFamily("MV Boli"),
+                        Text="YOUR TURN"
+                    }
+                }); 
+            }
+            else
+            {
+                EntranceStackPanel.Children.Add(new Border()
+                {
+                    Width = 150,
+                    Height = 30,
+                    BorderThickness = new Thickness(3),
+                    Background = new SolidColorBrush(Windows.UI.Colors.LightBlue),
+                    BorderBrush = new SolidColorBrush(Windows.UI.Colors.MediumPurple),
+                    Child = new TextBlock()
+                    {
+                        TextAlignment = TextAlignment.Center,
+                        Foreground = new SolidColorBrush(Windows.UI.Colors.MediumPurple),
+                        TextWrapping = TextWrapping.Wrap,
+                        FontSize = 15,
+                        FontFamily = new FontFamily("MV Boli"),
+                        Text = "YOUR TURN"
+                    }
+                });
+            }
+            
+       }
+        void clearStackPanel()
+        {
+            EntranceStackPanel.Children.Clear();
         }
     }
 }

@@ -402,6 +402,17 @@
                 </StackPanel>
             </Grid>
         </Viewbox>
+        <Viewbox Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,0,0,200">
+                <StackPanel x:Name="EntranceStackPanel" Orientation="Horizontal">
+                    <StackPanel.ChildrenTransitions>
+                        <TransitionCollection>
+                            <EntranceThemeTransition IsStaggeringEnabled="True" />
+                        </TransitionCollection>
+                    </StackPanel.ChildrenTransitions>
+                </StackPanel>
+            </Grid>
+        </Viewbox>
         <!--Paneles de informacion cartas-->
         <Viewbox Grid.Row="1" Grid.ColumnSpan="3" Margin="0,200,0,0" >
             <Grid >
@@ -424,7 +435,5 @@
                 </StackPanel>
             </Grid>
         </Viewbox>
-
-
     </Grid>
 </Page>

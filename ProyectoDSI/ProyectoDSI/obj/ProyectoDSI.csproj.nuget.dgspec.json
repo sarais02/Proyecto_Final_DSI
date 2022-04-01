@@ -1,29 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\ProyectoDSI.csproj": {}
+    "C:\\Users\\sarai\\Documents\\UCM\\2º CUATRI\\DSI\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\ProyectoDSI.csproj": {}
   },
   "projects": {
-    "D:\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\ProyectoDSI.csproj": {
+    "C:\\Users\\sarai\\Documents\\UCM\\2º CUATRI\\DSI\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\ProyectoDSI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\ProyectoDSI.csproj",
+        "projectUniqueName": "C:\\Users\\sarai\\Documents\\UCM\\2º CUATRI\\DSI\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\ProyectoDSI.csproj",
         "projectName": "ProyectoDSI",
-        "projectPath": "D:\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\ProyectoDSI.csproj",
-        "packagesPath": "C:\\Users\\javie\\.nuget\\packages\\",
-        "outputPath": "D:\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\obj\\",
+        "projectPath": "C:\\Users\\sarai\\Documents\\UCM\\2º CUATRI\\DSI\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\ProyectoDSI.csproj",
+        "packagesPath": "C:\\Users\\sarai\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sarai\\Documents\\UCM\\2º CUATRI\\DSI\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\javie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sarai\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "uap10.0.17763"

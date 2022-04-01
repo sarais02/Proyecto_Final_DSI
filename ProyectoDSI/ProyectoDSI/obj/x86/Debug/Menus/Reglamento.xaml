@@ -15,6 +15,7 @@
                     <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
                     <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Transparent"/>
                     <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="Transparent"/>
+                    <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Transparent"/>
                 </ResourceDictionary>
             </ResourceDictionary.ThemeDictionaries>
             <Style TargetType="TextBlock" x:Key="TextBlockStyle">

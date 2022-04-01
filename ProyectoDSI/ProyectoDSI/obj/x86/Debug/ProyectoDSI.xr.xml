@@ -31,6 +31,7 @@
       <RootProperty Name="Children" />
       <RootProperty Name="Style" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="ChildrenTransitions" />
       <RootProperty Name="Background" />
       <RootProperty Name="Opacity" />
       <RootProperty Name="Height" />
@@ -76,9 +77,9 @@
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="Children" />
-      <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
       <RootEvent Name="KeyDown" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
@@ -102,6 +103,10 @@
       <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.TransitionCollection" />
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.EntranceThemeTransition">
+      <RootProperty Name="IsStaggeringEnabled" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="Background" />
@@ -177,6 +182,7 @@
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="Width" />
+      <RootProperty Name="BorderBrush" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Items" />
     </RootType>
