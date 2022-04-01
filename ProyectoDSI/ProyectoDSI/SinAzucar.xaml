@@ -13,6 +13,20 @@
             <Setter Property="AllowDrop" Value="True"/>
             <Setter Property="Stretch" Value="Fill"/>
         </Style>
+        <Style TargetType="StackPanel" x:Name="panelesInfo">
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Background" Value="#c238eb"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Width" Value="100"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Name="textInfoPanel">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontFamily" Value="MV Boli"/>
+        </Style>
     </Page.Resources>
 
 
@@ -28,12 +42,16 @@
             <RowDefinition Height="179*"/>
         </Grid.RowDefinitions>
 
-
-        <TextBlock HorizontalAlignment="Right" Text="Mueve tu Ficha" TextWrapping="Wrap"
-                   FontSize="30" TextAlignment="Center"
+        <Viewbox  Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="50,0,0,500">
+                <TextBlock HorizontalAlignment="Right" Text="Mueve tu Ficha" TextWrapping="Wrap"
+                   FontSize="30" TextAlignment="Center" VerticalAlignment="Top"
                    Foreground="Cyan" FontFamily="MV Boli" FontWeight="Bold" 
                    Grid.Row="1" Width="140"/>
 
+            </Grid>
+        </Viewbox>
+        
         <Viewbox HorizontalAlignment="Left">
             <Button x:Name="PauseButton" Click="PauseButton_Click"
                 Content="Pausa" Background="LightPink" Foreground="Black"
@@ -48,7 +66,7 @@
                 <TextBlock x:Name="CountDown" Text="00:00" FontSize="45" Foreground="White" />
             </Border>
         </Viewbox>
-
+        <!--Tablero-->
         <Viewbox Grid.Column="1" Grid.Row="1" Margin="15"
                  VerticalAlignment="Stretch" HorizontalAlignment="Center">
             <Grid Grid.Column="1" Grid.Row="2" Margin="76,20,70,20">
@@ -306,8 +324,6 @@
                        Grid.ColumnSpan="2" Width="240"/>
             </Grid>
         </Viewbox>
-
-
         <!--Barra de progreso-->
         <Viewbox Grid.Column="1" HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" 
@@ -319,89 +335,91 @@
             </StackPanel>
         </Viewbox>
         <!--PanelIzquierdo-->
-        <Viewbox Grid.Row="1" Margin="20,130,80,20">
-            <StackPanel x:Name="PanelDeFichas" >
-                <ListView ItemsSource="{x:Bind listPanelFichas}" Background="Gold" 
+        <Viewbox Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <Grid Margin="20,130,80,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <StackPanel x:Name="PanelDeFichas" >
+                    <ListView ItemsSource="{x:Bind listPanelFichas}" Background="Gold" 
                       CornerRadius="15" >
-                    <ListView.ItemTemplate>
-                        <DataTemplate x:DataType="local:PanelFicha" >
-                            <StackPanel Orientation="Horizontal" Spacing=" 15">
-                                <Image  Source="{x:Bind ficha_.img_.Source}" Height="55" />
-                                <StackPanel Orientation="Vertical">
-                                    <TextBlock Text="{x:Bind rango_}" FontSize="16" Foreground="BlueViolet" FontFamily="MV Boli" FontWeight="Bold"/>
-                                    <TextBlock Text="{x:Bind numFichas_}" FontSize="32" FontFamily="MV Boli" FontWeight="Bold"/>
+                        <ListView.ItemTemplate>
+                            <DataTemplate x:DataType="local:PanelFicha" >
+                                <StackPanel Orientation="Horizontal" Spacing=" 15">
+                                    <Image  Source="{x:Bind ficha_.img_.Source}" Height="55" />
+                                    <StackPanel Orientation="Vertical">
+                                        <TextBlock Text="{x:Bind rango_}" FontSize="16" Foreground="BlueViolet" FontFamily="MV Boli" FontWeight="Bold"/>
+                                        <TextBlock Text="{x:Bind numFichas_}" FontSize="32" FontFamily="MV Boli" FontWeight="Bold"/>
+                                    </StackPanel>
                                 </StackPanel>
-                            </StackPanel>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackPanel>
+            </Grid>
         </Viewbox >
         <!--EstadoInicial-->
-        <Viewbox Grid.Row="1" Grid.Column="1" Margin="0,0,0,280">
-            <StackPanel  Background="Gray" 
+        <Viewbox Grid.Row="1" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+            <Grid Margin="0,0,0,250" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <StackPanel  Background="Gray" 
                     Opacity="0.75"  BorderBrush="White" BorderThickness="10" Height="537">
-                <StackPanel Background="Purple" Opacity="1"  BorderThickness="5" BorderBrush="White" Height="430">
-                    <TextBlock Text="Coloca tus fichas" FontFamily="MV Boli" FontWeight="ExtraBold" 
+                    <StackPanel Background="Purple" Opacity="1"  BorderThickness="5" BorderBrush="White" Height="430">
+                        <TextBlock Text="Coloca tus fichas" FontFamily="MV Boli" FontWeight="ExtraBold" 
                            VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="56"/>
-                    <StackPanel Height="345" Margin="10" Spacing="20" Orientation="Vertical" >
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="5">
-                            <StackPanel Orientation="Horizontal" Spacing="10">
-                                <Image Source="Assets/Regaliz.png" Height="150"/>
-                                <TextBlock Text="x1" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <StackPanel Height="345" Margin="10" Spacing="20" Orientation="Vertical" >
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="5">
+                                <StackPanel Orientation="Horizontal" Spacing="10">
+                                    <Image Source="Assets/Regaliz.png" Height="150"/>
+                                    <TextBlock Text="x1" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Spacing="10">
+                                    <Image Source="Assets/Baston.png" Height="150"/>
+                                    <TextBlock Text="x2" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Spacing="10">
+                                    <Image Source="Assets/Huevo.png" Height="150"/>
+                                    <TextBlock Text="x4" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Spacing="10">
+                                    <Image Source="Assets/BombaSandia.png" Height="150"/>
+                                    <TextBlock Text="x1" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </StackPanel>
                             </StackPanel>
-                            <StackPanel Orientation="Horizontal" Spacing="10">
-                                <Image Source="Assets/Baston.png" Height="150"/>
-                                <TextBlock Text="x2" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal" Spacing="10">
-                                <Image Source="Assets/Huevo.png" Height="150"/>
-                                <TextBlock Text="x4" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal" Spacing="10">
-                                <Image Source="Assets/BombaSandia.png" Height="150"/>
-                                <TextBlock Text="x1" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            </StackPanel>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="5">
-                            <StackPanel Orientation="Horizontal" Spacing="10">
-                                <Image Source="Assets/Sandia.png" Height="150"/>
-                                <TextBlock Text="x4" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal" Spacing="10">
-                                <Image Source="Assets/Cocacola.png" Height="150"/>
-                                <TextBlock Text="x8" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal" Spacing="10">
-                                <Image Source="Assets/Petazeta.png" Height="150"/>
-                                <TextBlock Text="x6" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal" Spacing="10">
-                                <Image Source="Assets/Fresa.png" Height="150"/>
-                                <TextBlock Text="x1" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="5">
+                                <StackPanel Orientation="Horizontal" Spacing="10">
+                                    <Image Source="Assets/Sandia.png" Height="150"/>
+                                    <TextBlock Text="x4" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Spacing="10">
+                                    <Image Source="Assets/Cocacola.png" Height="150"/>
+                                    <TextBlock Text="x8" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Spacing="10">
+                                    <Image Source="Assets/Petazeta.png" Height="150"/>
+                                    <TextBlock Text="x6" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Spacing="10">
+                                    <Image Source="Assets/Fresa.png" Height="150"/>
+                                    <TextBlock Text="x1" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </StackPanel>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
                 </StackPanel>
-            </StackPanel>
+            </Grid>
         </Viewbox>
         <!--Paneles de informacion cartas-->
         <Viewbox Grid.Row="1" Grid.ColumnSpan="3" Margin="0,200,0,0" >
             <Grid >
                 <StackPanel Orientation="Horizontal" Spacing="600">
-                    <StackPanel  x:Name="PanelInfoJugador"  Background="DeepSkyBlue" BorderThickness="5"
-                         HorizontalAlignment="Left" VerticalAlignment="Center" Width="100" Margin="155,0,0,0" >
-                        <TextBlock  x:Name="CartaInfoJugador" Text="Regaliz" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24"/>
+                    <StackPanel  x:Name="PanelInfoJugador"  Style="{StaticResource panelesInfo}" Margin="155,0,0,0" >
+                        <TextBlock  x:Name="CartaInfoJugador" Text="Regaliz" Style="{StaticResource textInfoPanel}" FontSize="24"/>
                         <Image x:Name="ImagenCartaJugador" Source="Assets/regaliz.png" Width="50"></Image>
-                        <TextBlock x:Name="InfoCartaJugador" HorizontalAlignment="Center"
+                        <TextBlock x:Name="InfoCartaJugador"  Style="{StaticResource textInfoPanel}"
                            TextWrapping="Wrap" Text="Tiene su punto débil expuesto, la yema, 
                            pero para poder acabar con él deberás cogerlo primero y gracias a su disposición de la clara puede arrastrarse muy rápido"  FontSize="8"/>
                     </StackPanel>
-                    <StackPanel  x:Name="PanelInfoEnemigo"  Background="DeepSkyBlue" BorderThickness="5"
-                         HorizontalAlignment="Left" VerticalAlignment="Center" Width="100" Margin="0,0,75,0" >
-                        <TextBlock  x:Name="CartaInfoEnemigo" Text="Regaliz" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24"/>
+                    <StackPanel  x:Name="PanelInfoEnemigo" Style="{StaticResource panelesInfo}" Margin="0,0,75,0" >
+                        <TextBlock  x:Name="CartaInfoEnemigo" Text="Regaliz"   FontSize="24" Style="{StaticResource textInfoPanel}"/>
                         <Image x:Name="ImagenCartaEnemigo" Source="Assets/regaliz.png" Width="50"></Image>
-                        <TextBlock x:Name="InfoCartaEnemigo" HorizontalAlignment="Center"
+                        <TextBlock x:Name="InfoCartaEnemigo" Style="{StaticResource textInfoPanel}"
                            TextWrapping="Wrap" Text="Tiene su punto débil expuesto, la yema, 
                            pero para poder acabar con él deberás cogerlo primero y gracias a su disposición de la clara puede arrastrarse muy rápido"  FontSize="8"/>
                     </StackPanel>
