@@ -6,6 +6,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.System;
+using Windows.UI.Text;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -43,6 +44,7 @@ namespace ProyectoDSI
             textTimer_.Tick += textTimer_Tick;
             textTimer_.Start();
             playersTurn = true;
+            Add();
         }
 
         private void PauseButton_Click(object sender, RoutedEventArgs e)
@@ -62,7 +64,7 @@ namespace ProyectoDSI
             }
             else if(minutes==0 && seconds <= 59)
             {
-                if (seconds == 0) { timer.Stop();  Add(); }
+                if (seconds == 0) { seconds = 30; minutes = 1;  Add(); textTimer_.Start(); }
                 else seconds--;
 
                 if (seconds < 10) CountDown.Text = "0" + minutes.ToString() + ":0" + seconds.ToString();
@@ -78,6 +80,7 @@ namespace ProyectoDSI
             }
             else
             {
+                textTimer_.Stop();
                 currentTime = initialTime;
                 clearStackPanel();
                 playersTurn = !playersTurn;
@@ -98,7 +101,7 @@ namespace ProyectoDSI
             timer.Interval = new TimeSpan(0, 0, 1);
 
             timer.Tick += timer_Tick;
-            CountDown.Text = "0" + minutes.ToString() + ":0" + seconds.ToString();
+            CountDown.Text = "0" + minutes.ToString() + ":" + seconds.ToString();
             timer.Start();
            
 
@@ -186,16 +189,17 @@ namespace ProyectoDSI
                     Width = 150,
                     Height = 30,
                     BorderThickness = new Thickness(3),
-                    Background = new SolidColorBrush(Windows.UI.Colors.LightBlue),
-                    BorderBrush = new SolidColorBrush(Windows.UI.Colors.MediumPurple),
+                    Background = new SolidColorBrush(Windows.UI.Colors.CornflowerBlue),
+                    BorderBrush = new SolidColorBrush(Windows.UI.Colors.MidnightBlue),
                     Child = new TextBlock() 
                     { 
                         TextAlignment = TextAlignment.Center, 
-                        Foreground= new SolidColorBrush(Windows.UI.Colors.MediumPurple),
+                        Foreground= new SolidColorBrush(Windows.UI.Colors.White),
                         TextWrapping=TextWrapping.Wrap,
                         FontSize=15,
                         FontFamily=new FontFamily("MV Boli"),
-                        Text="YOUR TURN"
+                        FontWeight = FontWeights.Bold,
+                        Text ="¡TU TURNO!"
                     }
                 }); 
             }
@@ -206,16 +210,17 @@ namespace ProyectoDSI
                     Width = 150,
                     Height = 30,
                     BorderThickness = new Thickness(3),
-                    Background = new SolidColorBrush(Windows.UI.Colors.LightBlue),
-                    BorderBrush = new SolidColorBrush(Windows.UI.Colors.MediumPurple),
+                    Background = new SolidColorBrush(Windows.UI.Colors.White),
+                    BorderBrush = new SolidColorBrush(Windows.UI.Colors.Red),
                     Child = new TextBlock()
                     {
                         TextAlignment = TextAlignment.Center,
-                        Foreground = new SolidColorBrush(Windows.UI.Colors.MediumPurple),
+                        Foreground = new SolidColorBrush(Windows.UI.Colors.Red),
                         TextWrapping = TextWrapping.Wrap,
                         FontSize = 15,
                         FontFamily = new FontFamily("MV Boli"),
-                        Text = "YOUR TURN"
+                        FontWeight = FontWeights.Bold,
+                        Text = "¡TURNO ENEMIGO!"
                     }
                 });
             }

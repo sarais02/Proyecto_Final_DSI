@@ -6,6 +6,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.System;
+using Windows.UI.Text;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,16 +26,74 @@ namespace ProyectoDSI
     {
         List<PanelFicha> listPanelFichas;
         bool[,] Tablero;
+        private DispatcherTimer timer;
+        private DispatcherTimer textTimer_;
+        private int minutes;
+        private int seconds;
+        private int initialTime = 2;
+        private int currentTime;
+        private bool playersTurn;
         public SinAzucar()
         {
             this.InitializeComponent();
-        }
+            currentTime = initialTime;
+            textTimer_ = new DispatcherTimer();
+            textTimer_.Interval = new TimeSpan(0, 0, 1);
 
+            textTimer_.Tick += textTimer_Tick;
+            textTimer_.Start();
+            playersTurn = true;
+            Add();
+        }
+        void timer_Tick(object sender, object e)
+        {
+            if (minutes > 0)
+            {
+                if (seconds == 0) { seconds = 59; minutes--; }
+                else seconds--;
+
+                if (seconds < 10) CountDown.Text = "0" + minutes.ToString() + ":0" + seconds.ToString();
+                else CountDown.Text = "0" + minutes.ToString() + ":" + seconds.ToString();
+            }
+            else if (minutes == 0 && seconds <= 59)
+            {
+                if (seconds == 0) { seconds = 30; minutes = 1; Add(); textTimer_.Start(); }
+                else seconds--;
+
+                if (seconds < 10) CountDown.Text = "0" + minutes.ToString() + ":0" + seconds.ToString();
+                else CountDown.Text = "0" + minutes.ToString() + ":" + seconds.ToString();
+            }
+
+        }
+        void textTimer_Tick(object sender, object e)
+        {
+            if (currentTime > 0)
+            {
+                currentTime--;
+            }
+            else
+            {
+                textTimer_.Stop();
+                currentTime = initialTime;
+                clearStackPanel();
+                playersTurn = !playersTurn;
+            }
+
+        }
         private void PauseButton_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(Pausa));         
         }
-        protected override void OnNavigatedTo(NavigationEventArgs e){            
+        protected override void OnNavigatedTo(NavigationEventArgs e){
+            minutes = 1;
+            seconds = 30;
+            this.NavigationCacheMode = NavigationCacheMode.Required;
+            timer = new DispatcherTimer();
+            timer.Interval = new TimeSpan(0, 0, 1);
+
+            timer.Tick += timer_Tick;
+            CountDown.Text = "0" + minutes.ToString() + ":" + seconds.ToString();
+            timer.Start();
             CrearLista();
             inicializateTablero();
         }
@@ -112,6 +171,56 @@ namespace ProyectoDSI
                     Tablero[i, j] = false;
                 }
             }
+        }
+        void Add()
+        {
+            if (playersTurn)
+            {
+                EntranceStackPanel.Children.Add(new Border()
+                {
+                    Width = 150,
+                    Height = 30,
+                    BorderThickness = new Thickness(3),
+                    Background = new SolidColorBrush(Windows.UI.Colors.CornflowerBlue),
+                    BorderBrush = new SolidColorBrush(Windows.UI.Colors.MidnightBlue),
+                    Child = new TextBlock()
+                    {
+                        TextAlignment = TextAlignment.Center,
+                        Foreground = new SolidColorBrush(Windows.UI.Colors.White),
+                        TextWrapping = TextWrapping.Wrap,
+                        FontSize = 15,
+                        FontFamily = new FontFamily("MV Boli"),
+                        FontWeight = FontWeights.Bold,
+                        Text = "¡TU TURNO!"
+                    }
+                });
+            }
+            else
+            {
+                EntranceStackPanel.Children.Add(new Border()
+                {
+                    Width = 150,
+                    Height = 30,
+                    BorderThickness = new Thickness(3),
+                    Background = new SolidColorBrush(Windows.UI.Colors.White),
+                    BorderBrush = new SolidColorBrush(Windows.UI.Colors.Red),
+                    Child = new TextBlock()
+                    {
+                        TextAlignment = TextAlignment.Center,
+                        Foreground = new SolidColorBrush(Windows.UI.Colors.Red),
+                        TextWrapping = TextWrapping.Wrap,
+                        FontSize = 15,
+                        FontFamily = new FontFamily("MV Boli"),
+                        FontWeight = FontWeights.Bold,
+                        Text = "¡TURNO ENEMIGO!"
+                    }
+                });
+            }
+
+        }
+        void clearStackPanel()
+        {
+            EntranceStackPanel.Children.Clear();
         }
     }
 }
