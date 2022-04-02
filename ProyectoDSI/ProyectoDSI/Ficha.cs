@@ -15,6 +15,10 @@ namespace ProyectoDSI
         public string rango_;
         public string numFichas_;
     }
+    class FichaInicial{
+        public Ficha ficha_;
+        public int cantidad_;
+    }
     class Ficha{
 
         public int id_; //todas las fichas estaran en una lista y este sera su indicide en ekl que se encuentra en dicha lista

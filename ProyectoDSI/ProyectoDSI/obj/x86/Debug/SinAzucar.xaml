@@ -53,7 +53,7 @@
         </Viewbox>
         
         <Viewbox HorizontalAlignment="Left">
-            <Button x:ConnectionId='22' x:Name="PauseButton"                          
+            <Button x:ConnectionId='33' x:Name="PauseButton"                          
                 Content="Pausa" Background="LightPink" Foreground="Black"
                 Margin="20,20,0,0" FontSize="25"
                 FontFamily="MV Boli" CornerRadius="10" BorderThickness="4"
@@ -63,13 +63,13 @@
         <Viewbox  Grid.Row="1"  Grid.Column="2" VerticalAlignment="Top" Margin="10,10,10,0">
             <Border BorderThickness="10" BorderBrush="#FF040E52" Background="Transparent"
                 CornerRadius="10" Height="80" >
-                <TextBlock x:ConnectionId='21' x:Name="CountDown" Text="00:00" FontSize="45" Foreground="White" />
+                <TextBlock x:ConnectionId='32' x:Name="CountDown" Text="00:00" FontSize="45" Foreground="White" />
             </Border>
         </Viewbox>
         <!--Tablero-->
         <Viewbox Grid.Column="1" Grid.Row="1" Margin="15"
                  VerticalAlignment="Stretch" HorizontalAlignment="Center">
-            <Grid Grid.Column="1" Grid.Row="2" Margin="76,20,70,20">
+            <Grid Grid.Column="1" Grid.Row="2" Margin="76,20,70,20" >
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition/>
@@ -96,232 +96,236 @@
                 </Grid.ColumnDefinitions>
                 <Image Source="Assets/Tablero.png" Stretch="Fill" Grid.RowSpan="10"
                    Grid.ColumnSpan="10" />
-                <!--Fila 0-->
-                <Image Stretch="Fill" Grid.Row="0"
-                   Grid.Column="0"/>
-                <Image Stretch="Fill" Grid.Row="0"
-                   Grid.Column="1"/>
-                <Image Stretch="Fill" Grid.Row="0"
-                   Grid.Column="2"/>
-                <Image Stretch="Fill" Grid.Row="0"
-                   Grid.Column="3"/>
-                <Image Stretch="Fill" Grid.Row="0"
-                   Grid.Column="4"/>
-                <Image Stretch="Fill" Grid.Row="0"
-                   Grid.Column="5"/>
-                <Image Stretch="Fill" Grid.Row="0"
-                   Grid.Column="6"/>
-                <Image Stretch="Fill" Grid.Row="0"
-                   Grid.Column="7"/>
-                <Image Stretch="Fill" Grid.Row="0"
-                   Grid.Column="8"/>
-                <Image Stretch="Fill" Grid.Row="0"
-                   Grid.Column="9"/>
-
-                <!--Fila 1-->
-                <Image Stretch="Fill" Grid.Row="1"
-                   Grid.Column="0"/>
-                <Image Stretch="Fill" Grid.Row="1"
-                   Grid.Column="1"/>
-                <Image Stretch="Fill" Grid.Row="1"
-                   Grid.Column="2"/>
-                <Image Stretch="Fill" Grid.Row="1"
-                   Grid.Column="3"/>
-                <Image Stretch="Fill" Grid.Row="1"
-                   Grid.Column="4"/>
-                <Image Stretch="Fill" Grid.Row="1"
-                   Grid.Column="5"/>
-                <Image Stretch="Fill" Grid.Row="1"
-                   Grid.Column="6"/>
-                <Image Stretch="Fill" Grid.Row="1"
-                   Grid.Column="7"/>
-                <Image Stretch="Fill" Grid.Row="1"
-                   Grid.Column="8"/>
-                <Image Stretch="Fill" Grid.Row="1"
-                   Grid.Column="9"/>
-
-                <!--Fila 2-->
-                <Image Stretch="Fill" Grid.Row="2"
-                   Grid.Column="0"/>
-                <Image Stretch="Fill" Grid.Row="2"
-                   Grid.Column="1"/>
-                <Image Stretch="Fill" Grid.Row="2"
-                   Grid.Column="2"/>
-                <Image Stretch="Fill" Grid.Row="2"
-                   Grid.Column="3"/>
-                <Image Stretch="Fill" Grid.Row="2"
-                   Grid.Column="4"/>
-                <Image Stretch="Fill" Grid.Row="2"
-                   Grid.Column="5"/>
-                <Image Stretch="Fill" Grid.Row="2"
-                   Grid.Column="6"/>
-                <Image Stretch="Fill" Grid.Row="2"
-                   Grid.Column="7"/>
-                <Image Stretch="Fill" Grid.Row="2"
-                   Grid.Column="8"/>
-                <Image Stretch="Fill" Grid.Row="2"
-                   Grid.Column="9"/>
-
-                <!--Fila 3-->
-                <Image Stretch="Fill" Grid.Row="3"
-                   Grid.Column="0"/>
-                <Image Stretch="Fill" Grid.Row="3"
-                   Grid.Column="1"/>
-                <Image Stretch="Fill" Grid.Row="3"
-                   Grid.Column="2"/>
-                <Image Stretch="Fill" Grid.Row="3"
-                   Grid.Column="3"/>
-                <Image Stretch="Fill" Grid.Row="3"
-                   Grid.Column="4"/>
-                <Image Stretch="Fill" Grid.Row="3"
-                   Grid.Column="5"/>
-                <Image Stretch="Fill" Grid.Row="3"
-                   Grid.Column="6"/>
-                <Image Stretch="Fill" Grid.Row="3"
-                   Grid.Column="7"/>
-                <Image Stretch="Fill" Grid.Row="3"
-                   Grid.Column="8"/>
-                <Image Stretch="Fill" Grid.Row="3"
-                   Grid.Column="9"/>
-
-                <!--Fila 4-->
-                <Image Stretch="Fill" Grid.Row="4"
-                   Grid.Column="0"/>
-                <Image Stretch="Fill" Grid.Row="4"
-                   Grid.Column="1"/>
-                <!--<Image Stretch="Fill" Grid.Row="4"
-                   Grid.Column="2"/>
-            <Image Stretch="Fill" Grid.Row="4"
-                   Grid.Column="3"/>-->
-                <Image Stretch="Fill" Grid.Row="4"
-                   Grid.Column="4"/>
-                <Image Stretch="Fill" Grid.Row="4"
-                   Grid.Column="5"/>
-                <!--<Image Stretch="Fill" Grid.Row="4"
-                   Grid.Column="6"/>
-            <Image Stretch="Fill" Grid.Row="4"
-                   Grid.Column="7"/>-->
-                <Image Stretch="Fill" Grid.Row="4"
-                   Grid.Column="8"/>
-                <Image Stretch="Fill" Grid.Row="4"
-                   Grid.Column="9"/>
-
-                <!--Fila 5-->
-                <Image Stretch="Fill" Grid.Row="5"
-                   Grid.Column="0"/>
-                <Image Stretch="Fill" Grid.Row="5"
-                   Grid.Column="1"/>
-                <!--<Image Stretch="Fill" Grid.Row="5"
-                   Grid.Column="2"/>
-            <Image Stretch="Fill" Grid.Row="5"
-                   Grid.Column="3"/>-->
-                <Image Stretch="Fill" Grid.Row="5"
-                   Grid.Column="4"/>
-                <Image Stretch="Fill" Grid.Row="5"
-                   Grid.Column="5"/>
-                <!--<Image Stretch="Fill" Grid.Row="5"
-                   Grid.Column="6"/>
-            <Image Stretch="Fill" Grid.Row="5"
-                   Grid.Column="7"/>-->
-                <Image Stretch="Fill" Grid.Row="5"
-                   Grid.Column="8"/>
-                <Image Stretch="Fill" Grid.Row="5"
-                   Grid.Column="9"/>
-
-                <!--Fila 6-->
-                <Image Stretch="Fill" Grid.Row="6"
-                   Grid.Column="0"/>
-                <Image Stretch="Fill" Grid.Row="6"
-                   Grid.Column="1"/>
-                <Image Stretch="Fill" Grid.Row="6"
-                   Grid.Column="2"/>
-                <Image Stretch="Fill" Grid.Row="6"
-                   Grid.Column="3"/>
-                <Image Stretch="Fill" Grid.Row="6"
-                   Grid.Column="4"/>
-                <Image Stretch="Fill" Grid.Row="6"
-                   Grid.Column="5"/>
-                <Image Stretch="Fill" Grid.Row="6"
-                   Grid.Column="6"/>
-                <Image Stretch="Fill" Grid.Row="6"
-                   Grid.Column="7"/>
-                <Image Stretch="Fill" Grid.Row="6"
-                   Grid.Column="8"/>
-                <Image Stretch="Fill" Grid.Row="6"
-                   Grid.Column="9"/>
-
-                <!--Fila 7-->
-                <Image Stretch="Fill" Grid.Row="7"
-                   Grid.Column="0"/>
-                <Image Stretch="Fill" Grid.Row="7"
-                   Grid.Column="1"/>
-                <Image Stretch="Fill" Grid.Row="7"
-                   Grid.Column="2"/>
-                <Image Stretch="Fill" Grid.Row="7"
-                   Grid.Column="3"/>
-                <Image Stretch="Fill" Grid.Row="7"
-                   Grid.Column="4"/>
-                <Image Stretch="Fill" Grid.Row="7"
-                   Grid.Column="5"/>
-                <Image Stretch="Fill" Grid.Row="7"
-                   Grid.Column="6"/>
-                <Image Stretch="Fill" Grid.Row="7"
-                   Grid.Column="7"/>
-                <Image Stretch="Fill" Grid.Row="7"
-                   Grid.Column="8"/>
-                <Image Stretch="Fill" Grid.Row="7"
-                   Grid.Column="9"/>
-
-                <!--Fila 8-->
-                <Image Stretch="Fill" Grid.Row="8"
-                   Grid.Column="0"/>
-                <Image Stretch="Fill" Grid.Row="8"
-                   Grid.Column="1"/>
-                <Image Stretch="Fill" Grid.Row="8"
-                   Grid.Column="2"/>
-                <Image Stretch="Fill" Grid.Row="8"
-                   Grid.Column="3"/>
-                <Image Stretch="Fill" Grid.Row="8"
-                   Grid.Column="4"/>
-                <Image Stretch="Fill" Grid.Row="8"
-                   Grid.Column="5"/>
-                <Image Stretch="Fill" Grid.Row="8"
-                   Grid.Column="6"/>
-                <Image Stretch="Fill" Grid.Row="8"
-                   Grid.Column="7"/>
-                <Image Stretch="Fill" Grid.Row="8"
-                   Grid.Column="8"/>
-                <Image Stretch="Fill" Grid.Row="8"
-                   Grid.Column="9"/>
-
-                <!--Fila 9-->
-                <Image Stretch="Fill" Grid.Row="9"
-                   Grid.Column="0"/>
-                <Image Stretch="Fill" Grid.Row="9"
-                   Grid.Column="1"/>
-                <Image Stretch="Fill" Grid.Row="9"
-                   Grid.Column="2"/>
-                <Image Stretch="Fill" Grid.Row="9"
-                   Grid.Column="3"/>
-                <Image Stretch="Fill" Grid.Row="9"
-                   Grid.Column="4"/>
-                <Image Stretch="Fill" Grid.Row="9"
-                   Grid.Column="5"/>
-                <Image Stretch="Fill" Grid.Row="9"
-                   Grid.Column="6"/>
-                <Image Stretch="Fill" Grid.Row="9"
-                   Grid.Column="7"/>
-                <Image Stretch="Fill" Grid.Row="9"
-                   Grid.Column="8"/>
-                <Image Stretch="Fill" Grid.Row="9"
-                   Grid.Column="9"/>
-
+                
                 <Image Grid.Column="2" Grid.Row="4" 
                        Source="Assets/obstaculos.png" Grid.RowSpan="2"
                        Grid.ColumnSpan="2" Width="240"/>
                 <Image Grid.Column="6" Grid.Row="4" 
                        Source="Assets/obstaculos.png" Grid.RowSpan="2"
                        Grid.ColumnSpan="2" Width="240"/>
+                
+                <Canvas x:ConnectionId='31' x:Name="MiCanvas" Grid.ColumnSpan="10" Grid.RowSpan="10">
+                    <!--Fila 0-->
+                    <Image Stretch="Fill" Grid.Row="0"
+                   Grid.Column="0"/>
+                    <Image Stretch="Fill" Grid.Row="0"
+                   Grid.Column="1"/>
+                    <Image Stretch="Fill" Grid.Row="0"
+                   Grid.Column="2"/>
+                    <Image Stretch="Fill" Grid.Row="0"
+                   Grid.Column="3"/>
+                    <Image Stretch="Fill" Grid.Row="0"
+                   Grid.Column="4"/>
+                    <Image Stretch="Fill" Grid.Row="0"
+                   Grid.Column="5"/>
+                    <Image Stretch="Fill" Grid.Row="0"
+                   Grid.Column="6"/>
+                    <Image Stretch="Fill" Grid.Row="0"
+                   Grid.Column="7"/>
+                    <Image Stretch="Fill" Grid.Row="0"
+                   Grid.Column="8"/>
+                    <Image Stretch="Fill" Grid.Row="0"
+                   Grid.Column="9"/>
+
+                    <!--Fila 1-->
+                    <Image Stretch="Fill" Grid.Row="1"
+                   Grid.Column="0"/>
+                    <Image Stretch="Fill" Grid.Row="1"
+                   Grid.Column="1"/>
+                    <Image Stretch="Fill" Grid.Row="1"
+                   Grid.Column="2"/>
+                    <Image Stretch="Fill" Grid.Row="1"
+                   Grid.Column="3"/>
+                    <Image Stretch="Fill" Grid.Row="1"
+                   Grid.Column="4"/>
+                    <Image Stretch="Fill" Grid.Row="1"
+                   Grid.Column="5"/>
+                    <Image Stretch="Fill" Grid.Row="1"
+                   Grid.Column="6"/>
+                    <Image Stretch="Fill" Grid.Row="1"
+                   Grid.Column="7"/>
+                    <Image Stretch="Fill" Grid.Row="1"
+                   Grid.Column="8"/>
+                    <Image Stretch="Fill" Grid.Row="1"
+                   Grid.Column="9"/>
+
+                    <!--Fila 2-->
+                    <Image Stretch="Fill" Grid.Row="2"
+                   Grid.Column="0"/>
+                    <Image Stretch="Fill" Grid.Row="2"
+                   Grid.Column="1"/>
+                    <Image Stretch="Fill" Grid.Row="2"
+                   Grid.Column="2"/>
+                    <Image Stretch="Fill" Grid.Row="2"
+                   Grid.Column="3"/>
+                    <Image Stretch="Fill" Grid.Row="2"
+                   Grid.Column="4"/>
+                    <Image Stretch="Fill" Grid.Row="2"
+                   Grid.Column="5"/>
+                    <Image Stretch="Fill" Grid.Row="2"
+                   Grid.Column="6"/>
+                    <Image Stretch="Fill" Grid.Row="2"
+                   Grid.Column="7"/>
+                    <Image Stretch="Fill" Grid.Row="2"
+                   Grid.Column="8"/>
+                    <Image Stretch="Fill" Grid.Row="2"
+                   Grid.Column="9"/>
+
+                    <!--Fila 3-->
+                    <Image Stretch="Fill" Grid.Row="3"
+                   Grid.Column="0"/>
+                    <Image Stretch="Fill" Grid.Row="3"
+                   Grid.Column="1"/>
+                    <Image Stretch="Fill" Grid.Row="3"
+                   Grid.Column="2"/>
+                    <Image Stretch="Fill" Grid.Row="3"
+                   Grid.Column="3"/>
+                    <Image Stretch="Fill" Grid.Row="3"
+                   Grid.Column="4"/>
+                    <Image Stretch="Fill" Grid.Row="3"
+                   Grid.Column="5"/>
+                    <Image Stretch="Fill" Grid.Row="3"
+                   Grid.Column="6"/>
+                    <Image Stretch="Fill" Grid.Row="3"
+                   Grid.Column="7"/>
+                    <Image Stretch="Fill" Grid.Row="3"
+                   Grid.Column="8"/>
+                    <Image Stretch="Fill" Grid.Row="3"
+                   Grid.Column="9"/>
+
+                    <!--Fila 4-->
+                    <Image Stretch="Fill" Grid.Row="4"
+                   Grid.Column="0"/>
+                    <Image Stretch="Fill" Grid.Row="4"
+                   Grid.Column="1"/>
+                    <!--<Image Stretch="Fill" Grid.Row="4"
+                   Grid.Column="2"/>
+            <Image Stretch="Fill" Grid.Row="4"
+                   Grid.Column="3"/>-->
+                    <Image Stretch="Fill" Grid.Row="4"
+                   Grid.Column="4"/>
+                    <Image Stretch="Fill" Grid.Row="4"
+                   Grid.Column="5"/>
+                    <!--<Image Stretch="Fill" Grid.Row="4"
+                   Grid.Column="6"/>
+            <Image Stretch="Fill" Grid.Row="4"
+                   Grid.Column="7"/>-->
+                    <Image Stretch="Fill" Grid.Row="4"
+                   Grid.Column="8"/>
+                    <Image Stretch="Fill" Grid.Row="4"
+                   Grid.Column="9"/>
+
+                    <!--Fila 5-->
+                    <Image Stretch="Fill" Grid.Row="5"
+                   Grid.Column="0"/>
+                    <Image Stretch="Fill" Grid.Row="5"
+                   Grid.Column="1"/>
+                    <!--<Image Stretch="Fill" Grid.Row="5"
+                   Grid.Column="2"/>
+            <Image Stretch="Fill" Grid.Row="5"
+                   Grid.Column="3"/>-->
+                    <Image Stretch="Fill" Grid.Row="5"
+                   Grid.Column="4"/>
+                    <Image Stretch="Fill" Grid.Row="5"
+                   Grid.Column="5"/>
+                    <!--<Image Stretch="Fill" Grid.Row="5"
+                   Grid.Column="6"/>
+            <Image Stretch="Fill" Grid.Row="5"
+                   Grid.Column="7"/>-->
+                    <Image Stretch="Fill" Grid.Row="5"
+                   Grid.Column="8"/>
+                    <Image Stretch="Fill" Grid.Row="5"
+                   Grid.Column="9"/>
+
+                    <!--Fila 6-->
+                    <Image Stretch="Fill" Grid.Row="6"
+                   Grid.Column="0"/>
+                    <Image Stretch="Fill" Grid.Row="6"
+                   Grid.Column="1"/>
+                    <Image Stretch="Fill" Grid.Row="6"
+                   Grid.Column="2"/>
+                    <Image Stretch="Fill" Grid.Row="6"
+                   Grid.Column="3"/>
+                    <Image Stretch="Fill" Grid.Row="6"
+                   Grid.Column="4"/>
+                    <Image Stretch="Fill" Grid.Row="6"
+                   Grid.Column="5"/>
+                    <Image Stretch="Fill" Grid.Row="6"
+                   Grid.Column="6"/>
+                    <Image Stretch="Fill" Grid.Row="6"
+                   Grid.Column="7"/>
+                    <Image Stretch="Fill" Grid.Row="6"
+                   Grid.Column="8"/>
+                    <Image Stretch="Fill" Grid.Row="6"
+                   Grid.Column="9"/>
+
+                    <!--Fila 7-->
+                    <Image Stretch="Fill" Grid.Row="7"
+                   Grid.Column="0"/>
+                    <Image Stretch="Fill" Grid.Row="7"
+                   Grid.Column="1"/>
+                    <Image Stretch="Fill" Grid.Row="7"
+                   Grid.Column="2"/>
+                    <Image Stretch="Fill" Grid.Row="7"
+                   Grid.Column="3"/>
+                    <Image Stretch="Fill" Grid.Row="7"
+                   Grid.Column="4"/>
+                    <Image Stretch="Fill" Grid.Row="7"
+                   Grid.Column="5"/>
+                    <Image Stretch="Fill" Grid.Row="7"
+                   Grid.Column="6"/>
+                    <Image Stretch="Fill" Grid.Row="7"
+                   Grid.Column="7"/>
+                    <Image Stretch="Fill" Grid.Row="7"
+                   Grid.Column="8"/>
+                    <Image Stretch="Fill" Grid.Row="7"
+                   Grid.Column="9"/>
+
+                    <!--Fila 8-->
+                    <Image Stretch="Fill" Grid.Row="8"
+                   Grid.Column="0"/>
+                    <Image Stretch="Fill" Grid.Row="8"
+                   Grid.Column="1"/>
+                    <Image Stretch="Fill" Grid.Row="8"
+                   Grid.Column="2"/>
+                    <Image Stretch="Fill" Grid.Row="8"
+                   Grid.Column="3"/>
+                    <Image Stretch="Fill" Grid.Row="8"
+                   Grid.Column="4"/>
+                    <Image Stretch="Fill" Grid.Row="8"
+                   Grid.Column="5"/>
+                    <Image Stretch="Fill" Grid.Row="8"
+                   Grid.Column="6"/>
+                    <Image Stretch="Fill" Grid.Row="8"
+                   Grid.Column="7"/>
+                    <Image Stretch="Fill" Grid.Row="8"
+                   Grid.Column="8"/>
+                    <Image Stretch="Fill" Grid.Row="8"
+                   Grid.Column="9"/>
+
+                    <!--Fila 9-->
+                    <Image Stretch="Fill" Grid.Row="9"
+                   Grid.Column="0"/>
+                    <Image Stretch="Fill" Grid.Row="9"
+                   Grid.Column="1"/>
+                    <Image Stretch="Fill" Grid.Row="9"
+                   Grid.Column="2"/>
+                    <Image Stretch="Fill" Grid.Row="9"
+                   Grid.Column="3"/>
+                    <Image Stretch="Fill" Grid.Row="9"
+                   Grid.Column="4"/>
+                    <Image Stretch="Fill" Grid.Row="9"
+                   Grid.Column="5"/>
+                    <Image Stretch="Fill" Grid.Row="9"
+                   Grid.Column="6"/>
+                    <Image Stretch="Fill" Grid.Row="9"
+                   Grid.Column="7"/>
+                    <Image Stretch="Fill" Grid.Row="9"
+                   Grid.Column="8"/>
+                    <Image Stretch="Fill" Grid.Row="9"
+                   Grid.Column="9"/>
+                </Canvas>
+               
             </Grid>
         </Viewbox>
         <!--Barra de progreso-->
@@ -337,16 +341,16 @@
         <!--PanelIzquierdo-->
         <Viewbox Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
             <Grid Margin="20,130,80,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                <StackPanel x:ConnectionId='14' x:Name="PanelDeFichas" >
-                    <ListView x:ConnectionId='15'                                        Background="Gold" 
+                <StackPanel x:ConnectionId='24' x:Name="PanelDeFichas" >
+                    <ListView x:ConnectionId='25'                                        Background="Gold" 
                       CornerRadius="15" >
                         <ListView.ItemTemplate>
                             <DataTemplate                               >
-                                <StackPanel x:ConnectionId='17' Orientation="Horizontal" Spacing=" 15">
-                                    <Image x:ConnectionId='18'                                       Height="55" />
+                                <StackPanel x:ConnectionId='27' Orientation="Horizontal" Spacing=" 15">
+                                    <Image x:ConnectionId='28'                                       Height="55" />
                                     <StackPanel Orientation="Vertical">
-                                        <TextBlock x:ConnectionId='19'                        FontSize="16" Foreground="BlueViolet" FontFamily="MV Boli" FontWeight="Bold"/>
-                                        <TextBlock x:ConnectionId='20'                            FontSize="32" FontFamily="MV Boli" FontWeight="Bold"/>
+                                        <TextBlock x:ConnectionId='29'                        FontSize="16" Foreground="BlueViolet" FontFamily="MV Boli" FontWeight="Bold"/>
+                                        <TextBlock x:ConnectionId='30'                            FontSize="32" FontFamily="MV Boli" FontWeight="Bold"/>
                                     </StackPanel>
                                 </StackPanel>
                             </DataTemplate>
@@ -360,47 +364,36 @@
             <Grid Margin="0,0,0,250" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                 <StackPanel  Background="Gray" 
                     Opacity="0.75"  BorderBrush="White" BorderThickness="10" Height="537">
-                    <StackPanel Background="Purple" Opacity="1"  BorderThickness="5" BorderBrush="White" Height="430">
+                    <StackPanel Background="Purple" Opacity="1"  BorderThickness="5" BorderBrush="White" Height="430" Width="725">
                         <TextBlock Text="Coloca tus fichas" FontFamily="MV Boli" FontWeight="ExtraBold" 
                            VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="56"/>
-                        <StackPanel Height="345" Margin="10" Spacing="20" Orientation="Vertical" >
-                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="5">
-                                <StackPanel Orientation="Horizontal" Spacing="10">
-                                    <Image Source="Assets/Regaliz.png" Height="150"/>
-                                    <TextBlock Text="x1" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal" Spacing="10">
-                                    <Image Source="Assets/Baston.png" Height="150"/>
-                                    <TextBlock Text="x2" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal" Spacing="10">
-                                    <Image Source="Assets/Huevo.png" Height="150"/>
-                                    <TextBlock Text="x4" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal" Spacing="10">
-                                    <Image Source="Assets/BombaSandia.png" Height="150"/>
-                                    <TextBlock Text="x1" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                </StackPanel>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="5">
-                                <StackPanel Orientation="Horizontal" Spacing="10">
-                                    <Image Source="Assets/Sandia.png" Height="150"/>
-                                    <TextBlock Text="x4" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal" Spacing="10">
-                                    <Image Source="Assets/Cocacola.png" Height="150"/>
-                                    <TextBlock Text="x8" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal" Spacing="10">
-                                    <Image Source="Assets/Petazeta.png" Height="150"/>
-                                    <TextBlock Text="x6" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal" Spacing="10">
-                                    <Image Source="Assets/Fresa.png" Height="150"/>
-                                    <TextBlock Text="x1" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                </StackPanel>
-                            </StackPanel>
-                        </StackPanel>
+                        <GridView x:ConnectionId='14' Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" 
+                                  IsItemClickEnabled="True"                                             
+                                  CanDragItems="True"                                                >
+                            <GridView.ItemTemplate >
+                                <DataTemplate                                >
+                                    <StackPanel x:ConnectionId='21' VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                Spacing="5" Orientation="Horizontal">
+                                        <Image x:ConnectionId='22'                                      Height="100"/>
+                                        <TextBlock x:ConnectionId='23'                           FontSize="48" 
+                                                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GridView.ItemTemplate>
+                        </GridView>
+                        <GridView x:ConnectionId='15' Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" 
+                                  IsItemClickEnabled="True"                                             >
+                            <GridView.ItemTemplate >
+                                <DataTemplate                                >
+                                    <StackPanel x:ConnectionId='17' VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                Spacing="5" Orientation="Horizontal">
+                                        <Image x:ConnectionId='18'                                      Height="100"/>
+                                        <TextBlock x:ConnectionId='19'                           FontSize="48" 
+                                                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GridView.ItemTemplate>
+                        </GridView>
                     </StackPanel>
                 </StackPanel>
             </Grid>

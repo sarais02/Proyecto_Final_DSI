@@ -107,7 +107,6 @@
     <RootType FullName="Windows.UI.Xaml.Media.Animation.EntranceThemeTransition">
       <RootProperty Name="IsStaggeringEnabled" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Media.Animation.AddDeleteThemeTransition" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="Background" />
@@ -200,6 +199,18 @@
     <RootType FullName="ProyectoDSI.Pausa" />
     <RootType FullName="ProyectoDSI.Reglamento" />
     <RootType FullName="ProyectoDSI.SeleccionNivel" />
+    <RootType FullName="Windows.UI.Xaml.Controls.GridView">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="IsItemClickEnabled" />
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="CanDragItems" />
+      <RootProperty Name="ItemTemplate" />
+      <RootEvent Name="DragItemsStarting" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Canvas">
+      <RootProperty Name="Children" />
+    </RootType>
     <RootType FullName="ProyectoDSI.SinAzucar" />
   </Roots.RootTypes>
 </Roots>

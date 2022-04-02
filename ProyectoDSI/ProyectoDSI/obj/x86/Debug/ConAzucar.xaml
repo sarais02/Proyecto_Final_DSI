@@ -409,7 +409,6 @@
                     <StackPanel.ChildrenTransitions>
                         <TransitionCollection>
                             <EntranceThemeTransition IsStaggeringEnabled="True" />
-                            <AddDeleteThemeTransition />
                         </TransitionCollection>
                     </StackPanel.ChildrenTransitions>
                 </StackPanel>
