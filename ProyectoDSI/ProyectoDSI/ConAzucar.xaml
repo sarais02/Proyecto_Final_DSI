@@ -62,7 +62,30 @@
                 <TextBlock x:Name="CountDown" Text="00:00" FontSize="45" Foreground="White" />
             </Border>
         </Viewbox>
+        <!--Paneles de informacion cartas-->
+        <Viewbox Grid.Row="1" Grid.ColumnSpan="3" Margin="0,200,0,0" >
+            <Grid >
+                <StackPanel Orientation="Horizontal" Spacing="650">
+                    <StackPanel  x:Name="PanelInfoJugador"  Style="{StaticResource panelesInfo}" Margin="155,0,0,0" >
+                        <TextBlock  x:Name="CartaInfoJugador" Text="Regaliz" Style="{StaticResource textInfoPanel}" FontSize="24"/>
+                        <TextBlock x:Name="RangoCartaJUgador" Text="Rango: 7" Style="{StaticResource textInfoPanel}" FontSize="16"/>
+                        <Image x:Name="ImagenCartaJugador" Source="Assets/regaliz.png" Width="50"></Image>
+                        <TextBlock x:Name="InfoCartaJugador"  Style="{StaticResource textInfoPanel}"
+                           TextWrapping="Wrap" Text="Tiene su punto débil expuesto, la yema, 
+                           pero para poder acabar con él deberás cogerlo primero y gracias a su disposición de la clara puede arrastrarse muy rápido"  FontSize="8"/>
+                    </StackPanel>
+                    <StackPanel  x:Name="PanelInfoEnemigo" Style="{StaticResource panelesInfo}" Margin="0,0,75,0" >
+                        <TextBlock  x:Name="CartaInfoEnemigo" Text="Regaliz"   FontSize="24" Style="{StaticResource textInfoPanel}"/>
+                        <TextBlock x:Name="RangoCartaEnemigo" Text="Rango: 7" Style="{StaticResource textInfoPanel}" FontSize="16"/>
+                        <Image x:Name="ImagenCartaEnemigo" Source="Assets/regaliz.png" Width="50"></Image>
+                        <TextBlock x:Name="InfoCartaEnemigo" Style="{StaticResource textInfoPanel}"
+                           TextWrapping="Wrap" Text="Tiene su punto débil expuesto, la yema, 
+                           pero para poder acabar con él deberás cogerlo primero y gracias a su disposición de la clara puede arrastrarse muy rápido"  FontSize="8"/>
+                    </StackPanel>
 
+                </StackPanel>
+            </Grid>
+        </Viewbox>
         <!--Tablero-->
         <Viewbox Grid.Column="1" Grid.Row="1" Margin="15"
                  VerticalAlignment="Stretch" HorizontalAlignment="Center">
@@ -357,47 +380,36 @@
             <Grid Margin="0,0,0,250" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                 <StackPanel  Background="Gray" 
                     Opacity="0.75"  BorderBrush="White" BorderThickness="10" Height="537">
-                    <StackPanel Background="Purple" Opacity="1"  BorderThickness="5" BorderBrush="White" Height="430">
+                    <StackPanel Background="Purple" Opacity="1"  BorderThickness="5" BorderBrush="White" Height="430" Width="725">
                         <TextBlock Text="Coloca tus fichas" FontFamily="MV Boli" FontWeight="ExtraBold" 
                            VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="56"/>
-                        <StackPanel Height="345" Margin="10" Spacing="20" Orientation="Vertical" >
-                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="5">
-                                <StackPanel Orientation="Horizontal" Spacing="10">
-                                    <Image Source="Assets/Regaliz.png" Height="150"/>
-                                    <TextBlock Text="x1" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal" Spacing="10">
-                                    <Image Source="Assets/Baston.png" Height="150"/>
-                                    <TextBlock Text="x2" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal" Spacing="10">
-                                    <Image Source="Assets/Huevo.png" Height="150"/>
-                                    <TextBlock Text="x4" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal" Spacing="10">
-                                    <Image Source="Assets/BombaSandia.png" Height="150"/>
-                                    <TextBlock Text="x1" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                </StackPanel>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="5">
-                                <StackPanel Orientation="Horizontal" Spacing="10">
-                                    <Image Source="Assets/Sandia.png" Height="150"/>
-                                    <TextBlock Text="x4" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal" Spacing="10">
-                                    <Image Source="Assets/Cocacola.png" Height="150"/>
-                                    <TextBlock Text="x8" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal" Spacing="10">
-                                    <Image Source="Assets/Petazeta.png" Height="150"/>
-                                    <TextBlock Text="x6" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal" Spacing="10">
-                                    <Image Source="Assets/Fresa.png" Height="150"/>
-                                    <TextBlock Text="x1" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                </StackPanel>
-                            </StackPanel>
-                        </StackPanel>
+                        <GridView Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" 
+                                  IsItemClickEnabled="True" ItemsSource="{x:Bind listFichasIniciales1}" 
+                                  CanDragItems="True" DragItemsStarting="GridView_DragItemsStarting" >
+                            <GridView.ItemTemplate >
+                                <DataTemplate x:DataType="local:FichaInicial">
+                                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                Spacing="5" Orientation="Horizontal">
+                                        <Image Source="{x:Bind ficha_.img_.Source}" Height="100"/>
+                                        <TextBlock Text="{x:Bind cantidad_}" FontSize="48" 
+                                                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GridView.ItemTemplate>
+                        </GridView>
+                        <GridView Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" 
+                                  IsItemClickEnabled="True" ItemsSource="{x:Bind listFichasIniciales2}" >
+                            <GridView.ItemTemplate >
+                                <DataTemplate x:DataType="local:FichaInicial">
+                                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                Spacing="5" Orientation="Horizontal">
+                                        <Image Source="{x:Bind ficha_.img_.Source}" Height="100"/>
+                                        <TextBlock Text="{x:Bind cantidad_}" FontSize="48" 
+                                                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GridView.ItemTemplate>
+                        </GridView>
                     </StackPanel>
                 </StackPanel>
             </Grid>
@@ -411,28 +423,6 @@
                             <EntranceThemeTransition IsStaggeringEnabled="True" />
                         </TransitionCollection>
                     </StackPanel.ChildrenTransitions>
-                </StackPanel>
-            </Grid>
-        </Viewbox>
-        <!--Paneles de informacion cartas-->
-        <Viewbox Grid.Row="1" Grid.ColumnSpan="3" Margin="0,200,0,0" >
-            <Grid >
-                <StackPanel Orientation="Horizontal" Spacing="600">
-                    <StackPanel  x:Name="PanelInfoJugador"  Style="{StaticResource panelesInfo}" Margin="155,0,0,0" >
-                        <TextBlock  x:Name="CartaInfoJugador" Text="Regaliz" Style="{StaticResource textInfoPanel}" FontSize="24"/>
-                        <Image x:Name="ImagenCartaJugador" Source="Assets/regaliz.png" Width="50"></Image>
-                        <TextBlock x:Name="InfoCartaJugador"  Style="{StaticResource textInfoPanel}"
-                           TextWrapping="Wrap" Text="Tiene su punto débil expuesto, la yema, 
-                           pero para poder acabar con él deberás cogerlo primero y gracias a su disposición de la clara puede arrastrarse muy rápido"  FontSize="8"/>
-                    </StackPanel>
-                    <StackPanel  x:Name="PanelInfoEnemigo" Style="{StaticResource panelesInfo}" Margin="0,0,75,0" >
-                        <TextBlock  x:Name="CartaInfoEnemigo" Text="Regaliz"   FontSize="24" Style="{StaticResource textInfoPanel}"/>
-                        <Image x:Name="ImagenCartaEnemigo" Source="Assets/regaliz.png" Width="50"></Image>
-                        <TextBlock x:Name="InfoCartaEnemigo" Style="{StaticResource textInfoPanel}"
-                           TextWrapping="Wrap" Text="Tiene su punto débil expuesto, la yema, 
-                           pero para poder acabar con él deberás cogerlo primero y gracias a su disposición de la clara puede arrastrarse muy rápido"  FontSize="8"/>
-                    </StackPanel>
-
                 </StackPanel>
             </Grid>
         </Viewbox>

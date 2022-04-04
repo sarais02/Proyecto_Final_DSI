@@ -66,48 +66,74 @@
                 <TextBlock x:Name="CountDown" Text="00:00" FontSize="45" Foreground="White" />
             </Border>
         </Viewbox>
+        <!--Paneles de informacion cartas-->
+        <Viewbox Grid.Row="1" Grid.ColumnSpan="3" Margin="0,200,0,0" >
+            <Grid >
+                <StackPanel Orientation="Horizontal" Spacing="650">
+                    <StackPanel  x:Name="PanelInfoJugador"  Style="{StaticResource panelesInfo}" Margin="155,0,0,0" >
+                        <TextBlock  x:Name="CartaInfoJugador" Text="Regaliz" Style="{StaticResource textInfoPanel}" FontSize="24"/>
+                        <TextBlock x:Name="RangoCartaJUgador" Text="Rango: 7" Style="{StaticResource textInfoPanel}" FontSize="16"/>
+                        <Image x:Name="ImagenCartaJugador" Source="Assets/regaliz.png" Width="50"></Image>
+                        <TextBlock x:Name="InfoCartaJugador"  Style="{StaticResource textInfoPanel}"
+                           TextWrapping="Wrap" Text="Tiene su punto débil expuesto, la yema, 
+                           pero para poder acabar con él deberás cogerlo primero y gracias a su disposición de la clara puede arrastrarse muy rápido"  FontSize="8"/>
+                    </StackPanel>
+                    <StackPanel  x:Name="PanelInfoEnemigo" Style="{StaticResource panelesInfo}" Margin="0,0,75,0" >
+                        <TextBlock  x:Name="CartaInfoEnemigo" Text="Regaliz"   FontSize="24" Style="{StaticResource textInfoPanel}"/>
+                        <TextBlock x:Name="RangoCartaEnemigo" Text="Rango: 7" Style="{StaticResource textInfoPanel}" FontSize="16"/>
+                        <Image x:Name="ImagenCartaEnemigo" Source="Assets/regaliz.png" Width="50"></Image>
+                        <TextBlock x:Name="InfoCartaEnemigo" Style="{StaticResource textInfoPanel}"
+                           TextWrapping="Wrap" Text="Tiene su punto débil expuesto, la yema, 
+                           pero para poder acabar con él deberás cogerlo primero y gracias a su disposición de la clara puede arrastrarse muy rápido"  FontSize="8"/>
+                    </StackPanel>
+
+                </StackPanel>
+            </Grid>
+        </Viewbox>
+        
         <!--Tablero-->
         <Viewbox Grid.Column="1" Grid.Row="1" Margin="15"
                  VerticalAlignment="Stretch" HorizontalAlignment="Center">
-            <Grid Grid.Column="1" Grid.Row="2" Margin="76,20,70,20" >
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Image Source="Assets/Tablero.png" Stretch="Fill" Grid.RowSpan="10"
+            <Grid>
+                <Grid Grid.Column="1" Grid.Row="2" Margin="76,20,70,20"  >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="90"/>
+                        <RowDefinition Height="90"/>
+                        <RowDefinition Height="90"/>
+                        <RowDefinition Height="90"/>
+                        <RowDefinition Height="90"/>
+                        <RowDefinition Height="90"/>
+                        <RowDefinition Height="90"/>
+                        <RowDefinition Height="90"/>
+                        <RowDefinition Height="90"/>
+                        <RowDefinition Height="90"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="90"/>
+                        <ColumnDefinition Width="90"/>
+                        <ColumnDefinition Width="90"/>
+                        <ColumnDefinition Width="90"/>
+                        <ColumnDefinition Width="90"/>
+                        <ColumnDefinition Width="90"/>
+                        <ColumnDefinition Width="90"/>
+                        <ColumnDefinition Width="90"/>
+                        <ColumnDefinition Width="90"/>
+                        <ColumnDefinition Width="90"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="Assets/Tablero.png" Stretch="Fill" Grid.RowSpan="10"
                    Grid.ColumnSpan="10" />
-                
-                <Image Grid.Column="2" Grid.Row="4" 
+
+                    <Image Grid.Column="2" Grid.Row="4" 
                        Source="Assets/obstaculos.png" Grid.RowSpan="2"
-                       Grid.ColumnSpan="2" Width="240"/>
-                <Image Grid.Column="6" Grid.Row="4" 
+                       Grid.ColumnSpan="2" />
+                    <Image Grid.Column="6" Grid.Row="4" 
                        Source="Assets/obstaculos.png" Grid.RowSpan="2"
-                       Grid.ColumnSpan="2" Width="240"/>
-                
-                <Canvas x:Name="MiCanvas" Grid.ColumnSpan="10" Grid.RowSpan="10">
+                       Grid.ColumnSpan="2" />
+
+
                     <!--Fila 0-->
-                    <Image Stretch="Fill" Grid.Row="0"
-                   Grid.Column="0"/>
+                    <Image Stretch="Fill" Grid.Row="0" 
+                   Grid.Column="0" />
                     <Image Stretch="Fill" Grid.Row="0"
                    Grid.Column="1"/>
                     <Image Stretch="Fill" Grid.Row="0"
@@ -198,18 +224,10 @@
                    Grid.Column="0"/>
                     <Image Stretch="Fill" Grid.Row="4"
                    Grid.Column="1"/>
-                    <!--<Image Stretch="Fill" Grid.Row="4"
-                   Grid.Column="2"/>
-            <Image Stretch="Fill" Grid.Row="4"
-                   Grid.Column="3"/>-->
                     <Image Stretch="Fill" Grid.Row="4"
                    Grid.Column="4"/>
                     <Image Stretch="Fill" Grid.Row="4"
                    Grid.Column="5"/>
-                    <!--<Image Stretch="Fill" Grid.Row="4"
-                   Grid.Column="6"/>
-            <Image Stretch="Fill" Grid.Row="4"
-                   Grid.Column="7"/>-->
                     <Image Stretch="Fill" Grid.Row="4"
                    Grid.Column="8"/>
                     <Image Stretch="Fill" Grid.Row="4"
@@ -220,18 +238,10 @@
                    Grid.Column="0"/>
                     <Image Stretch="Fill" Grid.Row="5"
                    Grid.Column="1"/>
-                    <!--<Image Stretch="Fill" Grid.Row="5"
-                   Grid.Column="2"/>
-            <Image Stretch="Fill" Grid.Row="5"
-                   Grid.Column="3"/>-->
                     <Image Stretch="Fill" Grid.Row="5"
                    Grid.Column="4"/>
                     <Image Stretch="Fill" Grid.Row="5"
                    Grid.Column="5"/>
-                    <!--<Image Stretch="Fill" Grid.Row="5"
-                   Grid.Column="6"/>
-            <Image Stretch="Fill" Grid.Row="5"
-                   Grid.Column="7"/>-->
                     <Image Stretch="Fill" Grid.Row="5"
                    Grid.Column="8"/>
                     <Image Stretch="Fill" Grid.Row="5"
@@ -304,28 +314,77 @@
                    Grid.Column="9"/>
 
                     <!--Fila 9-->
-                    <Image Stretch="Fill" Grid.Row="9"
-                   Grid.Column="0"/>
-                    <Image Stretch="Fill" Grid.Row="9"
-                   Grid.Column="1"/>
-                    <Image Stretch="Fill" Grid.Row="9"
-                   Grid.Column="2"/>
-                    <Image Stretch="Fill" Grid.Row="9"
-                   Grid.Column="3"/>
-                    <Image Stretch="Fill" Grid.Row="9"
-                   Grid.Column="4"/>
-                    <Image Stretch="Fill" Grid.Row="9"
-                   Grid.Column="5"/>
-                    <Image Stretch="Fill" Grid.Row="9"
-                   Grid.Column="6"/>
-                    <Image Stretch="Fill" Grid.Row="9"
-                   Grid.Column="7"/>
-                    <Image Stretch="Fill" Grid.Row="9"
-                   Grid.Column="8"/>
-                    <Image Stretch="Fill" Grid.Row="9"
-                   Grid.Column="9"/>
-                </Canvas>
-               
+
+                    <Image Grid.Row="9" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image Grid.Row="9" Grid.Column="1" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image Grid.Row="9" Grid.Column="2" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image Grid.Row="9" Grid.Column="3" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image Grid.Row="9" Grid.Column="4" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image Grid.Row="9" Grid.Column="5" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image Grid.Row="9" Grid.Column="6" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image Grid.Row="9" Grid.Column="7" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image Grid.Row="9" Grid.Column="8" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image Grid.Row="9" Grid.Column="9" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+
+                </Grid>
+                <!--Estado Inicial-->
+                <Grid Margin="76,0,70,100" VerticalAlignment="Top" HorizontalAlignment="Stretch">
+                    <StackPanel  Background="Gray" 
+                    Opacity="0.75"  BorderBrush="White" BorderThickness="10" Height="650">
+                        <StackPanel Background="Purple" Opacity="1"  BorderThickness="5" BorderBrush="White" Height="450">
+                            <TextBlock Text="Coloca tus fichas" FontFamily="MV Boli" FontWeight="ExtraBold" 
+                           VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="56"/>
+                            <GridView Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" 
+                                   ItemsSource="{x:Bind listFichasIniciales1}" 
+                                  CanDragItems="True" DragItemsStarting="GridView_DragItemsStarting" IsFocusEngagementEnabled="True">
+                                <GridView.ItemTemplate >
+                                    <DataTemplate x:DataType="local:FichaInicial">
+                                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                Spacing="5" Orientation="Horizontal">
+                                            <Image Source="{x:Bind ficha_.img_.Source}" Height="125"/>
+                                            <TextBlock Text="{x:Bind cantidad_}" FontSize="48" 
+                                                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </GridView.ItemTemplate>
+                            </GridView>
+                            <GridView Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" 
+                                  ItemsSource="{x:Bind listFichasIniciales2}" 
+                                      CanDragItems="True" DragItemsStarting="GridView_DragItemsStarting" IsFocusEngagementEnabled="True">
+                                <GridView.ItemTemplate >
+                                    <DataTemplate x:DataType="local:FichaInicial">
+                                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                Spacing="5" Orientation="Horizontal">
+                                            <Image Source="{x:Bind ficha_.img_.Source}" Height="125"/>
+                                            <TextBlock Text="{x:Bind cantidad_}" FontSize="48" 
+                                                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </GridView.ItemTemplate>
+                            </GridView>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
             </Grid>
         </Viewbox>
         <!--Barra de progreso-->
@@ -338,6 +397,7 @@
                 <Image Source="Assets/extremoIz.png" Height="65" FlowDirection="RightToLeft"></Image>
             </StackPanel>
         </Viewbox>
+        
         <!--PanelIzquierdo-->
         <Viewbox Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
             <Grid Margin="20,130,80,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
@@ -359,45 +419,7 @@
                 </StackPanel>
             </Grid>
         </Viewbox >
-        <!--EstadoInicial-->
-        <Viewbox Grid.Row="1" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
-            <Grid Margin="0,0,0,250" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                <StackPanel  Background="Gray" 
-                    Opacity="0.75"  BorderBrush="White" BorderThickness="10" Height="537">
-                    <StackPanel Background="Purple" Opacity="1"  BorderThickness="5" BorderBrush="White" Height="430" Width="725">
-                        <TextBlock Text="Coloca tus fichas" FontFamily="MV Boli" FontWeight="ExtraBold" 
-                           VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="56"/>
-                        <GridView Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" 
-                                  IsItemClickEnabled="True" ItemsSource="{x:Bind listFichasIniciales1}" 
-                                  CanDragItems="True" DragItemsStarting="GridView_DragItemsStarting" >
-                            <GridView.ItemTemplate >
-                                <DataTemplate x:DataType="local:FichaInicial">
-                                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"
-                                                Spacing="5" Orientation="Horizontal">
-                                        <Image Source="{x:Bind ficha_.img_.Source}" Height="100"/>
-                                        <TextBlock Text="{x:Bind cantidad_}" FontSize="48" 
-                                                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                    </StackPanel>
-                                </DataTemplate>
-                            </GridView.ItemTemplate>
-                        </GridView>
-                        <GridView Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" 
-                                  IsItemClickEnabled="True" ItemsSource="{x:Bind listFichasIniciales2}" >
-                            <GridView.ItemTemplate >
-                                <DataTemplate x:DataType="local:FichaInicial">
-                                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"
-                                                Spacing="5" Orientation="Horizontal">
-                                        <Image Source="{x:Bind ficha_.img_.Source}" Height="100"/>
-                                        <TextBlock Text="{x:Bind cantidad_}" FontSize="48" 
-                                                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                    </StackPanel>
-                                </DataTemplate>
-                            </GridView.ItemTemplate>
-                        </GridView>
-                    </StackPanel>
-                </StackPanel>
-            </Grid>
-        </Viewbox>
+                      
         <!--LETRERO TURNO-->
         <Viewbox Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
             <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,0,0,200">
@@ -407,28 +429,6 @@
                             <EntranceThemeTransition IsStaggeringEnabled="True" />
                         </TransitionCollection>
                     </StackPanel.ChildrenTransitions>
-                </StackPanel>
-            </Grid>
-        </Viewbox>
-        <!--Paneles de informacion cartas-->
-        <Viewbox Grid.Row="1" Grid.ColumnSpan="3" Margin="0,200,0,0" >
-            <Grid >
-                <StackPanel Orientation="Horizontal" Spacing="600">
-                    <StackPanel  x:Name="PanelInfoJugador"  Style="{StaticResource panelesInfo}" Margin="155,0,0,0" >
-                        <TextBlock  x:Name="CartaInfoJugador" Text="Regaliz" Style="{StaticResource textInfoPanel}" FontSize="24"/>
-                        <Image x:Name="ImagenCartaJugador" Source="Assets/regaliz.png" Width="50"></Image>
-                        <TextBlock x:Name="InfoCartaJugador"  Style="{StaticResource textInfoPanel}"
-                           TextWrapping="Wrap" Text="Tiene su punto débil expuesto, la yema, 
-                           pero para poder acabar con él deberás cogerlo primero y gracias a su disposición de la clara puede arrastrarse muy rápido"  FontSize="8"/>
-                    </StackPanel>
-                    <StackPanel  x:Name="PanelInfoEnemigo" Style="{StaticResource panelesInfo}" Margin="0,0,75,0" >
-                        <TextBlock  x:Name="CartaInfoEnemigo" Text="Regaliz"   FontSize="24" Style="{StaticResource textInfoPanel}"/>
-                        <Image x:Name="ImagenCartaEnemigo" Source="Assets/regaliz.png" Width="50"></Image>
-                        <TextBlock x:Name="InfoCartaEnemigo" Style="{StaticResource textInfoPanel}"
-                           TextWrapping="Wrap" Text="Tiene su punto débil expuesto, la yema, 
-                           pero para poder acabar con él deberás cogerlo primero y gracias a su disposición de la clara puede arrastrarse muy rápido"  FontSize="8"/>
-                    </StackPanel>
-
                 </StackPanel>
             </Grid>
         </Viewbox>

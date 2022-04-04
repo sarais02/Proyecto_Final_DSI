@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.DataTransfer;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.System;
@@ -26,6 +27,8 @@ namespace ProyectoDSI
     public sealed partial class ConAzucar : Page
     {
         List<PanelFicha> listPanelFichas;
+        List<FichaInicial> listFichasIniciales1;
+        List<FichaInicial> listFichasIniciales2;
         bool[,] Tablero;
         private DispatcherTimer timer;
         private DispatcherTimer textTimer_;
@@ -45,6 +48,9 @@ namespace ProyectoDSI
             textTimer_.Start();
             playersTurn = true;
             Add();
+            CrearLista();
+            inicializateTablero();
+            inicializarPartida();
         }
 
         private void PauseButton_Click(object sender, RoutedEventArgs e)
@@ -105,9 +111,7 @@ namespace ProyectoDSI
             timer.Start();
            
 
-            CrearLista();
-            inicializateTablero();
-
+          
             base.OnNavigatedTo(e);
         }
         private void CrearLista()
@@ -229,6 +233,86 @@ namespace ProyectoDSI
         void clearStackPanel()
         {
             EntranceStackPanel.Children.Clear();
+        }
+        void inicializarPartida()
+        {
+            listFichasIniciales1 = new List<FichaInicial>();
+            listFichasIniciales2 = new List<FichaInicial>();
+            FichaInicial fichainicial = new FichaInicial();
+
+            fichainicial.ficha_ = new Ficha(0, "Regaliz", -1, -1);
+            fichainicial.cantidad_ = 1;
+            listFichasIniciales1.Add(fichainicial);
+
+            fichainicial = new FichaInicial();
+            fichainicial.ficha_ = new Ficha(1, "Baston", -1, -1);
+            fichainicial.cantidad_ = 2;
+            listFichasIniciales1.Add(fichainicial);
+            fichainicial = new FichaInicial();
+            fichainicial.ficha_ = new Ficha(2, "Dedo", -1, -1);
+            fichainicial.cantidad_ = 3;
+            listFichasIniciales1.Add(fichainicial);
+            fichainicial = new FichaInicial();
+            fichainicial.ficha_ = new Ficha(3, "Huevo", -1, -1);
+            fichainicial.cantidad_ = 4;
+            listFichasIniciales1.Add(fichainicial);
+            fichainicial = new FichaInicial();
+            fichainicial.ficha_ = new Ficha(10, "Sandia", -1, -1);
+            fichainicial.cantidad_ = 4;
+            listFichasIniciales2.Add(fichainicial);
+            fichainicial = new FichaInicial();
+            fichainicial.ficha_ = new Ficha(11, "Cocacola", -1, -1);
+            fichainicial.cantidad_ = 8;
+            listFichasIniciales2.Add(fichainicial);
+            fichainicial = new FichaInicial();
+            fichainicial.ficha_ = new Ficha(12, "BombaSandia", -1, -1);
+            fichainicial.cantidad_ = 1;
+            listFichasIniciales2.Add(fichainicial);
+            fichainicial = new FichaInicial();
+            fichainicial.ficha_ = new Ficha(13, "Petazeta", -1, -1);
+            fichainicial.cantidad_ = 6;
+            listFichasIniciales2.Add(fichainicial);
+            fichainicial = new FichaInicial();
+            fichainicial.ficha_ = new Ficha(14, "Fresa", -1, -1);
+            fichainicial.cantidad_ = 1;
+            listFichasIniciales2.Add(fichainicial);
+        }
+        private void GridView_DragItemsStarting(object sender, DragItemsStartingEventArgs e)
+        {
+
+            FichaInicial aux = e.Items[0] as FichaInicial;
+            string id = aux.ficha_.id_.ToString();
+            e.Data.SetText(id);
+            e.Data.RequestedOperation = DataPackageOperation.Copy;
+        }
+
+        private void Image_DragOver(object sender, DragEventArgs e)
+        {
+            e.AcceptedOperation = DataPackageOperation.Copy;
+        }
+
+        private async void Image_Drop(object sender, DragEventArgs e)
+        {
+            var id = await e.DataView.GetTextAsync();
+            int aux = int.Parse(id);
+            //if (aux > 10)
+            //{
+            //    aux -= 10;
+            //    Ficha x = listFichasIniciales2[aux].ficha_;
+            //    if (listFichasIniciales2[aux].cantidad_ <= 1) listFichasIniciales2.Remove(listFichasIniciales2[aux]);
+            //    else listFichasIniciales2[aux].cantidad_--;
+
+            //    x.id_ = FichasJugador.Count();
+
+            //    FichasJugador.Add(x);
+            //}
+            //else
+            //{
+
+
+
+
+            //}
         }
     }
 }

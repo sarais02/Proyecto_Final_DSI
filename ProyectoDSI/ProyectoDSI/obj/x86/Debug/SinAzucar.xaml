@@ -53,7 +53,7 @@
         </Viewbox>
         
         <Viewbox HorizontalAlignment="Left">
-            <Button x:ConnectionId='33' x:Name="PauseButton"                          
+            <Button x:ConnectionId='44' x:Name="PauseButton"                          
                 Content="Pausa" Background="LightPink" Foreground="Black"
                 Margin="20,20,0,0" FontSize="25"
                 FontFamily="MV Boli" CornerRadius="10" BorderThickness="4"
@@ -63,51 +63,77 @@
         <Viewbox  Grid.Row="1"  Grid.Column="2" VerticalAlignment="Top" Margin="10,10,10,0">
             <Border BorderThickness="10" BorderBrush="#FF040E52" Background="Transparent"
                 CornerRadius="10" Height="80" >
-                <TextBlock x:ConnectionId='32' x:Name="CountDown" Text="00:00" FontSize="45" Foreground="White" />
+                <TextBlock x:ConnectionId='43' x:Name="CountDown" Text="00:00" FontSize="45" Foreground="White" />
             </Border>
         </Viewbox>
+        <!--Paneles de informacion cartas-->
+        <Viewbox Grid.Row="1" Grid.ColumnSpan="3" Margin="0,200,0,0" >
+            <Grid >
+                <StackPanel Orientation="Horizontal" Spacing="650">
+                    <StackPanel x:ConnectionId='33'  x:Name="PanelInfoJugador"  Style="{StaticResource panelesInfo}" Margin="155,0,0,0" >
+                        <TextBlock x:ConnectionId='39'  x:Name="CartaInfoJugador" Text="Regaliz" Style="{StaticResource textInfoPanel}" FontSize="24"/>
+                        <TextBlock x:ConnectionId='40' x:Name="RangoCartaJUgador" Text="Rango: 7" Style="{StaticResource textInfoPanel}" FontSize="16"/>
+                        <Image x:ConnectionId='41' x:Name="ImagenCartaJugador" Source="Assets/regaliz.png" Width="50"></Image>
+                        <TextBlock x:ConnectionId='42' x:Name="InfoCartaJugador"  Style="{StaticResource textInfoPanel}"
+                           TextWrapping="Wrap" Text="Tiene su punto débil expuesto, la yema, 
+                           pero para poder acabar con él deberás cogerlo primero y gracias a su disposición de la clara puede arrastrarse muy rápido"  FontSize="8"/>
+                    </StackPanel>
+                    <StackPanel x:ConnectionId='34'  x:Name="PanelInfoEnemigo" Style="{StaticResource panelesInfo}" Margin="0,0,75,0" >
+                        <TextBlock x:ConnectionId='35'  x:Name="CartaInfoEnemigo" Text="Regaliz"   FontSize="24" Style="{StaticResource textInfoPanel}"/>
+                        <TextBlock x:ConnectionId='36' x:Name="RangoCartaEnemigo" Text="Rango: 7" Style="{StaticResource textInfoPanel}" FontSize="16"/>
+                        <Image x:ConnectionId='37' x:Name="ImagenCartaEnemigo" Source="Assets/regaliz.png" Width="50"></Image>
+                        <TextBlock x:ConnectionId='38' x:Name="InfoCartaEnemigo" Style="{StaticResource textInfoPanel}"
+                           TextWrapping="Wrap" Text="Tiene su punto débil expuesto, la yema, 
+                           pero para poder acabar con él deberás cogerlo primero y gracias a su disposición de la clara puede arrastrarse muy rápido"  FontSize="8"/>
+                    </StackPanel>
+
+                </StackPanel>
+            </Grid>
+        </Viewbox>
+        
         <!--Tablero-->
         <Viewbox Grid.Column="1" Grid.Row="1" Margin="15"
                  VerticalAlignment="Stretch" HorizontalAlignment="Center">
-            <Grid Grid.Column="1" Grid.Row="2" Margin="76,20,70,20" >
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Image Source="Assets/Tablero.png" Stretch="Fill" Grid.RowSpan="10"
+            <Grid>
+                <Grid Grid.Column="1" Grid.Row="2" Margin="76,20,70,20"  >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="90"/>
+                        <RowDefinition Height="90"/>
+                        <RowDefinition Height="90"/>
+                        <RowDefinition Height="90"/>
+                        <RowDefinition Height="90"/>
+                        <RowDefinition Height="90"/>
+                        <RowDefinition Height="90"/>
+                        <RowDefinition Height="90"/>
+                        <RowDefinition Height="90"/>
+                        <RowDefinition Height="90"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="90"/>
+                        <ColumnDefinition Width="90"/>
+                        <ColumnDefinition Width="90"/>
+                        <ColumnDefinition Width="90"/>
+                        <ColumnDefinition Width="90"/>
+                        <ColumnDefinition Width="90"/>
+                        <ColumnDefinition Width="90"/>
+                        <ColumnDefinition Width="90"/>
+                        <ColumnDefinition Width="90"/>
+                        <ColumnDefinition Width="90"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="Assets/Tablero.png" Stretch="Fill" Grid.RowSpan="10"
                    Grid.ColumnSpan="10" />
-                
-                <Image Grid.Column="2" Grid.Row="4" 
+
+                    <Image Grid.Column="2" Grid.Row="4" 
                        Source="Assets/obstaculos.png" Grid.RowSpan="2"
-                       Grid.ColumnSpan="2" Width="240"/>
-                <Image Grid.Column="6" Grid.Row="4" 
+                       Grid.ColumnSpan="2" />
+                    <Image Grid.Column="6" Grid.Row="4" 
                        Source="Assets/obstaculos.png" Grid.RowSpan="2"
-                       Grid.ColumnSpan="2" Width="240"/>
-                
-                <Canvas x:ConnectionId='31' x:Name="MiCanvas" Grid.ColumnSpan="10" Grid.RowSpan="10">
+                       Grid.ColumnSpan="2" />
+
+
                     <!--Fila 0-->
-                    <Image Stretch="Fill" Grid.Row="0"
-                   Grid.Column="0"/>
+                    <Image Stretch="Fill" Grid.Row="0" 
+                   Grid.Column="0" />
                     <Image Stretch="Fill" Grid.Row="0"
                    Grid.Column="1"/>
                     <Image Stretch="Fill" Grid.Row="0"
@@ -198,18 +224,10 @@
                    Grid.Column="0"/>
                     <Image Stretch="Fill" Grid.Row="4"
                    Grid.Column="1"/>
-                    <!--<Image Stretch="Fill" Grid.Row="4"
-                   Grid.Column="2"/>
-            <Image Stretch="Fill" Grid.Row="4"
-                   Grid.Column="3"/>-->
                     <Image Stretch="Fill" Grid.Row="4"
                    Grid.Column="4"/>
                     <Image Stretch="Fill" Grid.Row="4"
                    Grid.Column="5"/>
-                    <!--<Image Stretch="Fill" Grid.Row="4"
-                   Grid.Column="6"/>
-            <Image Stretch="Fill" Grid.Row="4"
-                   Grid.Column="7"/>-->
                     <Image Stretch="Fill" Grid.Row="4"
                    Grid.Column="8"/>
                     <Image Stretch="Fill" Grid.Row="4"
@@ -220,18 +238,10 @@
                    Grid.Column="0"/>
                     <Image Stretch="Fill" Grid.Row="5"
                    Grid.Column="1"/>
-                    <!--<Image Stretch="Fill" Grid.Row="5"
-                   Grid.Column="2"/>
-            <Image Stretch="Fill" Grid.Row="5"
-                   Grid.Column="3"/>-->
                     <Image Stretch="Fill" Grid.Row="5"
                    Grid.Column="4"/>
                     <Image Stretch="Fill" Grid.Row="5"
                    Grid.Column="5"/>
-                    <!--<Image Stretch="Fill" Grid.Row="5"
-                   Grid.Column="6"/>
-            <Image Stretch="Fill" Grid.Row="5"
-                   Grid.Column="7"/>-->
                     <Image Stretch="Fill" Grid.Row="5"
                    Grid.Column="8"/>
                     <Image Stretch="Fill" Grid.Row="5"
@@ -304,28 +314,77 @@
                    Grid.Column="9"/>
 
                     <!--Fila 9-->
-                    <Image Stretch="Fill" Grid.Row="9"
-                   Grid.Column="0"/>
-                    <Image Stretch="Fill" Grid.Row="9"
-                   Grid.Column="1"/>
-                    <Image Stretch="Fill" Grid.Row="9"
-                   Grid.Column="2"/>
-                    <Image Stretch="Fill" Grid.Row="9"
-                   Grid.Column="3"/>
-                    <Image Stretch="Fill" Grid.Row="9"
-                   Grid.Column="4"/>
-                    <Image Stretch="Fill" Grid.Row="9"
-                   Grid.Column="5"/>
-                    <Image Stretch="Fill" Grid.Row="9"
-                   Grid.Column="6"/>
-                    <Image Stretch="Fill" Grid.Row="9"
-                   Grid.Column="7"/>
-                    <Image Stretch="Fill" Grid.Row="9"
-                   Grid.Column="8"/>
-                    <Image Stretch="Fill" Grid.Row="9"
-                   Grid.Column="9"/>
-                </Canvas>
-               
+
+                    <Image x:ConnectionId='23' Grid.Row="9" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    AllowDrop="True"                                             />
+                    <Image x:ConnectionId='24' Grid.Row="9" Grid.Column="1" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    AllowDrop="True"                                             />
+                    <Image x:ConnectionId='25' Grid.Row="9" Grid.Column="2" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    AllowDrop="True"                                             />
+                    <Image x:ConnectionId='26' Grid.Row="9" Grid.Column="3" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    AllowDrop="True"                                             />
+                    <Image x:ConnectionId='27' Grid.Row="9" Grid.Column="4" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    AllowDrop="True"                                             />
+                    <Image x:ConnectionId='28' Grid.Row="9" Grid.Column="5" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    AllowDrop="True"                                             />
+                    <Image x:ConnectionId='29' Grid.Row="9" Grid.Column="6" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    AllowDrop="True"                                             />
+                    <Image x:ConnectionId='30' Grid.Row="9" Grid.Column="7" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    AllowDrop="True"                                             />
+                    <Image x:ConnectionId='31' Grid.Row="9" Grid.Column="8" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    AllowDrop="True"                                             />
+                    <Image x:ConnectionId='32' Grid.Row="9" Grid.Column="9" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    AllowDrop="True"                                             />
+
+                </Grid>
+                <!--Estado Inicial-->
+                <Grid Margin="76,0,70,100" VerticalAlignment="Top" HorizontalAlignment="Stretch">
+                    <StackPanel  Background="Gray" 
+                    Opacity="0.75"  BorderBrush="White" BorderThickness="10" Height="650">
+                        <StackPanel Background="Purple" Opacity="1"  BorderThickness="5" BorderBrush="White" Height="450">
+                            <TextBlock Text="Coloca tus fichas" FontFamily="MV Boli" FontWeight="ExtraBold" 
+                           VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="56"/>
+                            <GridView x:ConnectionId='13' Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" 
+                                                                               
+                                  CanDragItems="True"                                                IsFocusEngagementEnabled="True">
+                                <GridView.ItemTemplate >
+                                    <DataTemplate                                >
+                                        <StackPanel x:ConnectionId='20' VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                Spacing="5" Orientation="Horizontal">
+                                            <Image x:ConnectionId='21'                                      Height="125"/>
+                                            <TextBlock x:ConnectionId='22'                           FontSize="48" 
+                                                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </GridView.ItemTemplate>
+                            </GridView>
+                            <GridView x:ConnectionId='14' Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" 
+                                                                              
+                                      CanDragItems="True"                                                IsFocusEngagementEnabled="True">
+                                <GridView.ItemTemplate >
+                                    <DataTemplate                                >
+                                        <StackPanel x:ConnectionId='16' VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                Spacing="5" Orientation="Horizontal">
+                                            <Image x:ConnectionId='17'                                      Height="125"/>
+                                            <TextBlock x:ConnectionId='18'                           FontSize="48" 
+                                                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </GridView.ItemTemplate>
+                            </GridView>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
             </Grid>
         </Viewbox>
         <!--Barra de progreso-->
@@ -338,19 +397,20 @@
                 <Image Source="Assets/extremoIz.png" Height="65" FlowDirection="RightToLeft"></Image>
             </StackPanel>
         </Viewbox>
+        
         <!--PanelIzquierdo-->
         <Viewbox Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
             <Grid Margin="20,130,80,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                <StackPanel x:ConnectionId='24' x:Name="PanelDeFichas" >
-                    <ListView x:ConnectionId='25'                                        Background="Gold" 
+                <StackPanel x:ConnectionId='6' x:Name="PanelDeFichas" >
+                    <ListView x:ConnectionId='7'                                        Background="Gold" 
                       CornerRadius="15" >
                         <ListView.ItemTemplate>
                             <DataTemplate                               >
-                                <StackPanel x:ConnectionId='27' Orientation="Horizontal" Spacing=" 15">
-                                    <Image x:ConnectionId='28'                                       Height="55" />
+                                <StackPanel x:ConnectionId='9' Orientation="Horizontal" Spacing=" 15">
+                                    <Image x:ConnectionId='10'                                       Height="55" />
                                     <StackPanel Orientation="Vertical">
-                                        <TextBlock x:ConnectionId='29'                        FontSize="16" Foreground="BlueViolet" FontFamily="MV Boli" FontWeight="Bold"/>
-                                        <TextBlock x:ConnectionId='30'                            FontSize="32" FontFamily="MV Boli" FontWeight="Bold"/>
+                                        <TextBlock x:ConnectionId='11'                        FontSize="16" Foreground="BlueViolet" FontFamily="MV Boli" FontWeight="Bold"/>
+                                        <TextBlock x:ConnectionId='12'                            FontSize="32" FontFamily="MV Boli" FontWeight="Bold"/>
                                     </StackPanel>
                                 </StackPanel>
                             </DataTemplate>
@@ -359,76 +419,16 @@
                 </StackPanel>
             </Grid>
         </Viewbox >
-        <!--EstadoInicial-->
-        <Viewbox Grid.Row="1" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
-            <Grid Margin="0,0,0,250" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                <StackPanel  Background="Gray" 
-                    Opacity="0.75"  BorderBrush="White" BorderThickness="10" Height="537">
-                    <StackPanel Background="Purple" Opacity="1"  BorderThickness="5" BorderBrush="White" Height="430" Width="725">
-                        <TextBlock Text="Coloca tus fichas" FontFamily="MV Boli" FontWeight="ExtraBold" 
-                           VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="56"/>
-                        <GridView x:ConnectionId='14' Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" 
-                                  IsItemClickEnabled="True"                                             
-                                  CanDragItems="True"                                                >
-                            <GridView.ItemTemplate >
-                                <DataTemplate                                >
-                                    <StackPanel x:ConnectionId='21' VerticalAlignment="Center" HorizontalAlignment="Center"
-                                                Spacing="5" Orientation="Horizontal">
-                                        <Image x:ConnectionId='22'                                      Height="100"/>
-                                        <TextBlock x:ConnectionId='23'                           FontSize="48" 
-                                                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                    </StackPanel>
-                                </DataTemplate>
-                            </GridView.ItemTemplate>
-                        </GridView>
-                        <GridView x:ConnectionId='15' Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" 
-                                  IsItemClickEnabled="True"                                             >
-                            <GridView.ItemTemplate >
-                                <DataTemplate                                >
-                                    <StackPanel x:ConnectionId='17' VerticalAlignment="Center" HorizontalAlignment="Center"
-                                                Spacing="5" Orientation="Horizontal">
-                                        <Image x:ConnectionId='18'                                      Height="100"/>
-                                        <TextBlock x:ConnectionId='19'                           FontSize="48" 
-                                                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                    </StackPanel>
-                                </DataTemplate>
-                            </GridView.ItemTemplate>
-                        </GridView>
-                    </StackPanel>
-                </StackPanel>
-            </Grid>
-        </Viewbox>
+                      
         <!--LETRERO TURNO-->
         <Viewbox Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
             <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,0,0,200">
-                <StackPanel x:ConnectionId='13' x:Name="EntranceStackPanel" Orientation="Horizontal">
+                <StackPanel x:ConnectionId='5' x:Name="EntranceStackPanel" Orientation="Horizontal">
                     <StackPanel.ChildrenTransitions>
                         <TransitionCollection>
                             <EntranceThemeTransition IsStaggeringEnabled="True" />
                         </TransitionCollection>
                     </StackPanel.ChildrenTransitions>
-                </StackPanel>
-            </Grid>
-        </Viewbox>
-        <!--Paneles de informacion cartas-->
-        <Viewbox Grid.Row="1" Grid.ColumnSpan="3" Margin="0,200,0,0" >
-            <Grid >
-                <StackPanel Orientation="Horizontal" Spacing="600">
-                    <StackPanel x:ConnectionId='5'  x:Name="PanelInfoJugador"  Style="{StaticResource panelesInfo}" Margin="155,0,0,0" >
-                        <TextBlock x:ConnectionId='10'  x:Name="CartaInfoJugador" Text="Regaliz" Style="{StaticResource textInfoPanel}" FontSize="24"/>
-                        <Image x:ConnectionId='11' x:Name="ImagenCartaJugador" Source="Assets/regaliz.png" Width="50"></Image>
-                        <TextBlock x:ConnectionId='12' x:Name="InfoCartaJugador"  Style="{StaticResource textInfoPanel}"
-                           TextWrapping="Wrap" Text="Tiene su punto débil expuesto, la yema, 
-                           pero para poder acabar con él deberás cogerlo primero y gracias a su disposición de la clara puede arrastrarse muy rápido"  FontSize="8"/>
-                    </StackPanel>
-                    <StackPanel x:ConnectionId='6'  x:Name="PanelInfoEnemigo" Style="{StaticResource panelesInfo}" Margin="0,0,75,0" >
-                        <TextBlock x:ConnectionId='7'  x:Name="CartaInfoEnemigo" Text="Regaliz"   FontSize="24" Style="{StaticResource textInfoPanel}"/>
-                        <Image x:ConnectionId='8' x:Name="ImagenCartaEnemigo" Source="Assets/regaliz.png" Width="50"></Image>
-                        <TextBlock x:ConnectionId='9' x:Name="InfoCartaEnemigo" Style="{StaticResource textInfoPanel}"
-                           TextWrapping="Wrap" Text="Tiene su punto débil expuesto, la yema, 
-                           pero para poder acabar con él deberás cogerlo primero y gracias a su disposición de la clara puede arrastrarse muy rápido"  FontSize="8"/>
-                    </StackPanel>
-
                 </StackPanel>
             </Grid>
         </Viewbox>

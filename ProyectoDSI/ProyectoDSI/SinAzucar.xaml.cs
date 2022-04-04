@@ -25,10 +25,14 @@ namespace ProyectoDSI
     /// </summary>
     public sealed partial class SinAzucar : Page
     {
+        bool[,] Tablero;
         List<PanelFicha> listPanelFichas;
         List<FichaInicial>listFichasIniciales1;
         List<FichaInicial>listFichasIniciales2;
-        bool[,] Tablero;
+
+        List<Ficha> FichasJugador;
+        List<Ficha> FichasEnemigo;
+
         private DispatcherTimer timer;
         private DispatcherTimer textTimer_;
         private int minutes;
@@ -167,6 +171,8 @@ namespace ProyectoDSI
         }
         void inicializarPartida()
         {
+            FichasEnemigo = new List<Ficha>();
+            FichasJugador= new List<Ficha>();
             listFichasIniciales1 = new List<FichaInicial>();
             listFichasIniciales2 = new List<FichaInicial>();
             FichaInicial fichainicial = new FichaInicial();
@@ -283,8 +289,28 @@ namespace ProyectoDSI
             e.AcceptedOperation = DataPackageOperation.Copy;
         }
 
-        private async void Image_Drop(object sender, DragEventArgs e){
-            var s = await e.DataView.GetTextAsync();
+        private async void Image_Drop(object sender, DragEventArgs e){         
+            var id = await e.DataView.GetTextAsync();
+            int aux = int.Parse(id);
+            Image Receptor = sender as Image;
+            Ficha x;
+            Receptor.Visibility = Visibility.Visible;
+            if (aux >= 10) {
+                aux -= 10;             
+                x = listFichasIniciales2[aux].ficha_;
+               if (listFichasIniciales2[aux].cantidad_ <= 1)  listFichasIniciales2.Remove(listFichasIniciales2[aux]);
+                listFichasIniciales2[aux].cantidad_--;
+            }
+            else{                
+                x = listFichasIniciales1[aux].ficha_;
+                if (listFichasIniciales1[aux].cantidad_ <= 1) listFichasIniciales2.Remove(listFichasIniciales2[aux]);
+                 listFichasIniciales1[aux].cantidad_--;
+            }
+            x.id_ = FichasJugador.Count();
+            x.X_ = 0;
+            x.Y_ = 0;
+            FichasJugador.Add(x);
+            Receptor.Source = x.img_.Source;
         }
     }
 }
