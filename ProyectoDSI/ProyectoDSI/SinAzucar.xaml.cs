@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
@@ -40,6 +41,8 @@ namespace ProyectoDSI
         private int initialTime = 2;
         private int currentTime;
         private bool playersTurn;
+
+        
         public SinAzucar()
         {
             this.InitializeComponent();
@@ -51,8 +54,7 @@ namespace ProyectoDSI
             textTimer_.Start();
             playersTurn = true;
             Add();
-            CrearLista();
-            inicializateTablero();
+            CrearLista();           
             inicializarPartida();
         }
         void timer_Tick(object sender, object e)
@@ -171,6 +173,7 @@ namespace ProyectoDSI
         }
         void inicializarPartida()
         {
+            Tablero = new bool[10, 10];
             FichasEnemigo = new List<Ficha>();
             FichasJugador= new List<Ficha>();
             listFichasIniciales1 = new List<FichaInicial>();
@@ -213,18 +216,7 @@ namespace ProyectoDSI
             fichainicial.ficha_ = new Ficha(14, "Fresa", -1, -1);
             fichainicial.cantidad_ = 1;
             listFichasIniciales2.Add(fichainicial);
-        }
-        private void inicializateTablero()
-        {
-            Tablero = new bool[10, 10];          
-            for (int i = 0; i < Tablero.GetLength(0); i++)
-            {
-                for (int j = 0; j < Tablero.GetLength(1); j++)
-                {
-                    Tablero[i, j] = false;
-                }
-            }
-        }
+        }     
         void Add()
         {
             if (playersTurn)
@@ -299,18 +291,49 @@ namespace ProyectoDSI
                 aux -= 10;             
                 x = listFichasIniciales2[aux].ficha_;
                if (listFichasIniciales2[aux].cantidad_ <= 1)  listFichasIniciales2.Remove(listFichasIniciales2[aux]);
-                listFichasIniciales2[aux].cantidad_--;
+               else listFichasIniciales2[aux].cantidad_--;
             }
             else{                
                 x = listFichasIniciales1[aux].ficha_;
                 if (listFichasIniciales1[aux].cantidad_ <= 1) listFichasIniciales2.Remove(listFichasIniciales2[aux]);
-                 listFichasIniciales1[aux].cantidad_--;
+                else listFichasIniciales1[aux].cantidad_--;
             }
             x.id_ = FichasJugador.Count();
-            x.X_ = 0;
-            x.Y_ = 0;
+            string aux2 = Receptor.Name;
+                     
+            x.Y_ = (int)Char.GetNumericValue(aux2[1]);
+            x.X_ = (int)Char.GetNumericValue(aux2[2]);
             FichasJugador.Add(x);
             Receptor.Source = x.img_.Source;
+            Tablero[ x.Y_, x.X_] = true;
+        }
+
+        private void Image_PointerPressed(object sender, PointerRoutedEventArgs e){
+            Windows.UI.Xaml.Input.Pointer ptr = e.Pointer;            
+            if (ptr.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse){
+                Image x= sender as Image;
+                string aux2 = x.Name;
+                int filCol = (int)Char.GetNumericValue(aux2[2]) + (int)Char.GetNumericValue(aux2[1]) * 10;
+                Windows.UI.Input.PointerPoint ptrPt = e.GetCurrentPoint(sender as Image);              
+                if (ptrPt.Properties.IsLeftButtonPressed){
+                    ImagenCartaJugador.Source = x.Source;
+                    for (int i = 0; i < FichasJugador.Count; i++) {
+                        if (FichasJugador[i].Y_*10+ FichasJugador[i].X_==filCol){
+                            InfoCartaJugador.Text = FichasJugador[i].info_;
+                            RangoCartaJugador.Text = FichasJugador[i].rango_;
+                            CartaInfoJugador.Text = FichasJugador[i].tipo_;
+                        }
+                    }
+                }
+                if (ptrPt.Properties.IsRightButtonPressed){
+                   //seleccionar la ficha como seleccionada y acto depues guardarnos una referencia a ella
+                }
+            }
+
+            // Prevent most handlers along the event route from handling the same event again.
+            e.Handled = true;
+
+
         }
     }
 }

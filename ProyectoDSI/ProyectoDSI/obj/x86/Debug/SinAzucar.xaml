@@ -53,7 +53,7 @@
         </Viewbox>
         
         <Viewbox HorizontalAlignment="Left">
-            <Button x:ConnectionId='44' x:Name="PauseButton"                          
+            <Button x:ConnectionId='64' x:Name="PauseButton"                          
                 Content="Pausa" Background="LightPink" Foreground="Black"
                 Margin="20,20,0,0" FontSize="25"
                 FontFamily="MV Boli" CornerRadius="10" BorderThickness="4"
@@ -63,26 +63,26 @@
         <Viewbox  Grid.Row="1"  Grid.Column="2" VerticalAlignment="Top" Margin="10,10,10,0">
             <Border BorderThickness="10" BorderBrush="#FF040E52" Background="Transparent"
                 CornerRadius="10" Height="80" >
-                <TextBlock x:ConnectionId='43' x:Name="CountDown" Text="00:00" FontSize="45" Foreground="White" />
+                <TextBlock x:ConnectionId='63' x:Name="CountDown" Text="00:00" FontSize="45" Foreground="White" />
             </Border>
         </Viewbox>
         <!--Paneles de informacion cartas-->
         <Viewbox Grid.Row="1" Grid.ColumnSpan="3" Margin="0,200,0,0" >
             <Grid >
                 <StackPanel Orientation="Horizontal" Spacing="650">
-                    <StackPanel x:ConnectionId='33'  x:Name="PanelInfoJugador"  Style="{StaticResource panelesInfo}" Margin="155,0,0,0" >
-                        <TextBlock x:ConnectionId='39'  x:Name="CartaInfoJugador" Text="Regaliz" Style="{StaticResource textInfoPanel}" FontSize="24"/>
-                        <TextBlock x:ConnectionId='40' x:Name="RangoCartaJUgador" Text="Rango: 7" Style="{StaticResource textInfoPanel}" FontSize="16"/>
-                        <Image x:ConnectionId='41' x:Name="ImagenCartaJugador" Source="Assets/regaliz.png" Width="50"></Image>
-                        <TextBlock x:ConnectionId='42' x:Name="InfoCartaJugador"  Style="{StaticResource textInfoPanel}"
+                    <StackPanel x:ConnectionId='53'  x:Name="PanelInfoJugador"  Style="{StaticResource panelesInfo}" Margin="155,0,0,0" >
+                        <TextBlock x:ConnectionId='59'  x:Name="CartaInfoJugador" Text="Regaliz" Style="{StaticResource textInfoPanel}" FontSize="24"/>
+                        <TextBlock x:ConnectionId='60' x:Name="RangoCartaJugador" Text="Rango: 7" Style="{StaticResource textInfoPanel}" FontSize="16"/>
+                        <Image x:ConnectionId='61' x:Name="ImagenCartaJugador" Source="Assets/regaliz.png" Width="50"></Image>
+                        <TextBlock x:ConnectionId='62' x:Name="InfoCartaJugador"  Style="{StaticResource textInfoPanel}"
                            TextWrapping="Wrap" Text="Tiene su punto débil expuesto, la yema, 
                            pero para poder acabar con él deberás cogerlo primero y gracias a su disposición de la clara puede arrastrarse muy rápido"  FontSize="8"/>
                     </StackPanel>
-                    <StackPanel x:ConnectionId='34'  x:Name="PanelInfoEnemigo" Style="{StaticResource panelesInfo}" Margin="0,0,75,0" >
-                        <TextBlock x:ConnectionId='35'  x:Name="CartaInfoEnemigo" Text="Regaliz"   FontSize="24" Style="{StaticResource textInfoPanel}"/>
-                        <TextBlock x:ConnectionId='36' x:Name="RangoCartaEnemigo" Text="Rango: 7" Style="{StaticResource textInfoPanel}" FontSize="16"/>
-                        <Image x:ConnectionId='37' x:Name="ImagenCartaEnemigo" Source="Assets/regaliz.png" Width="50"></Image>
-                        <TextBlock x:ConnectionId='38' x:Name="InfoCartaEnemigo" Style="{StaticResource textInfoPanel}"
+                    <StackPanel x:ConnectionId='54'  x:Name="PanelInfoEnemigo" Style="{StaticResource panelesInfo}" Margin="0,0,75,0" >
+                        <TextBlock x:ConnectionId='55'  x:Name="CartaInfoEnemigo" Text="Regaliz"   FontSize="24" Style="{StaticResource textInfoPanel}"/>
+                        <TextBlock x:ConnectionId='56' x:Name="RangoCartaEnemigo" Text="Rango: 7" Style="{StaticResource textInfoPanel}" FontSize="16"/>
+                        <Image x:ConnectionId='57' x:Name="ImagenCartaEnemigo" Source="Assets/regaliz.png" Width="50"></Image>
+                        <TextBlock x:ConnectionId='58' x:Name="InfoCartaEnemigo" Style="{StaticResource textInfoPanel}" 
                            TextWrapping="Wrap" Text="Tiene su punto débil expuesto, la yema, 
                            pero para poder acabar con él deberás cogerlo primero y gracias a su disposición de la clara puede arrastrarse muy rápido"  FontSize="8"/>
                     </StackPanel>
@@ -270,80 +270,98 @@
                    Grid.Column="9"/>
 
                     <!--Fila 7-->
-                    <Image Stretch="Fill" Grid.Row="7"
-                   Grid.Column="0"/>
-                    <Image Stretch="Fill" Grid.Row="7"
-                   Grid.Column="1"/>
-                    <Image Stretch="Fill" Grid.Row="7"
-                   Grid.Column="2"/>
-                    <Image Stretch="Fill" Grid.Row="7"
-                   Grid.Column="3"/>
-                    <Image Stretch="Fill" Grid.Row="7"
-                   Grid.Column="4"/>
-                    <Image Stretch="Fill" Grid.Row="7"
-                   Grid.Column="5"/>
-                    <Image Stretch="Fill" Grid.Row="7"
-                   Grid.Column="6"/>
-                    <Image Stretch="Fill" Grid.Row="7"
-                   Grid.Column="7"/>
-                    <Image Stretch="Fill" Grid.Row="7"
-                   Grid.Column="8"/>
-                    <Image Stretch="Fill" Grid.Row="7"
-                   Grid.Column="9"/>
+                    <Image x:ConnectionId='23' x:Name="_70" Grid.Row="7" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
+                    AllowDrop="True"                                             />
+                    <Image x:ConnectionId='24' x:Name="_71" Grid.Row="7" Grid.Column="1" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
+                    AllowDrop="True"                                             />
+                    <Image x:ConnectionId='25' x:Name="_72" Grid.Row="7" Grid.Column="2" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
+                    AllowDrop="True"                                             />
+                    <Image x:ConnectionId='26' x:Name="_73" Grid.Row="7" Grid.Column="3" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
+                    AllowDrop="True"                                             />
+                    <Image x:ConnectionId='27' x:Name="_74" Grid.Row="7" Grid.Column="4" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
+                    AllowDrop="True"                                             />
+                    <Image x:ConnectionId='28' x:Name="_75" Grid.Row="7" Grid.Column="5" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
+                    AllowDrop="True"                                             />
+                    <Image x:ConnectionId='29' x:Name="_76" Grid.Row="7" Grid.Column="6" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
+                    AllowDrop="True"                                             />
+                    <Image x:ConnectionId='30' x:Name="_77" Grid.Row="7" Grid.Column="7" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
+                    AllowDrop="True"                                             />
+                    <Image x:ConnectionId='31' x:Name="_78" Grid.Row="7" Grid.Column="8" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
+                    AllowDrop="True"                                             />
+                    <Image x:ConnectionId='32' x:Name="_79" Grid.Row="7" Grid.Column="9" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
+                    AllowDrop="True"                                             />
 
                     <!--Fila 8-->
-                    <Image Stretch="Fill" Grid.Row="8"
-                   Grid.Column="0"/>
-                    <Image Stretch="Fill" Grid.Row="8"
-                   Grid.Column="1"/>
-                    <Image Stretch="Fill" Grid.Row="8"
-                   Grid.Column="2"/>
-                    <Image Stretch="Fill" Grid.Row="8"
-                   Grid.Column="3"/>
-                    <Image Stretch="Fill" Grid.Row="8"
-                   Grid.Column="4"/>
-                    <Image Stretch="Fill" Grid.Row="8"
-                   Grid.Column="5"/>
-                    <Image Stretch="Fill" Grid.Row="8"
-                   Grid.Column="6"/>
-                    <Image Stretch="Fill" Grid.Row="8"
-                   Grid.Column="7"/>
-                    <Image Stretch="Fill" Grid.Row="8"
-                   Grid.Column="8"/>
-                    <Image Stretch="Fill" Grid.Row="8"
-                   Grid.Column="9"/>
-
+                    <Image x:ConnectionId='33' x:Name="_80" Grid.Row="8" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
+                    AllowDrop="True"                                             />
+                    <Image x:ConnectionId='34' x:Name="_81" Grid.Row="8" Grid.Column="1" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
+                    AllowDrop="True"                                             />
+                    <Image x:ConnectionId='35' x:Name="_82" Grid.Row="8" Grid.Column="2" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
+                    AllowDrop="True"                                             />
+                    <Image x:ConnectionId='36' x:Name="_83" Grid.Row="8" Grid.Column="3" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
+                    AllowDrop="True"                                             />
+                    <Image x:ConnectionId='37' x:Name="_84" Grid.Row="8" Grid.Column="4" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
+                    AllowDrop="True"                                             />
+                    <Image x:ConnectionId='38' x:Name="_85" Grid.Row="8" Grid.Column="5" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
+                    AllowDrop="True"                                             />
+                    <Image x:ConnectionId='39' x:Name="_86" Grid.Row="8" Grid.Column="6" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
+                    AllowDrop="True"                                             />
+                    <Image x:ConnectionId='40' x:Name="_87" Grid.Row="8" Grid.Column="7" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
+                    AllowDrop="True"                                             />
+                    <Image x:ConnectionId='41' x:Name="_88" Grid.Row="8" Grid.Column="8" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
+                    AllowDrop="True"                                             />
+                    <Image x:ConnectionId='42' x:Name="_89" Grid.Row="8" Grid.Column="9" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
+                    AllowDrop="True"                                             />
                     <!--Fila 9-->
-
-                    <Image x:ConnectionId='23' Grid.Row="9" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
-                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    <Image x:ConnectionId='43' x:Name="_90" Grid.Row="9" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='24' Grid.Row="9" Grid.Column="1" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
-                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    <Image x:ConnectionId='44' x:Name="_91" Grid.Row="9" Grid.Column="1" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='25' Grid.Row="9" Grid.Column="2" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
-                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    <Image x:ConnectionId='45' x:Name="_92" Grid.Row="9" Grid.Column="2" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='26' Grid.Row="9" Grid.Column="3" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
-                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    <Image x:ConnectionId='46' x:Name="_93" Grid.Row="9" Grid.Column="3" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='27' Grid.Row="9" Grid.Column="4" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
-                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    <Image x:ConnectionId='47' x:Name="_94" Grid.Row="9" Grid.Column="4" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='28' Grid.Row="9" Grid.Column="5" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
-                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    <Image x:ConnectionId='48' x:Name="_95" Grid.Row="9" Grid.Column="5" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='29' Grid.Row="9" Grid.Column="6" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
-                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    <Image x:ConnectionId='49' x:Name="_96" Grid.Row="9" Grid.Column="6" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='30' Grid.Row="9" Grid.Column="7" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
-                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    <Image x:ConnectionId='50' x:Name="_97" Grid.Row="9" Grid.Column="7" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='31' Grid.Row="9" Grid.Column="8" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
-                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    <Image x:ConnectionId='51' x:Name="_98" Grid.Row="9" Grid.Column="8" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='32' Grid.Row="9" Grid.Column="9" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
-                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                    <Image x:ConnectionId='52' x:Name="_99" Grid.Row="9" Grid.Column="9" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
 
                 </Grid>
