@@ -49,7 +49,7 @@
         </Viewbox>
 
         <Viewbox HorizontalAlignment="Left">
-            <Button x:ConnectionId='34' x:Name="PauseButton"                          
+            <Button x:ConnectionId='36' x:Name="PauseButton"                          
                 Content="Pausa" Background="LightPink" Foreground="Black"
                 Margin="20,20,0,0" FontSize="25"
                 FontFamily="MV Boli" CornerRadius="10" BorderThickness="4"
@@ -59,26 +59,26 @@
         <Viewbox  Grid.Row="1"  Grid.Column="2" VerticalAlignment="Top" Margin="10,10,10,0">
             <Border BorderThickness="10" BorderBrush="#FF4B0404" Background="Transparent"
                 CornerRadius="10" Height="80" >
-                <TextBlock x:ConnectionId='33' x:Name="CountDown" Text="00:00" FontSize="45" Foreground="White" />
+                <TextBlock x:ConnectionId='35' x:Name="CountDown" Text="00:00" FontSize="45" Foreground="White" />
             </Border>
         </Viewbox>
         <!--Paneles de informacion cartas-->
         <Viewbox Grid.Row="1" Grid.ColumnSpan="3" Margin="0,200,0,0" >
             <Grid >
                 <StackPanel Orientation="Horizontal" Spacing="650">
-                    <StackPanel x:ConnectionId='23'  x:Name="PanelInfoJugador"  Style="{StaticResource panelesInfo}" Margin="155,0,0,0" >
-                        <TextBlock x:ConnectionId='29'  x:Name="CartaInfoJugador" Text="Regaliz" Style="{StaticResource textInfoPanel}" FontSize="24"/>
-                        <TextBlock x:ConnectionId='30' x:Name="RangoCartaJUgador" Text="Rango: 7" Style="{StaticResource textInfoPanel}" FontSize="16"/>
-                        <Image x:ConnectionId='31' x:Name="ImagenCartaJugador" Source="Assets/regaliz.png" Width="50"></Image>
-                        <TextBlock x:ConnectionId='32' x:Name="InfoCartaJugador"  Style="{StaticResource textInfoPanel}"
+                    <StackPanel x:ConnectionId='25'  x:Name="PanelInfoJugador"  Style="{StaticResource panelesInfo}" Margin="155,0,0,0" >
+                        <TextBlock x:ConnectionId='31'  x:Name="CartaInfoJugador" Text="Regaliz" Style="{StaticResource textInfoPanel}" FontSize="24"/>
+                        <TextBlock x:ConnectionId='32' x:Name="RangoCartaJUgador" Text="Rango: 7" Style="{StaticResource textInfoPanel}" FontSize="16"/>
+                        <Image x:ConnectionId='33' x:Name="ImagenCartaJugador" Source="Assets/regaliz.png" Width="50"></Image>
+                        <TextBlock x:ConnectionId='34' x:Name="InfoCartaJugador"  Style="{StaticResource textInfoPanel}"
                            TextWrapping="Wrap" Text="Tiene su punto débil expuesto, la yema, 
                            pero para poder acabar con él deberás cogerlo primero y gracias a su disposición de la clara puede arrastrarse muy rápido"  FontSize="8"/>
                     </StackPanel>
-                    <StackPanel x:ConnectionId='24'  x:Name="PanelInfoEnemigo" Style="{StaticResource panelesInfo}" Margin="0,0,75,0" >
-                        <TextBlock x:ConnectionId='25'  x:Name="CartaInfoEnemigo" Text="Regaliz"   FontSize="24" Style="{StaticResource textInfoPanel}"/>
-                        <TextBlock x:ConnectionId='26' x:Name="RangoCartaEnemigo" Text="Rango: 7" Style="{StaticResource textInfoPanel}" FontSize="16"/>
-                        <Image x:ConnectionId='27' x:Name="ImagenCartaEnemigo" Source="Assets/regaliz.png" Width="50"></Image>
-                        <TextBlock x:ConnectionId='28' x:Name="InfoCartaEnemigo" Style="{StaticResource textInfoPanel}"
+                    <StackPanel x:ConnectionId='26'  x:Name="PanelInfoEnemigo" Style="{StaticResource panelesInfo}" Margin="0,0,75,0" >
+                        <TextBlock x:ConnectionId='27'  x:Name="CartaInfoEnemigo" Text="Regaliz"   FontSize="24" Style="{StaticResource textInfoPanel}"/>
+                        <TextBlock x:ConnectionId='28' x:Name="RangoCartaEnemigo" Text="Rango: 7" Style="{StaticResource textInfoPanel}" FontSize="16"/>
+                        <Image x:ConnectionId='29' x:Name="ImagenCartaEnemigo" Source="Assets/regaliz.png" Width="50"></Image>
+                        <TextBlock x:ConnectionId='30' x:Name="InfoCartaEnemigo" Style="{StaticResource textInfoPanel}"
                            TextWrapping="Wrap" Text="Tiene su punto débil expuesto, la yema, 
                            pero para poder acabar con él deberás cogerlo primero y gracias a su disposición de la clara puede arrastrarse muy rápido"  FontSize="8"/>
                     </StackPanel>
@@ -359,14 +359,26 @@
             <Grid Margin="20,130,80,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                 <StackPanel x:ConnectionId='16' x:Name="PanelDeFichas" >
                     <ListView x:ConnectionId='17'                                        Background="Gold" 
-                      CornerRadius="15" >
+                      CornerRadius="15">
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="ListViewItem">
+                                <Setter Property="Background" Value="Transparent" />
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="ListViewItem">
+                                            <ContentPresenter/>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </ListView.ItemContainerStyle>
                         <ListView.ItemTemplate>
                             <DataTemplate                               >
-                                <StackPanel x:ConnectionId='19' Orientation="Horizontal" Spacing=" 15">
-                                    <Image x:ConnectionId='20'                                       Height="55" />
+                                <StackPanel x:ConnectionId='21' Orientation="Horizontal" Spacing=" 15">
+                                    <Image x:ConnectionId='22'                                       Height="55" />
                                     <StackPanel Orientation="Vertical">
-                                        <TextBlock x:ConnectionId='21'                        FontSize="16" Foreground="BlueViolet" FontFamily="MV Boli" FontWeight="Bold"/>
-                                        <TextBlock x:ConnectionId='22'                            FontSize="32" FontFamily="MV Boli" FontWeight="Bold"/>
+                                        <TextBlock x:ConnectionId='23'                        FontSize="16" Foreground="BlueViolet" FontFamily="MV Boli" FontWeight="Bold"/>
+                                        <TextBlock x:ConnectionId='24'                            FontSize="32" FontFamily="MV Boli" FontWeight="Bold"/>
                                     </StackPanel>
                                 </StackPanel>
                             </DataTemplate>
