@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -28,8 +29,7 @@ namespace ProyectoDSI
     {
         bool[,] Tablero;//PARA VER EN QUE CASILLAS HAY FICHAS
         List<PanelFicha> listPanelFichas;//PANEL IZQUIERDO
-        List<FichaInicial>listFichasIniciales1;//PANEL INICIAL LISTA ARRIBA
-        List<FichaInicial>listFichasIniciales2;//PANEL INICIAL LISTA ABAJO
+        ObservableCollection<FichaInicial>listFichasIniciales1;//PANEL INICIAL LISTA ARRIBA
 
         List<Ficha> FichasJugador;
         List<Ficha> FichasEnemigo;
@@ -174,8 +174,8 @@ namespace ProyectoDSI
             Tablero = new bool[10, 10];
             FichasEnemigo = new List<Ficha>();
             FichasJugador= new List<Ficha>();
-            listFichasIniciales1 = new List<FichaInicial>();
-            listFichasIniciales2 = new List<FichaInicial>();
+            listFichasIniciales1 = new ObservableCollection<FichaInicial>();
+            
             FichaInicial fichainicial = new FichaInicial();
 
             fichainicial.ficha_=new Ficha(0, "Regaliz", -1, -1);
@@ -195,25 +195,25 @@ namespace ProyectoDSI
             fichainicial.cantidad_ = 4;
             listFichasIniciales1.Add(fichainicial);
             fichainicial = new FichaInicial();
-            fichainicial.ficha_ = new Ficha(10, "Sandia", -1, -1);
+            fichainicial.ficha_ = new Ficha(4, "Sandia", -1, -1);
             fichainicial.cantidad_ = 4;
-            listFichasIniciales2.Add(fichainicial);
+            listFichasIniciales1.Add(fichainicial);
             fichainicial = new FichaInicial();
-            fichainicial.ficha_ = new Ficha(11, "Cocacola", -1, -1);
+            fichainicial.ficha_ = new Ficha(5, "Cocacola", -1, -1);
             fichainicial.cantidad_ = 8;
-            listFichasIniciales2.Add(fichainicial);
+            listFichasIniciales1.Add(fichainicial);
             fichainicial = new FichaInicial();
-            fichainicial.ficha_ = new Ficha(12, "BombaSandia", -1, -1);
+            fichainicial.ficha_ = new Ficha(6, "BombaSandia", -1, -1);
             fichainicial.cantidad_ = 1;
-            listFichasIniciales2.Add(fichainicial);
+            listFichasIniciales1.Add(fichainicial);
             fichainicial = new FichaInicial();
-            fichainicial.ficha_ = new Ficha(13, "Petazeta", -1, -1);
+            fichainicial.ficha_ = new Ficha(7, "Petazeta", -1, -1);
             fichainicial.cantidad_ = 6;
-            listFichasIniciales2.Add(fichainicial);
+            listFichasIniciales1.Add(fichainicial);
             fichainicial = new FichaInicial();
-            fichainicial.ficha_ = new Ficha(14, "Fresa", -1, -1);
+            fichainicial.ficha_ = new Ficha(8, "Fresa", -1, -1);
             fichainicial.cantidad_ = 1;
-            listFichasIniciales2.Add(fichainicial);
+            listFichasIniciales1.Add(fichainicial);
         }     
         void Add()
         {
@@ -276,23 +276,19 @@ namespace ProyectoDSI
         {
             e.AcceptedOperation = DataPackageOperation.Copy;
         }
-        private async void Image_Drop(object sender, DragEventArgs e){         
+        private async void Image_Drop(object sender, DragEventArgs e){
+            if (playersTurn) return;
             var id = await e.DataView.GetTextAsync();
             int aux = int.Parse(id);
             Image Receptor = sender as Image;
             Ficha x;
             Receptor.Visibility = Visibility.Visible;
-            if (aux >= 10) {
-                aux -= 10;             
-                x = listFichasIniciales2[aux].ficha_;
-               if (listFichasIniciales2[aux].cantidad_ <= 1)  /*listFichasIniciales2.Remove(listFichasIniciales2[aux])*/;
-               else listFichasIniciales2[aux].cantidad_--;
-            }
-            else{                
-                x = listFichasIniciales1[aux].ficha_;
-                if (listFichasIniciales1[aux].cantidad_ <= 1) /*listFichasIniciales2.Remove(listFichasIniciales2[aux])*/;
-                else listFichasIniciales1[aux].cantidad_--;              
-            }
+                      
+            x = listFichasIniciales1[aux].ficha_;
+            listFichasIniciales1[aux].cantidad_--;
+            if (listFichasIniciales1[aux].cantidad_ <= 1) listFichasIniciales1.Remove(listFichasIniciales1[aux]);
+                  
+            
             x.id_ = FichasJugador.Count();
             string aux2 = Receptor.Name;
                      

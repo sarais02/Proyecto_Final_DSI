@@ -370,7 +370,23 @@
                         <StackPanel Background="Purple" Opacity="1"  BorderThickness="5" BorderBrush="White" Height="450">
                             <TextBlock Text="Coloca tus fichas" FontFamily="MV Boli" FontWeight="ExtraBold" 
                            VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="56"/>
-                            <GridView Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" 
+                            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="750">
+                                <GridView Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                                   ItemsSource="{x:Bind listFichasIniciales1}" 
+                                  CanDragItems="True" DragItemsStarting="GridView_DragItemsStarting" IsFocusEngagementEnabled="True">
+                                    <GridView.ItemTemplate >
+                                        <DataTemplate x:DataType="local:FichaInicial">
+                                            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                Spacing="5" Orientation="Horizontal">
+                                                <Image Source="{x:Bind ficha_.img_.Source}" Height="115"/>
+                                                <TextBlock Text="{x:Bind cantidad_}" FontSize="48" 
+                                                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridView.ItemTemplate>
+                                </GridView>
+                            </StackPanel>
+                            <!--<GridView Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" 
                                    ItemsSource="{x:Bind listFichasIniciales1}" 
                                   CanDragItems="True" DragItemsStarting="GridView_DragItemsStarting" IsFocusEngagementEnabled="True">
                                 <GridView.ItemTemplate >
@@ -397,7 +413,7 @@
                                         </StackPanel>
                                     </DataTemplate>
                                 </GridView.ItemTemplate>
-                            </GridView>
+                            </GridView>-->
                         </StackPanel>
                     </StackPanel>
                 </Grid>

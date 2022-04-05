@@ -19,7 +19,6 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="AllowDrop" />
-      <RootEvent Name="PointerEntered" />
       <RootEvent Name="PointerPressed" />
       <RootEvent Name="Drop" />
       <RootEvent Name="DragOver" />
