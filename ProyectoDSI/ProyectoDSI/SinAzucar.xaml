@@ -70,7 +70,7 @@
         <Viewbox Grid.Row="1" Grid.ColumnSpan="3" Margin="0,200,0,0" >
             <Grid >
                 <StackPanel Orientation="Horizontal" Spacing="650">
-                    <StackPanel  x:Name="PanelInfoJugador"  Style="{StaticResource panelesInfo}" Margin="155,0,0,0" >
+                    <StackPanel  x:Name="PanelInfoJugador"  Style="{StaticResource panelesInfo}" Margin="125,0,0,0" Visibility="Collapsed"  >
                         <TextBlock  x:Name="CartaInfoJugador" Text="Regaliz" Style="{StaticResource textInfoPanel}" FontSize="24"/>
                         <TextBlock x:Name="RangoCartaJugador" Text="Rango: 7" Style="{StaticResource textInfoPanel}" FontSize="16"/>
                         <Image x:Name="ImagenCartaJugador" Source="Assets/regaliz.png" Width="50"></Image>
@@ -78,7 +78,7 @@
                            TextWrapping="Wrap" Text="Tiene su punto débil expuesto, la yema, 
                            pero para poder acabar con él deberás cogerlo primero y gracias a su disposición de la clara puede arrastrarse muy rápido"  FontSize="8"/>
                     </StackPanel>
-                    <StackPanel  x:Name="PanelInfoEnemigo" Style="{StaticResource panelesInfo}" Margin="0,0,75,0" >
+                    <StackPanel  x:Name="PanelInfoEnemigo" Style="{StaticResource panelesInfo}" Margin="0,0,45,0" Visibility="Collapsed" >
                         <TextBlock  x:Name="CartaInfoEnemigo" Text="Regaliz"   FontSize="24" Style="{StaticResource textInfoPanel}"/>
                         <TextBlock x:Name="RangoCartaEnemigo" Text="Rango: 7" Style="{StaticResource textInfoPanel}" FontSize="16"/>
                         <Image x:Name="ImagenCartaEnemigo" Source="Assets/regaliz.png" Width="50"></Image>
@@ -86,7 +86,6 @@
                            TextWrapping="Wrap" Text="Tiene su punto débil expuesto, la yema, 
                            pero para poder acabar con él deberás cogerlo primero y gracias a su disposición de la clara puede arrastrarse muy rápido"  FontSize="8"/>
                     </StackPanel>
-
                 </StackPanel>
             </Grid>
         </Viewbox>
@@ -363,7 +362,6 @@
                     <Image x:Name="_99" Grid.Row="9" Grid.Column="9" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
-
                 </Grid>
                 <!--Estado Inicial-->
                 <Grid Margin="76,0,70,100" VerticalAlignment="Top" HorizontalAlignment="Stretch">
@@ -405,6 +403,7 @@
                 </Grid>
             </Grid>
         </Viewbox>
+        
         <!--Barra de progreso-->
         <Viewbox Grid.Column="1" HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" 

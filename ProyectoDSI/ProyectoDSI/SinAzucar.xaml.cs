@@ -26,10 +26,10 @@ namespace ProyectoDSI
     /// </summary>
     public sealed partial class SinAzucar : Page
     {
-        bool[,] Tablero;
-        List<PanelFicha> listPanelFichas;
-        List<FichaInicial>listFichasIniciales1;
-        List<FichaInicial>listFichasIniciales2;
+        bool[,] Tablero;//PARA VER EN QUE CASILLAS HAY FICHAS
+        List<PanelFicha> listPanelFichas;//PANEL IZQUIERDO
+        List<FichaInicial>listFichasIniciales1;//PANEL INICIAL LISTA ARRIBA
+        List<FichaInicial>listFichasIniciales2;//PANEL INICIAL LISTA ABAJO
 
         List<Ficha> FichasJugador;
         List<Ficha> FichasEnemigo;
@@ -43,8 +43,7 @@ namespace ProyectoDSI
         private bool playersTurn;
 
         
-        public SinAzucar()
-        {
+        public SinAzucar() {
             this.InitializeComponent();
             currentTime = initialTime;
             textTimer_ = new DispatcherTimer();
@@ -107,7 +106,6 @@ namespace ProyectoDSI
             CountDown.Text = "0" + minutes.ToString() + ":" + seconds.ToString();
             timer.Start();         
         }
-
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
         {
             if(e.Key==VirtualKey.Escape) 
@@ -267,7 +265,6 @@ namespace ProyectoDSI
         {
             EntranceStackPanel.Children.Clear();
         }
-
         private void GridView_DragItemsStarting(object sender, DragItemsStartingEventArgs e){
 
             FichaInicial aux = e.Items[0] as FichaInicial;
@@ -275,12 +272,10 @@ namespace ProyectoDSI
             e.Data.SetText(id);
             e.Data.RequestedOperation = DataPackageOperation.Copy;
         }
-
         private void Image_DragOver(object sender, DragEventArgs e)
         {
             e.AcceptedOperation = DataPackageOperation.Copy;
         }
-
         private async void Image_Drop(object sender, DragEventArgs e){         
             var id = await e.DataView.GetTextAsync();
             int aux = int.Parse(id);
@@ -290,13 +285,13 @@ namespace ProyectoDSI
             if (aux >= 10) {
                 aux -= 10;             
                 x = listFichasIniciales2[aux].ficha_;
-               if (listFichasIniciales2[aux].cantidad_ <= 1)  listFichasIniciales2.Remove(listFichasIniciales2[aux]);
+               if (listFichasIniciales2[aux].cantidad_ <= 1)  /*listFichasIniciales2.Remove(listFichasIniciales2[aux])*/;
                else listFichasIniciales2[aux].cantidad_--;
             }
             else{                
                 x = listFichasIniciales1[aux].ficha_;
-                if (listFichasIniciales1[aux].cantidad_ <= 1) listFichasIniciales2.Remove(listFichasIniciales2[aux]);
-                else listFichasIniciales1[aux].cantidad_--;
+                if (listFichasIniciales1[aux].cantidad_ <= 1) /*listFichasIniciales2.Remove(listFichasIniciales2[aux])*/;
+                else listFichasIniciales1[aux].cantidad_--;              
             }
             x.id_ = FichasJugador.Count();
             string aux2 = Receptor.Name;
@@ -307,33 +302,32 @@ namespace ProyectoDSI
             Receptor.Source = x.img_.Source;
             Tablero[ x.Y_, x.X_] = true;
         }
-
         private void Image_PointerPressed(object sender, PointerRoutedEventArgs e){
             Windows.UI.Xaml.Input.Pointer ptr = e.Pointer;            
-            if (ptr.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse){
+            if (ptr.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse && !playersTurn)
+            {
                 Image x= sender as Image;
                 string aux2 = x.Name;
                 int filCol = (int)Char.GetNumericValue(aux2[2]) + (int)Char.GetNumericValue(aux2[1]) * 10;
                 Windows.UI.Input.PointerPoint ptrPt = e.GetCurrentPoint(sender as Image);              
-                if (ptrPt.Properties.IsLeftButtonPressed){
+                if (ptrPt.Properties.IsRightButtonPressed){
                     ImagenCartaJugador.Source = x.Source;
                     for (int i = 0; i < FichasJugador.Count; i++) {
                         if (FichasJugador[i].Y_*10+ FichasJugador[i].X_==filCol){
+                            PanelInfoJugador.Visibility = Visibility.Visible;
                             InfoCartaJugador.Text = FichasJugador[i].info_;
                             RangoCartaJugador.Text = FichasJugador[i].rango_;
-                            CartaInfoJugador.Text = FichasJugador[i].tipo_;
+                            CartaInfoJugador.Text = FichasJugador[i].tipo_;                           
                         }
                     }
                 }
-                if (ptrPt.Properties.IsRightButtonPressed){
+                if (ptrPt.Properties.IsLeftButtonPressed){
                    //seleccionar la ficha como seleccionada y acto depues guardarnos una referencia a ella
                 }
             }
 
             // Prevent most handlers along the event route from handling the same event again.
             e.Handled = true;
-
-
         }
     }
 }
