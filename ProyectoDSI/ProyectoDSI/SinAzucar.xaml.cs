@@ -21,7 +21,7 @@ using Windows.UI.Xaml.Navigation;
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace ProyectoDSI
-{ 
+{
     /// <summary>
     /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
@@ -29,7 +29,7 @@ namespace ProyectoDSI
     {
         bool[,] Tablero;//PARA VER EN QUE CASILLAS HAY FICHAS
         List<PanelFicha> listPanelFichas;//PANEL IZQUIERDO
-        ObservableCollection<FichaInicial>listFichasIniciales1;//PANEL INICIAL LISTA ARRIBA
+        public ObservableCollection<FichaInicial> listFichasIniciales1 { get; } = new ObservableCollection<FichaInicial>(); //PANEL INICIAL LISTA ARRIBA
 
         List<Ficha> FichasJugador;
         List<Ficha> FichasEnemigo;
@@ -174,7 +174,7 @@ namespace ProyectoDSI
             Tablero = new bool[10, 10];
             FichasEnemigo = new List<Ficha>();
             FichasJugador= new List<Ficha>();
-            listFichasIniciales1 = new ObservableCollection<FichaInicial>();
+           
             
             FichaInicial fichainicial = new FichaInicial();
 
@@ -286,7 +286,16 @@ namespace ProyectoDSI
                       
             x = listFichasIniciales1[aux].ficha_;
             listFichasIniciales1[aux].cantidad_--;
-            if (listFichasIniciales1[aux].cantidad_ <= 1) listFichasIniciales1.Remove(listFichasIniciales1[aux]);
+            if (listFichasIniciales1[aux].cantidad_ < 1) {
+                for (int i = 1; i+aux < listFichasIniciales1.Count(); i++)
+                {
+                    //Ficha f = listPanelFichas[i].ficha_;
+                    //f.id_--;                  
+                    listPanelFichas[i+aux].ficha_.id_--;
+                    
+                }
+                listFichasIniciales1.Remove(listFichasIniciales1[aux]);                
+            }
                   
             
             x.id_ = FichasJugador.Count();
