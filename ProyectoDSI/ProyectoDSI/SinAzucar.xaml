@@ -269,97 +269,97 @@
                    Grid.Column="9"/>
 
                     <!--Fila 7-->
-                    <Image x:Name="_70" Grid.Row="7" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    <Image x:Name="_70" Grid.Row="7" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
-                    <Image x:Name="_71" Grid.Row="7" Grid.Column="1" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    <Image x:Name="_71" Grid.Row="7" Grid.Column="1" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
-                    <Image x:Name="_72" Grid.Row="7" Grid.Column="2" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    <Image x:Name="_72" Grid.Row="7" Grid.Column="2" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
-                    <Image x:Name="_73" Grid.Row="7" Grid.Column="3" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    <Image x:Name="_73" Grid.Row="7" Grid.Column="3" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
-                    <Image x:Name="_74" Grid.Row="7" Grid.Column="4" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    <Image x:Name="_74" Grid.Row="7" Grid.Column="4" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
-                    <Image x:Name="_75" Grid.Row="7" Grid.Column="5" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    <Image x:Name="_75" Grid.Row="7" Grid.Column="5" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
-                    <Image x:Name="_76" Grid.Row="7" Grid.Column="6" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    <Image x:Name="_76" Grid.Row="7" Grid.Column="6" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
-                    <Image x:Name="_77" Grid.Row="7" Grid.Column="7" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    <Image x:Name="_77" Grid.Row="7" Grid.Column="7" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
-                    <Image x:Name="_78" Grid.Row="7" Grid.Column="8" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    <Image x:Name="_78" Grid.Row="7" Grid.Column="8" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
-                    <Image x:Name="_79" Grid.Row="7" Grid.Column="9" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    <Image x:Name="_79" Grid.Row="7" Grid.Column="9" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
 
                     <!--Fila 8-->
-                    <Image x:Name="_80" Grid.Row="8" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    <Image x:Name="_80" Grid.Row="8" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
-                    <Image x:Name="_81" Grid.Row="8" Grid.Column="1" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    <Image x:Name="_81" Grid.Row="8" Grid.Column="1" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
-                    <Image x:Name="_82" Grid.Row="8" Grid.Column="2" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    <Image x:Name="_82" Grid.Row="8" Grid.Column="2" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
-                    <Image x:Name="_83" Grid.Row="8" Grid.Column="3" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    <Image x:Name="_83" Grid.Row="8" Grid.Column="3" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
-                    <Image x:Name="_84" Grid.Row="8" Grid.Column="4" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    <Image x:Name="_84" Grid.Row="8" Grid.Column="4" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
-                    <Image x:Name="_85" Grid.Row="8" Grid.Column="5" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    <Image x:Name="_85" Grid.Row="8" Grid.Column="5" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
-                    <Image x:Name="_86" Grid.Row="8" Grid.Column="6" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    <Image x:Name="_86" Grid.Row="8" Grid.Column="6" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
-                    <Image x:Name="_87" Grid.Row="8" Grid.Column="7" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    <Image x:Name="_87" Grid.Row="8" Grid.Column="7" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
-                    <Image x:Name="_88" Grid.Row="8" Grid.Column="8" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    <Image x:Name="_88" Grid.Row="8" Grid.Column="8" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
-                    <Image x:Name="_89" Grid.Row="8" Grid.Column="9" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    <Image x:Name="_89" Grid.Row="8" Grid.Column="9" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
                     <!--Fila 9-->
-                    <Image x:Name="_90" Grid.Row="9" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    <Image x:Name="_90" Grid.Row="9" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
-                    <Image x:Name="_91" Grid.Row="9" Grid.Column="1" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    <Image x:Name="_91" Grid.Row="9" Grid.Column="1" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
-                    <Image x:Name="_92" Grid.Row="9" Grid.Column="2" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    <Image x:Name="_92" Grid.Row="9" Grid.Column="2" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
-                    <Image x:Name="_93" Grid.Row="9" Grid.Column="3" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    <Image x:Name="_93" Grid.Row="9" Grid.Column="3" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
-                    <Image x:Name="_94" Grid.Row="9" Grid.Column="4" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    <Image x:Name="_94" Grid.Row="9" Grid.Column="4" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
-                    <Image x:Name="_95" Grid.Row="9" Grid.Column="5" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    <Image x:Name="_95" Grid.Row="9" Grid.Column="5" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
-                    <Image x:Name="_96" Grid.Row="9" Grid.Column="6" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    <Image x:Name="_96" Grid.Row="9" Grid.Column="6" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
-                    <Image x:Name="_97" Grid.Row="9" Grid.Column="7" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    <Image x:Name="_97" Grid.Row="9" Grid.Column="7" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
-                    <Image x:Name="_98" Grid.Row="9" Grid.Column="8" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    <Image x:Name="_98" Grid.Row="9" Grid.Column="8" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
-                    <Image x:Name="_99" Grid.Row="9" Grid.Column="9" Stretch="Fill" Source="Assets/SplashScreen.scale-200.png"
+                    <Image x:Name="_99" Grid.Row="9" Grid.Column="9" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
                 </Grid>

@@ -155,6 +155,7 @@
     <Content Include="Assets\back.png" />
     <Content Include="Assets\Baston.png" />
     <Content Include="Assets\BombaSandia.png" />
+    <Content Include="Assets\borde.png" />
     <Content Include="Assets\botoncontroles.png" />
     <Content Include="Assets\botonReglamento.png" />
     <Content Include="Assets\Cocacola.png" />

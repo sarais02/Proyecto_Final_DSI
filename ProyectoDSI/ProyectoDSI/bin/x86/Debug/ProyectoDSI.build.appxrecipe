@@ -43,6 +43,9 @@
     <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\BombaSandia.png">
       <PackagePath>Assets\BombaSandia.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\borde.png">
+      <PackagePath>Assets\borde.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\botoncontroles.png">
       <PackagePath>Assets\botoncontroles.png</PackagePath>
     </AppxPackagedFile>
