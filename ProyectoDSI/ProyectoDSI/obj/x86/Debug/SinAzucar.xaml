@@ -53,7 +53,7 @@
         </Viewbox>
         
         <Viewbox HorizontalAlignment="Left">
-            <Button x:ConnectionId='92' x:Name="PauseButton"                          
+            <Button x:ConnectionId='87' x:Name="PauseButton"                          
                 Content="Pausa" Background="LightPink" Foreground="Black"
                 Margin="20,20,0,0" FontSize="25"
                 FontFamily="MV Boli" CornerRadius="10" BorderThickness="4"
@@ -63,26 +63,26 @@
         <Viewbox  Grid.Row="1"  Grid.Column="2" VerticalAlignment="Top" Margin="10,10,10,0">
             <Border BorderThickness="10" BorderBrush="#FF040E52" Background="Transparent"
                 CornerRadius="10" Height="80" >
-                <TextBlock x:ConnectionId='91' x:Name="CountDown" Text="00:00" FontSize="45" Foreground="White" />
+                <TextBlock x:ConnectionId='86' x:Name="CountDown" Text="00:00" FontSize="45" Foreground="White" />
             </Border>
         </Viewbox>
         <!--Paneles de informacion cartas-->
         <Viewbox Grid.Row="1" Grid.ColumnSpan="3" Margin="0,200,0,0" >
             <Grid >
                 <StackPanel Orientation="Horizontal" Spacing="650">
-                    <StackPanel x:ConnectionId='81'  x:Name="PanelInfoJugador"  Style="{StaticResource panelesInfo}" Margin="125,0,0,0" Visibility="Collapsed"  >
-                        <TextBlock x:ConnectionId='87'  x:Name="CartaInfoJugador" Text="Regaliz" Style="{StaticResource textInfoPanel}" FontSize="24"/>
-                        <TextBlock x:ConnectionId='88' x:Name="RangoCartaJugador" Text="Rango: 7" Style="{StaticResource textInfoPanel}" FontSize="16"/>
-                        <Image x:ConnectionId='89' x:Name="ImagenCartaJugador" Source="Assets/regaliz.png" Width="50"></Image>
-                        <TextBlock x:ConnectionId='90' x:Name="InfoCartaJugador"  Style="{StaticResource textInfoPanel}"
+                    <StackPanel x:ConnectionId='76'  x:Name="PanelInfoJugador"  Style="{StaticResource panelesInfo}" Margin="125,0,0,0" Visibility="Collapsed"  >
+                        <TextBlock x:ConnectionId='82'  x:Name="CartaInfoJugador" Text="Regaliz" Style="{StaticResource textInfoPanel}" FontSize="24"/>
+                        <TextBlock x:ConnectionId='83' x:Name="RangoCartaJugador" Text="Rango: 7" Style="{StaticResource textInfoPanel}" FontSize="16"/>
+                        <Image x:ConnectionId='84' x:Name="ImagenCartaJugador" Source="Assets/regaliz.png" Width="50"></Image>
+                        <TextBlock x:ConnectionId='85' x:Name="InfoCartaJugador"  Style="{StaticResource textInfoPanel}"
                            TextWrapping="Wrap" Text="Tiene su punto débil expuesto, la yema, 
                            pero para poder acabar con él deberás cogerlo primero y gracias a su disposición de la clara puede arrastrarse muy rápido"  FontSize="8"/>
                     </StackPanel>
-                    <StackPanel x:ConnectionId='82'  x:Name="PanelInfoEnemigo" Style="{StaticResource panelesInfo}" Margin="0,0,45,0" Visibility="Collapsed" >
-                        <TextBlock x:ConnectionId='83'  x:Name="CartaInfoEnemigo" Text="Regaliz"   FontSize="24" Style="{StaticResource textInfoPanel}"/>
-                        <TextBlock x:ConnectionId='84' x:Name="RangoCartaEnemigo" Text="Rango: 7" Style="{StaticResource textInfoPanel}" FontSize="16"/>
-                        <Image x:ConnectionId='85' x:Name="ImagenCartaEnemigo" Source="Assets/regaliz.png" Width="50"></Image>
-                        <TextBlock x:ConnectionId='86' x:Name="InfoCartaEnemigo" Style="{StaticResource textInfoPanel}" 
+                    <StackPanel x:ConnectionId='77'  x:Name="PanelInfoEnemigo" Style="{StaticResource panelesInfo}" Margin="0,0,45,0" Visibility="Collapsed" >
+                        <TextBlock x:ConnectionId='78'  x:Name="CartaInfoEnemigo" Text="Regaliz"   FontSize="24" Style="{StaticResource textInfoPanel}"/>
+                        <TextBlock x:ConnectionId='79' x:Name="RangoCartaEnemigo" Text="Rango: 7" Style="{StaticResource textInfoPanel}" FontSize="16"/>
+                        <Image x:ConnectionId='80' x:Name="ImagenCartaEnemigo" Source="Assets/regaliz.png" Width="50"></Image>
+                        <TextBlock x:ConnectionId='81' x:Name="InfoCartaEnemigo" Style="{StaticResource textInfoPanel}" 
                            TextWrapping="Wrap" Text="Tiene su punto débil expuesto, la yema, 
                            pero para poder acabar con él deberás cogerlo primero y gracias a su disposición de la clara puede arrastrarse muy rápido"  FontSize="8"/>
                     </StackPanel>
@@ -131,98 +131,98 @@
 
 
                     <!--Fila 0-->
-                    <Image x:ConnectionId='21' x:Name="_00" Grid.Row="0" Stretch="Fill" 
+                    <Image x:ConnectionId='16' x:Name="_00" Grid.Row="0" Stretch="Fill" 
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='22' x:Name="_01" Grid.Row="0" Grid.Column="1" Stretch="Fill"
+                    <Image x:ConnectionId='17' x:Name="_01" Grid.Row="0" Grid.Column="1" Stretch="Fill"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='23' x:Name="_02" Grid.Row="0" Grid.Column="2" Stretch="Fill" 
+                    <Image x:ConnectionId='18' x:Name="_02" Grid.Row="0" Grid.Column="2" Stretch="Fill" 
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='24' x:Name="_03" Grid.Row="0" Grid.Column="3" Stretch="Fill" 
+                    <Image x:ConnectionId='19' x:Name="_03" Grid.Row="0" Grid.Column="3" Stretch="Fill" 
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='25' x:Name="_04" Grid.Row="0" Grid.Column="4" Stretch="Fill"
+                    <Image x:ConnectionId='20' x:Name="_04" Grid.Row="0" Grid.Column="4" Stretch="Fill"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='26' x:Name="_05" Grid.Row="0" Grid.Column="5" Stretch="Fill" 
+                    <Image x:ConnectionId='21' x:Name="_05" Grid.Row="0" Grid.Column="5" Stretch="Fill" 
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='27' x:Name="_06" Grid.Row="0" Grid.Column="6" Stretch="Fill" 
+                    <Image x:ConnectionId='22' x:Name="_06" Grid.Row="0" Grid.Column="6" Stretch="Fill" 
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='28' x:Name="_07" Grid.Row="0" Grid.Column="7" Stretch="Fill" 
+                    <Image x:ConnectionId='23' x:Name="_07" Grid.Row="0" Grid.Column="7" Stretch="Fill" 
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='29' x:Name="_08" Grid.Row="0" Grid.Column="8" Stretch="Fill" 
+                    <Image x:ConnectionId='24' x:Name="_08" Grid.Row="0" Grid.Column="8" Stretch="Fill" 
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='30' x:Name="_09" Grid.Row="0" Grid.Column="9" Stretch="Fill" 
+                    <Image x:ConnectionId='25' x:Name="_09" Grid.Row="0" Grid.Column="9" Stretch="Fill" 
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
 
                     <!--Fila 1-->
-                    <Image x:ConnectionId='31' x:Name="_10" Grid.Row="1" Stretch="Fill" 
+                    <Image x:ConnectionId='26' x:Name="_10" Grid.Row="1" Stretch="Fill" 
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='32' x:Name="_11" Grid.Row="1" Grid.Column="1" Stretch="Fill"
+                    <Image x:ConnectionId='27' x:Name="_11" Grid.Row="1" Grid.Column="1" Stretch="Fill"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='33' x:Name="_12" Grid.Row="1" Grid.Column="2" Stretch="Fill" 
+                    <Image x:ConnectionId='28' x:Name="_12" Grid.Row="1" Grid.Column="2" Stretch="Fill" 
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='34' x:Name="_13" Grid.Row="1" Grid.Column="3" Stretch="Fill" 
+                    <Image x:ConnectionId='29' x:Name="_13" Grid.Row="1" Grid.Column="3" Stretch="Fill" 
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='35' x:Name="_14" Grid.Row="1" Grid.Column="4" Stretch="Fill"
+                    <Image x:ConnectionId='30' x:Name="_14" Grid.Row="1" Grid.Column="4" Stretch="Fill"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='36' x:Name="_15" Grid.Row="1" Grid.Column="5" Stretch="Fill" 
+                    <Image x:ConnectionId='31' x:Name="_15" Grid.Row="1" Grid.Column="5" Stretch="Fill" 
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='37' x:Name="_16" Grid.Row="1" Grid.Column="6" Stretch="Fill" 
+                    <Image x:ConnectionId='32' x:Name="_16" Grid.Row="1" Grid.Column="6" Stretch="Fill" 
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='38' x:Name="_17" Grid.Row="1" Grid.Column="7" Stretch="Fill" 
+                    <Image x:ConnectionId='33' x:Name="_17" Grid.Row="1" Grid.Column="7" Stretch="Fill" 
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='39' x:Name="_18" Grid.Row="1" Grid.Column="8" Stretch="Fill" 
+                    <Image x:ConnectionId='34' x:Name="_18" Grid.Row="1" Grid.Column="8" Stretch="Fill" 
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='40' x:Name="_19" Grid.Row="1" Grid.Column="9" Stretch="Fill" 
+                    <Image x:ConnectionId='35' x:Name="_19" Grid.Row="1" Grid.Column="9" Stretch="Fill" 
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
 
                     <!--Fila 2-->
-                    <Image x:ConnectionId='41' x:Name="_20" Grid.Row="2" Stretch="Fill" 
+                    <Image x:ConnectionId='36' x:Name="_20" Grid.Row="2" Stretch="Fill" 
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='42' x:Name="_21" Grid.Row="2" Grid.Column="1" Stretch="Fill"
+                    <Image x:ConnectionId='37' x:Name="_21" Grid.Row="2" Grid.Column="1" Stretch="Fill"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='43' x:Name="_22" Grid.Row="2" Grid.Column="2" Stretch="Fill" 
+                    <Image x:ConnectionId='38' x:Name="_22" Grid.Row="2" Grid.Column="2" Stretch="Fill" 
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='44' x:Name="_23" Grid.Row="2" Grid.Column="3" Stretch="Fill" 
+                    <Image x:ConnectionId='39' x:Name="_23" Grid.Row="2" Grid.Column="3" Stretch="Fill" 
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='45' x:Name="_24" Grid.Row="2" Grid.Column="4" Stretch="Fill"
+                    <Image x:ConnectionId='40' x:Name="_24" Grid.Row="2" Grid.Column="4" Stretch="Fill"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='46' x:Name="_25" Grid.Row="2" Grid.Column="5" Stretch="Fill" 
+                    <Image x:ConnectionId='41' x:Name="_25" Grid.Row="2" Grid.Column="5" Stretch="Fill" 
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='47' x:Name="_26" Grid.Row="1" Grid.Column="6" Stretch="Fill" 
+                    <Image x:ConnectionId='42' x:Name="_26" Grid.Row="2" Grid.Column="6" Stretch="Fill" 
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='48' x:Name="_27" Grid.Row="2" Grid.Column="7" Stretch="Fill" 
+                    <Image x:ConnectionId='43' x:Name="_27" Grid.Row="2" Grid.Column="7" Stretch="Fill" 
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='49' x:Name="_28" Grid.Row="2" Grid.Column="8" Stretch="Fill" 
+                    <Image x:ConnectionId='44' x:Name="_28" Grid.Row="2" Grid.Column="8" Stretch="Fill" 
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='50' x:Name="_29" Grid.Row="2" Grid.Column="9" Stretch="Fill" 
+                    <Image x:ConnectionId='45' x:Name="_29" Grid.Row="2" Grid.Column="9" Stretch="Fill" 
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
                     <!--Fila 3-->
@@ -298,117 +298,117 @@
                    Grid.Column="9"/>
 
                     <!--Fila 7-->
-                    <Image x:ConnectionId='51' x:Name="_70" Grid.Row="7" Stretch="Fill" Source="Assets/borde.png"
+                    <Image x:ConnectionId='46' x:Name="_70" Grid.Row="7" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='52' x:Name="_71" Grid.Row="7" Grid.Column="1" Stretch="Fill" Source="Assets/borde.png"
+                    <Image x:ConnectionId='47' x:Name="_71" Grid.Row="7" Grid.Column="1" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='53' x:Name="_72" Grid.Row="7" Grid.Column="2" Stretch="Fill" Source="Assets/borde.png"
+                    <Image x:ConnectionId='48' x:Name="_72" Grid.Row="7" Grid.Column="2" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='54' x:Name="_73" Grid.Row="7" Grid.Column="3" Stretch="Fill" Source="Assets/borde.png"
+                    <Image x:ConnectionId='49' x:Name="_73" Grid.Row="7" Grid.Column="3" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='55' x:Name="_74" Grid.Row="7" Grid.Column="4" Stretch="Fill" Source="Assets/borde.png"
+                    <Image x:ConnectionId='50' x:Name="_74" Grid.Row="7" Grid.Column="4" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='56' x:Name="_75" Grid.Row="7" Grid.Column="5" Stretch="Fill" Source="Assets/borde.png"
+                    <Image x:ConnectionId='51' x:Name="_75" Grid.Row="7" Grid.Column="5" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='57' x:Name="_76" Grid.Row="7" Grid.Column="6" Stretch="Fill" Source="Assets/borde.png"
+                    <Image x:ConnectionId='52' x:Name="_76" Grid.Row="7" Grid.Column="6" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='58' x:Name="_77" Grid.Row="7" Grid.Column="7" Stretch="Fill" Source="Assets/borde.png"
+                    <Image x:ConnectionId='53' x:Name="_77" Grid.Row="7" Grid.Column="7" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='59' x:Name="_78" Grid.Row="7" Grid.Column="8" Stretch="Fill" Source="Assets/borde.png"
+                    <Image x:ConnectionId='54' x:Name="_78" Grid.Row="7" Grid.Column="8" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='60' x:Name="_79" Grid.Row="7" Grid.Column="9" Stretch="Fill" Source="Assets/borde.png"
+                    <Image x:ConnectionId='55' x:Name="_79" Grid.Row="7" Grid.Column="9" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
 
                     <!--Fila 8-->
-                    <Image x:ConnectionId='61' x:Name="_80" Grid.Row="8" Stretch="Fill" Source="Assets/borde.png"
+                    <Image x:ConnectionId='56' x:Name="_80" Grid.Row="8" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='62' x:Name="_81" Grid.Row="8" Grid.Column="1" Stretch="Fill" Source="Assets/borde.png"
+                    <Image x:ConnectionId='57' x:Name="_81" Grid.Row="8" Grid.Column="1" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='63' x:Name="_82" Grid.Row="8" Grid.Column="2" Stretch="Fill" Source="Assets/borde.png"
+                    <Image x:ConnectionId='58' x:Name="_82" Grid.Row="8" Grid.Column="2" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='64' x:Name="_83" Grid.Row="8" Grid.Column="3" Stretch="Fill" Source="Assets/borde.png"
+                    <Image x:ConnectionId='59' x:Name="_83" Grid.Row="8" Grid.Column="3" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='65' x:Name="_84" Grid.Row="8" Grid.Column="4" Stretch="Fill" Source="Assets/borde.png"
+                    <Image x:ConnectionId='60' x:Name="_84" Grid.Row="8" Grid.Column="4" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='66' x:Name="_85" Grid.Row="8" Grid.Column="5" Stretch="Fill" Source="Assets/borde.png"
+                    <Image x:ConnectionId='61' x:Name="_85" Grid.Row="8" Grid.Column="5" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='67' x:Name="_86" Grid.Row="8" Grid.Column="6" Stretch="Fill" Source="Assets/borde.png"
+                    <Image x:ConnectionId='62' x:Name="_86" Grid.Row="8" Grid.Column="6" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='68' x:Name="_87" Grid.Row="8" Grid.Column="7" Stretch="Fill" Source="Assets/borde.png"
+                    <Image x:ConnectionId='63' x:Name="_87" Grid.Row="8" Grid.Column="7" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='69' x:Name="_88" Grid.Row="8" Grid.Column="8" Stretch="Fill" Source="Assets/borde.png"
+                    <Image x:ConnectionId='64' x:Name="_88" Grid.Row="8" Grid.Column="8" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='70' x:Name="_89" Grid.Row="8" Grid.Column="9" Stretch="Fill" Source="Assets/borde.png"
+                    <Image x:ConnectionId='65' x:Name="_89" Grid.Row="8" Grid.Column="9" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
                     <!--Fila 9-->
-                    <Image x:ConnectionId='71' x:Name="_90" Grid.Row="9" Stretch="Fill" Source="Assets/borde.png"
+                    <Image x:ConnectionId='66' x:Name="_90" Grid.Row="9" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='72' x:Name="_91" Grid.Row="9" Grid.Column="1" Stretch="Fill" Source="Assets/borde.png"
+                    <Image x:ConnectionId='67' x:Name="_91" Grid.Row="9" Grid.Column="1" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='73' x:Name="_92" Grid.Row="9" Grid.Column="2" Stretch="Fill" Source="Assets/borde.png"
+                    <Image x:ConnectionId='68' x:Name="_92" Grid.Row="9" Grid.Column="2" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='74' x:Name="_93" Grid.Row="9" Grid.Column="3" Stretch="Fill" Source="Assets/borde.png"
+                    <Image x:ConnectionId='69' x:Name="_93" Grid.Row="9" Grid.Column="3" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='75' x:Name="_94" Grid.Row="9" Grid.Column="4" Stretch="Fill" Source="Assets/borde.png"
+                    <Image x:ConnectionId='70' x:Name="_94" Grid.Row="9" Grid.Column="4" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='76' x:Name="_95" Grid.Row="9" Grid.Column="5" Stretch="Fill" Source="Assets/borde.png"
+                    <Image x:ConnectionId='71' x:Name="_95" Grid.Row="9" Grid.Column="5" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='77' x:Name="_96" Grid.Row="9" Grid.Column="6" Stretch="Fill" Source="Assets/borde.png"
+                    <Image x:ConnectionId='72' x:Name="_96" Grid.Row="9" Grid.Column="6" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='78' x:Name="_97" Grid.Row="9" Grid.Column="7" Stretch="Fill" Source="Assets/borde.png"
+                    <Image x:ConnectionId='73' x:Name="_97" Grid.Row="9" Grid.Column="7" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='79' x:Name="_98" Grid.Row="9" Grid.Column="8" Stretch="Fill" Source="Assets/borde.png"
+                    <Image x:ConnectionId='74' x:Name="_98" Grid.Row="9" Grid.Column="8" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
-                    <Image x:ConnectionId='80' x:Name="_99" Grid.Row="9" Grid.Column="9" Stretch="Fill" Source="Assets/borde.png"
+                    <Image x:ConnectionId='75' x:Name="_99" Grid.Row="9" Grid.Column="9" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"                                      
                     AllowDrop="True"                                             />
                 </Grid>
                 <!--Estado Inicial-->
-                <Grid Margin="76,0,70,100" VerticalAlignment="Top" HorizontalAlignment="Stretch">
+                <!--<Grid Margin="76,0,70,100" VerticalAlignment="Top" HorizontalAlignment="Stretch">
                     <StackPanel  Background="Gray" 
                     Opacity="0.75"  BorderBrush="White" BorderThickness="10" Height="650">
                         <StackPanel Background="Purple" Opacity="1"  BorderThickness="5" BorderBrush="White" Height="450">
                             <TextBlock Text="Coloca tus fichas" FontFamily="MV Boli" FontWeight="ExtraBold" 
                            VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="56"/>
                             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="750">
-                                <GridView x:ConnectionId='16' Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" 
-                                                                               
-                                  CanDragItems="True"                                                IsFocusEngagementEnabled="True">
+                                <GridView Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                                   ItemsSource="{x:Bind listFichasIniciales1}" 
+                                  CanDragItems="True" DragItemsStarting="GridView_DragItemsStarting" IsFocusEngagementEnabled="True">
                                     <GridView.ItemTemplate >
-                                        <DataTemplate                                >
-                                            <StackPanel x:ConnectionId='18' VerticalAlignment="Center" HorizontalAlignment="Center"
+                                        <DataTemplate x:DataType="local:FichaInicial">
+                                            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"
                                                 Spacing="5" Orientation="Horizontal">
-                                                <Image x:ConnectionId='19'                                      Height="115"/>
-                                                <TextBlock x:ConnectionId='20'                           FontSize="48" 
+                                                <Image Source="{x:Bind ficha_.img_.Source}" Height="115"/>
+                                                <TextBlock Text="{x:Bind cantidad_}" FontSize="48" 
                                                    HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                             </StackPanel>
                                         </DataTemplate>
@@ -417,7 +417,7 @@
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
-                </Grid>
+                </Grid>-->
             </Grid>
         </Viewbox>
         

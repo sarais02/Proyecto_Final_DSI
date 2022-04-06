@@ -163,6 +163,7 @@
     <Content Include="Assets\controles2.png" />
     <Content Include="Assets\cursor.png" />
     <Content Include="Assets\Dedo.png" />
+    <Content Include="Assets\enemys.png" />
     <Content Include="Assets\extremoDr.png" />
     <Content Include="Assets\extremoIz.png" />
     <Content Include="Assets\fondomainmenu.png" />

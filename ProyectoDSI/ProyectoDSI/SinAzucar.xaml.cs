@@ -227,8 +227,8 @@ namespace ProyectoDSI
                 else if (i < 14) type = "Sandia";
                 else if (i < 22) type = "Cocacola";
                 else if (i < 23) type = "BombaSandia";
-                else if (i < 29) type = "BombaSandia";
-                else  type = "BombaSandia";
+                else if (i < 29) type = "Petazeta";
+                else  type = "Fresa";
 
                 x =RND.Next(0,10);
                 y =RND.Next(0,3);
@@ -239,9 +239,8 @@ namespace ProyectoDSI
                 Tablero[y, x] = true;
                 Ficha eng=new Ficha(FichasEnemigo.Count(),type,x,y);
                 string nombre = "_"+ y.ToString() + x.ToString();
-                Image aux=Grid_Tablero.FindName(nombre) as Image;
-                aux = new Image();
-                aux = eng.img_;
+                Image aux=Grid_Tablero.FindName(nombre) as Image;                             
+                aux.Source = new BitmapImage(new Uri("ms-appx:///Assets/enemys.png", UriKind.RelativeOrAbsolute)); ;
                 FichasEnemigo.Add(eng);
             }                            
         }  

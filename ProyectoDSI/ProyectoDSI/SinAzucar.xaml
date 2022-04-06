@@ -213,7 +213,7 @@
                     <Image x:Name="_25" Grid.Row="2" Grid.Column="5" Stretch="Fill" 
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
-                    <Image x:Name="_26" Grid.Row="1" Grid.Column="6" Stretch="Fill" 
+                    <Image x:Name="_26" Grid.Row="2" Grid.Column="6" Stretch="Fill" 
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
                     <Image x:Name="_27" Grid.Row="2" Grid.Column="7" Stretch="Fill" 
