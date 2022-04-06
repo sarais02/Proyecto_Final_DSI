@@ -22,7 +22,7 @@ namespace ProyectoDSI
     }
     public class Ficha{
 
-        public int id_; //todas las fichas estaran en una lista y este sera su indicide en ekl que se encuentra en dicha lista
+        public int id_ { get; set; } //todas las fichas estaran en una lista y este sera su indicide en ekl que se encuentra en dicha lista
         public string tipo_;
         public string info_;
         public string rango_;
@@ -105,8 +105,11 @@ namespace ProyectoDSI
             //contentcontrol
             ccImg_ = new ContentControl();
             ccImg_.Content = img_;
-            ccImg_.UseSystemFocusVisuals = true;
-
+            ccImg_.UseSystemFocusVisuals = true;          
+        }
+       public  void setID()
+        {
+            id_--;
         }
     }
 }

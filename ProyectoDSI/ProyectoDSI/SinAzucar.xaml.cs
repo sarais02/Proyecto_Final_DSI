@@ -214,7 +214,38 @@ namespace ProyectoDSI
             fichainicial.ficha_ = new Ficha(8, "Fresa", -1, -1);
             fichainicial.cantidad_ = 1;
             listFichasIniciales1.Add(fichainicial);
-        }     
+
+            //FICHAS DEL ENEMIGO
+            Random RND = new Random();
+            int x, y;
+            string type;
+            for (int i = 0; i < 30; i++){
+                if (i <= 0) type = "Regaliz";
+                else if (i < 3) type = "Baston";
+                else if (i < 6) type = "Dedo";
+                else if (i < 10) type = "Huevo";
+                else if (i < 14) type = "Sandia";
+                else if (i < 22) type = "Cocacola";
+                else if (i < 23) type = "BombaSandia";
+                else if (i < 29) type = "BombaSandia";
+                else  type = "BombaSandia";
+
+                x =RND.Next(0,10);
+                y =RND.Next(0,3);
+                while (Tablero[y, x]){
+                    x = RND.Next(0, 10);
+                    y = RND.Next(0, 3);
+                }
+                Tablero[y, x] = true;
+                Ficha eng=new Ficha(FichasEnemigo.Count(),type,x,y);
+                string nombre = "_"+ y.ToString() + x.ToString();
+                Image aux=Grid_Tablero.FindName(nombre) as Image;
+                aux = new Image();
+                aux = eng.img_;
+                FichasEnemigo.Add(eng);
+            }                            
+        }  
+      
         void Add()
         {
             if (playersTurn)
@@ -291,7 +322,7 @@ namespace ProyectoDSI
                 {
                     //Ficha f = listPanelFichas[i].ficha_;
                     //f.id_--;                  
-                    listPanelFichas[i+aux].ficha_.id_--;
+                    listPanelFichas[i+aux].ficha_.setID();
                     
                 }
                 listFichasIniciales1.Remove(listFichasIniciales1[aux]);                
