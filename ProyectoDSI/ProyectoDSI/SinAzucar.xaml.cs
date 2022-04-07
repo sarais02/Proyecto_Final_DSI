@@ -333,33 +333,22 @@ namespace ProyectoDSI
             var id = await e.DataView.GetTextAsync();
             int aux = int.Parse(id);
             Image Receptor = sender as Image;
-            Ficha x;
+            
+            string aux2 = Receptor.Name;
             Receptor.Visibility = Visibility.Visible;
 
-            x = listFichasIniciales1[aux].ficha_;
+          
             listFichasIniciales1[aux].cantidad_--;
+            Ficha nueva = new Ficha(FichasJugador.Count(), listFichasIniciales1[aux].ficha_.tipo_, (int)Char.GetNumericValue(aux2[2]), (int)Char.GetNumericValue(aux2[1]));
             if (listFichasIniciales1[aux].cantidad_ < 1) {
-                for (int i = 1; i + aux < listFichasIniciales1.Count(); i++)
-                {
-                    //Ficha f = listPanelFichas[i].ficha_;
-                    //f.id_--;                  
-                    listPanelFichas[i + aux].ficha_.setID();
-
-                }
+                for (int i = 1; i + aux < listFichasIniciales1.Count(); i++) 
+                    listFichasIniciales1[i + aux].ficha_.setID();                
                 listFichasIniciales1.Remove(listFichasIniciales1[aux]);
             }
-
-
-            x.id_ = FichasJugador.Count();
-            string aux2 = Receptor.Name;
-
-            x.Y_ = (int)Char.GetNumericValue(aux2[1]);
-            x.X_ = (int)Char.GetNumericValue(aux2[2]);
-            FichasJugador.Add(x);
-            Receptor.Source = x.img_.Source;
-
-            Tablero[x.Y_, x.X_].hayFicha = true;
-            Tablero[x.Y_, x.X_].esJug = true;
+            Receptor.Source = nueva.img_.Source;
+            FichasJugador.Add(nueva);
+            Tablero[nueva.Y_, nueva.X_].hayFicha = true;
+            Tablero[nueva.Y_, nueva.X_].esJug = true;
 
             //si ya ha puesto todas sus fichas se inicia la partida
             if (FichasJugador.Count() >= 2) {
@@ -468,5 +457,12 @@ namespace ProyectoDSI
                 posiblesMovimientos.Add(new coords(posFichaSelecionada.y_, posFichaSelecionada.x_ + 1));
             }
         }
+        private void eliminarCasillaSeleccionadas(int i = -1)
+        {
+            for (int j = 0; j < posiblesMovimientos.Count(); j++){
+                
+            }
+        }
     }
+    
 }
