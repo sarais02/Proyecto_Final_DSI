@@ -58,11 +58,11 @@
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Foreground" />
       <RootProperty Name="FontFamily" />
-      <RootProperty Name="Text" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="FontSize" />
+      <RootProperty Name="Text" />
       <RootProperty Name="Style" />
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="TextAlignment" />
@@ -105,6 +105,7 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Child" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.Animation.TransitionCollection" />
     <RootType FullName="Windows.UI.Xaml.Media.Animation.EntranceThemeTransition">
@@ -161,7 +162,6 @@
       <RootProperty Name="Child" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
-      <RootProperty Name="Content" />
       <RootProperty Name="Background" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="Margin" />
@@ -174,6 +174,7 @@
       <RootProperty Name="Height" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Content" />
       <RootProperty Name="Style" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="IsEnabled" />

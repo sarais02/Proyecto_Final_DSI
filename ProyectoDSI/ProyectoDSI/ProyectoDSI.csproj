@@ -159,6 +159,7 @@
     <Content Include="Assets\botoncontroles.png" />
     <Content Include="Assets\botonReglamento.png" />
     <Content Include="Assets\Cocacola.png" />
+    <Content Include="Assets\cocalocas.png" />
     <Content Include="Assets\controles1.png" />
     <Content Include="Assets\controles2.png" />
     <Content Include="Assets\cursor.png" />
@@ -166,6 +167,7 @@
     <Content Include="Assets\enemys.png" />
     <Content Include="Assets\extremoDr.png" />
     <Content Include="Assets\extremoIz.png" />
+    <Content Include="Assets\fichaEnemiga.png" />
     <Content Include="Assets\fondomainmenu.png" />
     <Content Include="Assets\fresa.png" />
     <Content Include="Assets\Huevo.png" />
@@ -231,6 +233,13 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.12</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <PRIResource Include="Strings\es-Es\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="Strings\en-US\Resources.resw" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

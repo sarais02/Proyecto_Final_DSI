@@ -37,6 +37,7 @@ namespace ProyectoDSI
         public CompositeTransform Transformation_;
 
         public Ficha(int id,string tipo,int posX, int posY){
+            var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
             id_ = id;
             tipo_ = tipo;
             //inicializo posicion que en un principio colocara la imagen en su respectiva columna y fila
@@ -48,14 +49,12 @@ namespace ProyectoDSI
             switch (tipo)
             {
                 case "Fresa":
-                    info_ = "La chuche más popular y preciada, todo el mundo la quiere";
+                    info_ = resourceLoader.GetString("InfoFresa");
                     rango_ = "F";
                     break;
 
                 case "Cocacola":
-                    info_ = "Va absolutamente loca puede moverse mucho y " +
-                        "muy rápido en un corto periodo de tiempo.Sin embargo " +
-                        "es muy débil porque no está muy fuerte";
+                    info_ = resourceLoader.GetString("InfoCola");
                     rango_ = "1";
                     break;
 

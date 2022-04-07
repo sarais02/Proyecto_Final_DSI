@@ -44,9 +44,9 @@
         <StackPanel VerticalAlignment="Bottom" Spacing="10" 
                     Margin="100,0,0,0" HorizontalAlignment="Left">
             <Image Source="../Assets/pirulos.png" Height="150" Width="150"/>
-            <Button x:ConnectionId='8' Content="Pasillo 1" CornerRadius="20" 
+            <Button x:ConnectionId='8' CornerRadius="20" 
                     FontSize="30" FontFamily="MV Boli"
-                    FontWeight="Bold"
+                    FontWeight="Bold" x:Uid="Pasillo1Button"
                                         />
         </StackPanel>
         <!--NIVEL 2-->
@@ -54,9 +54,9 @@
                     Grid.RowSpan="2"  HorizontalAlignment="Left"
                     Margin="60,0,0,0" Spacing="10">
             <Image Source="../Assets/pirulos.png" Height="150" Width="150"/>
-            <Button Content="Pasillo 2" CornerRadius="20" 
+            <Button  CornerRadius="20" 
                 FontSize="30" FontFamily="MV Boli"
-                FontWeight="Bold"
+                FontWeight="Bold" x:Uid="Pasillo2Button"
                 IsEnabled="False"/>
         </StackPanel>
         <!--NIVEL 3-->
@@ -65,9 +65,9 @@
                      HorizontalAlignment="Left"
                      Margin="100,0,0,50">
             <Image Source="../Assets/pirulos.png" Height="150" Width="150"/>
-            <Button Content="Pasillo 3" CornerRadius="20" 
+            <Button CornerRadius="20" 
                 FontSize="30" FontFamily="MV Boli"
-                FontWeight="Bold"
+                FontWeight="Bold" x:Uid="Pasillo3Button"
                 VerticalAlignment="Top" 
                 IsEnabled="False"/>
         </StackPanel>
@@ -76,56 +76,57 @@
                      VerticalAlignment="Bottom"
                      HorizontalAlignment="Center">
             <Image Source="../Assets/pirulos.png" Height="150" Width="150"/>
-            <Button Content="Pasillo 4" CornerRadius="20" 
+            <Button CornerRadius="20" 
                 FontSize="30" FontFamily="MV Boli"
                 FontWeight="Bold" 
-                Margin="0,0,0,50"
+                Margin="0,0,0,50" x:Uid="Pasillo4Button"
                 IsEnabled="False"/>
         </StackPanel>
 
-
+        <!--INICIAR BATALLA-->
         <StackPanel x:ConnectionId='2' Grid.ColumnSpan="3" Grid.RowSpan="3"
                     Background="LightPink" Height="400"
                     Width="650" Spacing="15"
                     x:Name="MenuIniciarBatalla" Visibility="Collapsed">
-            <TextBlock Text="Iniciar Batalla" VerticalAlignment="Center"
-                       HorizontalAlignment="Center"
+            <TextBlock VerticalAlignment="Center"
+                       HorizontalAlignment="Center" x:Uid="InitBattle"
                        FontSize="40" Foreground="White"/>
-            <TextBlock Text="¿Deseas comenzar la batalla?" VerticalAlignment="Center"
-                       HorizontalAlignment="Center"
+            <TextBlock VerticalAlignment="Center"
+                       HorizontalAlignment="Center" x:Uid="InitBattleQuestion"
                        FontSize="30" Foreground="White"/>
             
             <StackPanel Orientation="Horizontal" Margin="0,180,0,0"
                         Spacing="15" HorizontalAlignment="Center">
-                <Button x:ConnectionId='6' Background="HotPink" Content="SI" FontSize="40" 
-                        Width="300" Height="80"
+                <Button x:ConnectionId='6' Background="HotPink" FontSize="40" 
+                        Width="300" Height="80" x:Uid="AcceptButton"
                         CornerRadius="10"                       />
-                <Button x:ConnectionId='7' Background="HotPink" Content="NO" FontSize="40" 
+                <Button x:ConnectionId='7' Background="HotPink" FontSize="40" 
                         Width="300" Height="80"                       
-                        CornerRadius="10"/>
+                        CornerRadius="10" x:Uid="DenyButton"/>
             </StackPanel>
         </StackPanel>
 
+        <!--ELEGIR BANDO-->
         <StackPanel x:ConnectionId='3' Grid.ColumnSpan="3" Grid.RowSpan="3"
                     Background="LightPink" Height="400"
                     Width="650" Spacing="15"
                     x:Name="MenuElegitBando" Visibility="Collapsed">
-            <TextBlock Text="Elige Bando" VerticalAlignment="Center"
+            <TextBlock VerticalAlignment="Center" x:Uid="SelectSide"
                        HorizontalAlignment="Center"
                        FontSize="40" Foreground="White"/>
-            <TextBlock Text="¿En qué bando te gustaría luchar?" 
+            <TextBlock x:Uid="SelectSideQuestion"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        FontSize="30" Foreground="White"/>
 
             <StackPanel Orientation="Horizontal" Margin="0,180,0,0"
                         Spacing="15" HorizontalAlignment="Center">
-                <Button x:ConnectionId='4' Background="HotPink" Content="Con Azucar" FontSize="40" 
+                <Button x:ConnectionId='4' Background="HotPink" FontSize="40" 
                         Width="300" Height="80"                       
-                        CornerRadius="10"/>
-                <Button x:ConnectionId='5' Background="HotPink" Content="Sin Azucar" FontSize="40" 
+                        CornerRadius="10" x:Uid="SugarButton"/>
+                <Button x:ConnectionId='5' Background="HotPink" FontSize="40" 
                         Width="300" Height="80"                       
-                        CornerRadius="10"/>
+                        CornerRadius="10" x:Uid="NoSugarButton"/>
             </StackPanel>
         </StackPanel>
         

@@ -261,12 +261,14 @@ namespace ProyectoDSI
                 Ficha eng = new Ficha(FichasEnemigo.Count(), type, x, y);
                 string nombre = "_" + y.ToString() + x.ToString();
                 Image aux = Grid_Tablero.FindName(nombre) as Image;
-                aux.Source = new BitmapImage(new Uri("ms-appx:///Assets/enemys.png", UriKind.RelativeOrAbsolute)); 
+                aux.Source = new BitmapImage(new Uri("ms-appx:///Assets/fichaEnemiga.png", UriKind.RelativeOrAbsolute)); 
                 FichasEnemigo.Add(eng);
             }
         }
         void Add()
         {
+            var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
+
             if (playersTurn)
             {
                 EntranceStackPanel.Children.Add(new Border()
@@ -284,8 +286,8 @@ namespace ProyectoDSI
                         FontSize = 15,
                         FontFamily = new FontFamily("MV Boli"),
                         FontWeight = FontWeights.Bold,
-                        Text = "¡TU TURNO!"
-                    }
+                        Text = resourceLoader.GetString("LetreroTurnoJugador")
+            }
                 });
             }
             else
@@ -305,7 +307,7 @@ namespace ProyectoDSI
                         FontSize = 15,
                         FontFamily = new FontFamily("MV Boli"),
                         FontWeight = FontWeights.Bold,
-                        Text = "¡TURNO ENEMIGO!"
+                        Text = resourceLoader.GetString("LetreroTurnoEnemigo")
                     }
                 });
             }

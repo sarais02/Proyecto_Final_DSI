@@ -33,13 +33,13 @@
     <Grid Background="LightPink" KeyDown="Grid_KeyDown">
 
         <TextBlock VerticalAlignment="Top"
-                   Text="REGLAMENTO" 
+                   x:Uid="RegTitleShadow"
                    HorizontalAlignment="Center"
                    FontSize="70"
                    Margin="0,44,0,0"
                    Foreground="Gold" FontFamily="Bauhaus 93" Height="102" Width="404" Grid.Column="1"/>
         <TextBlock VerticalAlignment="Top"
-                   Text="REGLAMENTO" 
+                   x:Uid="RegTitle"
                    HorizontalAlignment="Center"
                    FontSize="70"
                    Margin="0,40,0,0"
@@ -56,8 +56,8 @@
         </Button>
 
 
-        <TextBlock Text="Back" Foreground="HotPink" FontSize="30"
-                   Margin="70,65,40,28"
+        <TextBlock Foreground="HotPink" FontSize="30"
+                   Margin="70,65,40,28" x:Uid="TextBackButton"
                    Visibility="Collapsed"
                    x:Name="SpecialText"/>
 
@@ -83,7 +83,7 @@
                 <ColumnDefinition Width="442*"/>
             </Grid.ColumnDefinitions>
 
-
+            <!--COLORES-->
             <Border Background="MediumVioletRed" Grid.ColumnSpan="4"/>
             <Border Background="Gold" Grid.ColumnSpan="4" Grid.Row="1"/>
             <Border Background="Gold" Grid.ColumnSpan="4" Grid.Row="3"/>
@@ -97,15 +97,15 @@
 
 
 
-            <TextBlock Text="Personaje" VerticalAlignment="Center"
+            <TextBlock VerticalAlignment="Center" x:Uid="ChartT1"
                            HorizontalAlignment="Center" FontSize="30" Height="40" Width="127"/>
-            <TextBlock Text="Rango" VerticalAlignment="Center"
+            <TextBlock VerticalAlignment="Center" x:Uid="ChartT2"
                            HorizontalAlignment="Center" FontSize="30"
                            Grid.Column="1" Height="40" Width="85"/>
-            <TextBlock Text="Cantidad" VerticalAlignment="Center"
+            <TextBlock VerticalAlignment="Center" x:Uid="ChartT3"
                            HorizontalAlignment="Center" FontSize="30"
                            Grid.Column="2" Height="40" Width="119"/>
-            <TextBlock Text="Habilidad Especial" VerticalAlignment="Center"
+            <TextBlock VerticalAlignment="Center" x:Uid="ChartT4"
                            HorizontalAlignment="Center" FontSize="30"
                            Grid.Column="3" Height="40" Width="240"/>
 
@@ -143,22 +143,22 @@
             <TextBlock Text="-" Style="{StaticResource TextBlockStyle}" Grid.Column="3" Grid.Row="2"/>
             <TextBlock Text="-" Style="{StaticResource TextBlockStyle}" Grid.Column="3" Grid.Row="3"/>
             <TextBlock Text="-" Style="{StaticResource TextBlockStyle}" Grid.Column="3" Grid.Row="4"/>
-            <TextBlock Text="Desativa las ptazetas" Style="{StaticResource TextBlockStyle}" Grid.Column="3" Grid.Row="5"/>
-            <TextBlock Text="Puede moverse en cualquier distancia" Style="{StaticResource TextBlockStyle}" Grid.Column="3" Grid.Row="6"/>
-            <TextBlock Text="Mata al regaliz" Style="{StaticResource TextBlockStyle}" Grid.Column="3" Grid.Row="7" TextWrapping="Wrap"/>
-            <TextBlock Text="No se mueve. Mata a las sandias" Style="{StaticResource TextBlockStyle}" Grid.Column="3" Grid.Row="8"/>
-            <TextBlock Text="El juego se gana/pierde si es capturada" Style="{StaticResource TextBlockStyle}" Grid.Column="3" Grid.Row="9"/>
+            <TextBlock x:Uid="ChartC41" Style="{StaticResource TextBlockStyle}" Grid.Column="3" Grid.Row="5"/>
+            <TextBlock x:Uid="ChartC42" Style="{StaticResource TextBlockStyle}" Grid.Column="3" Grid.Row="6"/>
+            <TextBlock x:Uid="ChartC43" Style="{StaticResource TextBlockStyle}" Grid.Column="3" Grid.Row="7" TextWrapping="Wrap"/>
+            <TextBlock x:Uid="ChartC44" Style="{StaticResource TextBlockStyle}" Grid.Column="3" Grid.Row="8"/>
+            <TextBlock x:Uid="ChartC45" Style="{StaticResource TextBlockStyle}" Grid.Column="3" Grid.Row="9"/>
 
             <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center"
                     Grid.Column="4" Grid.RowSpan="10" Background="DeepPink" CornerRadius="30"
                         Margin="20,0,10,0">
                 <TextBlock Text=" "/>
-                <TextBlock Text="-Cada Turno dura 1 minuto y 30 segundos." Style="{StaticResource TextBlockStyle}" Foreground="White" HorizontalAlignment="Left" Margin="5,0,0,0"/>
-                <TextBlock Text="-Solo se puede mover una ficha por minuto." Style="{StaticResource TextBlockStyle}" Foreground="White" HorizontalAlignment="Left" Margin="5,0,0,0"/>
-                <TextBlock Text="-Si al acabar el tiempo por turno no se ha movido la ficha, se moverá una aleatoriamente." Style="{StaticResource TextBlockStyle}" HorizontalAlignment="Left" Foreground="White" Margin="5,0,0,0"/>
-                <TextBlock Text="-Se produce un combate cuando 2 fichas de bandos opuestos se encuentran en la misma casilla." Style="{StaticResource TextBlockStyle}" HorizontalAlignment="Left" Foreground="White" Margin="5,0,0,0"/>
-                <TextBlock Text="-Al producirse un combate, el que tenga mayor rango o una habilidad superior, gana." Style="{StaticResource TextBlockStyle}" HorizontalAlignment="Left" Foreground="White" Margin="5,0,0,0"/>
-                <TextBlock Text="-Al producirse un combate, la ficha vencida desaparece y cede la casilla a la ganadora." Style="{StaticResource TextBlockStyle}" HorizontalAlignment="Left" Foreground="White" Margin="5,0,0,0"/>
+                <TextBlock x:Uid="N1" Style="{StaticResource TextBlockStyle}" Foreground="White" HorizontalAlignment="Left" Margin="5,0,0,0"/>
+                <TextBlock x:Uid="N2" Style="{StaticResource TextBlockStyle}" Foreground="White" HorizontalAlignment="Left" Margin="5,0,0,0"/>
+                <TextBlock x:Uid="N3" Style="{StaticResource TextBlockStyle}" HorizontalAlignment="Left" Foreground="White" Margin="5,0,0,0"/>
+                <TextBlock x:Uid="N4" Style="{StaticResource TextBlockStyle}" HorizontalAlignment="Left" Foreground="White" Margin="5,0,0,0"/>
+                <TextBlock x:Uid="N5" Style="{StaticResource TextBlockStyle}" HorizontalAlignment="Left" Foreground="White" Margin="5,0,0,0"/>
+                <TextBlock x:Uid="N6" Style="{StaticResource TextBlockStyle}" HorizontalAlignment="Left" Foreground="White" Margin="5,0,0,0"/>
                 <TextBlock Text=" "/>
             </StackPanel>
         </Grid>

@@ -22,6 +22,7 @@
   </Dependencies>
   <Resources>
     <Resource Language="ES-ES" />
+    <Resource Language="EN-US" />
   </Resources>
   <Applications>
     <Application Id="App" Executable="ProyectoDSI.exe" EntryPoint="ProyectoDSI.App">

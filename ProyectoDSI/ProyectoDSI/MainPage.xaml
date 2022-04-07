@@ -37,21 +37,21 @@
                     Margin="0,0,0,50">
                 <StackPanel VerticalAlignment="Center"
                     HorizontalAlignment="Center">
-                    <Button x:Name="Play" Content="Continuar" Margin="20"
+                    <Button x:Name="Play" Margin="20"
                     Width="400" FontSize="50" FontFamily="MV Boli"
-                    Click="Play_Click"/>
-                    <Button Content="Nueva Partida" Margin="20"
+                    Click="Play_Click" x:Uid="ContinueButton"/>
+                    <Button Margin="20"
                     Width="400" FontSize="50" FontFamily="MV Boli"
-                    Click="Play_Click"/>
+                    Click="Play_Click" x:Uid="NewGameButton"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"
                     VerticalAlignment="Bottom" Margin="0,20,0,0">
-                    <Button Content="Opciones" Margin="20"
+                    <Button Margin="20"
                     Width="400" FontSize="50" FontFamily="MV Boli"
-                     Click="Button_Click"/>
-                    <Button x:Name="OnExit" Content="Salir" Margin="20"
+                     Click="Button_Click" x:Uid="OptionnsButton"/>
+                    <Button x:Name="OnExit" Margin="20"
                     Width="400" FontSize="50" FontFamily="MV Boli"
-                    Click="OnExit_Click"/>
+                    Click="OnExit_Click" x:Uid="ExitButton"/>
                 </StackPanel>
             </StackPanel>
 

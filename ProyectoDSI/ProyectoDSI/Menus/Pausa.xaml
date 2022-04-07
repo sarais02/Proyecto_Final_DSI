@@ -36,14 +36,14 @@
     <Grid Background="#f6a2bf">
         <Grid Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" >
             <TextBlock VerticalAlignment="Top"
-                   Text="PAUSA" 
+                   Text="PAUSA" x:Uid="PauseTitleShadow"
                    HorizontalAlignment="Center"
                    TextAlignment="Center"
                    FontSize="70"
                    Margin="0,44,0,0"
                    Foreground="Gold" FontFamily="Bauhaus 93" Height="102" Width="404" Grid.Column="1"/>
             <TextBlock VerticalAlignment="Top"
-                   Text="PAUSA" 
+                   x:Uid="PauseTitle"
                    HorizontalAlignment="Center"
                    FontSize="70"
                    TextAlignment="Center"
