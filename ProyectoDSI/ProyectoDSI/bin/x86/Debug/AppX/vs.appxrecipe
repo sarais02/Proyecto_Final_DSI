@@ -30,13 +30,13 @@
     <AppXManifest Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-06T09:59:38.791</Modified>
+      <Modified>2022-04-07T10:31:28.430</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\ProyectoDSI.exe">
       <PackagePath>entrypoint\ProyectoDSI.exe</PackagePath>
-      <Modified>2022-04-06T09:59:38.400</Modified>
+      <Modified>2022-04-07T10:31:28.097</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -198,43 +198,43 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\ProyectoDSI.xr.xml">
       <PackagePath>ProyectoDSI.xr.xml</PackagePath>
-      <Modified>2022-04-06T09:51:41.881</Modified>
+      <Modified>2022-04-07T08:20:53.767</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-04-06T09:59:38.310</Modified>
+      <Modified>2022-04-07T10:27:06.348</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\ConAzucar.xbf">
       <PackagePath>ConAzucar.xbf</PackagePath>
-      <Modified>2022-04-06T09:59:38.279</Modified>
+      <Modified>2022-04-07T10:27:06.316</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Menus\Controles.xbf">
       <PackagePath>Menus\Controles.xbf</PackagePath>
-      <Modified>2022-04-06T09:59:38.310</Modified>
+      <Modified>2022-04-07T10:27:06.348</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-04-06T09:59:38.310</Modified>
+      <Modified>2022-04-07T10:27:06.348</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Menus\Opciones.xbf">
       <PackagePath>Menus\Opciones.xbf</PackagePath>
-      <Modified>2022-04-06T09:59:38.310</Modified>
+      <Modified>2022-04-07T10:27:06.348</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Menus\Pausa.xbf">
       <PackagePath>Menus\Pausa.xbf</PackagePath>
-      <Modified>2022-04-06T09:59:38.311</Modified>
+      <Modified>2022-04-07T10:27:06.348</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Menus\Reglamento.xbf">
       <PackagePath>Menus\Reglamento.xbf</PackagePath>
-      <Modified>2022-04-06T09:59:38.295</Modified>
+      <Modified>2022-04-07T10:27:06.332</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Menus\SeleccionNivel.xbf">
       <PackagePath>Menus\SeleccionNivel.xbf</PackagePath>
-      <Modified>2022-04-06T09:59:38.311</Modified>
+      <Modified>2022-04-07T10:27:06.348</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\SinAzucar.xbf">
       <PackagePath>SinAzucar.xbf</PackagePath>
-      <Modified>2022-04-06T09:59:38.310</Modified>
+      <Modified>2022-04-07T10:27:06.348</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -246,7 +246,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x86\Debug\Core\ProyectoDSI.exe">
       <PackagePath>ProyectoDSI.exe</PackagePath>
-      <Modified>2022-04-06T09:59:38.789</Modified>
+      <Modified>2022-04-07T10:31:28.428</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

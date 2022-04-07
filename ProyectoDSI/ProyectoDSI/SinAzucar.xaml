@@ -393,7 +393,7 @@
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
                 </Grid>
                 <!--Estado Inicial-->
-                <Grid Margin="76,0,70,100" VerticalAlignment="Top" HorizontalAlignment="Stretch">
+                <Grid x:Name="EstadoInicial" Margin="76,0,70,100" VerticalAlignment="Top" HorizontalAlignment="Stretch">
                     <StackPanel  Background="Gray" 
                     Opacity="0.75"  BorderBrush="White" BorderThickness="10" Height="650">
                         <StackPanel Background="Purple" Opacity="1"  BorderThickness="5" BorderBrush="White" Height="450">
