@@ -1,4 +1,3 @@
-WinMetadata\Windows.winmd
 Assets\back.png
 Assets\Baston.png
 Assets\BombaSandia.png
@@ -45,3 +44,4 @@ Menus\SeleccionNivel.xbf
 ProyectoDSI.xr.xml
 SinAzucar.xbf
 Properties\Default.rd.xml
+WinMetadata\Windows.winmd

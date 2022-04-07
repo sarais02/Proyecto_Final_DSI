@@ -388,6 +388,7 @@
                     <Image x:Name="_98" Grid.Row="9" Grid.Column="8" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                   
                     <Image x:Name="_99" Grid.Row="9" Grid.Column="9" Stretch="Fill" Source="Assets/borde.png"
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />

@@ -330,34 +330,24 @@ namespace ProyectoDSI
             if (playersTurn) return;
             var id = await e.DataView.GetTextAsync();
             int aux = int.Parse(id);
-            Image Receptor = sender as Image;
-            Ficha x;
+            Image Receptor = sender as Image;          
             Receptor.Visibility = Visibility.Visible;
+            string aux2 = Receptor.Name;                                
 
-            x = listFichasIniciales1[aux].ficha_;
+            Ficha w = new Ficha(FichasJugador.Count(), listFichasIniciales1[aux].ficha_.tipo_,(int)Char.GetNumericValue(aux2[2]), (int)Char.GetNumericValue(aux2[1]));
             listFichasIniciales1[aux].cantidad_--;
-            if (listFichasIniciales1[aux].cantidad_ < 1) {
-                for (int i = 1; i + aux < listFichasIniciales1.Count(); i++)
-                {
-                    //Ficha f = listPanelFichas[i].ficha_;
-                    //f.id_--;                  
-                    listPanelFichas[i + aux].ficha_.setID();
-
+            if (listFichasIniciales1[aux].cantidad_ ==0) {
+                for (int i = aux+1; i< listFichasIniciales1.Count(); i++){                
+                    listFichasIniciales1[i].ficha_.id_--;
                 }
                 listFichasIniciales1.Remove(listFichasIniciales1[aux]);
             }
+            
+            FichasJugador.Add(w);
+            Receptor.Source = w.img_.Source;
 
-
-            x.id_ = FichasJugador.Count();
-            string aux2 = Receptor.Name;
-
-            x.Y_ = (int)Char.GetNumericValue(aux2[1]);
-            x.X_ = (int)Char.GetNumericValue(aux2[2]);
-            FichasJugador.Add(x);
-            Receptor.Source = x.img_.Source;
-
-            Tablero[x.Y_, x.X_].hayFicha = true;
-            Tablero[x.Y_, x.X_].esJug = true;
+            Tablero[w.Y_, w.X_].hayFicha = true;
+            Tablero[w.Y_, w.X_].esJug = true;
 
             //si ya ha puesto todas sus fichas se inicia la partida
             if (FichasJugador.Count() >= 2) {
@@ -382,7 +372,7 @@ namespace ProyectoDSI
                     //si se corresponde con la casilla en la que se ha hecho click mover la fichas
                     for (int i = 0; i < posiblesMovimientos.Count(); i++){
                         if (posiblesMovimientos[i].x_ == col && posiblesMovimientos[i].y_ == fil){
-
+                            limpiarMovs(i);
                             Image aux = Grid_Tablero.FindName("_" + FichasJugador[seleccion].Y_.ToString() + FichasJugador[seleccion].X_.ToString()) as Image;
                             aux.Source = new BitmapImage();
                             FichasJugador[seleccion].X_ = col;
@@ -396,6 +386,7 @@ namespace ProyectoDSI
 
                             posiblesMovimientos.Clear();//limpio los posibles movimientos
                             hayAlgunaFichaSeleccionada = false;
+                           
                             return;
                         }
                     }
@@ -421,6 +412,7 @@ namespace ProyectoDSI
 
                             //Nos guardamos lo q hemos seleccionado este indice nos servira para luego acceder a el en la lista
                             seleccion = i;
+                            limpiarMovs(-1);
                             posiblesMovimientos.Clear();
                             hayAlgunaFichaSeleccionada = true;
                             //cambiamos la imagen de las posibles casillas de movimientos
@@ -449,6 +441,7 @@ namespace ProyectoDSI
             if (posFichaSelecionada.y_-1>0&& //para que no se salga del tablero             
                 !Tablero[posFichaSelecionada.y_-1, posFichaSelecionada.x_].esJug) {//si hay alguna ficha del jugador no queremos que sea un posible movimiento
                 posiblesMovimientos.Add(new coords(posFichaSelecionada.y_ - 1,posFichaSelecionada.x_));
+               
             }
             //abajo
             if (posFichaSelecionada.y_ + 1 < Tablero.GetLength(0) && //para que no se salga del tablero             
@@ -464,6 +457,15 @@ namespace ProyectoDSI
             if (posFichaSelecionada.x_ + 1 <Tablero.GetLength(1) &&
                 !Tablero[posFichaSelecionada.y_, posFichaSelecionada.x_ + 1].esJug){
                 posiblesMovimientos.Add(new coords(posFichaSelecionada.y_, posFichaSelecionada.x_ + 1));
+            }
+        }
+        private void limpiarMovs(int i){
+            for (int j = 0; j < posiblesMovimientos.Count(); j++){
+                if (i != j && !Tablero[posiblesMovimientos[j].y_, posiblesMovimientos[j].x_].hayFicha)
+                {
+                    Image change = Grid_Tablero.FindName("_" + FichasJugador[seleccion].Y_.ToString() + FichasJugador[seleccion].X_.ToString()) as Image;
+                    change.Source = new BitmapImage();
+                }
             }
         }
     }
