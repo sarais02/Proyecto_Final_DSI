@@ -208,7 +208,7 @@
     <value>Double-edged sword, if it attacks from the tip it can cause a lot of damage, on the other hand, if it does it from the part of the peel it will be easy to kill it</value>
   </data>
   <data name="InfoText.Text" xml:space="preserve">
-    <value>Move yout Token</value>
+    <value>Move your Token</value>
   </data>
   <data name="InfoText2.Text" xml:space="preserve">
     <value>Place your tokens</value>

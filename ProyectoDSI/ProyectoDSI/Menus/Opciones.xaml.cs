@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.System;
@@ -89,6 +90,37 @@ namespace ProyectoDSI
         private void BackImage_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
             Volver();
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBox comboBox = sender as ComboBox;
+            string language = comboBox.SelectedValue.ToString();
+            var resourceContext = new Windows.ApplicationModel.Resources.Core.ResourceContext(); // not using ResourceContext.GetForCurrentView
+
+            if (language == "Español") 
+            {
+                //resourceContext.Languages = new string[] { "es-Es" }; 
+                
+                Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = "es-ES";
+
+                Windows.ApplicationModel.Resources.Core.ResourceContext.GetForViewIndependentUse().Reset();
+                Windows.ApplicationModel.Resources.Core.ResourceContext.GetForCurrentView().Reset();
+            }
+
+            else if (language == "Ingles") 
+            {
+                //resourceContext.Languages = new string[] { "en-Us" }; 
+                
+                Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride = "en-US";
+
+                Windows.ApplicationModel.Resources.Core.ResourceContext.GetForViewIndependentUse().Reset();
+                Windows.ApplicationModel.Resources.Core.ResourceContext.GetForCurrentView().Reset();
+
+            }
+            //await Task.Delay(100);
+            //Frame.Navigate(this.GetType());
+
         }
     }
 }

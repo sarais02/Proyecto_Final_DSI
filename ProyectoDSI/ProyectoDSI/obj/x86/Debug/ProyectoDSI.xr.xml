@@ -208,6 +208,7 @@
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Items" />
+      <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="System.String" />
     <RootType FullName="Windows.UI.Xaml.Controls.SymbolIcon">

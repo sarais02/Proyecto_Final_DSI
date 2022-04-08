@@ -45,6 +45,8 @@
             </Style>
         </ResourceDictionary>
     </Page.Resources>
+    
+    
     <Grid Background="#f6a2bf" KeyDown="Grid_KeyDown" >
         <Grid.RowDefinitions>
             <RowDefinition Height="13*"/>
@@ -77,7 +79,7 @@
                    Visibility="Collapsed"
                    x:Name="SpecialText" Grid.RowSpan="2"/>
 
-        <Viewbox Grid.RowSpan="2">
+        <Viewbox Grid.Row="1">
             <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="23*"/>
@@ -106,7 +108,7 @@
                                    FontWeight="Bold" FontFamily="Fascinate Inline" x:Uid="Language"/>
                         <ComboBox PlaceholderText="Selecciona Un Idioma" x:Uid="ComboBoxLanguage"
                                    Width="200" BorderBrush="HotPink"
-                                   VerticalAlignment="Center">
+                                   VerticalAlignment="Center" SelectionChanged="ComboBox_SelectionChanged">
                             <x:String>Español</x:String>
                             <x:String>Ingles</x:String>
                         </ComboBox>
