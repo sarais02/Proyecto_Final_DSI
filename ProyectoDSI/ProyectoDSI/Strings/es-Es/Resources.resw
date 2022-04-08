@@ -180,11 +180,32 @@
   <data name="ExitButton.Content" xml:space="preserve">
     <value>Salir</value>
   </data>
+  <data name="InfoBaston" xml:space="preserve">
+    <value>Está afilado y puede atravesar a casi todas las cuches, acabando con ellas brutalmente</value>
+  </data>
+  <data name="InfoBomba" xml:space="preserve">
+    <value>Destruye todo a su paso, en cuanto detecta a algún enemigo en su área de explosion, no deja nada a su paso</value>
+  </data>
   <data name="InfoCola" xml:space="preserve">
     <value>Va absolutamente loca puede moverse mucho y muy rápido en un corto periodo de tiempo. Sin embargo es muy débil porque no está muy fuerte</value>
   </data>
+  <data name="InfoDedo" xml:space="preserve">
+    <value>Tiene ciertos parecidos con los humanos, muchas chuches se asustan al verlos aparecer y más si se agrupan de 5 en 5</value>
+  </data>
   <data name="InfoFresa" xml:space="preserve">
     <value>La chuche más popular y preciada, todo el mundo la quiere</value>
+  </data>
+  <data name="InfoHuevo" xml:space="preserve">
+    <value>Tiene su punto débil expuesto, la yema, pero para poder acabar con él deberás cogerlo primero y gracias a su disposición de la clara puede arrastrarse muy rápido</value>
+  </data>
+  <data name="InfoPtazetas" xml:space="preserve">
+    <value>Muy buenos es su trabajo, explotan y arrasan todo a su paso, dicen que algunos han dejado tuertos a humanos</value>
+  </data>
+  <data name="InfoRegaliz" xml:space="preserve">
+    <value>Es flexible y largo, puede envolver a todas las chuches y asfixiarlas</value>
+  </data>
+  <data name="InfoSandia" xml:space="preserve">
+    <value>Arma de doble filo, si ataca por la punta podrá causar mucho daño, en cambio si lo hace por la parte de la cáscara será fácil acabar con ella</value>
   </data>
   <data name="InfoText.Text" xml:space="preserve">
     <value>Mueve tu Ficha</value>
@@ -224,6 +245,33 @@
   </data>
   <data name="N6.Text" xml:space="preserve">
     <value>-Al producirse un combate, la ficha vencida desaparece y cede la casilla a la ganadora.</value>
+  </data>
+  <data name="NameBaston" xml:space="preserve">
+    <value>Baston</value>
+  </data>
+  <data name="NameBombaSandia" xml:space="preserve">
+    <value>BombaSandia</value>
+  </data>
+  <data name="NameCocacola" xml:space="preserve">
+    <value>Cocacola</value>
+  </data>
+  <data name="NameDedo" xml:space="preserve">
+    <value>Dedo</value>
+  </data>
+  <data name="NameFresa" xml:space="preserve">
+    <value>Fresa</value>
+  </data>
+  <data name="NameHuevo" xml:space="preserve">
+    <value>Huevo</value>
+  </data>
+  <data name="NamePtazeta" xml:space="preserve">
+    <value>Petazeta</value>
+  </data>
+  <data name="NameRegaliz" xml:space="preserve">
+    <value>Regaliz</value>
+  </data>
+  <data name="NameSandia" xml:space="preserve">
+    <value>Sandia</value>
   </data>
   <data name="NewGameButton.Content" xml:space="preserve">
     <value>Nueva Partida</value>

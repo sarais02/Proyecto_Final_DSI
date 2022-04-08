@@ -131,58 +131,61 @@ namespace ProyectoDSI
                 Frame.Navigate(typeof(Pausa));
         }
         private void CrearLista() {
+
+            var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
+
             listPanelFichas = new List<PanelFicha>();
             PanelFicha panelFicha;
             //regaliz
-            panelFicha.ficha_ = new Ficha(-1, "Regaliz", -1, -1);
+            panelFicha.ficha_ = new Ficha(-1, resourceLoader.GetString("NameRegaliz"), -1, -1);
             panelFicha.num_ = 1;
             panelFicha.rango_ = "7";
             panelFicha.numFichas_ = "x1";
             listPanelFichas.Add(panelFicha);
             //baston
-            panelFicha.ficha_ = new Ficha(-1, "Baston", -1, -1);
+            panelFicha.ficha_ = new Ficha(-1, resourceLoader.GetString("NameBaston"), -1, -1);
             panelFicha.num_ = 2;
             panelFicha.rango_ = "6";
             panelFicha.numFichas_ = "x2";
             listPanelFichas.Add(panelFicha);
             //dedos
-            panelFicha.ficha_ = new Ficha(-1, "Dedo", -1, -1);
+            panelFicha.ficha_ = new Ficha(-1, resourceLoader.GetString("NameDedo"), -1, -1);
             panelFicha.num_ = 3;
             panelFicha.rango_ = "5";
             panelFicha.numFichas_ = "x3";
             listPanelFichas.Add(panelFicha);
             //huevo
-            panelFicha.ficha_ = new Ficha(-1, "Huevo", -1, -1);
+            panelFicha.ficha_ = new Ficha(-1, resourceLoader.GetString("NameHuevo"), -1, -1);
             panelFicha.num_ = 4;
             panelFicha.rango_ = "4";
             panelFicha.numFichas_ = "x4";
             listPanelFichas.Add(panelFicha);
             //sandia
-            panelFicha.ficha_ = new Ficha(-1, "Sandia", -1, -1);
+            panelFicha.ficha_ = new Ficha(-1, resourceLoader.GetString("NameSandia"), -1, -1);
             panelFicha.num_ = 4;
             panelFicha.rango_ = "3";
             panelFicha.numFichas_ = "x4";
             listPanelFichas.Add(panelFicha);
             //cocacola
-            panelFicha.ficha_ = new Ficha(-1, "Cocacola", -1, -1);
+            panelFicha.ficha_ = new Ficha(-1, resourceLoader.GetString("NameCocacola"), -1, -1);
             panelFicha.num_ = 8;
             panelFicha.rango_ = "2";
             panelFicha.numFichas_ = "x8";
             listPanelFichas.Add(panelFicha);
             //chicle sandia
-            panelFicha.ficha_ = new Ficha(-1, "BombaSandia", -1, -1);
+            panelFicha.ficha_ = new Ficha(-1, resourceLoader.GetString("NameBombaSandia"), -1, -1);
             panelFicha.num_ = 1;
             panelFicha.rango_ = "1";
             panelFicha.numFichas_ = "x1";
             listPanelFichas.Add(panelFicha);
             //petazetas
-            panelFicha.ficha_ = new Ficha(-1, "Petazeta", -1, -1);
+            panelFicha.ficha_ = new Ficha(-1, resourceLoader.GetString("NamePtazeta"), -1, -1);
             panelFicha.num_ = 6;
             panelFicha.rango_ = "B";
             panelFicha.numFichas_ = "x6";
             listPanelFichas.Add(panelFicha);
             //fresa
-            panelFicha.ficha_ = new Ficha(-1, "Fresa", -1, -1);
+            panelFicha.ficha_ = new Ficha(-1, resourceLoader.GetString("NameFresa"), -1, -1);
             panelFicha.num_ = 1;
             panelFicha.rango_ = "F";
             panelFicha.numFichas_ = "x1";
@@ -190,6 +193,8 @@ namespace ProyectoDSI
         }
         void inicializarPartida()
         {
+            var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
+
             Tablero = new casillaTablero[10, 10];
             FichasEnemigo = new List<Ficha>();
             FichasJugador = new List<Ficha>();
@@ -197,40 +202,40 @@ namespace ProyectoDSI
 
             FichaInicial fichainicial = new FichaInicial();
 
-            fichainicial.ficha_ = new Ficha(0, "Regaliz", -1, -1);
+            fichainicial.ficha_ = new Ficha(0, resourceLoader.GetString("NameRegaliz"), -1, -1);
             fichainicial.cantidad_ = 1;
             listFichasIniciales1.Add(fichainicial);
 
             fichainicial = new FichaInicial();
-            fichainicial.ficha_ = new Ficha(1, "Baston", -1, -1);
+            fichainicial.ficha_ = new Ficha(1, resourceLoader.GetString("NameBaston"), -1, -1);
             fichainicial.cantidad_ = 2;
             listFichasIniciales1.Add(fichainicial);
             fichainicial = new FichaInicial();
-            fichainicial.ficha_ = new Ficha(2, "Dedo", -1, -1);
+            fichainicial.ficha_ = new Ficha(2, resourceLoader.GetString("NameDedo"), -1, -1);
             fichainicial.cantidad_ = 3;
             listFichasIniciales1.Add(fichainicial);
             fichainicial = new FichaInicial();
-            fichainicial.ficha_ = new Ficha(3, "Huevo", -1, -1);
+            fichainicial.ficha_ = new Ficha(3, resourceLoader.GetString("NameHuevo"), -1, -1);
             fichainicial.cantidad_ = 4;
             listFichasIniciales1.Add(fichainicial);
             fichainicial = new FichaInicial();
-            fichainicial.ficha_ = new Ficha(4, "Sandia", -1, -1);
+            fichainicial.ficha_ = new Ficha(4, resourceLoader.GetString("NameSandia"), -1, -1);
             fichainicial.cantidad_ = 4;
             listFichasIniciales1.Add(fichainicial);
             fichainicial = new FichaInicial();
-            fichainicial.ficha_ = new Ficha(5, "Cocacola", -1, -1);
+            fichainicial.ficha_ = new Ficha(5, resourceLoader.GetString("NameCocacola"), -1, -1);
             fichainicial.cantidad_ = 8;
             listFichasIniciales1.Add(fichainicial);
             fichainicial = new FichaInicial();
-            fichainicial.ficha_ = new Ficha(6, "BombaSandia", -1, -1);
+            fichainicial.ficha_ = new Ficha(6, resourceLoader.GetString("NameBombaSandia"), -1, -1);
             fichainicial.cantidad_ = 1;
             listFichasIniciales1.Add(fichainicial);
             fichainicial = new FichaInicial();
-            fichainicial.ficha_ = new Ficha(7, "Petazeta", -1, -1);
+            fichainicial.ficha_ = new Ficha(7, resourceLoader.GetString("NamePtazeta"), -1, -1);
             fichainicial.cantidad_ = 6;
             listFichasIniciales1.Add(fichainicial);
             fichainicial = new FichaInicial();
-            fichainicial.ficha_ = new Ficha(8, "Fresa", -1, -1);
+            fichainicial.ficha_ = new Ficha(8, resourceLoader.GetString("NameFresa"), -1, -1);
             fichainicial.cantidad_ = 1;
             listFichasIniciales1.Add(fichainicial);
 
@@ -239,15 +244,15 @@ namespace ProyectoDSI
             int x, y;
             string type;
             for (int i = 0; i < 30; i++) {
-                if (i <= 0) type = "Regaliz";
-                else if (i < 3) type = "Baston";
-                else if (i < 6) type = "Dedo";
-                else if (i < 10) type = "Huevo";
-                else if (i < 14) type = "Sandia";
-                else if (i < 22) type = "Cocacola";
-                else if (i < 23) type = "BombaSandia";
-                else if (i < 29) type = "Petazeta";
-                else type = "Fresa";
+                if (i <= 0) type = resourceLoader.GetString("NameRegaliz");
+                else if (i < 3) type = resourceLoader.GetString("NameBaston");
+                else if (i < 6) type = resourceLoader.GetString("NameDedo");
+                else if (i < 10) type = resourceLoader.GetString("NameHuevo");
+                else if (i < 14) type = resourceLoader.GetString("NameSandia");
+                else if (i < 22) type = resourceLoader.GetString("NameCocacola");
+                else if (i < 23) type = resourceLoader.GetString("NameBombaSandia");
+                else if (i < 29) type = resourceLoader.GetString("NamePtazeta");
+                else type = resourceLoader.GetString("NameFresa");
 
                 x = RND.Next(0, 10);
                 y = RND.Next(0, 3);
@@ -287,7 +292,7 @@ namespace ProyectoDSI
                         FontFamily = new FontFamily("MV Boli"),
                         FontWeight = FontWeights.Bold,
                         Text = resourceLoader.GetString("LetreroTurnoJugador")
-            }
+                    }
                 });
             }
             else
