@@ -120,7 +120,6 @@ namespace ProyectoDSI
             }
             //await Task.Delay(100);
             //Frame.Navigate(this.GetType());
-
         }
     }
 }

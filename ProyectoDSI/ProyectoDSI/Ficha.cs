@@ -45,57 +45,73 @@ namespace ProyectoDSI
             Y_ = posY;
             Angulo_ = 0;
             Transformation_ = new CompositeTransform();
+            img_ = new Image();
             //info
-            if(tipo == resourceLoader.GetString("NameFresa"))
+            if (tipo == resourceLoader.GetString("NameFresa"))
             {
                 info_ = resourceLoader.GetString("InfoFresa");
                 rango_ = "F";
+                dirImg_ = "ms-appx:///Assets/fresa.png";
+                img_.Source = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri(dirImg_));
             }
             else if(tipo== resourceLoader.GetString("NameCocacola"))
             {
                 info_ = resourceLoader.GetString("InfoCola");
                 rango_ = "1";
+                dirImg_ = "ms-appx:///Assets/Cocacola.png";
+                img_.Source = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri(dirImg_));
             }
             else if(tipo== resourceLoader.GetString("NameDedo"))
             {
                 info_ = resourceLoader.GetString("InfoDedo");
                 rango_ = "5";
+                dirImg_ = "ms-appx:///Assets/Dedo.png";
+                img_.Source = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri(dirImg_));
             }
             else if(tipo== resourceLoader.GetString("NamePtazeta"))
             {
                 info_ = resourceLoader.GetString("InfoPtazetas");
                 rango_ = "B";
+                dirImg_ = "ms-appx:///Assets/Petazeta.png";
+                img_.Source = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri(dirImg_));
             }
             else if(tipo== resourceLoader.GetString("NameSandia"))
             {
                 info_ = resourceLoader.GetString("InfoSandia");
                 rango_ = "3";
+                dirImg_ = "ms-appx:///Assets/Sandia.png";
+                img_.Source = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri(dirImg_));
             }
             else if(tipo== resourceLoader.GetString("NameBombaSandia"))
             {
                 info_ = resourceLoader.GetString("InfoBomba");
                 rango_ = "1";
+                dirImg_ = "ms-appx:///Assets/BombaSandia.png";
+                img_.Source = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri(dirImg_));
             }
             else if (tipo== resourceLoader.GetString("NameHuevo"))
             {
                 info_ = resourceLoader.GetString("InfoHuevo");
                 rango_ = "4";
+                dirImg_ = "ms-appx:///Assets/Huevo.png";
+                img_.Source = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri(dirImg_));
             }
             else if(tipo== resourceLoader.GetString("NameBaston"))
             {
                 info_ = resourceLoader.GetString("InfoBaston");
                 rango_ = "6";
+                dirImg_ = "ms-appx:///Assets/Baston.png";
+                img_.Source = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri(dirImg_));
             }
             else if(tipo== resourceLoader.GetString("NameRegaliz"))
             {
                 info_ = resourceLoader.GetString("InfoRegaliz");
                 rango_ = "7";
+                dirImg_ = "ms-appx:///Assets/regaliz.png";
+                img_.Source = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri(dirImg_));
             }
             //imagen
-            img_ = new Image();
-            dirImg_ = "ms-appx:///Assets/" + tipo+".png";
-            //string s = System.IO.Directory.GetCurrentDirectory() + "\\" + dirImg_;           
-            img_.Source = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri(dirImg_));
+           
             //contentcontrol
             ccImg_ = new ContentControl();
             ccImg_.Content = img_;
