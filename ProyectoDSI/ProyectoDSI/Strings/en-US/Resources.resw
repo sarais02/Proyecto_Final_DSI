@@ -117,11 +117,110 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AcceptButton.Content" xml:space="preserve">
+    <value>YES</value>
+  </data>
+  <data name="Bright.Text" xml:space="preserve">
+    <value>Brightness</value>
+  </data>
+  <data name="ChartC41.Text" xml:space="preserve">
+    <value>Deactivate the ptazetas</value>
+  </data>
+  <data name="ChartC42.Text" xml:space="preserve">
+    <value>Can move any distance</value>
+  </data>
+  <data name="ChartC43.Text" xml:space="preserve">
+    <value>Kills the licorice</value>
+  </data>
+  <data name="ChartC44.Text" xml:space="preserve">
+    <value>It does not move. Kills watermelons</value>
+  </data>
+  <data name="ChartC45.Text" xml:space="preserve">
+    <value>The game is won/lost if it is captured</value>
+  </data>
+  <data name="ChartT1.Text" xml:space="preserve">
+    <value>Character</value>
+  </data>
+  <data name="ChartT2.Text" xml:space="preserve">
+    <value>Rank</value>
+  </data>
+  <data name="ChartT3.Text" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="ChartT4.Text" xml:space="preserve">
+    <value>Special Hability</value>
+  </data>
+  <data name="ComboBoxLanguage.PlaceholderText" xml:space="preserve">
+    <value>Select a language</value>
+  </data>
   <data name="ContinueButton.Content" xml:space="preserve">
     <value>Continue</value>
   </data>
+  <data name="ControlsTitle.Text" xml:space="preserve">
+    <value>CONTROLS</value>
+  </data>
+  <data name="ControlsTitleShadow.Text" xml:space="preserve">
+    <value>CONTROLS</value>
+  </data>
+  <data name="Ctrol1.Text" xml:space="preserve">
+    <value>-Select Direction</value>
+  </data>
+  <data name="Ctrol2.Text" xml:space="preserve">
+    <value>-Move Character</value>
+  </data>
+  <data name="Ctrol3.Text" xml:space="preserve">
+    <value>-Pause Menu</value>
+  </data>
+  <data name="Ctrol4.Text" xml:space="preserve">
+    <value>-Select</value>
+  </data>
+  <data name="DenyButton.Content" xml:space="preserve">
+    <value>NO</value>
+  </data>
   <data name="ExitButton.Content" xml:space="preserve">
     <value>Exit</value>
+  </data>
+  <data name="InfoBaston" xml:space="preserve">
+    <value>It is sharp and can pierce almost all the candies, killing them brutally</value>
+  </data>
+  <data name="InfoBomba" xml:space="preserve">
+    <value>Destroys everything in its path, as soon as it detects an enemy in its explosion area, it leaves nothing in its path</value>
+  </data>
+  <data name="InfoCola" xml:space="preserve">
+    <value>It goes absolutely crazy, she can move a lot and very fast in a short period of time. However, it is very weak because it is not very strong</value>
+  </data>
+  <data name="InfoDedo" xml:space="preserve">
+    <value>It has certain resemblances to humans, many candies get scared when they see them appear and more if they are grouped 5 by 5</value>
+  </data>
+  <data name="InfoFresa" xml:space="preserve">
+    <value>The most popular and precious candy, everyone wants it</value>
+  </data>
+  <data name="InfoHuevo" xml:space="preserve">
+    <value>It has its weak point exposed, the yolk, but to be able to finish it you will have to catch it first, and thanks to its white disposition it can crawl very quickly</value>
+  </data>
+  <data name="InfoPtazetas" xml:space="preserve">
+    <value>Their work is very good, they explode and destroy everything in their path. It is said that some have left humans blind</value>
+  </data>
+  <data name="InfoRegaliz" xml:space="preserve">
+    <value>It is flexible and long, it can wrap all the sweets and strangle them</value>
+  </data>
+  <data name="InfoSandia" xml:space="preserve">
+    <value>Double-edged sword, if it attacks from the tip it can cause a lot of damage, on the other hand, if it does it from the part of the peel it will be easy to kill it</value>
+  </data>
+  <data name="InfoText.Text" xml:space="preserve">
+    <value>Move yout Token</value>
+  </data>
+  <data name="InfoText2.Text" xml:space="preserve">
+    <value>Place your tokens</value>
+  </data>
+  <data name="InitBattle.Text" xml:space="preserve">
+    <value>Begin Battle</value>
+  </data>
+  <data name="InitBattleQuestion.Text" xml:space="preserve">
+    <value>Do you want to start the battle?</value>
+  </data>
+  <data name="Language.Text" xml:space="preserve">
+    <value>Language</value>
   </data>
   <data name="LetreroTurnoEnemigo" xml:space="preserve">
     <value>ENEMY TURN!</value>
@@ -129,13 +228,106 @@
   <data name="LetreroTurnoJugador" xml:space="preserve">
     <value>YOUR TURN!</value>
   </data>
+  <data name="N1.Text" xml:space="preserve">
+    <value>-Each turn last 1 minute and 30 seconds.</value>
+  </data>
+  <data name="N2.Text" xml:space="preserve">
+    <value>-You can only move 1 token per minute.</value>
+  </data>
+  <data name="N3.Text" xml:space="preserve">
+    <value>-If at the end of the time per turn the token has not moved, one will be moved randomly.</value>
+  </data>
+  <data name="N4.Text" xml:space="preserve">
+    <value>-A combat takes place when 2 tokens from opposite sides are in the same square.</value>
+  </data>
+  <data name="N5.Text" xml:space="preserve">
+    <value>-When a fight takes place, the one with the highest rank or superior skill wins.</value>
+  </data>
+  <data name="N6.Text" xml:space="preserve">
+    <value>-When a combat takes place, the defeated token disappears and gives way to the winner.</value>
+  </data>
+  <data name="NameBaston" xml:space="preserve">
+    <value>Candy Cane</value>
+  </data>
+  <data name="NameBombaSandia" xml:space="preserve">
+    <value>BombaSandia</value>
+  </data>
+  <data name="NameCocacola" xml:space="preserve">
+    <value>Cocacola</value>
+  </data>
+  <data name="NameDedo" xml:space="preserve">
+    <value>Finger</value>
+  </data>
+  <data name="NameFresa" xml:space="preserve">
+    <value>Strawberry</value>
+  </data>
+  <data name="NameHuevo" xml:space="preserve">
+    <value>Egg</value>
+  </data>
+  <data name="NamePtazeta" xml:space="preserve">
+    <value>Petazeta</value>
+  </data>
+  <data name="NameRegaliz" xml:space="preserve">
+    <value>Licorice</value>
+  </data>
+  <data name="NameSandia" xml:space="preserve">
+    <value>Watermelon</value>
+  </data>
   <data name="NewGameButton.Content" xml:space="preserve">
     <value>New Game</value>
+  </data>
+  <data name="NoSugarButton.Content" xml:space="preserve">
+    <value>Sugar Free</value>
   </data>
   <data name="OptionnsButton.Content" xml:space="preserve">
     <value>Options</value>
   </data>
+  <data name="OpTitle.Text" xml:space="preserve">
+    <value>OPTIONS</value>
+  </data>
+  <data name="OpTitleShadow.Text" xml:space="preserve">
+    <value>OPTIONS</value>
+  </data>
   <data name="Pasillo1Button.Content" xml:space="preserve">
-    <value>Pasillo 1</value>
+    <value>Aisle 1</value>
+  </data>
+  <data name="Pasillo2Button.Content" xml:space="preserve">
+    <value>Aisle 2</value>
+  </data>
+  <data name="Pasillo3Button.Content" xml:space="preserve">
+    <value>Aisle 3</value>
+  </data>
+  <data name="Pasillo4Button.Content" xml:space="preserve">
+    <value>Aisle 4</value>
+  </data>
+  <data name="PauseButtonText.Content" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="PauseTitle.Text" xml:space="preserve">
+    <value>PAUSE</value>
+  </data>
+  <data name="PauseTitleShadow.Text" xml:space="preserve">
+    <value>PAUSE</value>
+  </data>
+  <data name="RegTitle.Text" xml:space="preserve">
+    <value>RULES</value>
+  </data>
+  <data name="RegTitleShadow.Text" xml:space="preserve">
+    <value>RULES</value>
+  </data>
+  <data name="SelectSide.Text" xml:space="preserve">
+    <value>Choose side</value>
+  </data>
+  <data name="SelectSideQuestion.Text" xml:space="preserve">
+    <value>Which side would you like to fight on?</value>
+  </data>
+  <data name="SugarButton.Content" xml:space="preserve">
+    <value>Sugar</value>
+  </data>
+  <data name="TextBackButton.Text" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="Volum.Text" xml:space="preserve">
+    <value>Volume</value>
   </data>
 </root>

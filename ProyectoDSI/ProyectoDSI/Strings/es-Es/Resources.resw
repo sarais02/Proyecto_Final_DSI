@@ -127,7 +127,7 @@
     <value>Desativa las ptazetas</value>
   </data>
   <data name="ChartC42.Text" xml:space="preserve">
-    <value>Puede moverse en cualquier distancia</value>
+    <value>Puede moverse a cualquier distancia</value>
   </data>
   <data name="ChartC43.Text" xml:space="preserve">
     <value>Mata al regaliz</value>
@@ -199,7 +199,7 @@
     <value>Tiene su punto débil expuesto, la yema, pero para poder acabar con él deberás cogerlo primero y gracias a su disposición de la clara puede arrastrarse muy rápido</value>
   </data>
   <data name="InfoPtazetas" xml:space="preserve">
-    <value>Muy buenos es su trabajo, explotan y arrasan todo a su paso, dicen que algunos han dejado tuertos a humanos</value>
+    <value>Muy buenos en su trabajo, explotan y arrasan todo a su paso, dicen que algunos han dejado tuertos a humanos</value>
   </data>
   <data name="InfoRegaliz" xml:space="preserve">
     <value>Es flexible y largo, puede envolver a todas las chuches y asfixiarlas</value>

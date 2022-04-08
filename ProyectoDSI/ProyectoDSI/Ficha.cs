@@ -46,53 +46,50 @@ namespace ProyectoDSI
             Angulo_ = 0;
             Transformation_ = new CompositeTransform();
             //info
-            switch (tipo)
+            if(tipo == resourceLoader.GetString("NameFresa"))
             {
-                case "Fresa":
-                    info_ = resourceLoader.GetString("InfoFresa");
-                    rango_ = "F";
-                    break;
-
-                case "Cocacola":
-                    info_ = resourceLoader.GetString("InfoCola");
-                    rango_ = "1";
-                    break;
-
-                case "Dedo":
-                    info_ = resourceLoader.GetString("InfoDedo");
-                    rango_ = "5";
-                    break;
-
-                case "Petazeta":
-                    info_ = resourceLoader.GetString("InfoPtazetas");
-                    rango_ = "B";
-                    break;
-
-                case "Sandia":
-                    info_ = resourceLoader.GetString("InfoSandia");
-                    rango_ = "3";
-                    break;
-
-                case "Baston":
-                    info_ = resourceLoader.GetString("InfoBaston");
-                    rango_ = "6";
-                    break;
-
-                case "BombaSandia":
-                    info_ = resourceLoader.GetString("InfoBomba");
-                    rango_ = "1";
-                    break;
-
-                case "Huevo":
-                    info_ = resourceLoader.GetString("InfoHuevo");
-                    rango_ = "4";
-                    break;
-
-                case "Regaliz":
-                    info_ = resourceLoader.GetString("InfoRegaliz");
-                    rango_ = "7";
-                    break;
-
+                info_ = resourceLoader.GetString("InfoFresa");
+                rango_ = "F";
+            }
+            else if(tipo== resourceLoader.GetString("NameCocacola"))
+            {
+                info_ = resourceLoader.GetString("InfoCola");
+                rango_ = "1";
+            }
+            else if(tipo== resourceLoader.GetString("NameDedo"))
+            {
+                info_ = resourceLoader.GetString("InfoDedo");
+                rango_ = "5";
+            }
+            else if(tipo== resourceLoader.GetString("NamePtazeta"))
+            {
+                info_ = resourceLoader.GetString("InfoPtazetas");
+                rango_ = "B";
+            }
+            else if(tipo== resourceLoader.GetString("NameSandia"))
+            {
+                info_ = resourceLoader.GetString("InfoSandia");
+                rango_ = "3";
+            }
+            else if(tipo== resourceLoader.GetString("NameBombaSandia"))
+            {
+                info_ = resourceLoader.GetString("InfoBomba");
+                rango_ = "1";
+            }
+            else if (tipo== resourceLoader.GetString("NameHuevo"))
+            {
+                info_ = resourceLoader.GetString("InfoHuevo");
+                rango_ = "4";
+            }
+            else if(tipo== resourceLoader.GetString("NameBaston"))
+            {
+                info_ = resourceLoader.GetString("InfoBaston");
+                rango_ = "6";
+            }
+            else if(tipo== resourceLoader.GetString("NameRegaliz"))
+            {
+                info_ = resourceLoader.GetString("InfoRegaliz");
+                rango_ = "7";
             }
             //imagen
             img_ = new Image();
