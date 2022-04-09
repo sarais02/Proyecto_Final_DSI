@@ -60,6 +60,7 @@ namespace ProyectoDSI
         private int initialTime = 2;
         private int currentTime;
         private bool playersTurn;
+        private bool estadoinicial=true;
 
 
         public SinAzucar() {
@@ -200,44 +201,51 @@ namespace ProyectoDSI
             FichasJugador = new List<Ficha>();
 
 
-            FichaInicial fichainicial = new FichaInicial();
-
-            fichainicial.ficha_ = new Ficha(0, resourceLoader.GetString("NameRegaliz"), -1, -1);
-            fichainicial.cantidad_ = 1;
+            FichaInicial fichainicial = new FichaInicial(new Ficha(0, resourceLoader.GetString("NameRegaliz"), -1, -1),1);         
             listFichasIniciales1.Add(fichainicial);
 
-            fichainicial = new FichaInicial();
-            fichainicial.ficha_ = new Ficha(1, resourceLoader.GetString("NameBaston"), -1, -1);
-            fichainicial.cantidad_ = 2;
+            fichainicial = new FichaInicial(new Ficha(1, resourceLoader.GetString("NameBaston"), -1, -1),2);
             listFichasIniciales1.Add(fichainicial);
-            fichainicial = new FichaInicial();
-            fichainicial.ficha_ = new Ficha(2, resourceLoader.GetString("NameDedo"), -1, -1);
-            fichainicial.cantidad_ = 3;
+
+            fichainicial = new FichaInicial(new Ficha(2, resourceLoader.GetString("NameDedo"), -1, -1),3);            
             listFichasIniciales1.Add(fichainicial);
-            fichainicial = new FichaInicial();
-            fichainicial.ficha_ = new Ficha(3, resourceLoader.GetString("NameHuevo"), -1, -1);
-            fichainicial.cantidad_ = 4;
+
+            fichainicial = new FichaInicial(new Ficha(3, resourceLoader.GetString("NameHuevo"), -1, -1),4);         
             listFichasIniciales1.Add(fichainicial);
-            fichainicial = new FichaInicial();
-            fichainicial.ficha_ = new Ficha(4, resourceLoader.GetString("NameSandia"), -1, -1);
-            fichainicial.cantidad_ = 4;
+
+            fichainicial = new FichaInicial(new Ficha(4, resourceLoader.GetString("NameSandia"), -1, -1),4);            
             listFichasIniciales1.Add(fichainicial);
-            fichainicial = new FichaInicial();
-            fichainicial.ficha_ = new Ficha(5, resourceLoader.GetString("NameCocacola"), -1, -1);
-            fichainicial.cantidad_ = 8;
+
+            fichainicial = new FichaInicial(new Ficha(5, resourceLoader.GetString("NameCocacola"), -1, -1),8);           
             listFichasIniciales1.Add(fichainicial);
-            fichainicial = new FichaInicial();
-            fichainicial.ficha_ = new Ficha(6, resourceLoader.GetString("NameBombaSandia"), -1, -1);
-            fichainicial.cantidad_ = 1;
+
+            fichainicial = new FichaInicial(new Ficha(6, resourceLoader.GetString("NameBombaSandia"), -1, -1),1);           
             listFichasIniciales1.Add(fichainicial);
-            fichainicial = new FichaInicial();
-            fichainicial.ficha_ = new Ficha(7, resourceLoader.GetString("NamePtazeta"), -1, -1);
-            fichainicial.cantidad_ = 6;
+
+            fichainicial = new FichaInicial(new Ficha(7, resourceLoader.GetString("NamePtazeta"), -1, -1),6);          
             listFichasIniciales1.Add(fichainicial);
-            fichainicial = new FichaInicial();
-            fichainicial.ficha_ = new Ficha(8, resourceLoader.GetString("NameFresa"), -1, -1);
-            fichainicial.cantidad_ = 1;
+
+            fichainicial = new FichaInicial(new Ficha(8, resourceLoader.GetString("NameFresa"), -1, -1),1);          
             listFichasIniciales1.Add(fichainicial);
+
+            //OBSTACULOS DEL MAPA
+            Tablero[4, 2].hayFicha = true;
+            Tablero[4, 2].esJug = true;
+            Tablero[4, 3].hayFicha = true;
+            Tablero[4, 3].esJug = true;
+            Tablero[5, 2].hayFicha = true;
+            Tablero[5, 2].esJug = true;
+            Tablero[5, 3].hayFicha = true;
+            Tablero[5, 3].esJug = true;
+
+            Tablero[4, 6].hayFicha = true;
+            Tablero[4, 6].esJug = true;
+            Tablero[4, 7].hayFicha = true;
+            Tablero[4, 7].esJug = true;
+            Tablero[5, 6].hayFicha = true;
+            Tablero[5, 6].esJug = true;
+            Tablero[5, 7].hayFicha = true;
+            Tablero[5, 7].esJug = true;
 
             //FICHAS DEL ENEMIGO
             Random RND = new Random();
@@ -341,28 +349,34 @@ namespace ProyectoDSI
             
             string aux2 = Receptor.Name;
             Receptor.Visibility = Visibility.Visible;
+            int y= (int)Char.GetNumericValue(aux2[1]),x= (int)Char.GetNumericValue(aux2[2]);
 
-          
+            if (Tablero[y, x].esJug) {
+                VolverAcasillaInicial(x, y);
+            }
+
             listFichasIniciales1[aux].cantidad_--;
-            Ficha nueva = new Ficha(FichasJugador.Count(), listFichasIniciales1[aux].ficha_.tipo_, (int)Char.GetNumericValue(aux2[2]), (int)Char.GetNumericValue(aux2[1]));
+            Ficha nueva = new Ficha(FichasJugador.Count(), listFichasIniciales1[aux].ficha_.tipo_, x, y);
             if (listFichasIniciales1[aux].cantidad_ < 1) {
                 for (int i = 1; i + aux < listFichasIniciales1.Count(); i++) 
-                    listFichasIniciales1[i + aux].ficha_.setID();                
+                    listFichasIniciales1[i + aux].ficha_.id_--;                
                 listFichasIniciales1.Remove(listFichasIniciales1[aux]);
             }
             Receptor.Source = nueva.img_.Source;
+           
             FichasJugador.Add(nueva);
             Tablero[nueva.Y_, nueva.X_].hayFicha = true;
             Tablero[nueva.Y_, nueva.X_].esJug = true;
 
             //si ya ha puesto todas sus fichas se inicia la partida
-            if (FichasJugador.Count() >= 2) {
+            if (FichasJugador.Count() >= 30) {
                 EstadoInicial.Visibility = Visibility.Collapsed;
+                estadoinicial = false;
             }
         }
         private void Image_PointerPressed(object sender, PointerRoutedEventArgs e) {
             Windows.UI.Xaml.Input.Pointer ptr = e.Pointer;
-            if (ptr.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse && !playersTurn) {//si es el turno del jugador y ha clickeado
+            if (ptr.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse && !playersTurn&&!estadoinicial) {//si es el turno del jugador y ha clickeado
                 Image x = sender as Image;//acedo a la imagen en la que se ha dropeado la ficha
                 string Name = x.Name;//accedo a su nombre              
 
@@ -379,19 +393,26 @@ namespace ProyectoDSI
                     for (int i = 0; i < posiblesMovimientos.Count(); i++){
                         if (posiblesMovimientos[i].x_ == col && posiblesMovimientos[i].y_ == fil){
 
+                            //quito la antigua casilla
+                            Tablero[FichasJugador[seleccion].Y_, FichasJugador[seleccion].X_].hayFicha = false;
+                            Tablero[FichasJugador[seleccion].Y_, FichasJugador[seleccion].X_].esJug= false;
+                            eliminarCasillaSeleccionadas();                          
+                            
                             Image aux = Grid_Tablero.FindName("_" + FichasJugador[seleccion].Y_.ToString() + FichasJugador[seleccion].X_.ToString()) as Image;
-                            aux.Source = new BitmapImage();
+                            aux.Source = new BitmapImage();//le quito la imagen
+                            //establezco las nuevas coordenadas de la ficha
                             FichasJugador[seleccion].X_ = col;
                             FichasJugador[seleccion].Y_ = fil;
 
                             aux = Grid_Tablero.FindName("_" + fil.ToString() + col.ToString()) as Image;
-                            aux.Source = FichasJugador[seleccion].img_.Source;
+                            aux.Source = FichasJugador[seleccion].img_.Source;//pongo la imagen en las nuevas coordenadas
 
+                            //actualizo el tablero
                             Tablero[fil, col].hayFicha = true;
                             Tablero[fil, col].esJug = true;
 
                             posiblesMovimientos.Clear();//limpio los posibles movimientos
-                            hayAlgunaFichaSeleccionada = false;
+                            hayAlgunaFichaSeleccionada = false;//ya no hay ninguna ficha seleccionada
                             return;
                         }
                     }
@@ -414,10 +435,11 @@ namespace ProyectoDSI
                         if (ptrPt.Properties.IsLeftButtonPressed) {
 
                             //CAMBIAR LA IMAGEN DE LA FICHA POR LA DE CONTORNO DORADITO
-
+                            eliminarCasillaSeleccionadas();
                             //Nos guardamos lo q hemos seleccionado este indice nos servira para luego acceder a el en la lista
                             seleccion = i;
                             posiblesMovimientos.Clear();
+                            //eliminarCasillaSeleccionadas();
                             hayAlgunaFichaSeleccionada = true;
                             //cambiamos la imagen de las posibles casillas de movimientos
                             //petazeta
@@ -436,36 +458,113 @@ namespace ProyectoDSI
             }
             e.Handled = true;
         }
-        private void seleccionarCasillasCocacola() {           
+        private void seleccionarCasillasCocacola() {
+            coords posFichaSelecionada = new coords(FichasJugador[seleccion].Y_, FichasJugador[seleccion].X_);           
+            int i = posFichaSelecionada.x_ - 1; bool salir = false;
+            //izquierda
+            while (i >=0&&!salir){
+                if (!Tablero[posFichaSelecionada.y_, i].esJug){
+                    if (Tablero[posFichaSelecionada.y_, i].hayFicha) salir = true;
 
+                    posiblesMovimientos.Add(new coords(posFichaSelecionada.y_, i));
+                    seleccionarCasilla(i, posFichaSelecionada.y_);
+                }
+                else salir = true;
+                i--;
+            }
+            i = posFichaSelecionada.x_ + 1;  salir = false;
+            //derecha
+            while (i < Tablero.GetLength(1) && !salir)
+            {
+                if (!Tablero[posFichaSelecionada.y_, i].esJug){
+                    if (Tablero[posFichaSelecionada.y_, i].hayFicha) salir = true;
+
+                    posiblesMovimientos.Add(new coords(posFichaSelecionada.y_, i));
+                    seleccionarCasilla(i, posFichaSelecionada.y_);
+                }
+                else salir = true;
+                i++;
+            }
+            i = posFichaSelecionada.y_ - 1; salir = false;
+            //arriba
+            while (i >= 0 && !salir)
+            {
+                if (!Tablero[i, posFichaSelecionada.x_].esJug)
+                {
+                    if (Tablero[i, posFichaSelecionada.x_].hayFicha) salir = true;
+
+                    posiblesMovimientos.Add(new coords(i, posFichaSelecionada.x_));
+                    seleccionarCasilla(posFichaSelecionada.x_, i);
+                }
+                else salir = true;
+                i--;
+            }
+            i = posFichaSelecionada.y_ + 1; salir = false;
+            //abajo
+            while (i < Tablero.GetLength(0) && !salir)
+            {
+                if (!Tablero[i, posFichaSelecionada.x_].esJug){
+                    if (Tablero[i, posFichaSelecionada.x_].hayFicha) salir = true;
+
+                    posiblesMovimientos.Add(new coords(i, posFichaSelecionada.x_));
+                    seleccionarCasilla(posFichaSelecionada.x_, i);
+                }
+                else salir = true;
+                i++;
+            }
         }
         private void seleccionarCasillasNormal() {
             coords posFichaSelecionada = new coords( FichasJugador[seleccion].Y_, FichasJugador[seleccion].X_);
             //arriba
-            if (posFichaSelecionada.y_-1>0&& //para que no se salga del tablero             
+            if (posFichaSelecionada.y_-1>=0&& //para que no se salga del tablero             
                 !Tablero[posFichaSelecionada.y_-1, posFichaSelecionada.x_].esJug) {//si hay alguna ficha del jugador no queremos que sea un posible movimiento
                 posiblesMovimientos.Add(new coords(posFichaSelecionada.y_ - 1,posFichaSelecionada.x_));
+                seleccionarCasilla(posFichaSelecionada.x_, posFichaSelecionada.y_ - 1);
             }
             //abajo
             if (posFichaSelecionada.y_ + 1 < Tablero.GetLength(0) && //para que no se salga del tablero             
                  !Tablero[posFichaSelecionada.y_+1, posFichaSelecionada.x_].esJug){//si hay alguna ficha del jugador no queremos que sea un posible movimiento
                 posiblesMovimientos.Add(new coords(posFichaSelecionada.y_ +1, posFichaSelecionada.x_));
+                seleccionarCasilla(posFichaSelecionada.x_, posFichaSelecionada.y_ + 1);
             }
             //derecha
-            if (posFichaSelecionada.x_-1>0&&
+            if (posFichaSelecionada.x_-1>=0&&
                 !Tablero[posFichaSelecionada.y_, posFichaSelecionada.x_-1].esJug){
                 posiblesMovimientos.Add(new coords(posFichaSelecionada.y_ , posFichaSelecionada.x_-1));
+                seleccionarCasilla(posFichaSelecionada.x_-1, posFichaSelecionada.y_);
             }
             //izquierda
             if (posFichaSelecionada.x_ + 1 <Tablero.GetLength(1) &&
                 !Tablero[posFichaSelecionada.y_, posFichaSelecionada.x_ + 1].esJug){
                 posiblesMovimientos.Add(new coords(posFichaSelecionada.y_, posFichaSelecionada.x_ + 1));
+                seleccionarCasilla(posFichaSelecionada.x_ + 1, posFichaSelecionada.y_ );
             }
         }
-        private void eliminarCasillaSeleccionadas(int i = -1)
-        {
-            for (int j = 0; j < posiblesMovimientos.Count(); j++){
-                
+        private void eliminarCasillaSeleccionadas(int i = -1){
+            for (int j = 0; j < posiblesMovimientos.Count(); j++){                
+                DeseleccionarCasilla(posiblesMovimientos[j].x_, posiblesMovimientos[j].y_);
+            }
+        }
+        private void seleccionarCasilla(int x,int y) {
+            Image aux = Grid_Tablero.FindName("_" + y.ToString() + x.ToString()) as Image;
+            if (Tablero[y, x].hayFicha) //es enemiga
+                aux.Source = new BitmapImage(new Uri("ms-appx:///Assets/fichaEnemiga2.png", UriKind.RelativeOrAbsolute));
+            else//No hay ficha
+                aux.Source = new BitmapImage(new Uri("ms-appx:///Assets/borde.png", UriKind.RelativeOrAbsolute));
+        }
+        private void DeseleccionarCasilla(int x,int y){
+            Image aux = Grid_Tablero.FindName("_" + y.ToString() + x.ToString()) as Image;
+            if (Tablero[y, x].hayFicha) //es enemiga
+                aux.Source = new BitmapImage(new Uri("ms-appx:///Assets/fichaEnemiga.png", UriKind.RelativeOrAbsolute));
+            else//No hay ficha
+                aux.Source = new BitmapImage();
+        }
+        private void VolverAcasillaInicial(int x,int y){
+            for (int i = 0; i < FichasJugador.Count(); i++){
+                if(FichasJugador[i].X_==x && FichasJugador[i].Y_ == y){
+                    listFichasIniciales1.Add(new FichaInicial(new Ficha(listFichasIniciales1.Count(), FichasJugador[i].tipo_,-1,-1), 1));
+                    FichasJugador.Remove(FichasJugador[i]);                   
+                }
             }
         }
     }

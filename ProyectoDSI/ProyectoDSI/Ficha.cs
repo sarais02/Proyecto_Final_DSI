@@ -16,7 +16,13 @@ namespace ProyectoDSI
         public string numFichas_;
     }
    public  class FichaInicial{
-       
+        public FichaInicial() {
+            
+        }
+        public FichaInicial(Ficha f,int k){
+            ficha_ = f;
+            cantidad_ = k;
+        }
         public Ficha ficha_;
         public int cantidad_;
     }
@@ -57,7 +63,7 @@ namespace ProyectoDSI
             else if(tipo== resourceLoader.GetString("NameCocacola"))
             {
                 info_ = resourceLoader.GetString("InfoCola");
-                rango_ = "1";
+                rango_ = "2";
                 dirImg_ = "ms-appx:///Assets/Cocacola.png";
                 img_.Source = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri(dirImg_));
             }
@@ -116,10 +122,6 @@ namespace ProyectoDSI
             ccImg_ = new ContentControl();
             ccImg_.Content = img_;
             ccImg_.UseSystemFocusVisuals = true;          
-        }
-       public  void setID()
-       {
-            id_--;
-       }
+        }      
     }
 }

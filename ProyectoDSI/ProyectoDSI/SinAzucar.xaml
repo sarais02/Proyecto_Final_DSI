@@ -94,7 +94,7 @@
         <Viewbox Grid.Column="1" Grid.Row="1" Margin="15"
                  VerticalAlignment="Stretch" HorizontalAlignment="Center">
             <Grid x:Name="Grid_Tablero">
-                <Grid Grid.Column="1" Grid.Row="2" Margin="76,20,70,20"  >
+                <Grid Grid.Column="1" Grid.Row="2" Margin="76,20,70,20" >
                     <Grid.RowDefinitions>
                         <RowDefinition Height="90"/>
                         <RowDefinition Height="90"/>
@@ -226,76 +226,132 @@
                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
                     AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
                     <!--Fila 3-->
-                    <Image Stretch="Fill" Grid.Row="3"
-                   Grid.Column="0"/>
-                    <Image Stretch="Fill" Grid.Row="3"
-                   Grid.Column="1"/>
-                    <Image Stretch="Fill" Grid.Row="3"
-                   Grid.Column="2"/>
-                    <Image Stretch="Fill" Grid.Row="3"
-                   Grid.Column="3"/>
-                    <Image Stretch="Fill" Grid.Row="3"
-                   Grid.Column="4"/>
-                    <Image Stretch="Fill" Grid.Row="3"
-                   Grid.Column="5"/>
-                    <Image Stretch="Fill" Grid.Row="3"
-                   Grid.Column="6"/>
-                    <Image Stretch="Fill" Grid.Row="3"
-                   Grid.Column="7"/>
-                    <Image Stretch="Fill" Grid.Row="3"
-                   Grid.Column="8"/>
-                    <Image Stretch="Fill" Grid.Row="3"
-                   Grid.Column="9"/>
+                    <Image x:Name="_30" Grid.Row="3" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_31" Grid.Row="3" Grid.Column="1" Stretch="Fill"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_32" Grid.Row="3" Grid.Column="2" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_33" Grid.Row="3" Grid.Column="3" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_34" Grid.Row="3" Grid.Column="4" Stretch="Fill"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_35" Grid.Row="3" Grid.Column="5" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_36" Grid.Row="3" Grid.Column="6" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_37" Grid.Row="3" Grid.Column="7" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_38" Grid.Row="3" Grid.Column="8" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_39" Grid.Row="3" Grid.Column="9" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
 
                     <!--Fila 4-->
-                    <Image Stretch="Fill" Grid.Row="4"
-                   Grid.Column="0"/>
-                    <Image Stretch="Fill" Grid.Row="4"
-                   Grid.Column="1"/>
-                    <Image Stretch="Fill" Grid.Row="4"
-                   Grid.Column="4"/>
-                    <Image Stretch="Fill" Grid.Row="4"
-                   Grid.Column="5"/>
-                    <Image Stretch="Fill" Grid.Row="4"
-                   Grid.Column="8"/>
-                    <Image Stretch="Fill" Grid.Row="4"
-                   Grid.Column="9"/>
+                    <Image x:Name="_40" Grid.Row="4" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_41" Grid.Row="4" Grid.Column="1" Stretch="Fill"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_42" Grid.Row="4" Grid.Column="2" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_43" Grid.Row="4" Grid.Column="3" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_44" Grid.Row="4" Grid.Column="4" Stretch="Fill"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_45" Grid.Row="4" Grid.Column="5" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_46" Grid.Row="4" Grid.Column="6" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_47" Grid.Row="4" Grid.Column="7" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_48" Grid.Row="4" Grid.Column="8" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_49" Grid.Row="4" Grid.Column="9" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
 
                     <!--Fila 5-->
-                    <Image Stretch="Fill" Grid.Row="5"
-                   Grid.Column="0"/>
-                    <Image Stretch="Fill" Grid.Row="5"
-                   Grid.Column="1"/>
-                    <Image Stretch="Fill" Grid.Row="5"
-                   Grid.Column="4"/>
-                    <Image Stretch="Fill" Grid.Row="5"
-                   Grid.Column="5"/>
-                    <Image Stretch="Fill" Grid.Row="5"
-                   Grid.Column="8"/>
-                    <Image Stretch="Fill" Grid.Row="5"
-                   Grid.Column="9"/>
+                    <Image x:Name="_50" Grid.Row="5" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_51" Grid.Row="5" Grid.Column="1" Stretch="Fill"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_52" Grid.Row="5" Grid.Column="2" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_53" Grid.Row="5" Grid.Column="3" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_54" Grid.Row="5" Grid.Column="4" Stretch="Fill"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_55" Grid.Row="5" Grid.Column="5" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_56" Grid.Row="5" Grid.Column="6" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_57" Grid.Row="5" Grid.Column="7" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_58" Grid.Row="5" Grid.Column="8" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_59" Grid.Row="5" Grid.Column="9" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
 
                     <!--Fila 6-->
-                    <Image Stretch="Fill" Grid.Row="6"
-                   Grid.Column="0"/>
-                    <Image Stretch="Fill" Grid.Row="6"
-                   Grid.Column="1"/>
-                    <Image Stretch="Fill" Grid.Row="6"
-                   Grid.Column="2"/>
-                    <Image Stretch="Fill" Grid.Row="6"
-                   Grid.Column="3"/>
-                    <Image Stretch="Fill" Grid.Row="6"
-                   Grid.Column="4"/>
-                    <Image Stretch="Fill" Grid.Row="6"
-                   Grid.Column="5"/>
-                    <Image Stretch="Fill" Grid.Row="6"
-                   Grid.Column="6"/>
-                    <Image Stretch="Fill" Grid.Row="6"
-                   Grid.Column="7"/>
-                    <Image Stretch="Fill" Grid.Row="6"
-                   Grid.Column="8"/>
-                    <Image Stretch="Fill" Grid.Row="6"
-                   Grid.Column="9"/>
+                    <Image x:Name="_60" Grid.Row="6" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_61" Grid.Row="6" Grid.Column="1" Stretch="Fill"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_62" Grid.Row="6" Grid.Column="2" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_63" Grid.Row="6" Grid.Column="3" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_64" Grid.Row="6" Grid.Column="4" Stretch="Fill"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_65" Grid.Row="6" Grid.Column="5" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_66" Grid.Row="6" Grid.Column="6" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_67" Grid.Row="6" Grid.Column="7" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_68" Grid.Row="6" Grid.Column="8" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
+                    <Image x:Name="_69" Grid.Row="6" Grid.Column="9" Stretch="Fill" 
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" PointerPressed="Image_PointerPressed"
+                    AllowDrop="True" Drop="Image_Drop" DragOver="Image_DragOver" />
 
                     <!--Fila 7-->
                     <Image x:Name="_70" Grid.Row="7" Stretch="Fill" Source="Assets/borde.png"
