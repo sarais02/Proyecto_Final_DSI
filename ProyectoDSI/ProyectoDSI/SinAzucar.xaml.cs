@@ -124,7 +124,7 @@ namespace ProyectoDSI
 
             timer.Tick += timer_Tick;
             CountDown.Text = "0" + minutes.ToString() + ":" + seconds.ToString();
-            timer.Start();
+           
         }
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
         {
@@ -372,6 +372,8 @@ namespace ProyectoDSI
             if (FichasJugador.Count() >= 30) {
                 EstadoInicial.Visibility = Visibility.Collapsed;
                 estadoinicial = false;
+                
+                timer.Start();
             }
         }
         private void Image_PointerPressed(object sender, PointerRoutedEventArgs e) {
@@ -413,6 +415,20 @@ namespace ProyectoDSI
 
                             posiblesMovimientos.Clear();//limpio los posibles movimientos
                             hayAlgunaFichaSeleccionada = false;//ya no hay ninguna ficha seleccionada
+
+                            for (int k = 0; k < FichasEnemigo.Count(); k++)
+                            {
+                                if(FichasEnemigo[k].X_==col && FichasEnemigo[k].Y_ == fil)
+                                {
+                                    FichasEnemigo.Remove(FichasEnemigo[k]);
+                                    break;
+                                }
+                            }
+
+                            double total = FichasEnemigo.Count() + FichasJugador.Count();
+                            double valor = FichasJugador.Count() / total;
+                            ProgressBar.Value = valor * 100;
+
                             return;
                         }
                     }

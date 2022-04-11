@@ -350,7 +350,7 @@
                         Margin="0,5,0,0">
                 <Image Source="Assets/extremoDr.png" Height="65" FlowDirection="RightToLeft"></Image>
                 <ProgressBar Value="50" Height="45" Background="Red" 
-                             Foreground="White" Width="700"/>
+                             Foreground="White" Width="700" x:Name="ProgressBar"/>
                 <Image Source="Assets/extremoIz.png" Height="65" FlowDirection="RightToLeft"></Image>
             </StackPanel>
         </Viewbox>
