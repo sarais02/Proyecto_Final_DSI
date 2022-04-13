@@ -457,14 +457,14 @@
                            VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="56"/>
                             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="750">
                                 <GridView x:ConnectionId='18' Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" 
-                                                                               
+                                                                               IsItemClickEnabled="True"                               
                                   CanDragItems="True"                                                IsFocusEngagementEnabled="True">
                                     <GridView.ItemTemplate >
                                         <DataTemplate                                >
                                             <StackPanel x:ConnectionId='20' VerticalAlignment="Center" HorizontalAlignment="Center"
                                                 Spacing="5" Orientation="Horizontal">
                                                 <Image x:ConnectionId='21'                                      Height="115"/>
-                                                <TextBlock x:ConnectionId='22'                           FontSize="48" 
+                                                <TextBlock x:ConnectionId='22'                                       FontSize="48" 
                                                    HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                             </StackPanel>
                                         </DataTemplate>

@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.ApplicationModel.DataTransfer;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -38,12 +40,16 @@ namespace ProyectoDSI
         public bool hayFicha;
         public bool esJug;
     }
-    public sealed partial class SinAzucar : Page
+    public interface INotifyPropertyChanged
+    {
+        event PropertyChangedEventHandler PropertyChanged;
+    }
+    public sealed partial class SinAzucar : Page, INotifyPropertyChanged
     {
         casillaTablero[,] Tablero;//PARA VER EN QUE CASILLAS HAY FICHAS
         List<PanelFicha> listPanelFichas;//PANEL IZQUIERDO
         public ObservableCollection<FichaInicial> listFichasIniciales1 { get; } = new ObservableCollection<FichaInicial>(); //PANEL INICIAL LISTA ARRIBA
-
+        public event PropertyChangedEventHandler PropertyChanged;
         List<Ficha> FichasJugador;
         List<Ficha> FichasEnemigo;
 
@@ -62,6 +68,7 @@ namespace ProyectoDSI
         private bool playersTurn;
         private bool estadoinicial=true;
 
+       
 
         public SinAzucar() {
             this.InitializeComponent();
@@ -282,8 +289,7 @@ namespace ProyectoDSI
         {
             var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
 
-            if (playersTurn)
-            {
+            if (playersTurn){
                 EntranceStackPanel.Children.Add(new Border()
                 {
                     Width = 150,
@@ -303,8 +309,7 @@ namespace ProyectoDSI
                     }
                 });
             }
-            else
-            {
+            else{
                 EntranceStackPanel.Children.Add(new Border()
                 {
                     Width = 150,
@@ -326,12 +331,10 @@ namespace ProyectoDSI
             }
 
         }
-        void clearStackPanel()
-        {
+        void clearStackPanel(){
             EntranceStackPanel.Children.Clear();
         }
         private void GridView_DragItemsStarting(object sender, DragItemsStartingEventArgs e) {
-
             FichaInicial aux = e.Items[0] as FichaInicial;
             string id = aux.ficha_.id_.ToString();
             e.Data.SetText(id);
@@ -342,7 +345,6 @@ namespace ProyectoDSI
             e.AcceptedOperation = DataPackageOperation.Copy;
         }
         private async void Image_Drop(object sender, DragEventArgs e) {
-            if (playersTurn) return;
             var id = await e.DataView.GetTextAsync();
             int aux = int.Parse(id);
             Image Receptor = sender as Image;
@@ -354,14 +356,9 @@ namespace ProyectoDSI
             if (Tablero[y, x].esJug) {
                 VolverAcasillaInicial(x, y);
             }
-
-            listFichasIniciales1[aux].cantidad_--;
             Ficha nueva = new Ficha(FichasJugador.Count(), listFichasIniciales1[aux].ficha_.tipo_, x, y);
-            if (listFichasIniciales1[aux].cantidad_ < 1) {
-                for (int i = 1; i + aux < listFichasIniciales1.Count(); i++) 
-                    listFichasIniciales1[i + aux].ficha_.id_--;                
-                listFichasIniciales1.Remove(listFichasIniciales1[aux]);
-            }
+
+            RemoverFichaInicial(aux);
             Receptor.Source = nueva.img_.Source;
            
             FichasJugador.Add(nueva);
@@ -369,10 +366,25 @@ namespace ProyectoDSI
             Tablero[nueva.Y_, nueva.X_].esJug = true;
 
             //si ya ha puesto todas sus fichas se inicia la partida
-            if (FichasJugador.Count() >= 30) {
+            ComprobacionEstadoInicial();
+
+        }
+        private void RemoverFichaInicial(int aux){
+            listFichasIniciales1[aux].cantidad_--;
+            if (listFichasIniciales1[aux].cantidad_ < 1)
+            {
+                for (int i = 1; i + aux < listFichasIniciales1.Count(); i++)
+                    listFichasIniciales1[i + aux].ficha_.id_--;
+                listFichasIniciales1.Remove(listFichasIniciales1[aux]);
+            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs((listFichasIniciales1[aux].cantidad_).ToString()));
+            
+        }
+        private void ComprobacionEstadoInicial(){
+            if (FichasJugador.Count() >= 30){
                 EstadoInicial.Visibility = Visibility.Collapsed;
                 estadoinicial = false;
-                
+
                 timer.Start();
             }
         }
@@ -580,6 +592,23 @@ namespace ProyectoDSI
                 if(FichasJugador[i].X_==x && FichasJugador[i].Y_ == y){
                     listFichasIniciales1.Add(new FichaInicial(new Ficha(listFichasIniciales1.Count(), FichasJugador[i].tipo_,-1,-1), 1));
                     FichasJugador.Remove(FichasJugador[i]);                   
+                }
+            }
+        }
+        private void GridView_ItemClick(object sender, ItemClickEventArgs e){
+            FichaInicial ficha=e.ClickedItem as FichaInicial;
+            for (int i = 7; i < Tablero.GetLength(0); i++){
+                for (int j = 0; j < Tablero.GetLength(1); j++){
+                    if (!Tablero[i, j].esJug){
+                        Image aux = Grid_Tablero.FindName("_" + i.ToString() + j.ToString()) as Image;                     
+                        aux.Source = ficha.ficha_.img_.Source;                       
+                        RemoverFichaInicial(ficha.ficha_.id_);
+                        Tablero[i, j].esJug = true;
+                        Tablero[i, j].hayFicha = true;
+                        FichasJugador.Add(new Ficha(FichasJugador.Count,ficha.ficha_.tipo_, j, i));
+                        ComprobacionEstadoInicial();
+                        return;
+                    }
                 }
             }
         }

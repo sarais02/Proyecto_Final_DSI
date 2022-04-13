@@ -457,14 +457,14 @@
                            VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="56"/>
                             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="750">
                                 <GridView Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" 
-                                   ItemsSource="{x:Bind listFichasIniciales1}" 
+                                   ItemsSource="{x:Bind listFichasIniciales1}" IsItemClickEnabled="True" ItemClick="GridView_ItemClick"
                                   CanDragItems="True" DragItemsStarting="GridView_DragItemsStarting" IsFocusEngagementEnabled="True">
                                     <GridView.ItemTemplate >
                                         <DataTemplate x:DataType="local:FichaInicial">
                                             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center"
                                                 Spacing="5" Orientation="Horizontal">
                                                 <Image Source="{x:Bind ficha_.img_.Source}" Height="115"/>
-                                                <TextBlock Text="{x:Bind cantidad_}" FontSize="48" 
+                                                <TextBlock Text="{x:Bind cantidad_,Mode=OneWay}" FontSize="48" 
                                                    HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                             </StackPanel>
                                         </DataTemplate>
