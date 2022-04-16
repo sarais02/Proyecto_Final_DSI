@@ -118,8 +118,8 @@ namespace ProyectoDSI
                 Windows.ApplicationModel.Resources.Core.ResourceContext.GetForCurrentView().Reset();
 
             }
-            //await Task.Delay(100);
-            //Frame.Navigate(this.GetType());
+            Frame.Navigate(this.GetType());
+            Frame.GoBack();
         }
     }
 }
