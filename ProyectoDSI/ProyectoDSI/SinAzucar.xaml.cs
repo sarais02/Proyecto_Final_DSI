@@ -67,7 +67,7 @@ namespace ProyectoDSI
         private int currentTime;
         private bool playersTurn;
         private bool estadoinicial=true;
-
+        private bool atack = false;
        
 
         public SinAzucar() {
@@ -289,50 +289,89 @@ namespace ProyectoDSI
         {
             var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
 
-            if (playersTurn){
-                EntranceStackPanel.Children.Add(new Border()
-                {
-                    Width = 150,
-                    Height = 30,
-                    BorderThickness = new Thickness(3),
-                    Background = new SolidColorBrush(Windows.UI.Colors.CornflowerBlue),
-                    BorderBrush = new SolidColorBrush(Windows.UI.Colors.MidnightBlue),
-                    Child = new TextBlock()
+            if (!atack)
+            {
+                if (playersTurn){
+                    EntranceStackPanel.Children.Add(new Border()
                     {
-                        TextAlignment = TextAlignment.Center,
-                        Foreground = new SolidColorBrush(Windows.UI.Colors.White),
-                        TextWrapping = TextWrapping.Wrap,
-                        FontSize = 15,
-                        FontFamily = new FontFamily("MV Boli"),
-                        FontWeight = FontWeights.Bold,
-                        Text = resourceLoader.GetString("LetreroTurnoJugador")
-                    }
-                });
-            }
-            else{
-                EntranceStackPanel.Children.Add(new Border()
-                {
-                    Width = 150,
-                    Height = 30,
-                    BorderThickness = new Thickness(3),
-                    Background = new SolidColorBrush(Windows.UI.Colors.White),
-                    BorderBrush = new SolidColorBrush(Windows.UI.Colors.Red),
-                    Child = new TextBlock()
+                        Width = 150,
+                        Height = 30,
+                        BorderThickness = new Thickness(3),
+                        Background = new SolidColorBrush(Windows.UI.Colors.CornflowerBlue),
+                        BorderBrush = new SolidColorBrush(Windows.UI.Colors.MidnightBlue),
+                        Child = new TextBlock()
+                        {
+                            TextAlignment = TextAlignment.Center,
+                            Foreground = new SolidColorBrush(Windows.UI.Colors.White),
+                            TextWrapping = TextWrapping.Wrap,
+                            FontSize = 15,
+                            FontFamily = new FontFamily("MV Boli"),
+                            FontWeight = FontWeights.Bold,
+                            Text = resourceLoader.GetString("LetreroTurnoJugador")
+                        }
+                    });
+                }
+                else{
+                    EntranceStackPanel.Children.Add(new Border()
                     {
-                        TextAlignment = TextAlignment.Center,
-                        Foreground = new SolidColorBrush(Windows.UI.Colors.Red),
-                        TextWrapping = TextWrapping.Wrap,
-                        FontSize = 15,
-                        FontFamily = new FontFamily("MV Boli"),
-                        FontWeight = FontWeights.Bold,
-                        Text = resourceLoader.GetString("LetreroTurnoEnemigo")
-                    }
-                });
+                        Width = 150,
+                        Height = 30,
+                        BorderThickness = new Thickness(3),
+                        Background = new SolidColorBrush(Windows.UI.Colors.White),
+                        BorderBrush = new SolidColorBrush(Windows.UI.Colors.Red),
+                        Child = new TextBlock()
+                        {
+                            TextAlignment = TextAlignment.Center,
+                            Foreground = new SolidColorBrush(Windows.UI.Colors.Red),
+                            TextWrapping = TextWrapping.Wrap,
+                            FontSize = 15,
+                            FontFamily = new FontFamily("MV Boli"),
+                            FontWeight = FontWeights.Bold,
+                            Text = resourceLoader.GetString("LetreroTurnoEnemigo")
+                        }
+                    });
+                }
             }
+            else
+            {
+                AttackStackPanel.Children.Add(new Image() 
+                { 
+                    Source = new BitmapImage(new Uri("ms-appx:///Assets/fire.png", UriKind.RelativeOrAbsolute)),
+                    Height=50
+                });
 
+                AttackStackPanel.Children.Add(new Border() 
+                {
+                    Width = 150,
+                    Height = 30,
+                    BorderThickness = new Thickness(3),
+                    Background = new SolidColorBrush(Windows.UI.Colors.Yellow),
+                    BorderBrush = new SolidColorBrush(Windows.UI.Colors.Orange),
+                    Child = new TextBlock()
+                    {
+                        TextAlignment = TextAlignment.Center,
+                        Foreground = new SolidColorBrush(Windows.UI.Colors.Orange),
+                        TextWrapping = TextWrapping.Wrap,
+                        FontSize = 15,
+                        FontFamily = new FontFamily("MV Boli"),
+                        FontWeight = FontWeights.Bold,
+                        Text = resourceLoader.GetString("LetreroAtaque")
+                    }
+                });
+
+                AttackStackPanel.Children.Add(new Image()
+                {
+                    Source = new BitmapImage(new Uri("ms-appx:///Assets/fire.png", UriKind.RelativeOrAbsolute)),
+                    Height = 50
+                });
+            }
         }
         void clearStackPanel(){
             EntranceStackPanel.Children.Clear();
+        }
+        void clearAttackStackPanel()
+        {
+            AttackStackPanel.Children.Clear();
         }
         private void GridView_DragItemsStarting(object sender, DragItemsStartingEventArgs e) {
             FichaInicial aux = e.Items[0] as FichaInicial;
@@ -388,9 +427,11 @@ namespace ProyectoDSI
                 timer.Start();
             }
         }
-        private void Image_PointerPressed(object sender, PointerRoutedEventArgs e) {
+        private void Image_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
             Windows.UI.Xaml.Input.Pointer ptr = e.Pointer;
-            if (ptr.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse && !playersTurn&&!estadoinicial) {//si es el turno del jugador y ha clickeado
+            if (ptr.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse && !playersTurn && !estadoinicial)
+            {//si es el turno del jugador y ha clickeado
                 Image x = sender as Image;//acedo a la imagen en la que se ha dropeado la ficha
                 string Name = x.Name;//accedo a su nombre              
 
@@ -400,43 +441,76 @@ namespace ProyectoDSI
                 Windows.UI.Input.PointerPoint ptrPt = e.GetCurrentPoint(sender as Image);
 
                 //SI NO ES UNA CASILLA DEL JUGADOR Y HAY UNA CASILLA SELECCIONADA
-                if (hayAlgunaFichaSeleccionada&& ptrPt.Properties.IsLeftButtonPressed)
+                if (hayAlgunaFichaSeleccionada && ptrPt.Properties.IsLeftButtonPressed)
                 {
                     //recorrer las lista de coordenasdas con los posibles movimientos de la ficha seleccionada y
                     //si se corresponde con la casilla en la que se ha hecho click mover la fichas
-                    for (int i = 0; i < posiblesMovimientos.Count(); i++){
-                        if (posiblesMovimientos[i].x_ == col && posiblesMovimientos[i].y_ == fil){
-
-                            //quito la antigua casilla
-                            Tablero[FichasJugador[seleccion].Y_, FichasJugador[seleccion].X_].hayFicha = false;
-                            Tablero[FichasJugador[seleccion].Y_, FichasJugador[seleccion].X_].esJug= false;
-                            eliminarCasillaSeleccionadas();                          
-                            
-                            Image aux = Grid_Tablero.FindName("_" + FichasJugador[seleccion].Y_.ToString() + FichasJugador[seleccion].X_.ToString()) as Image;
-                            aux.Source = new BitmapImage();//le quito la imagen
-                            //establezco las nuevas coordenadas de la ficha
-                            FichasJugador[seleccion].X_ = col;
-                            FichasJugador[seleccion].Y_ = fil;
-
-                            aux = Grid_Tablero.FindName("_" + fil.ToString() + col.ToString()) as Image;
-                            aux.Source = FichasJugador[seleccion].img_.Source;//pongo la imagen en las nuevas coordenadas
-
-                            //actualizo el tablero
-                            Tablero[fil, col].hayFicha = true;
-                            Tablero[fil, col].esJug = true;
-
-                            posiblesMovimientos.Clear();//limpio los posibles movimientos
-                            hayAlgunaFichaSeleccionada = false;//ya no hay ninguna ficha seleccionada
+                    for (int i = 0; i < posiblesMovimientos.Count(); i++)
+                    {
+                        if (posiblesMovimientos[i].x_ == col && posiblesMovimientos[i].y_ == fil)
+                        {
+                            int enemigo = -1;
 
                             for (int k = 0; k < FichasEnemigo.Count(); k++)
                             {
-                                if(FichasEnemigo[k].X_==col && FichasEnemigo[k].Y_ == fil)
+                                if (FichasEnemigo[k].X_ == col && FichasEnemigo[k].Y_ == fil)
                                 {
-                                    FichasEnemigo.Remove(FichasEnemigo[k]);
+                                    // FichasEnemigo.Remove(FichasEnemigo[k]);
+                                    enemigo = k;
                                     break;
                                 }
                             }
+                            if (enemigo != -1)
+                            {
+                                atack = true;
+                                Add();
+                                atack = false;
+                            }
+                            //quito la antigua casilla
+                            Tablero[FichasJugador[seleccion].Y_, FichasJugador[seleccion].X_].hayFicha = false;
+                            Tablero[FichasJugador[seleccion].Y_, FichasJugador[seleccion].X_].esJug = false;
+                            eliminarCasillaSeleccionadas();
+                            //gana el enemigo
+                            if (enemigo != -1 && (FichasEnemigo[enemigo].rango_ == "B" || FichasEnemigo[enemigo].rango_[0] > FichasJugador[seleccion].rango_[0]))
+                            {
+                                Image aux = Grid_Tablero.FindName("_" + FichasJugador[seleccion].Y_.ToString() + FichasJugador[seleccion].X_.ToString()) as Image;
+                                aux.Source = new BitmapImage();//le quito la imagen                                                              
+                                FichasJugador.Remove(FichasJugador[seleccion]);
+                            }
+                            //empate
+                            else if (enemigo != -1 && FichasEnemigo[enemigo].rango_ == FichasJugador[seleccion].rango_)
+                            {
+                                Image aux = Grid_Tablero.FindName("_" + FichasJugador[seleccion].Y_.ToString() + FichasJugador[seleccion].X_.ToString()) as Image;
+                                aux.Source = new BitmapImage();//le quito la imagen
+                                FichasJugador.Remove(FichasJugador[seleccion]);
 
+                                aux = Grid_Tablero.FindName("_" + FichasEnemigo[enemigo].Y_.ToString() + FichasEnemigo[enemigo].X_.ToString()) as Image;
+                                aux.Source = new BitmapImage();//le quito la imagen
+                                FichasEnemigo.Remove(FichasEnemigo[enemigo]);
+                            }
+                            //gana jugador
+                            else
+                            {
+                                Image aux = Grid_Tablero.FindName("_" + FichasJugador[seleccion].Y_.ToString() + FichasJugador[seleccion].X_.ToString()) as Image;
+                                aux.Source = new BitmapImage();//le quito la imagen
+                                                               //establezco las nuevas coordenadas de la ficha
+                                FichasJugador[seleccion].X_ = col;
+                                FichasJugador[seleccion].Y_ = fil;
+
+                                aux = Grid_Tablero.FindName("_" + fil.ToString() + col.ToString()) as Image;
+                                aux.Source = FichasJugador[seleccion].img_.Source;//pongo la imagen en las nuevas coordenadas
+
+                                //actualizo el tablero
+                                Tablero[fil, col].hayFicha = true;
+                                Tablero[fil, col].esJug = true;
+
+                                if (enemigo != -1)
+                                {
+                                    FichasEnemigo.Remove(FichasEnemigo[enemigo]);
+                                }
+                            }
+                            posiblesMovimientos.Clear();//limpio los posibles movimientos
+                            hayAlgunaFichaSeleccionada = false;//ya no hay ninguna ficha seleccionada
                             double total = FichasEnemigo.Count() + FichasJugador.Count();
                             double valor = FichasJugador.Count() / total;
                             ProgressBar.Value = valor * 100;

@@ -33,21 +33,10 @@ namespace ProyectoDSI
             CursorHand = new CoreCursor(CoreCursorType.Hand, 0);
             CursorArrow = new CoreCursor(CoreCursorType.Arrow, 0);
         }
-        private void ButtonReglamento_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
         {
 
         }
-
-        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
         private void Reglas_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(Reglamento));
@@ -85,11 +74,6 @@ namespace ProyectoDSI
 
             Window.Current.CoreWindow.PointerCursor = CursorArrow;
             SpecialText.Visibility = Visibility.Collapsed;
-        }
-
-        private void BackImage_PointerPressed(object sender, PointerRoutedEventArgs e)
-        {
-            Volver();
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

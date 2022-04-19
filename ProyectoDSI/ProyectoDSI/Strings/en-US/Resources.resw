@@ -222,6 +222,9 @@
   <data name="Language.Text" xml:space="preserve">
     <value>Language</value>
   </data>
+  <data name="LetreroAtaque" xml:space="preserve">
+    <value>ATTACK!</value>
+  </data>
   <data name="LetreroTurnoEnemigo" xml:space="preserve">
     <value>ENEMY TURN!</value>
   </data>
