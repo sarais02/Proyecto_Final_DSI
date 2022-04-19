@@ -457,7 +457,7 @@
                            VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="56"/>
                             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="750">
                                 <GridView Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" 
-                                   ItemsSource="{x:Bind listFichasIniciales1}" IsItemClickEnabled="True" ItemClick="GridView_ItemClick"
+                                   ItemsSource="{x:Bind ListaPanelFichasIniciales}" IsItemClickEnabled="True" ItemClick="GridView_ItemClick"
                                   CanDragItems="True" DragItemsStarting="GridView_DragItemsStarting" IsFocusEngagementEnabled="True">
                                     <GridView.ItemTemplate >
                                         <DataTemplate x:DataType="local:FichaInicial">
@@ -492,7 +492,7 @@
         <Viewbox Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
             <Grid Margin="20,130,80,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                 <StackPanel x:Name="PanelDeFichas" >
-                    <ListView ItemsSource="{x:Bind listPanelFichas}" Background="Gold" 
+                    <ListView ItemsSource="{x:Bind PanelFichasIzquierda}" Background="Gold" 
                       CornerRadius="15"  >
                         <ListView.ItemContainerStyle>
                             <Style TargetType="ListViewItem">

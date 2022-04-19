@@ -47,8 +47,8 @@ namespace ProyectoDSI
     public sealed partial class SinAzucar : Page, INotifyPropertyChanged
     {
         casillaTablero[,] Tablero;//PARA VER EN QUE CASILLAS HAY FICHAS
-        List<PanelFicha> listPanelFichas;//PANEL IZQUIERDO
-        public ObservableCollection<FichaInicial> listFichasIniciales1 { get; } = new ObservableCollection<FichaInicial>(); //PANEL INICIAL LISTA ARRIBA
+        public ObservableCollection<PanelFicha> PanelFichasIzquierda { get; } = new ObservableCollection<PanelFicha>();//PANEL IZQUIERDO
+        public ObservableCollection<FichaInicial> ListaPanelFichasIniciales { get; } = new ObservableCollection<FichaInicial>(); //PANEL INICIAL LISTA ARRIBA
         public event PropertyChangedEventHandler PropertyChanged;
         List<Ficha> FichasJugador;
         List<Ficha> FichasEnemigo;
@@ -142,62 +142,62 @@ namespace ProyectoDSI
 
             var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
 
-            listPanelFichas = new List<PanelFicha>();
+           
             PanelFicha panelFicha;
             //regaliz
             panelFicha.ficha_ = new Ficha(-1, resourceLoader.GetString("NameRegaliz"), -1, -1);
             panelFicha.num_ = 1;
             panelFicha.rango_ = "7";
             panelFicha.numFichas_ = "x1";
-            listPanelFichas.Add(panelFicha);
+            PanelFichasIzquierda.Add(panelFicha);
             //baston
             panelFicha.ficha_ = new Ficha(-1, resourceLoader.GetString("NameBaston"), -1, -1);
             panelFicha.num_ = 2;
             panelFicha.rango_ = "6";
             panelFicha.numFichas_ = "x2";
-            listPanelFichas.Add(panelFicha);
+            PanelFichasIzquierda.Add(panelFicha);
             //dedos
             panelFicha.ficha_ = new Ficha(-1, resourceLoader.GetString("NameDedo"), -1, -1);
             panelFicha.num_ = 3;
             panelFicha.rango_ = "5";
             panelFicha.numFichas_ = "x3";
-            listPanelFichas.Add(panelFicha);
+            PanelFichasIzquierda.Add(panelFicha);
             //huevo
             panelFicha.ficha_ = new Ficha(-1, resourceLoader.GetString("NameHuevo"), -1, -1);
             panelFicha.num_ = 4;
             panelFicha.rango_ = "4";
             panelFicha.numFichas_ = "x4";
-            listPanelFichas.Add(panelFicha);
+            PanelFichasIzquierda.Add(panelFicha);
             //sandia
             panelFicha.ficha_ = new Ficha(-1, resourceLoader.GetString("NameSandia"), -1, -1);
             panelFicha.num_ = 4;
             panelFicha.rango_ = "3";
             panelFicha.numFichas_ = "x4";
-            listPanelFichas.Add(panelFicha);
+            PanelFichasIzquierda.Add(panelFicha);
             //cocacola
             panelFicha.ficha_ = new Ficha(-1, resourceLoader.GetString("NameCocacola"), -1, -1);
             panelFicha.num_ = 8;
             panelFicha.rango_ = "2";
             panelFicha.numFichas_ = "x8";
-            listPanelFichas.Add(panelFicha);
+            PanelFichasIzquierda.Add(panelFicha);
             //chicle sandia
             panelFicha.ficha_ = new Ficha(-1, resourceLoader.GetString("NameBombaSandia"), -1, -1);
             panelFicha.num_ = 1;
             panelFicha.rango_ = "1";
             panelFicha.numFichas_ = "x1";
-            listPanelFichas.Add(panelFicha);
+            PanelFichasIzquierda.Add(panelFicha);
             //petazetas
             panelFicha.ficha_ = new Ficha(-1, resourceLoader.GetString("NamePtazeta"), -1, -1);
             panelFicha.num_ = 6;
             panelFicha.rango_ = "B";
             panelFicha.numFichas_ = "x6";
-            listPanelFichas.Add(panelFicha);
+            PanelFichasIzquierda.Add(panelFicha);
             //fresa
             panelFicha.ficha_ = new Ficha(-1, resourceLoader.GetString("NameFresa"), -1, -1);
             panelFicha.num_ = 1;
             panelFicha.rango_ = "F";
             panelFicha.numFichas_ = "x1";
-            listPanelFichas.Add(panelFicha);
+            PanelFichasIzquierda.Add(panelFicha);
         }
         void inicializarPartida()
         {
@@ -209,31 +209,31 @@ namespace ProyectoDSI
 
 
             FichaInicial fichainicial = new FichaInicial(new Ficha(0, resourceLoader.GetString("NameRegaliz"), -1, -1),1);         
-            listFichasIniciales1.Add(fichainicial);
+            ListaPanelFichasIniciales.Add(fichainicial);
 
             fichainicial = new FichaInicial(new Ficha(1, resourceLoader.GetString("NameBaston"), -1, -1),2);
-            listFichasIniciales1.Add(fichainicial);
+            ListaPanelFichasIniciales.Add(fichainicial);
 
             fichainicial = new FichaInicial(new Ficha(2, resourceLoader.GetString("NameDedo"), -1, -1),3);            
-            listFichasIniciales1.Add(fichainicial);
+            ListaPanelFichasIniciales.Add(fichainicial);
 
             fichainicial = new FichaInicial(new Ficha(3, resourceLoader.GetString("NameHuevo"), -1, -1),4);         
-            listFichasIniciales1.Add(fichainicial);
+            ListaPanelFichasIniciales.Add(fichainicial);
 
             fichainicial = new FichaInicial(new Ficha(4, resourceLoader.GetString("NameSandia"), -1, -1),4);            
-            listFichasIniciales1.Add(fichainicial);
+            ListaPanelFichasIniciales.Add(fichainicial);
 
             fichainicial = new FichaInicial(new Ficha(5, resourceLoader.GetString("NameCocacola"), -1, -1),8);           
-            listFichasIniciales1.Add(fichainicial);
+            ListaPanelFichasIniciales.Add(fichainicial);
 
             fichainicial = new FichaInicial(new Ficha(6, resourceLoader.GetString("NameBombaSandia"), -1, -1),1);           
-            listFichasIniciales1.Add(fichainicial);
+            ListaPanelFichasIniciales.Add(fichainicial);
 
             fichainicial = new FichaInicial(new Ficha(7, resourceLoader.GetString("NamePtazeta"), -1, -1),6);          
-            listFichasIniciales1.Add(fichainicial);
+            ListaPanelFichasIniciales.Add(fichainicial);
 
             fichainicial = new FichaInicial(new Ficha(8, resourceLoader.GetString("NameFresa"), -1, -1),1);          
-            listFichasIniciales1.Add(fichainicial);
+            ListaPanelFichasIniciales.Add(fichainicial);
 
             //OBSTACULOS DEL MAPA
             Tablero[4, 2].hayFicha = true;
@@ -395,7 +395,7 @@ namespace ProyectoDSI
             if (Tablero[y, x].esJug) {
                 VolverAcasillaInicial(x, y);
             }
-            Ficha nueva = new Ficha(FichasJugador.Count(), listFichasIniciales1[aux].ficha_.tipo_, x, y);
+            Ficha nueva = new Ficha(FichasJugador.Count(), ListaPanelFichasIniciales[aux].ficha_.tipo_, x, y);
 
             RemoverFichaInicial(aux);
             Receptor.Source = nueva.img_.Source;
@@ -409,14 +409,14 @@ namespace ProyectoDSI
 
         }
         private void RemoverFichaInicial(int aux){
-            listFichasIniciales1[aux].cantidad_--;
-            if (listFichasIniciales1[aux].cantidad_ < 1)
+            ListaPanelFichasIniciales[aux].cantidad_--;
+            if (ListaPanelFichasIniciales[aux].cantidad_ < 1)
             {
-                for (int i = 1; i + aux < listFichasIniciales1.Count(); i++)
-                    listFichasIniciales1[i + aux].ficha_.id_--;
-                listFichasIniciales1.Remove(listFichasIniciales1[aux]);
+                for (int i = 1; i + aux < ListaPanelFichasIniciales.Count(); i++)
+                    ListaPanelFichasIniciales[i + aux].ficha_.id_--;
+                ListaPanelFichasIniciales.Remove(ListaPanelFichasIniciales[aux]);
             }
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs((listFichasIniciales1[aux].cantidad_).ToString()));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs((ListaPanelFichasIniciales[aux].cantidad_).ToString()));
             
         }
         private void ComprobacionEstadoInicial(){
@@ -471,11 +471,18 @@ namespace ProyectoDSI
                             Tablero[FichasJugador[seleccion].Y_, FichasJugador[seleccion].X_].esJug = false;
                             eliminarCasillaSeleccionadas();
                             //gana el enemigo
-                            if (enemigo != -1 && (FichasEnemigo[enemigo].rango_ == "B" || FichasEnemigo[enemigo].rango_[0] > FichasJugador[seleccion].rango_[0]))
+                            if (enemigo != -1 && (FichasEnemigo[enemigo].rango_ == "B" || FichasJugador[seleccion].rango_=="B"||FichasEnemigo[enemigo].rango_[0] > FichasJugador[seleccion].rango_[0]))
                             {
                                 Image aux = Grid_Tablero.FindName("_" + FichasJugador[seleccion].Y_.ToString() + FichasJugador[seleccion].X_.ToString()) as Image;
-                                aux.Source = new BitmapImage();//le quito la imagen                                                              
+                                aux.Source = new BitmapImage();//le quito la imagen
+                                if (FichasJugador[seleccion].rango_ == "B")
+                                    ListaPanelFichasIniciales[6].cantidad_--;
+                                else if (FichasJugador[seleccion].rango_ == "F") ListaPanelFichasIniciales[7].cantidad_--;
+                                else {
+                                    int tx = int.Parse(FichasJugador[seleccion].rango_);
+                                    ListaPanelFichasIniciales[int.Parse(FichasJugador[seleccion].rango_)].cantidad_--; }
                                 FichasJugador.Remove(FichasJugador[seleccion]);
+
                             }
                             //empate
                             else if (enemigo != -1 && FichasEnemigo[enemigo].rango_ == FichasJugador[seleccion].rango_)
@@ -664,7 +671,7 @@ namespace ProyectoDSI
         private void VolverAcasillaInicial(int x,int y){
             for (int i = 0; i < FichasJugador.Count(); i++){
                 if(FichasJugador[i].X_==x && FichasJugador[i].Y_ == y){
-                    listFichasIniciales1.Add(new FichaInicial(new Ficha(listFichasIniciales1.Count(), FichasJugador[i].tipo_,-1,-1), 1));
+                    ListaPanelFichasIniciales.Add(new FichaInicial(new Ficha(ListaPanelFichasIniciales.Count(), FichasJugador[i].tipo_,-1,-1), 1));
                     FichasJugador.Remove(FichasJugador[i]);                   
                 }
             }

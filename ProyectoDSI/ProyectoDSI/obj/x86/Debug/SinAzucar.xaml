@@ -457,7 +457,7 @@
                            VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="56"/>
                             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="750">
                                 <GridView x:ConnectionId='19' Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" 
-                                                                               IsItemClickEnabled="True"                               
+                                                                                    IsItemClickEnabled="True"                               
                                   CanDragItems="True"                                                IsFocusEngagementEnabled="True">
                                     <GridView.ItemTemplate >
                                         <DataTemplate                                >
@@ -492,7 +492,7 @@
         <Viewbox Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
             <Grid Margin="20,130,80,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                 <StackPanel x:ConnectionId='7' x:Name="PanelDeFichas" >
-                    <ListView x:ConnectionId='8'                                        Background="Gold" 
+                    <ListView x:ConnectionId='8'                                             Background="Gold" 
                       CornerRadius="15"  >
                         <ListView.ItemContainerStyle>
                             <Style TargetType="ListViewItem">

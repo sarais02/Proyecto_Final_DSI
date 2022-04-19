@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sarai\\Documents\\UCM\\2º CUATRI\\DSI\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\ProyectoDSI.csproj": {}
+    "C:\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\ProyectoDSI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sarai\\Documents\\UCM\\2º CUATRI\\DSI\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\ProyectoDSI.csproj": {
+    "C:\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\ProyectoDSI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sarai\\Documents\\UCM\\2º CUATRI\\DSI\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\ProyectoDSI.csproj",
+        "projectUniqueName": "C:\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\ProyectoDSI.csproj",
         "projectName": "ProyectoDSI",
-        "projectPath": "C:\\Users\\sarai\\Documents\\UCM\\2º CUATRI\\DSI\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\ProyectoDSI.csproj",
-        "packagesPath": "C:\\Users\\sarai\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sarai\\Documents\\UCM\\2º CUATRI\\DSI\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\obj\\",
+        "projectPath": "C:\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\ProyectoDSI.csproj",
+        "packagesPath": "C:\\Users\\javie\\.nuget\\packages\\",
+        "outputPath": "C:\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -19,7 +19,7 @@
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\sarai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\javie\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
