@@ -512,7 +512,7 @@
                                     <Image  Source="{x:Bind ficha_.img_.Source}" Height="55" />
                                     <StackPanel Orientation="Vertical">
                                         <TextBlock Text="{x:Bind rango_}" FontSize="16" Foreground="BlueViolet" FontFamily="MV Boli" FontWeight="Bold"/>
-                                        <TextBlock Text="{x:Bind numFichas_}" FontSize="32" FontFamily="MV Boli" FontWeight="Bold"/>
+                                        <TextBlock Text="{x:Bind numFichas_, Mode=TwoWay}" FontSize="32" FontFamily="MV Boli" FontWeight="Bold"/>
                                     </StackPanel>
                                 </StackPanel>
                             </DataTemplate>

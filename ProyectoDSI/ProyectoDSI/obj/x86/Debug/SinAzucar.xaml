@@ -512,7 +512,7 @@
                                     <Image x:ConnectionId='13'                                       Height="55" />
                                     <StackPanel Orientation="Vertical">
                                         <TextBlock x:ConnectionId='14'                        FontSize="16" Foreground="BlueViolet" FontFamily="MV Boli" FontWeight="Bold"/>
-                                        <TextBlock x:ConnectionId='15'                            FontSize="32" FontFamily="MV Boli" FontWeight="Bold"/>
+                                        <TextBlock x:ConnectionId='15'                                         FontSize="32" FontFamily="MV Boli" FontWeight="Bold"/>
                                     </StackPanel>
                                 </StackPanel>
                             </DataTemplate>

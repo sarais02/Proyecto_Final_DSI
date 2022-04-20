@@ -154,29 +154,13 @@ namespace ProyectoDSI
             //sandia           
             PanelFichasIzquierda.Add(new PanelFicha(new Ficha(-1, resourceLoader.GetString("NameSandia"), -1, -1), 4, "3", "x4"));
             //cocacola
-            panelFicha.ficha_ = new Ficha(-1, resourceLoader.GetString("NameCocacola"), -1, -1);
-            panelFicha.num_ = 8;
-            panelFicha.rango_ = "2";
-            panelFicha.numFichas_ = "x8";
-            PanelFichasIzquierda.Add(panelFicha);
+            PanelFichasIzquierda.Add(new PanelFicha(new Ficha(-1, resourceLoader.GetString("NameCocacola"), -1, -1), 8, "2", "x8"));
             //chicle sandia
-            panelFicha.ficha_ = new Ficha(-1, resourceLoader.GetString("NameBombaSandia"), -1, -1);
-            panelFicha.num_ = 1;
-            panelFicha.rango_ = "1";
-            panelFicha.numFichas_ = "x1";
-            PanelFichasIzquierda.Add(panelFicha);
-            //petazetas
-            panelFicha.ficha_ = new Ficha(-1, resourceLoader.GetString("NamePtazeta"), -1, -1);
-            panelFicha.num_ = 6;
-            panelFicha.rango_ = "B";
-            panelFicha.numFichas_ = "x6";
-            PanelFichasIzquierda.Add(panelFicha);
+            PanelFichasIzquierda.Add(new PanelFicha(new Ficha(-1, resourceLoader.GetString("NameBombaSandia"), -1, -1), 1, "1", "x1"));
+            //petazetas          
+            PanelFichasIzquierda.Add(new PanelFicha(new Ficha(-1, resourceLoader.GetString("NamePtazeta"), -1, -1), 6, "B", "x1"));
             //fresa
-            panelFicha.ficha_ = new Ficha(-1, resourceLoader.GetString("NameFresa"), -1, -1);
-            panelFicha.num_ = 1;
-            panelFicha.rango_ = "F";
-            panelFicha.numFichas_ = "x1";
-            PanelFichasIzquierda.Add(panelFicha);
+            PanelFichasIzquierda.Add(new PanelFicha(new Ficha(-1, resourceLoader.GetString("NameBombaSandia"), -1, -1), 1, "F", "x1"));
         }
         void inicializarPartida()
         {
@@ -453,17 +437,17 @@ namespace ProyectoDSI
                             if (enemigo != -1 && (FichasEnemigo[enemigo].rango_ == "B" || FichasJugador[seleccion].rango_=="B"||FichasEnemigo[enemigo].rango_[0] > FichasJugador[seleccion].rango_[0]))
                             {
                                 Image aux = Grid_Tablero.FindName("_" + FichasJugador[seleccion].Y_.ToString() + FichasJugador[seleccion].X_.ToString()) as Image;
+                                int num;
                                 aux.Source = new BitmapImage();//le quito la imagen
-                                if (FichasJugador[seleccion].rango_ == "B") ;
-                                //ListaPanelFichasIniciales[6].cantidad_--;
-                                else if (FichasJugador[seleccion].rango_ == "F") ;
-                                //ListaPanelFichasIniciales[7].cantidad_--;
+                                if (FichasJugador[seleccion].rango_ == "F") { num = 8; }
                                 else{
 
-                                    int num = FichasJugador[seleccion].rango_[0] - 48;
-                                    int resta = PanelFichasIzquierda[num].numFichas_[1] - 48;
-                                    PanelFichasIzquierda[num].numFichas_ = PanelFichasIzquierda[num].numFichas_[0] + resta.ToString();                                                                                                                                             
+                                    num = FichasJugador[seleccion].rango_[0] - 48;
+                                    num =Math.Abs(num-7);                                                                                                                                             
                                 }
+                                int resta = PanelFichasIzquierda[num].numFichas_[1] - 48;
+                                resta--;
+                                PanelFichasIzquierda[num].numFichas_ = PanelFichasIzquierda[num].numFichas_[0] + resta.ToString();
                                 FichasJugador.Remove(FichasJugador[seleccion]);
 
                             }
