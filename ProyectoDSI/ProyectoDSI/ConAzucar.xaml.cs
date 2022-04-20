@@ -117,7 +117,8 @@ namespace ProyectoDSI
         private void CrearLista()
         {
             listPanelFichas = new List<PanelFicha>();
-            PanelFicha panelFicha;
+            PanelFicha panelFicha=new PanelFicha();
+            
             //regaliz
             panelFicha.ficha_ = new Ficha(-1, "Regaliz", -1, -1);
             panelFicha.num_ = 1;

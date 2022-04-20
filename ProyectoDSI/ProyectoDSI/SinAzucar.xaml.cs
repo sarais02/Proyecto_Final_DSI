@@ -49,6 +49,7 @@ namespace ProyectoDSI
         casillaTablero[,] Tablero;//PARA VER EN QUE CASILLAS HAY FICHAS
         public ObservableCollection<PanelFicha> PanelFichasIzquierda { get; } = new ObservableCollection<PanelFicha>();//PANEL IZQUIERDO
         public ObservableCollection<FichaInicial> ListaPanelFichasIniciales { get; } = new ObservableCollection<FichaInicial>(); //PANEL INICIAL LISTA ARRIBA
+
         public event PropertyChangedEventHandler PropertyChanged;
         List<Ficha> FichasJugador;
         List<Ficha> FichasEnemigo;
@@ -142,38 +143,16 @@ namespace ProyectoDSI
 
             var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
 
-           
-            PanelFicha panelFicha;
             //regaliz
-            panelFicha.ficha_ = new Ficha(-1, resourceLoader.GetString("NameRegaliz"), -1, -1);
-            panelFicha.num_ = 1;
-            panelFicha.rango_ = "7";
-            panelFicha.numFichas_ = "x1";
-            PanelFichasIzquierda.Add(panelFicha);
+            PanelFichasIzquierda.Add(new PanelFicha(new Ficha(-1, resourceLoader.GetString("NameRegaliz"), -1, -1), 1, "7", "x1"));
             //baston
-            panelFicha.ficha_ = new Ficha(-1, resourceLoader.GetString("NameBaston"), -1, -1);
-            panelFicha.num_ = 2;
-            panelFicha.rango_ = "6";
-            panelFicha.numFichas_ = "x2";
-            PanelFichasIzquierda.Add(panelFicha);
-            //dedos
-            panelFicha.ficha_ = new Ficha(-1, resourceLoader.GetString("NameDedo"), -1, -1);
-            panelFicha.num_ = 3;
-            panelFicha.rango_ = "5";
-            panelFicha.numFichas_ = "x3";
-            PanelFichasIzquierda.Add(panelFicha);
-            //huevo
-            panelFicha.ficha_ = new Ficha(-1, resourceLoader.GetString("NameHuevo"), -1, -1);
-            panelFicha.num_ = 4;
-            panelFicha.rango_ = "4";
-            panelFicha.numFichas_ = "x4";
-            PanelFichasIzquierda.Add(panelFicha);
-            //sandia
-            panelFicha.ficha_ = new Ficha(-1, resourceLoader.GetString("NameSandia"), -1, -1);
-            panelFicha.num_ = 4;
-            panelFicha.rango_ = "3";
-            panelFicha.numFichas_ = "x4";
-            PanelFichasIzquierda.Add(panelFicha);
+            PanelFichasIzquierda.Add(new PanelFicha(new Ficha(-1, resourceLoader.GetString("NameBaston"), -1, -1), 2, "6", "x2"));
+            //dedos           
+            PanelFichasIzquierda.Add(new PanelFicha(new Ficha(-1, resourceLoader.GetString("NameDedo"), -1, -1), 3, "5", "x3"));
+            //huevo         
+            PanelFichasIzquierda.Add(new PanelFicha(new Ficha(-1, resourceLoader.GetString("NameHuevo"), -1, -1), 4, "4", "x4"));
+            //sandia           
+            PanelFichasIzquierda.Add(new PanelFicha(new Ficha(-1, resourceLoader.GetString("NameSandia"), -1, -1), 4, "3", "x4"));
             //cocacola
             panelFicha.ficha_ = new Ficha(-1, resourceLoader.GetString("NameCocacola"), -1, -1);
             panelFicha.num_ = 8;
@@ -475,12 +454,16 @@ namespace ProyectoDSI
                             {
                                 Image aux = Grid_Tablero.FindName("_" + FichasJugador[seleccion].Y_.ToString() + FichasJugador[seleccion].X_.ToString()) as Image;
                                 aux.Source = new BitmapImage();//le quito la imagen
-                                if (FichasJugador[seleccion].rango_ == "B")
-                                    ListaPanelFichasIniciales[6].cantidad_--;
-                                else if (FichasJugador[seleccion].rango_ == "F") ListaPanelFichasIniciales[7].cantidad_--;
-                                else {
-                                    int tx = int.Parse(FichasJugador[seleccion].rango_);
-                                    ListaPanelFichasIniciales[int.Parse(FichasJugador[seleccion].rango_)].cantidad_--; }
+                                if (FichasJugador[seleccion].rango_ == "B") ;
+                                //ListaPanelFichasIniciales[6].cantidad_--;
+                                else if (FichasJugador[seleccion].rango_ == "F") ;
+                                //ListaPanelFichasIniciales[7].cantidad_--;
+                                else{
+
+                                    int num = FichasJugador[seleccion].rango_[0] - 48;
+                                    int resta = PanelFichasIzquierda[num].numFichas_[1] - 48;
+                                    PanelFichasIzquierda[num].numFichas_ = PanelFichasIzquierda[num].numFichas_[0] + resta.ToString();                                                                                                                                             
+                                }
                                 FichasJugador.Remove(FichasJugador[seleccion]);
 
                             }

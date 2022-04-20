@@ -8,8 +8,17 @@ using Windows.UI.Xaml.Controls;
 
 namespace ProyectoDSI
 {
-    public struct PanelFicha
+    public class PanelFicha
     {
+        public PanelFicha(){
+
+        }
+        public PanelFicha(Ficha ficha,int num,string rango,string numFichas){
+            ficha_ = ficha;
+            num_ = num;
+            rango_ = rango;
+            numFichas_ = numFichas;
+        }
         public Ficha ficha_;
         public int num_;
         public string rango_;

@@ -1,27 +1,29 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\ProyectoDSI.csproj": {}
+    "D:\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\ProyectoDSI.csproj": {}
   },
   "projects": {
-    "C:\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\ProyectoDSI.csproj": {
+    "D:\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\ProyectoDSI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\ProyectoDSI.csproj",
+        "projectUniqueName": "D:\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\ProyectoDSI.csproj",
         "projectName": "ProyectoDSI",
-        "projectPath": "C:\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\ProyectoDSI.csproj",
+        "projectPath": "D:\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\ProyectoDSI.csproj",
         "packagesPath": "C:\\Users\\javie\\.nuget\\packages\\",
-        "outputPath": "C:\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\obj\\",
+        "outputPath": "D:\\Proyecto_Final_DSI\\ProyectoDSI\\ProyectoDSI\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
           "C:\\Users\\javie\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "uap10.0.17763"
