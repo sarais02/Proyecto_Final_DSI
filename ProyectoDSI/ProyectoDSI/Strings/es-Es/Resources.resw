@@ -180,6 +180,12 @@
   <data name="ExitButton.Content" xml:space="preserve">
     <value>Salir</value>
   </data>
+  <data name="Idiom1.Text" xml:space="preserve">
+    <value>Español</value>
+  </data>
+  <data name="Idiom2.Text" xml:space="preserve">
+    <value>Inglés</value>
+  </data>
   <data name="InfoBaston" xml:space="preserve">
     <value>Está afilado y puede atravesar a casi todas las cuches, acabando con ellas brutalmente</value>
   </data>

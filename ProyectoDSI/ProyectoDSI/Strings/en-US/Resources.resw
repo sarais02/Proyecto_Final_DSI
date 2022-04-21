@@ -180,6 +180,12 @@
   <data name="ExitButton.Content" xml:space="preserve">
     <value>Exit</value>
   </data>
+  <data name="Idiom1.Text" xml:space="preserve">
+    <value>Spanish</value>
+  </data>
+  <data name="Idiom2.Text" xml:space="preserve">
+    <value>English</value>
+  </data>
   <data name="InfoBaston" xml:space="preserve">
     <value>It is sharp and can pierce almost all the candies, killing them brutally</value>
   </data>

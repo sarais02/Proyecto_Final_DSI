@@ -109,8 +109,8 @@
                         <ComboBox x:ConnectionId='7' PlaceholderText="Selecciona Un Idioma" x:Uid="ComboBoxLanguage"
                                    Width="200" BorderBrush="HotPink"
                                    VerticalAlignment="Center"                                             >
-                            <x:String>Español</x:String>
-                            <x:String>Ingles</x:String>
+                            <TextBlock x:Uid="Idiom1"/>
+                            <TextBlock x:Uid="Idiom2"/>
                         </ComboBox>
                     </StackPanel>
                 </StackPanel>
