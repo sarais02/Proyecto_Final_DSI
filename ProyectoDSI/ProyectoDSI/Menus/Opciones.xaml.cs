@@ -5,6 +5,8 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using Windows.Foundation;
+using Windows.Media.Core;
+using Windows.Media.Playback;
 using Windows.Foundation.Collections;
 using Windows.System;
 using Windows.UI.Core;
@@ -25,13 +27,14 @@ namespace ProyectoDSI
     {
         CoreCursor CursorArrow = null;
         CoreCursor CursorHand = null;
-
+        MediaPlayer clickSound;
         PointerPoint ptrPt;       
         public Opciones()
         {
             this.InitializeComponent();
             CursorHand = new CoreCursor(CoreCursorType.Hand, 0);
             CursorArrow = new CoreCursor(CoreCursorType.Arrow, 0);
+            clickSound = new MediaPlayer();
         }
         private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
         {
@@ -39,11 +42,13 @@ namespace ProyectoDSI
         }
         private void Reglas_Click(object sender, RoutedEventArgs e)
         {
+            clickSound.Play();
             Frame.Navigate(typeof(Reglamento));
         }
 
         private void Pause_Click(object sender, RoutedEventArgs e)
         {
+            clickSound.Play();
             Frame.Navigate(typeof(Controles));
         }
 
@@ -59,6 +64,7 @@ namespace ProyectoDSI
         }
 
         private void VolverButton_Click(object sender, RoutedEventArgs e){
+            clickSound.Play();
             Volver();
         }
 
@@ -71,7 +77,6 @@ namespace ProyectoDSI
 
         private void BackImage_PointerExited(object sender, PointerRoutedEventArgs e)
         {
-
             Window.Current.CoreWindow.PointerCursor = CursorArrow;
             SpecialText.Visibility = Visibility.Collapsed;
         }
@@ -100,7 +105,12 @@ namespace ProyectoDSI
 
             }
             Frame.Navigate(this.GetType());
-            Frame.GoBack();
+        }
+        protected override async void OnNavigatedTo(NavigationEventArgs e)
+        {
+            Windows.Storage.StorageFolder folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync(@"Assets");
+            Windows.Storage.StorageFile file = await folder.GetFileAsync("bottonclick.wav");
+            clickSound.Source = MediaSource.CreateFromStorageFile(file);
         }
     }
 }

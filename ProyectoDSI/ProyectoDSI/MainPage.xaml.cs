@@ -6,6 +6,8 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Media.Core;
+using Windows.Media.Playback;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -23,12 +25,15 @@ namespace ProyectoDSI
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        MediaPlayer clickSound;
         public MainPage()
         {
             this.InitializeComponent();
+            clickSound = new MediaPlayer();
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private  void Button_Click(object sender, RoutedEventArgs e)
         {
+            clickSound.Play();
             Frame.Navigate(typeof(Opciones));
         }
 
@@ -39,7 +44,15 @@ namespace ProyectoDSI
 
         private void Play_Click(object sender, RoutedEventArgs e)
         {
+            clickSound.Play();
             Frame.Navigate(typeof(SeleccionNivel));
+        }
+
+        protected override  async void OnNavigatedTo(NavigationEventArgs e)
+        {
+            Windows.Storage.StorageFolder folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync(@"Assets");
+            Windows.Storage.StorageFile file = await folder.GetFileAsync("bottonclick.wav");
+            clickSound.Source = MediaSource.CreateFromStorageFile(file);
         }
     }
 }

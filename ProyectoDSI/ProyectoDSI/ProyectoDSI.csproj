@@ -158,6 +158,8 @@
     <Content Include="Assets\borde.png" />
     <Content Include="Assets\botoncontroles.png" />
     <Content Include="Assets\botonReglamento.png" />
+    <Content Include="Assets\bottonclick.wav" />
+    <Content Include="Assets\click.wav" />
     <Content Include="Assets\Cocacola.png" />
     <Content Include="Assets\cocalocas.png" />
     <Content Include="Assets\controles1.png" />

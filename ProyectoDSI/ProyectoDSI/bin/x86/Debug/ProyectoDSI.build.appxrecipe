@@ -154,6 +154,12 @@
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\bottonclick.wav">
+      <PackagePath>Assets\bottonclick.wav</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\click.wav">
+      <PackagePath>Assets\click.wav</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\Plano.jpg">
       <PackagePath>Assets\Plano.jpg</PackagePath>
     </AppxPackagedFile>

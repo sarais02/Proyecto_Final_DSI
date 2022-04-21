@@ -5,6 +5,8 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Media.Core;
+using Windows.Media.Playback;
 using Windows.System;
 using Windows.UI.Core;
 using Windows.UI.Input;
@@ -28,11 +30,13 @@ namespace ProyectoDSI
         CoreCursor CursorArrow = null;
         CoreCursor CursorHand = null;
         PointerPoint ptrPt;
+        MediaPlayer clickSound;
         public Controles()
         {
             this.InitializeComponent();
             CursorArrow = new CoreCursor(CoreCursorType.Arrow, 0);
             CursorHand = new CoreCursor(CoreCursorType.Hand, 0);
+            clickSound = new MediaPlayer();
         }
 
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
@@ -66,7 +70,14 @@ namespace ProyectoDSI
 
         private void BackImage_Click(object sender, RoutedEventArgs e)
         {
+            clickSound.Play();
             Volver();
+        }
+        protected override async void OnNavigatedTo(NavigationEventArgs e)
+        {
+            Windows.Storage.StorageFolder folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync(@"Assets");
+            Windows.Storage.StorageFile file = await folder.GetFileAsync("bottonclick.wav");
+            clickSound.Source = MediaSource.CreateFromStorageFile(file);
         }
     }
 }
