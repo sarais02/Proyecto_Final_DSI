@@ -52,12 +52,12 @@
             </Grid>
         </Viewbox>
         
-        <Viewbox HorizontalAlignment="Left">
+        <Viewbox HorizontalAlignment="Left" >
             <Button x:Name="PauseButton" Click="PauseButton_Click" x:Uid="PauseButtonText"
-                Background="LightPink" Foreground="Black"
+                Background="LightPink" Foreground="Black" IsTabStop="False" 
                 Margin="20,20,0,0" FontSize="25"
                 FontFamily="MV Boli" CornerRadius="10" BorderThickness="4"
-                BorderBrush="White" Width="120" Height="58"/>
+                BorderBrush="White" Width="120" Height="58" AllowFocusOnInteraction="False"/>
         </Viewbox>
 
         <Viewbox  Grid.Row="1"  Grid.Column="2" VerticalAlignment="Top" Margin="10,10,10,0">
@@ -94,7 +94,7 @@
         <Viewbox Grid.Column="1" Grid.Row="1" Margin="15"
                  VerticalAlignment="Stretch" HorizontalAlignment="Center">
             <Grid x:Name="Grid_Tablero">
-                <Grid Grid.Column="1" Grid.Row="2" Margin="76,20,70,20" >
+                <Grid x:Name="TableroIMG" Grid.Column="1" Grid.Row="2" Margin="76,20,70,20" >
                     <Grid.RowDefinitions>
                         <RowDefinition Height="90"/>
                         <RowDefinition Height="90"/>
@@ -119,13 +119,13 @@
                         <ColumnDefinition Width="90"/>
                         <ColumnDefinition Width="90"/>
                     </Grid.ColumnDefinitions>
-                    <Image Source="Assets/Tablero.png" Stretch="Fill" Grid.RowSpan="10"
+                    <Image x:Name="IMG_TABLERO" Source="Assets/Tablero.png" Stretch="Fill" Grid.RowSpan="10"
                    Grid.ColumnSpan="10" />
 
-                    <Image Grid.Column="2" Grid.Row="4" 
+                    <Image x:Name="Obstaculos1" Grid.Column="2" Grid.Row="4" 
                        Source="Assets/obstaculos.png" Grid.RowSpan="2"
                        Grid.ColumnSpan="2" />
-                    <Image Grid.Column="6" Grid.Row="4" 
+                    <Image x:Name="Obstaculos2" Grid.Column="6" Grid.Row="4" 
                        Source="Assets/obstaculos.png" Grid.RowSpan="2"
                        Grid.ColumnSpan="2" />
 
@@ -489,11 +489,11 @@
         </Viewbox>
         
         <!--PanelIzquierdo-->
-        <Viewbox Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-            <Grid Margin="20,130,80,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                <StackPanel x:Name="PanelDeFichas" >
+        <Viewbox Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" AllowFocusOnInteraction="False">
+            <Grid Margin="20,130,80,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" AllowFocusOnInteraction="False">
+                <StackPanel x:Name="PanelDeFichas" AllowFocusOnInteraction="False"  >
                     <ListView ItemsSource="{x:Bind PanelFichasIzquierda}" Background="Gold" 
-                      CornerRadius="15"  >
+                      CornerRadius="15" AllowFocusOnInteraction="False" >
                         <ListView.ItemContainerStyle>
                             <Style TargetType="ListViewItem">
                                 <Setter Property="Background" Value="Transparent" />

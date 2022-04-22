@@ -57,7 +57,8 @@ namespace ProyectoDSI
         //Movimiento
         int seleccion;
         //Ficha fichaSeleccionada;
-        bool hayAlgunaFichaSeleccionada = false;
+        bool hayAlgunaFichaSeleccionada_MOUSE = false;
+        bool hayAlgunaFichaSeleccionada_KEYBOARD_GAMEPAD = false;
         List<coords> posiblesMovimientos = new List<coords>();
 
         private DispatcherTimer timer;
@@ -69,8 +70,9 @@ namespace ProyectoDSI
         private bool playersTurn;
         private bool estadoinicial=true;
         private bool atack = false;
-       
 
+        Image mi;
+        coords Pos;
         public SinAzucar() {
             this.InitializeComponent();
             currentTime = initialTime;
@@ -134,10 +136,56 @@ namespace ProyectoDSI
             CountDown.Text = "0" + minutes.ToString() + ":" + seconds.ToString();
            
         }
-        private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
-        {
-            if (e.Key == VirtualKey.Escape)
-                Frame.Navigate(typeof(Pausa));
+        private void Grid_KeyDown(object sender, KeyRoutedEventArgs e){
+            if (estadoinicial) return;
+            bool mover = false;
+           
+                switch (e.Key){
+                case VirtualKey.Escape:
+                    Frame.Navigate(typeof(Pausa));
+                    break;
+                case VirtualKey.V:
+                    MoverCasillaSeleccionada(Pos.y_, Pos.x_, ref hayAlgunaFichaSeleccionada_KEYBOARD_GAMEPAD);
+                    e.Handled = true;
+                    break;
+                case VirtualKey.GamepadA:
+                    MoverCasillaSeleccionada(Pos.y_, Pos.x_, ref hayAlgunaFichaSeleccionada_KEYBOARD_GAMEPAD);
+                    e.Handled = true;
+                    break;
+                case VirtualKey.Left:
+                    mover = true;
+                    Pos.x_--;
+                    if (Pos.x_ < 0) Pos.x_ = 0;
+                    e.Handled = true;
+                    break;
+                case VirtualKey.Right:
+                    mover = true;
+                    Pos.x_++;
+                    if (Pos.x_ > Tablero.GetLength(1)) Pos.x_ = Tablero.GetLength(1) - 1;
+                    e.Handled = true;
+                    break;
+                case VirtualKey.Up:
+                    mover = true;
+                    Pos.y_--;
+                    if (Pos.y_ < 0) Pos.y_ = 0;
+                    e.Handled = true;
+                    break;
+                case VirtualKey.Down:
+                    mover = true;
+                    Pos.y_++;
+                    if (Pos.y_ > Tablero.GetLength(0)) Pos.y_ = Tablero.GetLength(0) - 1;
+                    e.Handled = true;
+                    break;
+                default:
+                    e.Handled = true;
+                    break;
+            }
+            if (mover){
+                mi.Visibility = Visibility.Visible;
+                mi.SetValue(Grid.RowProperty, Pos.y_);
+                mi.SetValue(Grid.ColumnProperty, Pos.x_);
+                seleccionarCasillaKey_GamePad(Pos.y_, Pos.x_);
+            }
         }
         private void CrearLista() {
 
@@ -170,6 +218,16 @@ namespace ProyectoDSI
             FichasEnemigo = new List<Ficha>();
             FichasJugador = new List<Ficha>();
 
+
+            mi = new Image();          
+            mi.Source = new BitmapImage(new Uri("ms-appx:///Assets/Square44x44Logo.targetsize-24_altform-unplated.png", UriKind.RelativeOrAbsolute));
+            mi.SetValue(Grid.RowProperty, 7);
+            mi.SetValue(Grid.ColumnProperty, 0);
+            mi.Visibility = Visibility.Collapsed;
+            mi.Name = "Marco";
+            Pos = new coords(7, 0);
+            mi.AllowFocusOnInteraction = true;
+            mi.AllowFocusWhenDisabled = true;
 
             FichaInicial fichainicial = new FichaInicial(new Ficha(0, resourceLoader.GetString("NameRegaliz"), -1, -1),1);         
             ListaPanelFichasIniciales.Add(fichainicial);
@@ -386,7 +444,8 @@ namespace ProyectoDSI
             if (FichasJugador.Count() >= 30){
                 EstadoInicial.Visibility = Visibility.Collapsed;
                 estadoinicial = false;
-
+                Grid_Tablero.Children.Remove(EstadoInicial);
+                TableroIMG.Children.Add(mi);
                 timer.Start();
             }
         }
@@ -404,100 +463,15 @@ namespace ProyectoDSI
                 Windows.UI.Input.PointerPoint ptrPt = e.GetCurrentPoint(sender as Image);
 
                 //SI NO ES UNA CASILLA DEL JUGADOR Y HAY UNA CASILLA SELECCIONADA
-                if (hayAlgunaFichaSeleccionada && ptrPt.Properties.IsLeftButtonPressed)
-                {
-                    //recorrer las lista de coordenasdas con los posibles movimientos de la ficha seleccionada y
-                    //si se corresponde con la casilla en la que se ha hecho click mover la fichas
-                    for (int i = 0; i < posiblesMovimientos.Count(); i++)
-                    {
-                        if (posiblesMovimientos[i].x_ == col && posiblesMovimientos[i].y_ == fil)
-                        {
-                            int enemigo = -1;
-
-                            for (int k = 0; k < FichasEnemigo.Count(); k++)
-                            {
-                                if (FichasEnemigo[k].X_ == col && FichasEnemigo[k].Y_ == fil)
-                                {
-                                    // FichasEnemigo.Remove(FichasEnemigo[k]);
-                                    enemigo = k;
-                                    break;
-                                }
-                            }
-                            if (enemigo != -1)
-                            {
-                                atack = true;
-                                Add();
-                                atack = false;
-                            }
-                            //quito la antigua casilla
-                            Tablero[FichasJugador[seleccion].Y_, FichasJugador[seleccion].X_].hayFicha = false;
-                            Tablero[FichasJugador[seleccion].Y_, FichasJugador[seleccion].X_].esJug = false;
-                            eliminarCasillaSeleccionadas();
-                            //gana el enemigo
-                            if (enemigo != -1 && (FichasEnemigo[enemigo].rango_ == "B" || FichasJugador[seleccion].rango_=="B"||FichasEnemigo[enemigo].rango_[0] > FichasJugador[seleccion].rango_[0]))
-                            {
-                                Image aux = Grid_Tablero.FindName("_" + FichasJugador[seleccion].Y_.ToString() + FichasJugador[seleccion].X_.ToString()) as Image;
-                                int num;
-                                aux.Source = new BitmapImage();//le quito la imagen
-                                if (FichasJugador[seleccion].rango_ == "F") { num = 8; }
-                                else{
-
-                                    num = FichasJugador[seleccion].rango_[0] - 48;
-                                    num =Math.Abs(num-7);                                                                                                                                             
-                                }
-                                int resta = PanelFichasIzquierda[num].numFichas_[1] - 48;
-                                resta--;
-                                PanelFichasIzquierda[num].numFichas_ = PanelFichasIzquierda[num].numFichas_[0] + resta.ToString();
-                                FichasJugador.Remove(FichasJugador[seleccion]);
-
-                            }
-                            //empate
-                            else if (enemigo != -1 && FichasEnemigo[enemigo].rango_ == FichasJugador[seleccion].rango_)
-                            {
-                                Image aux = Grid_Tablero.FindName("_" + FichasJugador[seleccion].Y_.ToString() + FichasJugador[seleccion].X_.ToString()) as Image;
-                                aux.Source = new BitmapImage();//le quito la imagen
-                                FichasJugador.Remove(FichasJugador[seleccion]);
-
-                                aux = Grid_Tablero.FindName("_" + FichasEnemigo[enemigo].Y_.ToString() + FichasEnemigo[enemigo].X_.ToString()) as Image;
-                                aux.Source = new BitmapImage();//le quito la imagen
-                                FichasEnemigo.Remove(FichasEnemigo[enemigo]);
-                            }
-                            //gana jugador
-                            else
-                            {
-                                Image aux = Grid_Tablero.FindName("_" + FichasJugador[seleccion].Y_.ToString() + FichasJugador[seleccion].X_.ToString()) as Image;
-                                aux.Source = new BitmapImage();//le quito la imagen
-                                                               //establezco las nuevas coordenadas de la ficha
-                                FichasJugador[seleccion].X_ = col;
-                                FichasJugador[seleccion].Y_ = fil;
-
-                                aux = Grid_Tablero.FindName("_" + fil.ToString() + col.ToString()) as Image;
-                                aux.Source = FichasJugador[seleccion].img_.Source;//pongo la imagen en las nuevas coordenadas
-
-                                //actualizo el tablero
-                                Tablero[fil, col].hayFicha = true;
-                                Tablero[fil, col].esJug = true;
-
-                                if (enemigo != -1)
-                                {
-                                    FichasEnemigo.Remove(FichasEnemigo[enemigo]);
-                                }
-                            }
-                            posiblesMovimientos.Clear();//limpio los posibles movimientos
-                            hayAlgunaFichaSeleccionada = false;//ya no hay ninguna ficha seleccionada
-                            double total = FichasEnemigo.Count() + FichasJugador.Count();
-                            double valor = FichasJugador.Count() / total;
-                            ProgressBar.Value = valor * 100;
-
-                            return;
-                        }
-                    }
+                if (hayAlgunaFichaSeleccionada_MOUSE && ptrPt.Properties.IsLeftButtonPressed){
+                    MoverCasillaSeleccionada(fil, col, ref hayAlgunaFichaSeleccionada_MOUSE);
+                    if (!hayAlgunaFichaSeleccionada_MOUSE) return;
                 }
 
                 //MIRO SI HE SELECCIONADO ALGUNA CASILLA DEL JUGADOR
                 for (int i = 0; i < FichasJugador.Count; i++) {//recorro la lista de fichas del jugador
                     if (FichasJugador[i].Y_ ==fil && FichasJugador[i].X_ == col) {//si es la ficha del jugador
-                       
+                        mi.Visibility = Visibility.Collapsed;//quito el marco de teclado
                         //CLICK DERECHO
                         if (ptrPt.Properties.IsRightButtonPressed) {
                             ImagenCartaJugador.Source = x.Source;//pongo la imagend e la ficha
@@ -516,7 +490,7 @@ namespace ProyectoDSI
                             seleccion = i;
                             posiblesMovimientos.Clear();
                             //eliminarCasillaSeleccionadas();
-                            hayAlgunaFichaSeleccionada = true;
+                            hayAlgunaFichaSeleccionada_MOUSE = true;
                             //cambiamos la imagen de las posibles casillas de movimientos
                             //petazeta
                             if (FichasJugador[i].rango_ == "B") ;//como no se mueve pues no hace nada
@@ -533,6 +507,127 @@ namespace ProyectoDSI
                 }              
             }
             e.Handled = true;
+        }
+        private void seleccionarCasillaKey_GamePad(int fil,int col){
+            //MIRO SI HE SELECCIONADO ALGUNA CASILLA DEL JUGADOR
+            for (int i = 0; i < FichasJugador.Count; i++)
+            {//recorro la lista de fichas del jugador
+                if (FichasJugador[i].Y_ == fil && FichasJugador[i].X_ == col)
+                {//si es la ficha del jugador
+
+                    //CAMBIAR LA IMAGEN DE LA FICHA POR LA DE CONTORNO DORADITO
+                    eliminarCasillaSeleccionadas();
+                    //Nos guardamos lo q hemos seleccionado este indice nos servira para luego acceder a el en la lista
+                    seleccion = i;
+                    posiblesMovimientos.Clear();
+                    //eliminarCasillaSeleccionadas();
+                    hayAlgunaFichaSeleccionada_KEYBOARD_GAMEPAD = true;
+                    //cambiamos la imagen de las posibles casillas de movimientos
+                    //petazeta
+                    if (FichasJugador[i].rango_ == "B") ;//como no se mueve pues no hace nada
+                                                            //cocacola
+                    else if (FichasJugador[i].rango_ == "2"){
+                        seleccionarCasillasCocacola();
+                    }
+                    //resto de fichas que tienen un movimiento normal
+                    else{
+                        seleccionarCasillasNormal();
+                    }
+                    
+                }
+            }
+        }
+        private void MoverCasillaSeleccionada(int fil,int col, ref bool cambio){
+            //SI NO ES UNA CASILLA DEL JUGADOR Y HAY UNA CASILLA SELECCIONADA
+            if (cambio){
+                //recorrer las lista de coordenasdas con los posibles movimientos de la ficha seleccionada y
+                //si se corresponde con la casilla en la que se ha hecho click mover la fichas
+                for (int i = 0; i < posiblesMovimientos.Count(); i++)
+                {
+                    if (posiblesMovimientos[i].x_ == col && posiblesMovimientos[i].y_ == fil)
+                    {
+                        int enemigo = -1;
+
+                        for (int k = 0; k < FichasEnemigo.Count(); k++)
+                        {
+                            if (FichasEnemigo[k].X_ == col && FichasEnemigo[k].Y_ == fil)
+                            {
+                                // FichasEnemigo.Remove(FichasEnemigo[k]);
+                                enemigo = k;
+                                break;
+                            }
+                        }
+                        if (enemigo != -1)
+                        {
+                            atack = true;
+                            Add();
+                            atack = false;
+                        }
+                        //quito la antigua casilla
+                        Tablero[FichasJugador[seleccion].Y_, FichasJugador[seleccion].X_].hayFicha = false;
+                        Tablero[FichasJugador[seleccion].Y_, FichasJugador[seleccion].X_].esJug = false;
+                        eliminarCasillaSeleccionadas();
+                        //gana el enemigo
+                        if (enemigo != -1 && (FichasEnemigo[enemigo].rango_ == "B" || FichasJugador[seleccion].rango_ == "B" || FichasEnemigo[enemigo].rango_[0] > FichasJugador[seleccion].rango_[0]))
+                        {
+                            Image aux = Grid_Tablero.FindName("_" + FichasJugador[seleccion].Y_.ToString() + FichasJugador[seleccion].X_.ToString()) as Image;
+                            int num;
+                            aux.Source = new BitmapImage();//le quito la imagen
+                            if (FichasJugador[seleccion].rango_ == "F") { num = 8; }
+                            else
+                            {
+
+                                num = FichasJugador[seleccion].rango_[0] - 48;
+                                num = Math.Abs(num - 7);
+                            }
+                            int resta = PanelFichasIzquierda[num].numFichas_[1] - 48;
+                            resta--;
+                            PanelFichasIzquierda[num].numFichas_ = PanelFichasIzquierda[num].numFichas_[0] + resta.ToString();
+                            FichasJugador.Remove(FichasJugador[seleccion]);
+
+                        }
+                        //empate
+                        else if (enemigo != -1 && FichasEnemigo[enemigo].rango_ == FichasJugador[seleccion].rango_)
+                        {
+                            Image aux = Grid_Tablero.FindName("_" + FichasJugador[seleccion].Y_.ToString() + FichasJugador[seleccion].X_.ToString()) as Image;
+                            aux.Source = new BitmapImage();//le quito la imagen
+                            FichasJugador.Remove(FichasJugador[seleccion]);
+
+                            aux = Grid_Tablero.FindName("_" + FichasEnemigo[enemigo].Y_.ToString() + FichasEnemigo[enemigo].X_.ToString()) as Image;
+                            aux.Source = new BitmapImage();//le quito la imagen
+                            FichasEnemigo.Remove(FichasEnemigo[enemigo]);
+                        }
+                        //gana jugador
+                        else
+                        {
+                            Image aux = Grid_Tablero.FindName("_" + FichasJugador[seleccion].Y_.ToString() + FichasJugador[seleccion].X_.ToString()) as Image;
+                            aux.Source = new BitmapImage();//le quito la imagen
+                                                           //establezco las nuevas coordenadas de la ficha
+                            FichasJugador[seleccion].X_ = col;
+                            FichasJugador[seleccion].Y_ = fil;
+
+                            aux = Grid_Tablero.FindName("_" + fil.ToString() + col.ToString()) as Image;
+                            aux.Source = FichasJugador[seleccion].img_.Source;//pongo la imagen en las nuevas coordenadas
+
+                            //actualizo el tablero
+                            Tablero[fil, col].hayFicha = true;
+                            Tablero[fil, col].esJug = true;
+
+                            if (enemigo != -1)
+                            {
+                                FichasEnemigo.Remove(FichasEnemigo[enemigo]);
+                            }
+                        }
+                        posiblesMovimientos.Clear();//limpio los posibles movimientos
+                        cambio= false;//ya no hay ninguna ficha seleccionada
+                        double total = FichasEnemigo.Count() + FichasJugador.Count();
+                        double valor = FichasJugador.Count() / total;
+                        ProgressBar.Value = valor * 100;
+
+                        return;
+                    }
+                }
+            }
         }
         private void seleccionarCasillasCocacola() {
             coords posFichaSelecionada = new coords(FichasJugador[seleccion].Y_, FichasJugador[seleccion].X_);           
@@ -660,6 +755,15 @@ namespace ProyectoDSI
                 }
             }
         }
-    }
-    
+        private void PanelIzquierdo_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == Windows.System.VirtualKey.Tab)
+            {
+                e.Handled = true;
+                DependencyObject candidate = null;
+                candidate = FocusManager.FindNextFocusableElement(FocusNavigationDirection.Up);
+               
+            }
+        }
+    }   
 }
