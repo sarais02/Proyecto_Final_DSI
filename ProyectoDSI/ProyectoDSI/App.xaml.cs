@@ -71,6 +71,9 @@ namespace ProyectoDSI
                 // Asegurarse de que la ventana actual está activa.
                 Window.Current.Activate();
             }
+
+            rootFrame.CacheSize = 2;
+            Window.Current.Activate();
         }
 
         /// <summary>

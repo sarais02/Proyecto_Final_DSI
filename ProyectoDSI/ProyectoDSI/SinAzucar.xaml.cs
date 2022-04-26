@@ -49,6 +49,8 @@ namespace ProyectoDSI
     public sealed partial class SinAzucar : Page, INotifyPropertyChanged
     {
         MediaPlayer clickSound;
+        MediaPlayer attackSound;
+        MediaPlayer pressedSound;
         casillaTablero[,] Tablero;//PARA VER EN QUE CASILLAS HAY FICHAS
         public ObservableCollection<PanelFicha> PanelFichasIzquierda { get; } = new ObservableCollection<PanelFicha>();//PANEL IZQUIERDO
         public ObservableCollection<FichaInicial> ListaPanelFichasIniciales { get; } = new ObservableCollection<FichaInicial>(); //PANEL INICIAL LISTA ARRIBA
@@ -79,22 +81,33 @@ namespace ProyectoDSI
         coords Pos;
         public SinAzucar() {
             this.InitializeComponent();
+            minutes = 1;
+            seconds = 30;
+
+            timer = new DispatcherTimer();
             currentTime = initialTime;
             textTimer_ = new DispatcherTimer();
             actualTime = initTime;
             attackTimer_ = new DispatcherTimer();
             textTimer_.Interval = new TimeSpan(0, 0, 1);
             attackTimer_.Interval = new TimeSpan(0, 0, 1);
+            timer.Interval = new TimeSpan(0, 0, 1);
 
             clickSound = new MediaPlayer();
+            attackSound = new MediaPlayer();
+            pressedSound = new MediaPlayer();
             textTimer_.Tick += textTimer_Tick;
             attackTimer_.Tick += attackTimer_Tick;
+            timer.Tick += timer_Tick;
+            CountDown.Text = "0" + minutes.ToString() + ":" + seconds.ToString();
             textTimer_.Start();
 
             playersTurn = true;
             Add();
             CrearLista();
             inicializarPartida();
+
+            this.NavigationCacheMode = NavigationCacheMode.Enabled;
         }
         void timer_Tick(object sender, object e)
         {
@@ -114,14 +127,12 @@ namespace ProyectoDSI
                 if (seconds < 10) CountDown.Text = "0" + minutes.ToString() + ":0" + seconds.ToString();
                 else CountDown.Text = "0" + minutes.ToString() + ":" + seconds.ToString();
             }
-
         }
         void textTimer_Tick(object sender, object e)
         {
             if (currentTime > 0)
-            {
                 currentTime--;
-            }
+            
             else
             {
                 textTimer_.Stop();
@@ -129,14 +140,12 @@ namespace ProyectoDSI
                 clearStackPanel();
                 playersTurn = !playersTurn;
             }
-
         }
         void attackTimer_Tick(object sender, object e)
         {
             if (actualTime > 0)
-            {
                 actualTime--;
-            }
+            
             else
             {
                 attackTimer_.Stop();
@@ -149,21 +158,20 @@ namespace ProyectoDSI
         private void PauseButton_Click(object sender, RoutedEventArgs e)
         {
             clickSound.Play();
+            timer.Stop();
             Frame.Navigate(typeof(Pausa));
         }
         protected async override void OnNavigatedTo(NavigationEventArgs e) {
-            minutes = 1;
-            seconds = 30;
+            timer.Start();
             this.NavigationCacheMode = NavigationCacheMode.Required;
-            timer = new DispatcherTimer();
-            timer.Interval = new TimeSpan(0, 0, 1);
-
-            timer.Tick += timer_Tick;
-            CountDown.Text = "0" + minutes.ToString() + ":" + seconds.ToString();
-
+            //SONIDOS
             Windows.Storage.StorageFolder folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync(@"Assets");
             Windows.Storage.StorageFile file = await folder.GetFileAsync("bottonclick.wav");
             clickSound.Source = MediaSource.CreateFromStorageFile(file);
+            file = await folder.GetFileAsync("attacksound.wav");
+            attackSound.Source = MediaSource.CreateFromStorageFile(file);
+            file = await folder.GetFileAsync("click.wav");
+            pressedSound.Source = MediaSource.CreateFromStorageFile(file);
         }
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e){
             if (estadoinicial) return;
@@ -338,7 +346,7 @@ namespace ProyectoDSI
         void Add()
         {
             var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
-
+            //TURNO NORMAL
             if (!atack)
             {
                 if (playersTurn){
@@ -361,6 +369,7 @@ namespace ProyectoDSI
                         }
                     });
                 }
+                //ATAQUE
                 else{
                     EntranceStackPanel.Children.Add(new Border()
                     {
@@ -384,6 +393,7 @@ namespace ProyectoDSI
             }
             else
             {
+                if (AttackStackPanel.Children[0] != null) clearAttackStackPanel();
                 AttackStackPanel.Children.Add(new Image() 
                 { 
                     Source = new BitmapImage(new Uri("ms-appx:///Assets/fire.png", UriKind.RelativeOrAbsolute)),
@@ -456,7 +466,7 @@ namespace ProyectoDSI
 
             //si ya ha puesto todas sus fichas se inicia la partida
             ComprobacionEstadoInicial();
-
+            pressedSound.Play();
         }
         private void RemoverFichaInicial(int aux){
             ListaPanelFichasIniciales[aux].cantidad_--;
@@ -576,6 +586,7 @@ namespace ProyectoDSI
                     if (posiblesMovimientos[i].x_ == col && posiblesMovimientos[i].y_ == fil)
                     {
                         int enemigo = -1;
+                        pressedSound.Play();
 
                         for (int k = 0; k < FichasEnemigo.Count(); k++)
                         {
@@ -588,6 +599,7 @@ namespace ProyectoDSI
                         }
                         if (enemigo != -1)
                         {
+                            attackSound.Play();
                             atack = true;
                             Add();
                             attackTimer_.Start();
@@ -783,6 +795,7 @@ namespace ProyectoDSI
         }
         private void GridView_ItemClick(object sender, ItemClickEventArgs e){
             FichaInicial ficha=e.ClickedItem as FichaInicial;
+            pressedSound.Play();
             for (int i = 7; i < Tablero.GetLength(0); i++){
                 for (int j = 0; j < Tablero.GetLength(1); j++){
                     if (!Tablero[i, j].esJug){
