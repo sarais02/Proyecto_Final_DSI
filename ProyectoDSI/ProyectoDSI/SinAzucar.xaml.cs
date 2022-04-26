@@ -341,6 +341,7 @@ namespace ProyectoDSI
                 Image aux = Grid_Tablero.FindName(nombre) as Image;
                 aux.Source = new BitmapImage(new Uri("ms-appx:///Assets/fichaEnemiga.png", UriKind.RelativeOrAbsolute)); 
                 FichasEnemigo.Add(eng);
+                PanelDeFichas.Visibility = Visibility.Collapsed;
             }
         }
         void Add()
@@ -482,6 +483,8 @@ namespace ProyectoDSI
         private void ComprobacionEstadoInicial(){
             if (FichasJugador.Count() >= 30){
                 EstadoInicial.Visibility = Visibility.Collapsed;
+                PanelDeFichas.Visibility = Visibility.Visible;
+                ImagenInicial.Visibility = Visibility.Collapsed;
                 estadoinicial = false;
                 Grid_Tablero.Children.Remove(EstadoInicial);
                 TableroIMG.Children.Add(mi);
@@ -650,6 +653,7 @@ namespace ProyectoDSI
 
                             aux = Grid_Tablero.FindName("_" + FichasEnemigo[enemigo].Y_.ToString() + FichasEnemigo[enemigo].X_.ToString()) as Image;
                             aux.Source = new BitmapImage();//le quito la imagen
+                            Tablero[FichasEnemigo[enemigo].Y_, FichasEnemigo[enemigo].X_].hayFicha = false;//quito la marca del tablero
                             FichasEnemigo.Remove(FichasEnemigo[enemigo]);
                         }
                         //gana jugador
@@ -671,14 +675,14 @@ namespace ProyectoDSI
                             if (enemigo != -1)
                             {
                                 FichasEnemigo.Remove(FichasEnemigo[enemigo]);
-                            }
+                            }                            
+                           
                         }
                         posiblesMovimientos.Clear();//limpio los posibles movimientos
                         cambio= false;//ya no hay ninguna ficha seleccionada
                         double total = FichasEnemigo.Count() + FichasJugador.Count();
                         double valor = FichasJugador.Count() / total;
                         ProgressBar.Value = valor * 100;
-
                         return;
                     }
                 }

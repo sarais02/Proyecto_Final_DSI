@@ -51,7 +51,7 @@
 
             </Grid>
         </Viewbox>
-        
+
         <Viewbox HorizontalAlignment="Left" >
             <Button x:Name="PauseButton" Click="PauseButton_Click" x:Uid="PauseButtonText"
                 Background="LightPink" Foreground="Black" IsTabStop="False" 
@@ -89,7 +89,7 @@
                 </StackPanel>
             </Grid>
         </Viewbox>
-        
+
         <!--Tablero-->
         <Viewbox Grid.Column="1" Grid.Row="1" Margin="15"
                  VerticalAlignment="Stretch" HorizontalAlignment="Center">
@@ -476,7 +476,7 @@
                 </Grid>
             </Grid>
         </Viewbox>
-        
+
         <!--Barra de progreso-->
         <Viewbox Grid.Column="1" HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" 
@@ -487,11 +487,13 @@
                 <Image Source="Assets/extremoIz.png" Height="65" FlowDirection="RightToLeft"></Image>
             </StackPanel>
         </Viewbox>
-        
+
         <!--PanelIzquierdo-->
         <Viewbox Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" AllowFocusOnInteraction="False">
             <Grid Margin="20,130,80,20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" AllowFocusOnInteraction="False">
-                <StackPanel x:Name="PanelDeFichas" AllowFocusOnInteraction="False"  >
+                <Image x:Name="ImagenInicial" Source="Assets/nuveX.png" VerticalAlignment="Center" HorizontalAlignment="Center" 
+                       Height="1000" Width="650"/>
+                <StackPanel  x:Name="PanelDeFichas" AllowFocusOnInteraction="False"  >
                     <ListView ItemsSource="{x:Bind PanelFichasIzquierda}" Background="Gold" 
                       CornerRadius="15" AllowFocusOnInteraction="False" >
                         <ListView.ItemContainerStyle>
@@ -521,7 +523,7 @@
                 </StackPanel>
             </Grid>
         </Viewbox >
-                      
+
         <!--LETRERO TURNO-->
         <Viewbox Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
             <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,0,0,200">

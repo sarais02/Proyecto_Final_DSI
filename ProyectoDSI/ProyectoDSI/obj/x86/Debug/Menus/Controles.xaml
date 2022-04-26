@@ -53,8 +53,8 @@
         </Button>
 
 
-        <TextBlock x:ConnectionId='4' Text="Back" Foreground="HotPink" FontSize="30"
-                   Margin="70,65,40,28"
+        <TextBlock x:ConnectionId='4' Foreground="HotPink" FontSize="30"
+                   Margin="70,65,40,28" x:Uid="TextBackButton"
                    Visibility="Collapsed"
                    x:Name="SpecialText"/>
         <Viewbox Margin="0,150,0,0" >
