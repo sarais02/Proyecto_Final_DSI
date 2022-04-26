@@ -5,6 +5,8 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Media.Core;
+using Windows.Media.Playback;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -22,39 +24,49 @@ namespace ProyectoDSI
     /// </summary>
     public sealed partial class SeleccionNivel : Page
     {
+        MediaPlayer clickSound;
         public SeleccionNivel()
         {
             this.InitializeComponent();
+            clickSound = new MediaPlayer();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            clickSound.Play();
             MenuIniciarBatalla.Visibility = Visibility.Visible;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            clickSound.Play();
             MenuElegitBando.Visibility = Visibility.Visible;
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            // First, check that it's safe to ask the Frame to go backward.
-            if (Frame.CanGoBack)
-            {
-                // If there's a page in the "backstack," we can call GoBack().
-                Frame.GoBack();
-            }
+            clickSound.Play();
+            
+            if (Frame.CanGoBack) Frame.GoBack();
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
+            clickSound.Play();
             Frame.Navigate(typeof(ConAzucar));
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
+            clickSound.Play();
             Frame.Navigate(typeof(SinAzucar));
+        }
+
+        protected override async void OnNavigatedTo(NavigationEventArgs e)
+        {
+            Windows.Storage.StorageFolder folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync(@"Assets");
+            Windows.Storage.StorageFile file = await folder.GetFileAsync("bottonclick.wav");
+            clickSound.Source = MediaSource.CreateFromStorageFile(file);
         }
     }
 }

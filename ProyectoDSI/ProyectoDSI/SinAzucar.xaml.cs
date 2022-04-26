@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using Windows.ApplicationModel.DataTransfer;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Media.Core;
+using Windows.Media.Playback;
 using Windows.System;
 using Windows.UI.Text;
 using Windows.UI.Xaml;
@@ -46,6 +48,7 @@ namespace ProyectoDSI
     }
     public sealed partial class SinAzucar : Page, INotifyPropertyChanged
     {
+        MediaPlayer clickSound;
         casillaTablero[,] Tablero;//PARA VER EN QUE CASILLAS HAY FICHAS
         public ObservableCollection<PanelFicha> PanelFichasIzquierda { get; } = new ObservableCollection<PanelFicha>();//PANEL IZQUIERDO
         public ObservableCollection<FichaInicial> ListaPanelFichasIniciales { get; } = new ObservableCollection<FichaInicial>(); //PANEL INICIAL LISTA ARRIBA
@@ -79,6 +82,7 @@ namespace ProyectoDSI
             textTimer_ = new DispatcherTimer();
             textTimer_.Interval = new TimeSpan(0, 0, 1);
 
+            clickSound = new MediaPlayer();
             textTimer_.Tick += textTimer_Tick;
             textTimer_.Start();
             playersTurn = true;
@@ -123,9 +127,10 @@ namespace ProyectoDSI
         }
         private void PauseButton_Click(object sender, RoutedEventArgs e)
         {
+            clickSound.Play();
             Frame.Navigate(typeof(Pausa));
         }
-        protected override void OnNavigatedTo(NavigationEventArgs e) {
+        protected async override void OnNavigatedTo(NavigationEventArgs e) {
             minutes = 1;
             seconds = 30;
             this.NavigationCacheMode = NavigationCacheMode.Required;
@@ -134,7 +139,10 @@ namespace ProyectoDSI
 
             timer.Tick += timer_Tick;
             CountDown.Text = "0" + minutes.ToString() + ":" + seconds.ToString();
-           
+
+            Windows.Storage.StorageFolder folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync(@"Assets");
+            Windows.Storage.StorageFile file = await folder.GetFileAsync("bottonclick.wav");
+            clickSound.Source = MediaSource.CreateFromStorageFile(file);
         }
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e){
             if (estadoinicial) return;
