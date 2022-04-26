@@ -66,10 +66,11 @@ namespace ProyectoDSI
 
         private DispatcherTimer timer;
         private DispatcherTimer textTimer_;
+        private DispatcherTimer attackTimer_;
         private int minutes;
         private int seconds;
-        private int initialTime = 2;
-        private int currentTime;
+        private int initialTime = 2, initTime=2;
+        private int currentTime, actualTime;
         private bool playersTurn;
         private bool estadoinicial=true;
         private bool atack = false;
@@ -80,11 +81,16 @@ namespace ProyectoDSI
             this.InitializeComponent();
             currentTime = initialTime;
             textTimer_ = new DispatcherTimer();
+            actualTime = initTime;
+            attackTimer_ = new DispatcherTimer();
             textTimer_.Interval = new TimeSpan(0, 0, 1);
+            attackTimer_.Interval = new TimeSpan(0, 0, 1);
 
             clickSound = new MediaPlayer();
             textTimer_.Tick += textTimer_Tick;
+            attackTimer_.Tick += attackTimer_Tick;
             textTimer_.Start();
+
             playersTurn = true;
             Add();
             CrearLista();
@@ -124,6 +130,21 @@ namespace ProyectoDSI
                 playersTurn = !playersTurn;
             }
 
+        }
+        void attackTimer_Tick(object sender, object e)
+        {
+            if (actualTime > 0)
+            {
+                actualTime--;
+            }
+            else
+            {
+                attackTimer_.Stop();
+                actualTime = initTime;
+                clearAttackStackPanel();
+                PanelInfoEnemigo.Visibility = Visibility.Collapsed;
+                PanelInfoJugador.Visibility = Visibility.Collapsed;
+            }
         }
         private void PauseButton_Click(object sender, RoutedEventArgs e)
         {
@@ -569,7 +590,21 @@ namespace ProyectoDSI
                         {
                             atack = true;
                             Add();
+                            attackTimer_.Start();
                             atack = false;
+
+                            CartaInfoJugador.Text = FichasJugador[seleccion].tipo_;
+                            RangoCartaJugador.Text = FichasJugador[seleccion].rango_;
+                            ImagenCartaJugador.Source = FichasJugador[seleccion].img_.Source;
+                            InfoCartaJugador.Text = FichasJugador[seleccion].info_;
+
+                            CartaInfoEnemigo.Text = FichasEnemigo[enemigo].tipo_;
+                            RangoCartaEnemigo.Text = FichasEnemigo[enemigo].rango_;
+                            ImagenCartaEnemigo.Source = FichasEnemigo[enemigo].img_.Source;
+                            InfoCartaEnemigo.Text = FichasEnemigo[enemigo].info_;
+
+                            PanelInfoJugador.Visibility = Visibility.Visible;//activo el panel
+                            PanelInfoEnemigo.Visibility = Visibility.Visible;
                         }
                         //quito la antigua casilla
                         Tablero[FichasJugador[seleccion].Y_, FichasJugador[seleccion].X_].hayFicha = false;

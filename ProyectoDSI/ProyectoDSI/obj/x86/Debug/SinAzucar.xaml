@@ -71,16 +71,16 @@
             <Grid >
                 <StackPanel Orientation="Horizontal" Spacing="650">
                     <StackPanel x:ConnectionId='128'  x:Name="PanelInfoJugador"  Style="{StaticResource panelesInfo}" Margin="125,0,0,0" Visibility="Collapsed"  >
-                        <TextBlock x:ConnectionId='134'  x:Name="CartaInfoJugador" Text="Regaliz" Style="{StaticResource textInfoPanel}" FontSize="24"/>
-                        <TextBlock x:ConnectionId='135' x:Name="RangoCartaJugador" Text="Rango: 7" Style="{StaticResource textInfoPanel}" FontSize="16"/>
+                        <TextBlock x:ConnectionId='134'  x:Name="CartaInfoJugador" Text="Regaliz" Style="{StaticResource textInfoPanel}" FontSize="24" TextWrapping="Wrap"/>
+                        <TextBlock x:ConnectionId='135' x:Name="RangoCartaJugador" Text="Rango: 7" Style="{StaticResource textInfoPanel}" FontSize="16" TextWrapping="Wrap"/>
                         <Image x:ConnectionId='136' x:Name="ImagenCartaJugador" Source="Assets/regaliz.png" Width="50"></Image>
                         <TextBlock x:ConnectionId='137' x:Name="InfoCartaJugador"  Style="{StaticResource textInfoPanel}"
                            TextWrapping="Wrap" Text="Tiene su punto débil expuesto, la yema, 
                            pero para poder acabar con él deberás cogerlo primero y gracias a su disposición de la clara puede arrastrarse muy rápido"  FontSize="8"/>
                     </StackPanel>
                     <StackPanel x:ConnectionId='129'  x:Name="PanelInfoEnemigo" Style="{StaticResource panelesInfo}" Margin="0,0,45,0" Visibility="Collapsed" >
-                        <TextBlock x:ConnectionId='130'  x:Name="CartaInfoEnemigo" Text="Regaliz"   FontSize="24" Style="{StaticResource textInfoPanel}"/>
-                        <TextBlock x:ConnectionId='131' x:Name="RangoCartaEnemigo" Text="Rango: 7" Style="{StaticResource textInfoPanel}" FontSize="16"/>
+                        <TextBlock x:ConnectionId='130'  x:Name="CartaInfoEnemigo" Text="Regaliz"   FontSize="24" Style="{StaticResource textInfoPanel}" TextWrapping="Wrap"/>
+                        <TextBlock x:ConnectionId='131' x:Name="RangoCartaEnemigo" Text="Rango: 7" Style="{StaticResource textInfoPanel}" FontSize="16" TextWrapping="Wrap"/>
                         <Image x:ConnectionId='132' x:Name="ImagenCartaEnemigo" Source="Assets/regaliz.png" Width="50"></Image>
                         <TextBlock x:ConnectionId='133' x:Name="InfoCartaEnemigo" Style="{StaticResource textInfoPanel}" 
                            TextWrapping="Wrap" Text="Tiene su punto débil expuesto, la yema, 
