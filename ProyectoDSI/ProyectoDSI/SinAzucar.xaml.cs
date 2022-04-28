@@ -74,6 +74,7 @@ namespace ProyectoDSI
         private int initialTime = 2, initTime=2;
         private int currentTime, actualTime;
         private bool playersTurn;
+        private bool isStarted = false;
         private bool estadoinicial=true;
         private bool atack = false;
 
@@ -122,7 +123,7 @@ namespace ProyectoDSI
             }
             else if (minutes == 0 && seconds <= 59)
             {
-                if (seconds == 0) { seconds = 30; minutes = 1; Add(); textTimer_.Start(); }
+                if (seconds == 0) { playersTurn = !playersTurn; seconds = 30; minutes = 1; Add(); textTimer_.Start(); }
                 else seconds--;
 
                 if (seconds < 10) CountDown.Text = "0" + minutes.ToString() + ":0" + seconds.ToString();
@@ -139,7 +140,6 @@ namespace ProyectoDSI
                 textTimer_.Stop();
                 currentTime = initialTime;
                 clearStackPanel();
-                playersTurn = !playersTurn;
             }
         }
         void attackTimer_Tick(object sender, object e)
@@ -163,7 +163,7 @@ namespace ProyectoDSI
             Frame.Navigate(typeof(Pausa));
         }
         protected async override void OnNavigatedTo(NavigationEventArgs e) {
-            timer.Start();
+            if(isStarted) timer.Start();
             this.NavigationCacheMode = NavigationCacheMode.Required;
             //SONIDOS
             Windows.Storage.StorageFolder folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync(@"Assets");
@@ -346,6 +346,7 @@ namespace ProyectoDSI
             if (!atack)
             {
                 if (playersTurn){
+                    if (EntranceStackPanel.Children[0] != null) clearStackPanel();
                     EntranceStackPanel.Children.Add(new Border()
                     {
                         Width = 150,
@@ -367,6 +368,7 @@ namespace ProyectoDSI
                 }
                 //ATAQUE
                 else{
+                    if (EntranceStackPanel.Children[0] != null) clearStackPanel();
                     EntranceStackPanel.Children.Add(new Border()
                     {
                         Width = 150,
@@ -484,12 +486,13 @@ namespace ProyectoDSI
                 estadoinicial = false;
                 Grid_Tablero.Children.Remove(EstadoInicial);
                 timer.Start();
+                isStarted = true;
             }
         }
         private void Image_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
             Windows.UI.Xaml.Input.Pointer ptr = e.Pointer;
-            if (ptr.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse && !playersTurn && !estadoinicial)
+            if (ptr.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse && playersTurn && !estadoinicial)
             {//si es el turno del jugador y ha clickeado
                 Image x = sender as Image;//acedo a la imagen en la que se ha dropeado la ficha
                 string Name = x.Name;//accedo a su nombre              
@@ -502,6 +505,11 @@ namespace ProyectoDSI
                 //SI NO ES UNA CASILLA DEL JUGADOR Y HAY UNA CASILLA SELECCIONADA
                 if (hayAlgunaFichaSeleccionada_MOUSE && ptrPt.Properties.IsLeftButtonPressed){
                     MoverCasillaSeleccionada(fil, col, ref hayAlgunaFichaSeleccionada_MOUSE);
+                    minutes = 1;
+                    seconds = 30;
+                    playersTurn = !playersTurn;
+                    Add();
+                    textTimer_.Start();
                     if (!hayAlgunaFichaSeleccionada_MOUSE) return;
                 }
 
