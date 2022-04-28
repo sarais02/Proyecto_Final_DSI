@@ -1,0 +1,4 @@
+-Musica de fonde
+-Arreglar el focus
+-Funcionalidad de los slider
+-Acabar el tuno en cuanto se coloque la ficha

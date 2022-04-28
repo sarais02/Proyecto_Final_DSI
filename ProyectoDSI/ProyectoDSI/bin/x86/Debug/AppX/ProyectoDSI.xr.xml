@@ -44,7 +44,7 @@
       <RootProperty Name="Style" />
       <RootProperty Name="CornerRadius" />
       <RootProperty Name="Visibility" />
-      <RootProperty Name="AllowFocusOnInteraction" />
+      <RootProperty Name="IsTapEnabled" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Panel">
       <RootProperty Name="Background" />
@@ -85,7 +85,7 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="AllowFocusOnInteraction" />
+      <RootProperty Name="IsTapEnabled" />
       <RootEvent Name="KeyDown" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
@@ -108,7 +108,6 @@
       <RootProperty Name="Child" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Width" />
-      <RootProperty Name="AllowFocusOnInteraction" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.Animation.TransitionCollection" />
     <RootType FullName="Windows.UI.Xaml.Media.Animation.EntranceThemeTransition">
@@ -137,7 +136,7 @@
       <RootProperty Name="CornerRadius" />
       <RootProperty Name="ItemContainerStyle" />
       <RootProperty Name="ItemTemplate" />
-      <RootProperty Name="AllowFocusOnInteraction" />
+      <RootProperty Name="IsTabStop" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListViewItem" />
     <RootType FullName="Windows.UI.Xaml.Controls.Control">
@@ -188,7 +187,6 @@
       <RootProperty Name="FontWeight" />
       <RootProperty Name="IsEnabled" />
       <RootProperty Name="IsTabStop" />
-      <RootProperty Name="AllowFocusOnInteraction" />
       <RootEvent Name="Click" />
       <RootEvent Name="PointerEntered" />
       <RootEvent Name="PointerExited" />
@@ -233,6 +231,12 @@
     <RootType FullName="ProyectoDSI.Pausa" />
     <RootType FullName="ProyectoDSI.Reglamento" />
     <RootType FullName="ProyectoDSI.SeleccionNivel" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ContentControl">
+      <RootProperty Name="UseSystemFocusVisuals" />
+      <RootProperty Name="TabIndex" />
+      <RootProperty Name="IsTabStop" />
+      <RootProperty Name="Content" />
+    </RootType>
     <RootType FullName="ProyectoDSI.SinAzucar" />
   </Roots.RootTypes>
 </Roots>

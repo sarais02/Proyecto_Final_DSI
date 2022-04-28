@@ -77,6 +77,7 @@ namespace ProyectoDSI
         private bool estadoinicial=true;
         private bool atack = false;
 
+        
         Image mi;
         coords Pos;
         public SinAzucar() {
@@ -181,7 +182,8 @@ namespace ProyectoDSI
                 case VirtualKey.Escape:
                     Frame.Navigate(typeof(Pausa));
                     break;
-                case VirtualKey.V:
+                case VirtualKey.Space:
+                case VirtualKey.Enter:
                     MoverCasillaSeleccionada(Pos.y_, Pos.x_, ref hayAlgunaFichaSeleccionada_KEYBOARD_GAMEPAD);
                     e.Handled = true;
                     break;
@@ -218,9 +220,9 @@ namespace ProyectoDSI
                     break;
             }
             if (mover){
-                mi.Visibility = Visibility.Visible;
-                mi.SetValue(Grid.RowProperty, Pos.y_);
-                mi.SetValue(Grid.ColumnProperty, Pos.x_);
+                miContentControl.Visibility = Visibility.Visible;
+                miContentControl.SetValue(Grid.RowProperty, Pos.y_);
+                miContentControl.SetValue(Grid.ColumnProperty, Pos.x_);
                 seleccionarCasillaKey_GamePad(Pos.y_, Pos.x_);
             }
         }
@@ -254,17 +256,10 @@ namespace ProyectoDSI
             Tablero = new casillaTablero[10, 10];
             FichasEnemigo = new List<Ficha>();
             FichasJugador = new List<Ficha>();
-
-
-            mi = new Image();          
-            mi.Source = new BitmapImage(new Uri("ms-appx:///Assets/Square44x44Logo.targetsize-24_altform-unplated.png", UriKind.RelativeOrAbsolute));
-            mi.SetValue(Grid.RowProperty, 7);
-            mi.SetValue(Grid.ColumnProperty, 0);
-            mi.Visibility = Visibility.Collapsed;
-            mi.Name = "Marco";
+            
+            //miContentControl.Visibility = Visibility.Collapsed;         
             Pos = new coords(7, 0);
-            mi.AllowFocusOnInteraction = true;
-            mi.AllowFocusWhenDisabled = true;
+           
 
             FichaInicial fichainicial = new FichaInicial(new Ficha(0, resourceLoader.GetString("NameRegaliz"), -1, -1),1);         
             ListaPanelFichasIniciales.Add(fichainicial);
@@ -485,9 +480,9 @@ namespace ProyectoDSI
                 EstadoInicial.Visibility = Visibility.Collapsed;
                 PanelDeFichas.Visibility = Visibility.Visible;
                 ImagenInicial.Visibility = Visibility.Collapsed;
+               
                 estadoinicial = false;
                 Grid_Tablero.Children.Remove(EstadoInicial);
-                TableroIMG.Children.Add(mi);
                 timer.Start();
             }
         }
@@ -513,7 +508,7 @@ namespace ProyectoDSI
                 //MIRO SI HE SELECCIONADO ALGUNA CASILLA DEL JUGADOR
                 for (int i = 0; i < FichasJugador.Count; i++) {//recorro la lista de fichas del jugador
                     if (FichasJugador[i].Y_ ==fil && FichasJugador[i].X_ == col) {//si es la ficha del jugador
-                        mi.Visibility = Visibility.Collapsed;//quito el marco de teclado
+                       // miContentControl.Visibility = Visibility.Collapsed;//quito el marco de teclado
                         //CLICK DERECHO
                         if (ptrPt.Properties.IsRightButtonPressed) {
                             ImagenCartaJugador.Source = x.Source;//pongo la imagend e la ficha
