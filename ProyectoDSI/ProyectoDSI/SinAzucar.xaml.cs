@@ -175,9 +175,10 @@ namespace ProyectoDSI
             pressedSound.Source = MediaSource.CreateFromStorageFile(file);
         }
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e){
-            if (estadoinicial) return;
+            if (estadoinicial|| !playersTurn) return;
             bool mover = false;
-           
+
+            miContentControl.Focus(FocusState.Keyboard);
                 switch (e.Key){
                 case VirtualKey.Escape:
                     Frame.Navigate(typeof(Pausa));
@@ -185,10 +186,14 @@ namespace ProyectoDSI
                 case VirtualKey.Space:
                 case VirtualKey.Enter:
                     MoverCasillaSeleccionada(Pos.y_, Pos.x_, ref hayAlgunaFichaSeleccionada_KEYBOARD_GAMEPAD);
+                    comprobarCambioDeTurno(hayAlgunaFichaSeleccionada_KEYBOARD_GAMEPAD);
+                    if (!hayAlgunaFichaSeleccionada_KEYBOARD_GAMEPAD) return;
                     e.Handled = true;
                     break;
                 case VirtualKey.GamepadA:
                     MoverCasillaSeleccionada(Pos.y_, Pos.x_, ref hayAlgunaFichaSeleccionada_KEYBOARD_GAMEPAD);
+                    comprobarCambioDeTurno(hayAlgunaFichaSeleccionada_KEYBOARD_GAMEPAD);
+                    if (!hayAlgunaFichaSeleccionada_KEYBOARD_GAMEPAD) return;
                     e.Handled = true;
                     break;
                 case VirtualKey.Left:
@@ -226,6 +231,17 @@ namespace ProyectoDSI
                 seleccionarCasillaKey_GamePad(Pos.y_, Pos.x_);
             }
         }
+        void comprobarCambioDeTurno(bool bolean){
+            if (!bolean)
+            {
+                minutes = 1;
+                seconds = 30;
+                playersTurn = !playersTurn;
+                Add();
+                textTimer_.Start();
+                return;
+            }
+        }
         private void CrearLista() {
 
             var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView();
@@ -256,8 +272,7 @@ namespace ProyectoDSI
             Tablero = new casillaTablero[10, 10];
             FichasEnemigo = new List<Ficha>();
             FichasJugador = new List<Ficha>();
-            
-            //miContentControl.Visibility = Visibility.Collapsed;         
+                     
             Pos = new coords(7, 0);
            
 
@@ -482,7 +497,7 @@ namespace ProyectoDSI
                 EstadoInicial.Visibility = Visibility.Collapsed;
                 PanelDeFichas.Visibility = Visibility.Visible;
                 ImagenInicial.Visibility = Visibility.Collapsed;
-               
+                miContentControl.Visibility = Visibility.Collapsed;
                 estadoinicial = false;
                 Grid_Tablero.Children.Remove(EstadoInicial);
                 timer.Start();
@@ -496,7 +511,7 @@ namespace ProyectoDSI
             {//si es el turno del jugador y ha clickeado
                 Image x = sender as Image;//acedo a la imagen en la que se ha dropeado la ficha
                 string Name = x.Name;//accedo a su nombre              
-
+                miContentControl.Visibility = Visibility.Collapsed;//quito el marco de tecla
                 //cacheo la fila y columna
                 int fil = (int)Char.GetNumericValue(Name[1]);
                 int col = (int)Char.GetNumericValue(Name[2]);
@@ -505,18 +520,14 @@ namespace ProyectoDSI
                 //SI NO ES UNA CASILLA DEL JUGADOR Y HAY UNA CASILLA SELECCIONADA
                 if (hayAlgunaFichaSeleccionada_MOUSE && ptrPt.Properties.IsLeftButtonPressed){
                     MoverCasillaSeleccionada(fil, col, ref hayAlgunaFichaSeleccionada_MOUSE);
-                    minutes = 1;
-                    seconds = 30;
-                    playersTurn = !playersTurn;
-                    Add();
-                    textTimer_.Start();
+                    comprobarCambioDeTurno(hayAlgunaFichaSeleccionada_MOUSE);
                     if (!hayAlgunaFichaSeleccionada_MOUSE) return;
                 }
 
                 //MIRO SI HE SELECCIONADO ALGUNA CASILLA DEL JUGADOR
                 for (int i = 0; i < FichasJugador.Count; i++) {//recorro la lista de fichas del jugador
                     if (FichasJugador[i].Y_ ==fil && FichasJugador[i].X_ == col) {//si es la ficha del jugador
-                       // miContentControl.Visibility = Visibility.Collapsed;//quito el marco de teclado
+                       
                         //CLICK DERECHO
                         if (ptrPt.Properties.IsRightButtonPressed) {
                             ImagenCartaJugador.Source = x.Source;//pongo la imagend e la ficha
