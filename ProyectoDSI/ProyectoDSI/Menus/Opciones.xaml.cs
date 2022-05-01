@@ -35,6 +35,8 @@ namespace ProyectoDSI
             CursorHand = new CoreCursor(CoreCursorType.Hand, 0);
             CursorArrow = new CoreCursor(CoreCursorType.Arrow, 0);
             clickSound = new MediaPlayer();
+            ElementSoundPlayer.State = ElementSoundPlayerState.On;
+            sliderAudio.Value = ElementSoundPlayer.Volume * 100;
         }
         private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
         {
@@ -112,5 +114,12 @@ namespace ProyectoDSI
             Windows.Storage.StorageFile file = await folder.GetFileAsync("bottonclick.wav");
             clickSound.Source = MediaSource.CreateFromStorageFile(file);
         }
+
+        private void sliderAudio_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            double volume = sliderAudio.Value / 100.0;
+            ElementSoundPlayer.Volume = volume;
+        }
+
     }
 }

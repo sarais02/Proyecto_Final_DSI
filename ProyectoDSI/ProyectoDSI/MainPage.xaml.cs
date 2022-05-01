@@ -26,7 +26,7 @@ namespace ProyectoDSI
     public sealed partial class MainPage : Page
     {
         MediaPlayer clickSound;
-        MediaPlayer backgroundSound;
+       public MediaPlayer backgroundSound;
         bool played = false;
         public MainPage()
         {
@@ -34,6 +34,7 @@ namespace ProyectoDSI
             clickSound = new MediaPlayer();
             backgroundSound = new MediaPlayer();
             this.NavigationCacheMode = NavigationCacheMode.Enabled;
+            ElementSoundPlayer.State = ElementSoundPlayerState.On;
         }
         private  void Button_Click(object sender, RoutedEventArgs e)
         {

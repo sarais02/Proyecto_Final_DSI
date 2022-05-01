@@ -94,14 +94,15 @@
                     <StackPanel Style="{StaticResource optionstackPanel}" >
                         <TextBlock x:ConnectionId='8' VerticalAlignment="Center" FontSize="30" Foreground="HotPink"
                                    FontWeight="Bold" FontFamily="Fascinate Inline"                                               x:Uid="Volum"/>
-                        <Slider Style="{StaticResource slidersUI}" />
+                        <Slider x:ConnectionId='9' Style="{StaticResource slidersUI}" x:Name="sliderAudio" Maximum="100" Minimum="0" 
+                                                                       />
                         <SymbolIcon Symbol="Audio" Foreground="DeepPink"/>
                     </StackPanel>
                     <StackPanel Style="{StaticResource optionstackPanel}" >
                         <TextBlock VerticalAlignment="Center" FontSize="30" Foreground="HotPink"
                                    FontWeight="Bold" FontFamily="Fascinate Inline" x:Uid="Bright"/>
                         <Slider Style="{StaticResource slidersUI}" />
-                        <SymbolIcon Symbol="Audio" Foreground="DeepPink"/>
+                        <SymbolIcon Symbol="Favorite"  Foreground="DeepPink"/>
                     </StackPanel>
                     <StackPanel Style="{StaticResource optionstackPanel}">
                         <TextBlock VerticalAlignment="Center" FontSize="30" Foreground="HotPink"

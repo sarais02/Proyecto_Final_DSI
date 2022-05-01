@@ -202,6 +202,9 @@
     <RootType FullName="ProyectoDSI.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.Slider">
       <RootProperty Name="Style" />
+      <RootProperty Name="Maximum" />
+      <RootProperty Name="Minimum" />
+      <RootEvent Name="ValueChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Primitives.RangeBase">
       <RootProperty Name="Maximum" />
