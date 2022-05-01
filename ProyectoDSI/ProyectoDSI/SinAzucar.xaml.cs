@@ -51,6 +51,7 @@ namespace ProyectoDSI
         MediaPlayer clickSound;
         MediaPlayer attackSound;
         MediaPlayer pressedSound;
+        MediaPlayer backgroundSound;
         casillaTablero[,] Tablero;//PARA VER EN QUE CASILLAS HAY FICHAS
         public ObservableCollection<PanelFicha> PanelFichasIzquierda { get; } = new ObservableCollection<PanelFicha>();//PANEL IZQUIERDO
         public ObservableCollection<FichaInicial> ListaPanelFichasIniciales { get; } = new ObservableCollection<FichaInicial>(); //PANEL INICIAL LISTA ARRIBA
@@ -98,6 +99,7 @@ namespace ProyectoDSI
             clickSound = new MediaPlayer();
             attackSound = new MediaPlayer();
             pressedSound = new MediaPlayer();
+            backgroundSound = new MediaPlayer();
             textTimer_.Tick += textTimer_Tick;
             attackTimer_.Tick += attackTimer_Tick;
             timer.Tick += timer_Tick;
@@ -173,6 +175,10 @@ namespace ProyectoDSI
             attackSound.Source = MediaSource.CreateFromStorageFile(file);
             file = await folder.GetFileAsync("click.wav");
             pressedSound.Source = MediaSource.CreateFromStorageFile(file);
+            file = await folder.GetFileAsync("background01.mp3");
+            backgroundSound.Source = MediaSource.CreateFromStorageFile(file);
+            backgroundSound.IsLoopingEnabled = true;
+            backgroundSound.Play();
         }
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e){
             if (estadoinicial|| !playersTurn) return;

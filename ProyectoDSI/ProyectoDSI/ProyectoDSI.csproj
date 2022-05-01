@@ -154,6 +154,7 @@
   <ItemGroup>
     <Content Include="Assets\attacksound.wav" />
     <Content Include="Assets\back.png" />
+    <Content Include="Assets\background01.mp3" />
     <Content Include="Assets\Baston.png" />
     <Content Include="Assets\BombaSandia.png" />
     <Content Include="Assets\borde.png" />
@@ -177,6 +178,9 @@
     <Content Include="Assets\fresa.png" />
     <Content Include="Assets\Huevo.png" />
     <Content Include="Assets\mando.png" />
+    <Content Include="Assets\menu01.mp3" />
+    <Content Include="Assets\menu02.wav" />
+    <Content Include="Assets\menu03.wav" />
     <Content Include="Assets\nuve.png" />
     <Content Include="Assets\nuveX.png" />
     <Content Include="Assets\obstaculos.png" />

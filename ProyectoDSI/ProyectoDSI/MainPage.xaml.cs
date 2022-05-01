@@ -26,10 +26,14 @@ namespace ProyectoDSI
     public sealed partial class MainPage : Page
     {
         MediaPlayer clickSound;
+        MediaPlayer backgroundSound;
+        bool played = false;
         public MainPage()
         {
             this.InitializeComponent();
             clickSound = new MediaPlayer();
+            backgroundSound = new MediaPlayer();
+            this.NavigationCacheMode = NavigationCacheMode.Enabled;
         }
         private  void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -44,8 +48,10 @@ namespace ProyectoDSI
 
         private void Play_Click(object sender, RoutedEventArgs e)
         {
+            played = false;
             clickSound.Play();
             Frame.Navigate(typeof(SeleccionNivel));
+            backgroundSound.Pause();
         }
 
         protected override  async void OnNavigatedTo(NavigationEventArgs e)
@@ -53,6 +59,17 @@ namespace ProyectoDSI
             Windows.Storage.StorageFolder folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync(@"Assets");
             Windows.Storage.StorageFile file = await folder.GetFileAsync("bottonclick.wav");
             clickSound.Source = MediaSource.CreateFromStorageFile(file);
+            if (!played) playsound();
         }
+
+       private async void playsound()
+       {
+            played = true;
+            Windows.Storage.StorageFolder folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync(@"Assets");
+            Windows.Storage.StorageFile file = await folder.GetFileAsync("menu03.wav");
+            backgroundSound.Source = MediaSource.CreateFromStorageFile(file);
+            backgroundSound.IsLoopingEnabled = true;
+            backgroundSound.Play();
+       }
     }
 }
