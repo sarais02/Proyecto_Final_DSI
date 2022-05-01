@@ -102,7 +102,7 @@
                         <TextBlock VerticalAlignment="Center" FontSize="30" Foreground="HotPink"
                                    FontWeight="Bold" FontFamily="Fascinate Inline" x:Uid="Bright"/>
                         <Slider Style="{StaticResource slidersUI}" />
-                        <SymbolIcon Symbol="Favorite"  Foreground="DeepPink"/>
+                        <Image Source="/Assets/brillo2.png" Width="25"  />
                     </StackPanel>
                     <StackPanel Style="{StaticResource optionstackPanel}">
                         <TextBlock VerticalAlignment="Center" FontSize="30" Foreground="HotPink"

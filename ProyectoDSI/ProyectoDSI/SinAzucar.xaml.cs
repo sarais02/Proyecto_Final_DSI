@@ -78,6 +78,7 @@ namespace ProyectoDSI
         private bool isStarted = false;
         private bool estadoinicial=true;
         private bool atack = false;
+        private bool derecho = false;
 
         
         Image mi;
@@ -158,8 +159,10 @@ namespace ProyectoDSI
                 PanelInfoJugador.Visibility = Visibility.Collapsed;
             }
         }
-        private void PauseButton_Click(object sender, RoutedEventArgs e)
-        {
+        private void PauseButton_Click(object sender, RoutedEventArgs e){
+            Pausa();
+        }
+        private void Pausa(){
             clickSound.Play();
             timer.Stop();
             Frame.Navigate(typeof(Pausa));
@@ -187,7 +190,7 @@ namespace ProyectoDSI
             miContentControl.Focus(FocusState.Keyboard);
                 switch (e.Key){
                 case VirtualKey.Escape:
-                    Frame.Navigate(typeof(Pausa));
+                    Pausa();
                     break;
                 case VirtualKey.Space:
                 case VirtualKey.Enter:
@@ -201,6 +204,13 @@ namespace ProyectoDSI
                     comprobarCambioDeTurno(hayAlgunaFichaSeleccionada_KEYBOARD_GAMEPAD);
                     if (!hayAlgunaFichaSeleccionada_KEYBOARD_GAMEPAD) return;
                     e.Handled = true;
+                    break;
+                case VirtualKey.GamepadMenu:
+                    Pausa();
+                    break;
+                case VirtualKey.E:
+                case VirtualKey.GamepadY:
+                    comprobarInfoFicha(Pos.y_,Pos.x_); 
                     break;
                 case VirtualKey.Left:
                     mover = true;
@@ -229,7 +239,7 @@ namespace ProyectoDSI
                 default:
                     e.Handled = true;
                     break;
-            }
+                }
             if (mover){
                 miContentControl.Visibility = Visibility.Visible;
                 miContentControl.SetValue(Grid.RowProperty, Pos.y_);
@@ -247,6 +257,28 @@ namespace ProyectoDSI
                 textTimer_.Start();
                 return;
             }
+        }
+        bool comprobarInfoFicha(int Y, int X)
+        {
+            for (int i = 0; i < FichasJugador.Count; i++)
+            {//recorro la lista de fichas del jugador
+                if (FichasJugador[i].Y_ == Y&& FichasJugador[i].X_ == X)
+                {//si es la ficha del jugador
+                    derecho = !derecho;
+                    Image x = Grid_Tablero.FindName("_" + Y.ToString() + X.ToString()) as Image;
+                    ImagenCartaJugador.Source = x.Source;//pongo la imagend e la ficha
+                    //activo el panel
+                    if (derecho)
+                    PanelInfoJugador.Visibility = Visibility.Visible;
+                    else PanelInfoJugador.Visibility = Visibility.Collapsed;      
+                    //actualizo la info
+                    InfoCartaJugador.Text = FichasJugador[i].info_;
+                    RangoCartaJugador.Text = FichasJugador[i].rango_;
+                    CartaInfoJugador.Text = FichasJugador[i].tipo_;
+                    return true;
+                }
+            }
+            return false;
         }
         private void CrearLista() {
 
@@ -535,14 +567,9 @@ namespace ProyectoDSI
                     if (FichasJugador[i].Y_ ==fil && FichasJugador[i].X_ == col) {//si es la ficha del jugador
                        
                         //CLICK DERECHO
-                        if (ptrPt.Properties.IsRightButtonPressed) {
-                            ImagenCartaJugador.Source = x.Source;//pongo la imagend e la ficha
-                            PanelInfoJugador.Visibility = Visibility.Visible;//activo el panel
-                            //actualizo la info
-                            InfoCartaJugador.Text = FichasJugador[i].info_;
-                            RangoCartaJugador.Text = FichasJugador[i].rango_;
-                            CartaInfoJugador.Text = FichasJugador[i].tipo_;
-                        }
+                        if (ptrPt.Properties.IsRightButtonPressed && comprobarInfoFicha(fil, col)) 
+                             return;
+                        
                         //CLICK IZQUIERDO
                         if (ptrPt.Properties.IsLeftButtonPressed) {
 

@@ -161,6 +161,8 @@
     <Content Include="Assets\botoncontroles.png" />
     <Content Include="Assets\botonReglamento.png" />
     <Content Include="Assets\bottonclick.wav" />
+    <Content Include="Assets\brillo.png" />
+    <Content Include="Assets\brillo2.png" />
     <Content Include="Assets\click.wav" />
     <Content Include="Assets\Cocacola.png" />
     <Content Include="Assets\cocalocas.png" />
