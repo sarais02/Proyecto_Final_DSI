@@ -120,9 +120,6 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Ficha.cs" />
-    <Compile Include="ConAzucar.xaml.cs">
-      <DependentUpon>ConAzucar.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Menus\Controles.xaml.cs">
       <DependentUpon>Controles.xaml</DependentUpon>
     </Compile>
@@ -141,6 +138,9 @@
     </Compile>
     <Compile Include="Menus\SeleccionNivel.xaml.cs">
       <DependentUpon>SeleccionNivel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ConAzucar.xaml.cs">
+      <DependentUpon>ConAzucar.xaml</DependentUpon>
     </Compile>
     <Compile Include="SinAzucar.xaml.cs">
       <DependentUpon>SinAzucar.xaml</DependentUpon>
@@ -208,10 +208,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="ConAzucar.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Menus\Controles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -235,6 +231,10 @@
     <Page Include="Menus\SeleccionNivel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ConAzucar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="SinAzucar.xaml">
       <SubType>Designer</SubType>
