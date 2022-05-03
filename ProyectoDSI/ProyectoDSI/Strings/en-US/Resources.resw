@@ -153,7 +153,7 @@
   <data name="ComboBoxLanguage.PlaceholderText" xml:space="preserve">
     <value>Select a language</value>
   </data>
-  <data name="ContinueButton.Content" xml:space="preserve">
+  <data name="ContinueButton.Text" xml:space="preserve">
     <value>Continue</value>
   </data>
   <data name="ControlsTitle.Text" xml:space="preserve">
@@ -177,7 +177,7 @@
   <data name="DenyButton.Content" xml:space="preserve">
     <value>NO</value>
   </data>
-  <data name="ExitButton.Content" xml:space="preserve">
+  <data name="ExitButton.Text" xml:space="preserve">
     <value>Exit</value>
   </data>
   <data name="Idiom1.Text" xml:space="preserve">
@@ -282,13 +282,13 @@
   <data name="NameSandia" xml:space="preserve">
     <value>Watermelon</value>
   </data>
-  <data name="NewGameButton.Content" xml:space="preserve">
+  <data name="NewGameButton.Text" xml:space="preserve">
     <value>New Game</value>
   </data>
   <data name="NoSugarButton.Content" xml:space="preserve">
     <value>Sugar Free</value>
   </data>
-  <data name="OptionnsButton.Content" xml:space="preserve">
+  <data name="OptionnsButton.Text" xml:space="preserve">
     <value>Options</value>
   </data>
   <data name="OpTitle.Text" xml:space="preserve">

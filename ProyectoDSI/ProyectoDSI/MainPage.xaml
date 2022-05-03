@@ -27,31 +27,50 @@
             <TextBlock x:Name="Shadow"
             Text="Sweet War" VerticalAlignment="Top"
             HorizontalAlignment="Center" Margin="0,45,0,0"
-            FontSize="130" Foreground="Black"  FontWeight="Bold" FontFamily="Brush Script MT"/>
+            FontSize="140" Foreground="Black"  FontWeight="Bold" FontFamily="Brush Script MT"/>
 
             <TextBlock Text="Sweet War" VerticalAlignment="Top"
                    HorizontalAlignment="Center"
                    Margin="0,50,0,0"
-                   FontSize="130" Foreground="#FF0066FF" FontWeight="Bold" FontFamily="Brush Script MT"/>
+                   FontSize="140" Foreground="#FF0066FF" FontWeight="Bold" FontFamily="Brush Script MT"/>
             <StackPanel VerticalAlignment="Bottom" 
                     Margin="0,0,0,50">
                 <StackPanel VerticalAlignment="Center"
                     HorizontalAlignment="Center">
                     <Button x:Name="Play" Margin="20"
-                    Width="400" FontSize="50" FontFamily="MV Boli"
-                    Click="Play_Click" x:Uid="ContinueButton"/>
-                    <Button Margin="20"
-                    Width="400" FontSize="50" FontFamily="MV Boli"
-                    Click="Play_Click" x:Uid="NewGameButton"/>
+                    Width="400" FontSize="45" FontFamily="MV Boli"
+                    Click="Play_Click">
+                        <StackPanel Orientation="Horizontal" Spacing="30" >
+                            <TextBlock  x:Uid="ContinueButton"/>
+                            <Image Source="Assets/play.png" Height="50"/>
+                        </StackPanel>
+                    </Button>
+                    <Button Margin="20" Width="400" 
+                            FontSize="45" FontFamily="MV Boli"
+                            Click="Play_Click">
+                        <StackPanel Orientation="Horizontal" Spacing="15" >
+                            <TextBlock  x:Uid="NewGameButton"/>
+                            <Image Source="Assets/new game.png" Height="60"/>
+                        </StackPanel>
+                    </Button>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"
                     VerticalAlignment="Bottom" Margin="0,20,0,0">
-                    <Button Margin="20"
-                    Width="400" FontSize="50" FontFamily="MV Boli"
-                     Click="Button_Click" x:Uid="OptionnsButton"/>
+                    <Button Margin="20" Width="400" FontSize="45" 
+                            FontFamily="MV Boli" Click="Button_Click" >
+                        <StackPanel Orientation="Horizontal" Spacing="30" >
+                            <TextBlock x:Uid="OptionnsButton"/>
+                            <Image Source="Assets/settings.png" Height="50"/>
+                        </StackPanel>
+                    </Button>
                     <Button x:Name="OnExit" Margin="20"
-                    Width="400" FontSize="50" FontFamily="MV Boli"
-                    Click="OnExit_Click" x:Uid="ExitButton"/>
+                    Width="400" FontSize="45" FontFamily="MV Boli"
+                    Click="OnExit_Click">
+                        <StackPanel Orientation="Horizontal" Spacing="30" >
+                            <TextBlock x:Uid="ExitButton"/>
+                            <Image Source="Assets/h.png" Height="50"/>
+                        </StackPanel>
+                    </Button>
                 </StackPanel>
             </StackPanel>
 

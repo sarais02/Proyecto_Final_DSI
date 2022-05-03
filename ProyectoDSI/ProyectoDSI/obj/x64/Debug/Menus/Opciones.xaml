@@ -113,6 +113,7 @@
                             <TextBlock x:Uid="Idiom1"/>
                             <TextBlock x:Uid="Idiom2"/>
                         </ComboBox>
+                        <SymbolIcon Symbol="World" Foreground="DeepPink"/>
                     </StackPanel>
                 </StackPanel>
                 <Image  Grid.Column="0" Source="../Assets/nuve.png"  Stretch="Uniform"/>

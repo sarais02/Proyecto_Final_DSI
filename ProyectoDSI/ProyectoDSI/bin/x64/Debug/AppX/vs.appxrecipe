@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-03T08:14:36.114</Modified>
+      <Modified>2022-05-03T14:34:05.117</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x64\Debug\ProyectoDSI.exe">
       <PackagePath>entrypoint\ProyectoDSI.exe</PackagePath>
-      <Modified>2022-05-03T08:14:35.357</Modified>
+      <Modified>2022-05-03T14:34:04.499</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -154,6 +154,10 @@
       <PackagePath>Assets\fresa.png</PackagePath>
       <Modified>2022-03-27T09:02:26.648</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\h.png">
+      <PackagePath>Assets\h.png</PackagePath>
+      <Modified>2022-05-03T14:03:56.780</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\Huevo.png">
       <PackagePath>Assets\Huevo.png</PackagePath>
       <Modified>2022-03-30T10:40:01.653</Modified>
@@ -161,6 +165,10 @@
     <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\mando.png">
       <PackagePath>Assets\mando.png</PackagePath>
       <Modified>2022-03-27T16:41:48.744</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\new game.png">
+      <PackagePath>Assets\new game.png</PackagePath>
+      <Modified>2022-05-03T14:15:06.832</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\nuve.png">
       <PackagePath>Assets\nuve.png</PackagePath>
@@ -186,6 +194,10 @@
       <PackagePath>Assets\pirulos.png</PackagePath>
       <Modified>2022-03-27T10:40:12.887</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\play.png">
+      <PackagePath>Assets\play.png</PackagePath>
+      <Modified>2022-05-03T14:24:12.913</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\raya.png">
       <PackagePath>Assets\raya.png</PackagePath>
       <Modified>2022-03-27T16:41:48.744</Modified>
@@ -197,6 +209,10 @@
     <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\Sandia.png">
       <PackagePath>Assets\Sandia.png</PackagePath>
       <Modified>2022-03-30T10:40:01.658</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\settings.png">
+      <PackagePath>Assets\settings.png</PackagePath>
+      <Modified>2022-05-03T14:01:13.814</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\Assets\Tablero.png">
       <PackagePath>Assets\Tablero.png</PackagePath>
@@ -254,43 +270,43 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x64\Debug\ProyectoDSI.xr.xml">
       <PackagePath>ProyectoDSI.xr.xml</PackagePath>
-      <Modified>2022-05-03T07:51:53.329</Modified>
+      <Modified>2022-05-03T14:06:21.761</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-05-03T08:11:24.420</Modified>
+      <Modified>2022-05-03T14:34:04.329</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x64\Debug\Menus\Controles.xbf">
       <PackagePath>Menus\Controles.xbf</PackagePath>
-      <Modified>2022-05-03T08:11:24.420</Modified>
+      <Modified>2022-05-03T14:34:04.330</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-05-03T08:11:24.420</Modified>
+      <Modified>2022-05-03T14:34:04.330</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x64\Debug\Menus\Opciones.xbf">
       <PackagePath>Menus\Opciones.xbf</PackagePath>
-      <Modified>2022-05-03T08:11:24.377</Modified>
+      <Modified>2022-05-03T14:34:04.284</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x64\Debug\Menus\Pausa.xbf">
       <PackagePath>Menus\Pausa.xbf</PackagePath>
-      <Modified>2022-05-03T08:11:24.420</Modified>
+      <Modified>2022-05-03T14:34:04.331</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x64\Debug\Menus\Reglamento.xbf">
       <PackagePath>Menus\Reglamento.xbf</PackagePath>
-      <Modified>2022-05-03T08:11:24.385</Modified>
+      <Modified>2022-05-03T14:34:04.292</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x64\Debug\Menus\SeleccionNivel.xbf">
       <PackagePath>Menus\SeleccionNivel.xbf</PackagePath>
-      <Modified>2022-05-03T08:11:24.421</Modified>
+      <Modified>2022-05-03T14:34:04.332</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x64\Debug\ConAzucar.xbf">
       <PackagePath>ConAzucar.xbf</PackagePath>
-      <Modified>2022-05-03T08:11:24.404</Modified>
+      <Modified>2022-05-03T14:34:04.311</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x64\Debug\SinAzucar.xbf">
       <PackagePath>SinAzucar.xbf</PackagePath>
-      <Modified>2022-05-03T08:11:24.420</Modified>
+      <Modified>2022-05-03T14:34:04.329</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -298,11 +314,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-05-03T07:51:54.237</Modified>
+      <Modified>2022-05-03T14:28:06.888</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sarai\Documents\UCM\2º CUATRI\DSI\Proyecto_Final_DSI\ProyectoDSI\ProyectoDSI\bin\x64\Debug\Core\ProyectoDSI.exe">
       <PackagePath>ProyectoDSI.exe</PackagePath>
-      <Modified>2022-05-03T08:14:36.107</Modified>
+      <Modified>2022-05-03T14:34:05.112</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
