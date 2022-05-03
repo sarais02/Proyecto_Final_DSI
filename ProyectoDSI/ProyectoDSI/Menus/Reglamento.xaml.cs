@@ -30,6 +30,7 @@ namespace ProyectoDSI
         CoreCursor CursorArrow = null;
         CoreCursor CursorHand = null;
         MediaPlayer clickSound;
+        MediaPlayer backgroundSound;
         PointerPoint ptrPt;
         public Reglamento()
         {
@@ -37,6 +38,7 @@ namespace ProyectoDSI
             CursorHand = new CoreCursor(CoreCursorType.Hand, 0);
             CursorArrow = new CoreCursor(CoreCursorType.Arrow, 0);
             clickSound = new MediaPlayer();
+            backgroundSound = new MediaPlayer();
         }
 
         private void Button_PointerEntered(object sender, PointerRoutedEventArgs e)
@@ -62,8 +64,8 @@ namespace ProyectoDSI
             // First, check that it's safe to ask the Frame to go backward.
             if (Frame.CanGoBack)
             {
-                // If there's a page in the "backstack," we can call GoBack().
                 Frame.GoBack();
+                backgroundSound.Pause();
             }
         }
 
@@ -77,6 +79,10 @@ namespace ProyectoDSI
             Windows.Storage.StorageFolder folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync(@"Assets");
             Windows.Storage.StorageFile file = await folder.GetFileAsync("bottonclick.wav");
             clickSound.Source = MediaSource.CreateFromStorageFile(file);
+            file = await folder.GetFileAsync("menu03.wav");
+            backgroundSound.Source = MediaSource.CreateFromStorageFile(file);
+            backgroundSound.IsLoopingEnabled = true;
+            backgroundSound.Play();
         }
     }
 }

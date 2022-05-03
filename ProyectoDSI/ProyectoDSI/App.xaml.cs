@@ -72,7 +72,7 @@ namespace ProyectoDSI
                 Window.Current.Activate();
             }
 
-            rootFrame.CacheSize = 3;
+            rootFrame.CacheSize = 2;
             Window.Current.Activate();
         }
 

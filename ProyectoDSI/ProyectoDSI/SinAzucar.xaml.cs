@@ -15,8 +15,6 @@ using Windows.System;
 using Windows.UI.Text;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
@@ -161,6 +159,7 @@ namespace ProyectoDSI
         }
         private void PauseButton_Click(object sender, RoutedEventArgs e){
             Pausa();
+            backgroundSound.Pause();
         }
         private void Pausa(){
             clickSound.Play();

@@ -31,12 +31,14 @@ namespace ProyectoDSI
         CoreCursor CursorHand = null;
         PointerPoint ptrPt;
         MediaPlayer clickSound;
+        MediaPlayer backgroundSound;
         public Controles()
         {
             this.InitializeComponent();
             CursorArrow = new CoreCursor(CoreCursorType.Arrow, 0);
             CursorHand = new CoreCursor(CoreCursorType.Hand, 0);
             clickSound = new MediaPlayer();
+            backgroundSound = new MediaPlayer();
         }
 
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
@@ -58,13 +60,13 @@ namespace ProyectoDSI
             Window.Current.CoreWindow.PointerCursor = CursorArrow;
             SpecialText.Visibility = Visibility.Collapsed;
         }
-
         
         private void Volver()
         {
             if (Frame.CanGoBack)
             {
                 Frame.GoBack();
+                backgroundSound.Pause();
             }
         }
 
@@ -78,6 +80,10 @@ namespace ProyectoDSI
             Windows.Storage.StorageFolder folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync(@"Assets");
             Windows.Storage.StorageFile file = await folder.GetFileAsync("bottonclick.wav");
             clickSound.Source = MediaSource.CreateFromStorageFile(file);
+            file = await folder.GetFileAsync("menu03.wav");
+            backgroundSound.Source = MediaSource.CreateFromStorageFile(file);
+            backgroundSound.IsLoopingEnabled = true;
+            backgroundSound.Play();
         }
     }
 }

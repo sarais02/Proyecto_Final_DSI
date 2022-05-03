@@ -28,6 +28,7 @@ namespace ProyectoDSI
         CoreCursor CursorArrow = null;
         CoreCursor CursorHand = null;
         MediaPlayer clickSound;
+        MediaPlayer backgroundSound;
         PointerPoint ptrPt;       
         public Opciones()
         {
@@ -35,6 +36,7 @@ namespace ProyectoDSI
             CursorHand = new CoreCursor(CoreCursorType.Hand, 0);
             CursorArrow = new CoreCursor(CoreCursorType.Arrow, 0);
             clickSound = new MediaPlayer();
+            backgroundSound = new MediaPlayer();
             ElementSoundPlayer.State = ElementSoundPlayerState.On;
             sliderAudio.Value = ElementSoundPlayer.Volume * 100;
         }
@@ -45,12 +47,14 @@ namespace ProyectoDSI
         private void Reglas_Click(object sender, RoutedEventArgs e)
         {
             clickSound.Play();
+            backgroundSound.Pause();
             Frame.Navigate(typeof(Reglamento));
         }
 
         private void Pause_Click(object sender, RoutedEventArgs e)
         {
             clickSound.Play();
+            backgroundSound.Pause();
             Frame.Navigate(typeof(Controles));
         }
 
@@ -61,6 +65,7 @@ namespace ProyectoDSI
         }
         private void Volver(){
             if (Frame.CanGoBack){
+                backgroundSound.Pause();
                 Frame.GoBack();
             }
         }
@@ -106,13 +111,20 @@ namespace ProyectoDSI
                 Windows.ApplicationModel.Resources.Core.ResourceContext.GetForCurrentView().Reset();
 
             }
+            backgroundSound.Pause();
             Frame.Navigate(this.GetType());
+            backgroundSound.Pause();
+            Frame.GoBack();
         }
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
             Windows.Storage.StorageFolder folder = await Windows.ApplicationModel.Package.Current.InstalledLocation.GetFolderAsync(@"Assets");
             Windows.Storage.StorageFile file = await folder.GetFileAsync("bottonclick.wav");
             clickSound.Source = MediaSource.CreateFromStorageFile(file);
+            file = await folder.GetFileAsync("menu03.wav");
+            backgroundSound.Source = MediaSource.CreateFromStorageFile(file);
+            backgroundSound.IsLoopingEnabled = true;
+            backgroundSound.Play();
         }
 
         private void sliderAudio_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
@@ -120,6 +132,5 @@ namespace ProyectoDSI
             double volume = sliderAudio.Value / 100.0;
             ElementSoundPlayer.Volume = volume;
         }
-
     }
 }
