@@ -183,13 +183,24 @@ namespace ProyectoDSI
             backgroundSound.Play();
         }
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e){
-            if (estadoinicial|| !playersTurn) return;
+            if (estadoinicial || !playersTurn) { 
+                if (e.Key == VirtualKey.J) {
+                    minutes = 1;
+                    seconds = 30;
+                    playersTurn = !playersTurn;
+                    Add();
+                    textTimer_.Start();
+                }
+                return;
+            }
+
             bool mover = false;
 
             miContentControl.Focus(FocusState.Keyboard);
                 switch (e.Key){
                 case VirtualKey.Escape:
                     Pausa();
+                    e.Handled = true;
                     break;
                 case VirtualKey.Space:
                 case VirtualKey.Enter:
@@ -203,13 +214,15 @@ namespace ProyectoDSI
                     comprobarCambioDeTurno(hayAlgunaFichaSeleccionada_KEYBOARD_GAMEPAD);
                     if (!hayAlgunaFichaSeleccionada_KEYBOARD_GAMEPAD) return;
                     e.Handled = true;
-                    break;
+                    break;              
                 case VirtualKey.GamepadMenu:
                     Pausa();
+                    e.Handled = true;
                     break;
                 case VirtualKey.E:
                 case VirtualKey.GamepadY:
-                    comprobarInfoFicha(Pos.y_,Pos.x_); 
+                    comprobarInfoFicha(Pos.y_,Pos.x_);
+                    e.Handled = true;
                     break;
                 case VirtualKey.Left:
                     mover = true;
